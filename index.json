@@ -1,0 +1,387 @@
+﻿[
+	{
+		"link": "README.md",
+		"char_ofs": 0,
+		"byte_ofs": 0
+	},
+	{
+		"link": "1-elec/README.md",
+		"char_ofs": 226,
+		"byte_ofs": 503
+	},
+	{
+		"link": "1-elec/VOLTAGE_1.md",
+		"char_ofs": 233,
+		"byte_ofs": 514
+	},
+	{
+		"link": "1-elec/VOLTAGE_2.md",
+		"char_ofs": 1225,
+		"byte_ofs": 2704
+	},
+	{
+		"link": "1-elec/VOLTAGE_3.md",
+		"char_ofs": 1707,
+		"byte_ofs": 3703
+	},
+	{
+		"link": "1-elec/Parts_replacement_tips.md",
+		"char_ofs": 2171,
+		"byte_ofs": 4657
+	},
+	{
+		"link": "1-elec/Adjustment_tips.md",
+		"char_ofs": 5124,
+		"byte_ofs": 11027
+	},
+	{
+		"link": "2-servo-control-board-part/README.md",
+		"char_ofs": 6243,
+		"byte_ofs": 13360
+	},
+	{
+		"link": "2-servo-control-board-part/E02500.md",
+		"char_ofs": 6256,
+		"byte_ofs": 13384
+	},
+	{
+		"link": "2-servo-control-board-part/E02501.md",
+		"char_ofs": 8317,
+		"byte_ofs": 18058
+	},
+	{
+		"link": "2-servo-control-board-part/E02502.md",
+		"char_ofs": 9874,
+		"byte_ofs": 21370
+	},
+	{
+		"link": "2-servo-control-board-part/E02503.md",
+		"char_ofs": 11433,
+		"byte_ofs": 24505
+	},
+	{
+		"link": "2-servo-control-board-part/E02504.md",
+		"char_ofs": 12685,
+		"byte_ofs": 27108
+	},
+	{
+		"link": "2-servo-control-board-part/E02505.md",
+		"char_ofs": 13851,
+		"byte_ofs": 29575
+	},
+	{
+		"link": "2-servo-control-board-part/E02506.md",
+		"char_ofs": 15427,
+		"byte_ofs": 32794
+	},
+	{
+		"link": "2-servo-control-board-part/E02507.md",
+		"char_ofs": 16839,
+		"byte_ofs": 35873
+	},
+	{
+		"link": "2-servo-control-board-part/E02508.md",
+		"char_ofs": 18729,
+		"byte_ofs": 39885
+	},
+	{
+		"link": "2-servo-control-board-part/E02520.md",
+		"char_ofs": 20106,
+		"byte_ofs": 42625
+	},
+	{
+		"link": "2-servo-control-board-part/E02521.md",
+		"char_ofs": 23147,
+		"byte_ofs": 48896
+	},
+	{
+		"link": "2-servo-control-board-part/E02522.md",
+		"char_ofs": 24523,
+		"byte_ofs": 51708
+	},
+	{
+		"link": "2-servo-control-board-part/E02541.md",
+		"char_ofs": 25632,
+		"byte_ofs": 54171
+	},
+	{
+		"link": "3-safety-board-part/README.md",
+		"char_ofs": 28013,
+		"byte_ofs": 58583
+	},
+	{
+		"link": "3-safety-board-part/E00002.md",
+		"char_ofs": 28025,
+		"byte_ofs": 58607
+	},
+	{
+		"link": "3-safety-board-part/E00014.md",
+		"char_ofs": 32277,
+		"byte_ofs": 67374
+	},
+	{
+		"link": "3-safety-board-part/E00043.md",
+		"char_ofs": 35124,
+		"byte_ofs": 72995
+	},
+	{
+		"link": "3-safety-board-part/E02200.md",
+		"char_ofs": 36547,
+		"byte_ofs": 75723
+	},
+	{
+		"link": "3-safety-board-part/E02201.md",
+		"char_ofs": 37623,
+		"byte_ofs": 78003
+	},
+	{
+		"link": "3-safety-board-part/E02202.md",
+		"char_ofs": 38730,
+		"byte_ofs": 80489
+	},
+	{
+		"link": "3-safety-board-part/E02206.md",
+		"char_ofs": 39838,
+		"byte_ofs": 82977
+	},
+	{
+		"link": "3-safety-board-part/E02207.md",
+		"char_ofs": 40390,
+		"byte_ofs": 84226
+	},
+	{
+		"link": "3-safety-board-part/E02208.md",
+		"char_ofs": 41012,
+		"byte_ofs": 85607
+	},
+	{
+		"link": "3-safety-board-part/E02260.md",
+		"char_ofs": 41634,
+		"byte_ofs": 86988
+	},
+	{
+		"link": "3-safety-board-part/E02261.md",
+		"char_ofs": 43506,
+		"byte_ofs": 90526
+	},
+	{
+		"link": "3-safety-board-part/E02280.md",
+		"char_ofs": 43834,
+		"byte_ofs": 91139
+	},
+	{
+		"link": "3-safety-board-part/E02281.md",
+		"char_ofs": 45110,
+		"byte_ofs": 93609
+	},
+	{
+		"link": "3-safety-board-part/E02301.md",
+		"char_ofs": 45440,
+		"byte_ofs": 94226
+	},
+	{
+		"link": "3-safety-board-part/E64002.md",
+		"char_ofs": 47164,
+		"byte_ofs": 97390
+	},
+	{
+		"link": "3-safety-board-part/E64003.md",
+		"char_ofs": 49893,
+		"byte_ofs": 102398
+	},
+	{
+		"link": "3-safety-board-part/E64035.md",
+		"char_ofs": 51378,
+		"byte_ofs": 105167
+	},
+	{
+		"link": "4-servo-board-part/README.md",
+		"char_ofs": 52071,
+		"byte_ofs": 106464
+	},
+	{
+		"link": "4-servo-board-part/E02450.md",
+		"char_ofs": 52080,
+		"byte_ofs": 106481
+	},
+	{
+		"link": "4-servo-board-part/E02451.md",
+		"char_ofs": 54824,
+		"byte_ofs": 111936
+	},
+	{
+		"link": "4-servo-board-part/E02452.md",
+		"char_ofs": 57194,
+		"byte_ofs": 116600
+	},
+	{
+		"link": "4-servo-board-part/E02453.md",
+		"char_ofs": 57670,
+		"byte_ofs": 117636
+	},
+	{
+		"link": "4-servo-board-part/E02454.md",
+		"char_ofs": 58138,
+		"byte_ofs": 118654
+	},
+	{
+		"link": "4-servo-board-part/E02455.md",
+		"char_ofs": 58614,
+		"byte_ofs": 119701
+	},
+	{
+		"link": "4-servo-board-part/E02459.md",
+		"char_ofs": 59074,
+		"byte_ofs": 120720
+	},
+	{
+		"link": "4-servo-board-part/E02460.md",
+		"char_ofs": 59549,
+		"byte_ofs": 121766
+	},
+	{
+		"link": "4-servo-board-part/E02461.md",
+		"char_ofs": 61002,
+		"byte_ofs": 124705
+	},
+	{
+		"link": "4-servo-board-part/E02462.md",
+		"char_ofs": 61521,
+		"byte_ofs": 125823
+	},
+	{
+		"link": "4-servo-board-part/E02463.md",
+		"char_ofs": 62167,
+		"byte_ofs": 127218
+	},
+	{
+		"link": "4-servo-board-part/E02464.md",
+		"char_ofs": 62678,
+		"byte_ofs": 128333
+	},
+	{
+		"link": "4-servo-board-part/E02470.md",
+		"char_ofs": 64508,
+		"byte_ofs": 132157
+	},
+	{
+		"link": "4-servo-board-part/E02630.md",
+		"char_ofs": 65910,
+		"byte_ofs": 135251
+	},
+	{
+		"link": "4-servo-board-part/E02631.md",
+		"char_ofs": 69177,
+		"byte_ofs": 141898
+	},
+	{
+		"link": "4-servo-board-part/E02632.md",
+		"char_ofs": 69678,
+		"byte_ofs": 142973
+	},
+	{
+		"link": "4-servo-board-part/E02633.md",
+		"char_ofs": 71468,
+		"byte_ofs": 146600
+	},
+	{
+		"link": "4-servo-board-part/E02634.md",
+		"char_ofs": 72783,
+		"byte_ofs": 149158
+	},
+	{
+		"link": "4-servo-board-part/E02650.md",
+		"char_ofs": 73534,
+		"byte_ofs": 150723
+	},
+	{
+		"link": "4-servo-board-part/E02651.md",
+		"char_ofs": 76992,
+		"byte_ofs": 157718
+	},
+	{
+		"link": "4-servo-board-part/E02652.md",
+		"char_ofs": 78774,
+		"byte_ofs": 161321
+	},
+	{
+		"link": "4-servo-board-part/E02653.md",
+		"char_ofs": 79893,
+		"byte_ofs": 163479
+	},
+	{
+		"link": "4-servo-board-part/E02670.md",
+		"char_ofs": 80445,
+		"byte_ofs": 164639
+	},
+	{
+		"link": "4-servo-board-part/E02680.md",
+		"char_ofs": 82403,
+		"byte_ofs": 168539
+	},
+	{
+		"link": "4-servo-board-part/E02780.md",
+		"char_ofs": 85041,
+		"byte_ofs": 173792
+	},
+	{
+		"link": "4-servo-board-part/E02781.md",
+		"char_ofs": 87957,
+		"byte_ofs": 179478
+	},
+	{
+		"link": "4-servo-board-part/E02472.md",
+		"char_ofs": 90400,
+		"byte_ofs": 184266
+	},
+	{
+		"link": "4-servo-board-part/E02554.md",
+		"char_ofs": 91634,
+		"byte_ofs": 186802
+	},
+	{
+		"link": "4-servo-board-part/E02560.md",
+		"char_ofs": 92729,
+		"byte_ofs": 188999
+	},
+	{
+		"link": "4-servo-board-part/E02570.md",
+		"char_ofs": 94039,
+		"byte_ofs": 191631
+	},
+	{
+		"link": "4-servo-board-part/E02564.md",
+		"char_ofs": 95492,
+		"byte_ofs": 194491
+	},
+	{
+		"link": "5-communication/README.md",
+		"char_ofs": 96979,
+		"byte_ofs": 197422
+	},
+	{
+		"link": "5-communication/E29003.md",
+		"char_ofs": 96986,
+		"byte_ofs": 197433
+	},
+	{
+		"link": "5-communication/E29016.md",
+		"char_ofs": 99163,
+		"byte_ofs": 201437
+	},
+	{
+		"link": "appendices/README.md",
+		"char_ofs": 100457,
+		"byte_ofs": 203808
+	},
+	{
+		"link": "appendices/rules-occupational-safety.md",
+		"char_ofs": 100468,
+		"byte_ofs": 203831
+	},
+	{
+		"link": "quality-assurance.md",
+		"char_ofs": 100688,
+		"byte_ofs": 204229
+	}
+]
