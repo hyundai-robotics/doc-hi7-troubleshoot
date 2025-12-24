@@ -24,7 +24,7 @@
   * [2.12 E50300 (○축) IPM 폴트](2-servo-amp-board-part/E50300.md)
   * [2.13 E50301 (O축) IPM 폴트 - Gate 구동전원 저전압](2-servo-amp-board-part/E50301.md)
 
-* [3. 안전신호 보드](3-safety-board-part/README.md)
+* [3. 서보안전 보드(안전파트)](3-safety-board-part/README.md)
   * [3.1  E00002 하드웨어 리밋스위치 작동중](3-safety-board-part/E00002.md)
   * [3.2  E00014 안전스위치(EM, OTR, TS 등) 순간접촉](3-safety-board-part/E00014.md)
   * [3.3  E00043 자동모드 안전가드(Auto Guard) 스위치 접속 이상](3-safety-board-part/E00043.md)
@@ -44,7 +44,7 @@
   * [3.17 E64003 서보보드(BD640) 상태 입력 에러](3-safety-board-part/E64003.md)
   * [3.18 E64035 안전모듈 상태 출력(SFST) 불일치 (안전체인2 OFF)](3-safety-board-part/E64035.md)
 
-* [4. 서보 보드](4-servo-board-part/README.md)
+* [4. 서보안전 보드(서보파트)](4-servo-board-part/README.md)
   * [4.1  E02470(O축) 엔코더이상: 엔코더 리셋 필요](4-servo-board-part/E02470.md)
   * [4.2  E02670(O축) 지령치 이상](4-servo-board-part/E02670.md)
   * [4.3  E02680(O축) 최고속 초과](4-servo-board-part/E02680.md)
