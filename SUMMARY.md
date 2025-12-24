@@ -24,7 +24,7 @@
   * [2.12 E50300 (○축) IPM 폴트](2-servo-amp-board-part/E50300.md)
   * [2.13 E50301 (O축) IPM 폴트 - Gate 구동전원 저전압](2-servo-amp-board-part/E50301.md)
 
-* [3. 안전신호 보드](3-safety-board-part/README.md)
+* [3. 서보안전 보드(안전파트)](3-safety-board-part/README.md)
   * [3.1  N00088 외부 비상정지 입력](3-safety-board-part/N00088.md)
   * [3.2  E00002 주축 리밋 스위치 작동중](3-safety-board-part/E00002.md)
   * [3.3  E02310 자동모드 안전가드 스위치 동작중](3-safety-board-part/E02310.md)
@@ -33,7 +33,7 @@
   * [3.5  E52042 (0 ch) 안전 입력 신호의 불일치](3-safety-board-part/E52042.md)
   * [3.6  E52043 (0 ch) 부가 안전 입력 신호의 불일치](3-safety-board-part/E52043.md)
   
-* [4. 서보 보드](4-servo-board-part/README.md)
+* [4. 서보안전 보드(서보파트)](4-servo-board-part/README.md)
   * [4.1  E02470(O축) 엔코더이상: 엔코더 리셋 필요](4-servo-board-part/E02470.md)
   * [4.2  E02670(O축) 지령치 이상](4-servo-board-part/E02670.md)
   * [4.3  E02680(O축) 최고속 초과](4-servo-board-part/E02680.md)
@@ -57,9 +57,6 @@
   * [4.21 E50400(O축) 위치 편차 초과](4-servo-board-part/E50400.md)
   * [4.22 E50401(O축) 속도별 위치 편차 초과](4-servo-board-part/E50401.md)
   * [4.23 E50402(O축) 위치 편차 초과 - 저온 마찰 증가](4-servo-board-part/E50402.md)
-  * [4.24 E51429 초기충전 저항 릴레이 피드백 이상](4-servo-board-part/E51429.md)
-  * [4.25 E51441 (0축) 브레이크 피드백 이상](4-servo-board-part/E51441.md)
-  * [4.26 E51443 브레이크 전원 이상](4-servo-board-part/E51443.md)
 
 * [5. 통신](5-communication/README.md)
   * [5.1  E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)](5-communication/E29003.md)
