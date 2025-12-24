@@ -57,7 +57,10 @@
   * [4.21 E50400(O축) 위치 편차 초과](4-servo-board-part/E50400.md)
   * [4.22 E50401(O축) 속도별 위치 편차 초과](4-servo-board-part/E50401.md)
   * [4.23 E50402(O축) 위치 편차 초과 - 저온 마찰 증가](4-servo-board-part/E50402.md)
-
+  * [4.24 E51429 초기충전 저항 릴레이 피드백 이상](4-servo-board-part/E51429.md)
+  * [4.25 E51441 (0축) 브레이크 피드백 이상](4-servo-board-part/E51441.md)
+  * [4.26 E51443 브레이크 전원 이상](4-servo-board-part/E51443.md)
+  
 * [5. 통신](5-communication/README.md)
   * [5.1  E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)](5-communication/E29003.md)
   * [5.2  E29016 전장보드 통신(EtherCAT) 마스터 연결 끊김 발생](5-communication/E29016.md)
