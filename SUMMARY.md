@@ -24,29 +24,6 @@
   * [2.12 E50300 (○축) IPM 폴트](2-servo-amp-board-part/E50300.md)
   * [2.13 E50301 (O축) IPM 폴트 - Gate 구동전원 저전압](2-servo-amp-board-part/E50301.md)
 
-<<<<<<< HEAD
-* [3. 서보안전 보드(안전파트)](3-safety-board-part/README.md)
-  * [3.1  E00002 하드웨어 리밋스위치 작동중](3-safety-board-part/E00002.md)
-  * [3.2  E00014 안전스위치(EM, OTR, TS 등) 순간접촉](3-safety-board-part/E00014.md)
-  * [3.3  E00043 자동모드 안전가드(Auto Guard) 스위치 접속 이상](3-safety-board-part/E00043.md)
-  * [3.4  E02200 본체 리밋SW 동작중](3-safety-board-part/E02200.md)
-  * [3.5  E02201 ~ E02208 하드웨어 리밋SW 점검 방법](3-safety-board-part/E02201~E2208.md)
-  * [3.6  E02201 본체 리밋SW 입력불일치 (안전체인 1 OFF)](3-safety-board-part/E02201.md)
-  * [3.7  E02202 본체 리밋SW 입력불일치 (안전체인 2 OFF)](3-safety-board-part/E02202.md)
-  * [3.8  E02206 본체 리밋SW 단선 또는 미접속](3-safety-board-part/E02206.md)
-  * [3.9  E02207 본체 리밋SW 입력불일치 (안전체인 1 OFF)](3-safety-board-part/E02207.md)
-  * [3.10 E02208 본체 리밋SW 입력불일치 (안전체인 2 OFF)](3-safety-board-part/E02208.md)
-  * [3.11 E02260 서보ON 시도중 전자접촉기(MC2) 고장/검지이상](3-safety-board-part/E02260.md)
-  * [3.12 E02261 서보ON 상태에서 전자접촉기(MC2) 고장/검지이상](3-safety-board-part/E02261.md)
-  * [3.13 E02280 서보ON 시도중 전자접촉기(MC1) 고장/검지이상](3-safety-board-part/E02280.md)
-  * [3.14 E02281 서보ON 상태에서 전자접촉기(MC1) 고장/검지이상](3-safety-board-part/E02281.md)
-  * [3.15 E02301 CPUERR 신호 불일치 (H6COM 테스크 에러)](3-safety-board-part/E02301.md)
-  * [3.16 E64002 H6COM-T Heartbeat 갱신 중단 에러](3-safety-board-part/E64002.md)
-  * [3.17 E64003 서보보드(BD640) 상태 입력 에러](3-safety-board-part/E64003.md)
-  * [3.18 E64035 안전모듈 상태 출력(SFST) 불일치 (안전체인2 OFF)](3-safety-board-part/E64035.md)
-
-* [4. 서보안전 보드(서보파트)](4-servo-board-part/README.md)
-=======
 * [3. 안전신호 보드](3-safety-board-part/README.md)
   * [3.1  N00088 외부 비상정지 입력](3-safety-board-part/N00088.md)
   * [3.2  E00002 주축 리밋 스위치 작동중](3-safety-board-part/E00002.md)
@@ -55,10 +32,8 @@
   * [3.4  E51431 (A ch) 전자접촉기 피드백 이상](3-safety-board-part/E51431.md)
   * [3.5  E52042 (0 ch) 안전 입력 신호의 불일치](3-safety-board-part/E52042.md)
   * [3.6  E52043 (0 ch) 부가 안전 입력 신호의 불일치](3-safety-board-part/E52043.md)
-
   
 * [4. 서보 보드](4-servo-board-part/README.md)
->>>>>>> 70da6ce44c32c949db67d7672c229b93e4e4b222
   * [4.1  E02470(O축) 엔코더이상: 엔코더 리셋 필요](4-servo-board-part/E02470.md)
   * [4.2  E02670(O축) 지령치 이상](4-servo-board-part/E02670.md)
   * [4.3  E02680(O축) 최고속 초과](4-servo-board-part/E02680.md)
