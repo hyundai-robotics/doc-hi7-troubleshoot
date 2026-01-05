@@ -3,11 +3,10 @@
 * [Hi7 제어기 트러블슈팅 매뉴얼](README.md)
 
 * [1. 전장](1-elec/README.md)
-  * [1.1 전압점검1 – Hi6-N 제어기 내부 3상 전압 점검절차](1-elec/VOLTAGE_1.md)
-  * [1.2 전압점검2 – Hi6-N 제어기 입력 3상 전압 점검절차](1-elec/VOLTAGE_2.md)
-  * [1.3 전압점검3 – Hi6-T 제어기 입력 단상 전압 점검 절차](1-elec/VOLTAGE_3.md)
-  * [1.4 부품 교환 요령](1-elec/Parts_replacement_tips.md)
-  * [1.5 조정 요령](1-elec/Adjustment_tips.md)
+  * [1.1 전압점검1 – Hi7-N 제어기 내부 3상 전압 점검절차](1-elec/VOLTAGE_1.md)
+  * [1.2 전압점검2 – Hi7-N 제어기 입력 3상 전압 점검절차](1-elec/VOLTAGE_2.md)
+  * [1.3 부품 교환 요령](1-elec/Parts_replacement_tips.md)
+  * [1.4 조정 요령](1-elec/Adjustment_tips.md)
 
 * [2. 서보AMP 보드](2-servo-amp-board-part/README.md)
   * [2.1  E02500 AMP의 회생방전 저항 과열](2-servo-amp-board-part/E02500.md)
