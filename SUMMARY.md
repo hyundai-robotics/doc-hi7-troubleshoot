@@ -63,6 +63,7 @@
 * [5. 통신](5-communication/README.md)
   * [5.1  E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)](5-communication/E29003.md)
   * [5.2  E29016 전장보드 통신(EtherCAT) 마스터 연결 끊김 발생](5-communication/E29016.md)
+  * [5.3  전장보드 통신(EtherCAT) 마스터 ENI 불일치](5-communication/EtherCAT_ENI_Missmatch.md)
 
 * [별첨](appendices/README.md)
   * [산업안전보건기준에 관한 규칙 및 안전검사 고시](appendices/rules-occupational-safety.md)
