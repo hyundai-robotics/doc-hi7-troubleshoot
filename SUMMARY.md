@@ -28,9 +28,9 @@
   * [3.2  E00002 주축 리밋 스위치 작동중](3-safety-board-part/E00002.md)
   * [3.3  E02310 자동모드 안전가드 스위치 동작중](3-safety-board-part/E02310.md)
   * [3.4  E02320 일반안전가드 스위치 동작중](3-safety-board-part/E02320.md)
-  * [3.4  E51431 (A ch) 전자접촉기 피드백 이상](3-safety-board-part/E51431.md)
-  * [3.5  E52042 (0 ch) 안전 입력 신호의 불일치](3-safety-board-part/E52042.md)
-  * [3.6  E52043 (0 ch) 부가 안전 입력 신호의 불일치](3-safety-board-part/E52043.md)
+  * [3.5  E51431 (A ch) 전자접촉기 피드백 이상](3-safety-board-part/E51431.md)
+  * [3.6  E52042 (0 ch) 안전 입력 신호의 불일치](3-safety-board-part/E52042.md)
+  * [3.7  E52043 (0 ch) 부가 안전 입력 신호의 불일치](3-safety-board-part/E52043.md)
   
 * [4. 서보안전 보드(서보파트)](4-servo-board-part/README.md)
   * [4.1  E02470(O축) 엔코더이상: 엔코더 리셋 필요](4-servo-board-part/E02470.md)
