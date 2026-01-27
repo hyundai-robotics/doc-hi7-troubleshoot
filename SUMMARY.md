@@ -1,6 +1,6 @@
 ﻿# Table of contents
 
-* [Hi7 제어기 트러블슈팅 매뉴얼](README.md)
+* [Hi7 제어기 보수설명서 - 트러블슈팅](README.md)
 
 * [1. 전장](1-elec/README.md)
   * [1.1 전압점검1 – Hi7-N 제어기 내부 3상 전압 점검절차](1-elec/VOLTAGE_1.md)
