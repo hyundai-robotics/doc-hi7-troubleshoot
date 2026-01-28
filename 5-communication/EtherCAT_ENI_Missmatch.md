@@ -1,11 +1,11 @@
-# 전장보드 통신(EtherCAT) 마스터 ENI 불일치
+## 5.3. 전장보드 통신(EtherCAT) 마스터 ENI 불일치
 
-## 1. 개요
+### 1. 개요
 
 제어기 통신 연결 구성과 설정된 ENI파일이 불일치 합니다.<br>
 (ENI : EtherCAT Network Information)
 
-## 2. 원인
+### 2. 원인
 
 {% hint style="info" %}
 
