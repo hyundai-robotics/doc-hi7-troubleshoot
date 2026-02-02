@@ -1,12 +1,13 @@
 ﻿
 [__SOURCE](README.md)
-# Hi7 제어기 보수설명서 - 트러블슈팅
+# Hi7 Controller Maintenance Manual – Troubleshooting
 
-제어기는 고정밀도, 고신속성을 가장 중점으로 구성되어 있습니다. 만일 문제가 발생한 경우 원인 발견 및 복귀가 용이하도록 배려되어 있습니다. 이 설명서를 충분히 이해하여 원활한 고장수리(Troubleshooting)에 활용되도록 바랍니다.
+The controller is designed with primary emphasis on high precision and high-speed performance.
+In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
 
-## 고장수리 방법
+## Troubleshooting Procedures
 
-Hi7-N제어기에서 발생하는 에러코드에 대하여 각각의 고장수리 방법에 대해서 설명합니다.
+This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
 
 [__SOURCE](1-elec/README.md)
 # 1. 전장
@@ -1313,7 +1314,7 @@ D)	조그키를 사용하여 로봇을 동작영역 안으로 이동시킵니다
 
 이와 같은 경우는 리밋스위치와 관계된 구성품들에서 원인을 찾을 수 있습니다. 리밋스위치는 다음 그림과 같이 본체로부터 CEC1 – CER1 케이블을 통하여 제어기의 서보안전 보드 또는 옵션 안전 IO 보드에 연결됩니다.
 
-![](../_assets/3-Safety-io/E00002/hw_limit_sw_wire_0.png)<br>
+![](../_assets/3-Safety-io/E00002/hw_limit_sw_wire_0_en.png)<br>
 그림 3.2.4. 하드웨어 리밋SW 배선 구조<br>
 
 주요 점검 포인트와 순서는<br>
@@ -1382,7 +1383,7 @@ C(M)ER1커넥터-C(M)EC1 커넥터 간 와이어하니스 케이블 또는 커�
 ② 저항이 쇼트상태로 측정되었다면,<br>
 다른 부분의 고장을 체크하여야 합니다. 당사에 문의하십시오.<br>
 
-![](../_assets/3-Safety-io/E00002/그림8.jpg)<br>
+![](../_assets/3-Safety-io/E00002/그림8_en.png)<br>
 그림 3.2.7. 하드웨어 리밋SW 하네스 C(M)ER 구조
 
 ### (3) 주축 리밋 스위치 회로의 배선 또는 접점에 이상이 발생한 경우
@@ -1946,7 +1947,7 @@ TP화면상의 등록된 로봇기종과 실제 설치된 로봇이 일치하는
 
 엔코더측 커넥터 pin(3-4)의 전압을 측정해 주십시오.
 
-![](../_assets/4.서보보드/encoder_connector_pin_info.png)<br>
+![](../_assets/4.서보보드/encoder_connector_pin_info_en.png)<br>
 그림 4.4.1 엔코더 커넥터 핀 정보
 
 측정된 전압이 기준 전압보다 낮을 경우, 서보안전 보드(BD642)의 VR1 볼륨저항을 돌려 엔코더측 커넥터 전압이 기준전압 이내가 되도록 조정하십시오.
@@ -2002,7 +2003,7 @@ CER1과 엔코더 측 커넥터간의 배선을 점검하십시오.
 ![](../_assets/4.서보보드/encoder_comm_fail_screen.png)
 그림 4.4.9 엔코더 통신실패 모니터링
 
-![](../_assets/4.서보보드/encoder_comm_fail_number.png)
+![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
 
 
 [__SOURCE](4-servo-board-part/E50102.md)
@@ -2073,7 +2074,7 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오. 배선점검�
 ![](../_assets/4.서보보드/encoder_comm_fail_screen.png)<br>
 그림 4.5.7 엔코더 통신실패 모니터링
 
-![](../_assets/4.서보보드/encoder_comm_fail_number.png)
+![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
 
 
 [__SOURCE](4-servo-board-part/E50103.md)
@@ -2219,7 +2220,7 @@ CER1과 엔코더측 커넥터간의 배선을 점검하십시오. 배선점검�
 
 엔코더측 커넥터 pin(3-4)의 전압을 측정해 주십시오.
 
-![](../_assets/4.서보보드/encoder_connector_pin_info.png)<br>
+![](../_assets/4.서보보드/encoder_connector_pin_info_en.png)<br>
 그림 4.11.1 엔코더 커넥터 핀 정보
 
 측정된 전압이 기준전압보다 낮을 경우 서보안전 보드(BD642)의 VR1 볼륨저항을 돌려 엔코더측 커넥터 전압이 기준전압 이내가 되도록 조정하십시오.
@@ -3216,20 +3217,19 @@ C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
 
 
 [__SOURCE](appendices/README.md)
-# 별첨
-
+# Appendices
   
 
 
 
 [__SOURCE](appendices/rules-occupational-safety.md)
-# 산업안전보건기준에 관한 규칙 및 안전검사 고시
+# Rules on Occupational Safety and Health Standards and Safety Inspection Notification
 
-당해 산업용 로봇은 산업안전보건기준에 관한 규칙 및 안전검사 고시(검사 대상일 경우)의 검사 기준을 고려하여 설치하여야 한다.
+This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
 
-"[산업안전보건기준에 관한 규칙](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
 
 [__SOURCE](quality-assurance.md)
-# 품질보증
+# Quality Assurance
 
-"[품질보증](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
+"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"

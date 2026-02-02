@@ -1,8 +1,8 @@
 ﻿{
-    "langCode": "ko",
-    "series": "Hi7 제어기",
-    "title": "보수설명서 - 트러블슈팅",
-    "publisher": "HD현대로보틱스",
-    "tocTitle": "목차",
+    "langCode": "en",
+    "series": "Hi7 Controller",
+    "title": "Maintenance Manual – Troubleshooting",
+    "publisher": "HD Hyundai Robotics",
+    "tocTitle": "Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]"
 }

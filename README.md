@@ -1,7 +1,8 @@
-﻿# Hi7 제어기 보수설명서 - 트러블슈팅
+﻿# Hi7 Controller Maintenance Manual – Troubleshooting
 
-제어기는 고정밀도, 고신속성을 가장 중점으로 구성되어 있습니다. 만일 문제가 발생한 경우 원인 발견 및 복귀가 용이하도록 배려되어 있습니다. 이 설명서를 충분히 이해하여 원활한 고장수리(Troubleshooting)에 활용되도록 바랍니다.
+The controller is designed with primary emphasis on high precision and high-speed performance.
+In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
 
-## 고장수리 방법
+## Troubleshooting Procedures
 
-Hi7-N제어기에서 발생하는 에러코드에 대하여 각각의 고장수리 방법에 대해서 설명합니다.
+This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
