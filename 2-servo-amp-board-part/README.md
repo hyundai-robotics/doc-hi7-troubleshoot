@@ -1,1 +1,1 @@
-﻿# 2. 서보AMP 보드
+﻿# 2. Servo AMP Board
