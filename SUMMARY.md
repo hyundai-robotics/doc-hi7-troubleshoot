@@ -61,9 +61,9 @@
   * [4.26. E51443 Brake Power Error](4-servo-board-part/E51443.md)
 
 * [5. Communication](5-communication/README.md)
-  * [5.1. E29003 Electrical Board Communication Error (EtherCAT Connection Lost)](5-communication/E29003.md)
-  * [5.2. E29016 Electrical Board Communication (EtherCAT) Master Connection Lost](5-communication/E29016.md)
-  * [5.3. Electrical Board Communication (EtherCAT) Master ENI Mismatch](5-communication/EtherCAT_ENI_Missmatch.md)
+  * [5.1. E29003 Board Communication Error (EtherCAT Disconnected)](5-communication/E29003.md)
+  * [5.2. E29016 Board Communication (EtherCAT) Master Disconnection Detected](5-communication/E29016.md)
+  * [5.3. Board Communication (EtherCAT) Master ENI Mismatch](5-communication/EtherCAT_ENI_Missmatch.md)
 
 * [Appendices](appendices/README.md)
   * [Rules on Occupational Safety and Health Standards and Safety Inspection Notices](appendices/rules-occupational-safety.md)

@@ -1,4 +1,6 @@
-﻿# Hi7 Controller Maintenance Manual – Troubleshooting
+﻿
+[__SOURCE](README.md)
+# Hi7 Controller Maintenance Manual – Troubleshooting
 
 The controller is designed with primary emphasis on high precision and high-speed performance.
 In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
@@ -6,7 +8,11 @@ In the event of a malfunction, the system is structured to allow easy identifica
 ## Troubleshooting Procedures
 
 This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
-# 1. 전장## 1.1. 전압점검1 – Hi7-N 제어기 내부 3상 전압 점검절차
+
+[__SOURCE](1-elec/README.md)
+# 1. 전장
+[__SOURCE](1-elec/VOLTAGE_1.md)
+## 1.1. 전압점검1 – Hi7-N 제어기 내부 3상 전압 점검절차
 
 (1) 제어기 내부의 3상 전원 전압을 확인하십시오.
 
@@ -26,6 +32,8 @@ This section describes the troubleshooting procedures for each error code that m
 
 2)	제어기 명판의 전압이 220V가 아닌 경우
 제어기 입력전원이 AC 220V 사양이 아닌 경우에는 내장된 트랜스포머를 사용하여 3상 전원을 AC220V로 변환하여 전장모듈에 연결됩니다. 전장모듈 측에서 측정된 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 내장된 트랜스포머의 입력과 출력 단자의 연결 상태를 점검하십시오. 내장된 트랜스포머의 1차단은 제어기 명판에 표기된 전압으로 연결되어야 합니다. 트랜스포머의 2차단은 항상 AC 3상 220V로 설정되어 있습니다. 입력단자와 출력단자가 올바르게 연결된 상태에서도 출력단자에서 AC 3상 220V가 정상적으로 출력되지 않으면 트랜스포머 불량입니다. 이때의 트랜스포머의 출력전압 오차는 5% 이내이어야 합니다.
+
+[__SOURCE](1-elec/VOLTAGE_2.md)
 ## 1.2. 전압점검2 – Hi7-N 제어기 입력 3상 전압 점검절차
 
 (1)	제어기에 부착된 명판의 전압과 실제 입력전압을 확인하십시오.
@@ -41,6 +49,8 @@ This section describes the troubleshooting procedures for each error code that m
 {% hint style="warning" %}
 고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
 {% endhint %}
+
+[__SOURCE](1-elec/Parts_replacement_tips.md)
 ## 1.3. 부품 교환 요령
 
 고장수리(troubleshooting)시 각 부품 및 기판의 교환요령을 설명합니다.
@@ -133,6 +143,8 @@ PSM는 주 제어전원으로 이용되는 복합전원장치로서 정밀장치
 ③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
 ④	커넥터가 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
 
+
+[__SOURCE](1-elec/Adjustment_tips.md)
 ## 1.4. 조정 요령
 
 본 제어기는 출하시에 기본적으로 모든 것이 조정이 되어 있으므로 별도로 조정할 필요 없습니다. 그러나 부품을 교환할 경우에는 일부 조정이 필요하며 그 조정위치와 요령을 설명합니다. 필요한 경우를 제외하고는 조정하지 말고 문제가 발생하였더라도 그 원인이 밝혀지지 않은 경우에는 절대로 건드리지 않도록 하십시오. 
@@ -161,7 +173,11 @@ Hi7-N제어기 : 변압기(TR2)의 출력 전원은 반드시 AC220V 로 이용�
 {% endhint %}
 
 본 제어기내 입력전원은 반드시 AC220V 3상을 사용해야 합니다. 그외 전압 사양의 제어기는 출하 시 조정 완료된 상태이오니, 당사 요원의 허락 없이 절대로 탭을 변경할 수 없습니다.
-# 2. Servo AMP Board## 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
+
+[__SOURCE](2-servo-amp-board-part/README.md)
+# 2. Servo AMP Board
+[__SOURCE](2-servo-amp-board-part/E02500.md)
+## 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
 
 ### 1. Overview
 
@@ -246,6 +262,8 @@ If all fans are inoperative, please verify the fan input voltage. The fan input 
 * Verify the error according to the robot's playback speed.
 
 If an overheat error occurs during continuous playback for 5 minutes or longer, it is likely because the robot's repetitive motions have exceeded the controller's cooling capacity. Please reduce the robot's playback speed and verify if the error persists. If the overheat error is resolved by lowering the speed but the required cycle time for the task cannot be achieved, please contact our technical support department.
+
+[__SOURCE](2-servo-amp-board-part/E02501.md)
 ## 2.2. E02501 AMP Regenerative Discharge Resistor Open Circuit, Resistor or Circuit Error
 
 ### 1. Overview
@@ -326,6 +344,8 @@ Regenerative discharge operation begins at approximately DC 375V. If a voltage o
 
 -> Servo Drive Unit Input Voltage Specification: 3-phase AC 220V
 -> Allowable Range when Motor is ON: 198V ~ 242V
+
+[__SOURCE](2-servo-amp-board-part/E02502.md)
 ## 2.3. E02502 AMP Regenerative Discharge Resistor Detection Circuit Error
 
 ### 1. Overview
@@ -394,6 +414,8 @@ The modules responsible for detecting the regenerative discharge resistor overhe
 -> Hi7-NX Controller: To be included in the future (TBD).
 
 Please identify the specific components installed in your current controller before proceeding with the inspection. Replace the unit with a known functional part and verify whether the error recurs.
+
+[__SOURCE](2-servo-amp-board-part/E02503.md)
 ## 2.4. E02503 AMP PN Overvoltage Generated
 
 ### 1. Overview
@@ -446,7 +468,9 @@ If the resistance value is higher than the specification, regenerative discharge
 
 ![](../_assets/2.서보AMP/E02503/E02503_1.PNG  )
 
-Figure 1.1 Measuring Resistance at the CNDR Connector (Hi6-N Controller)## 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
+Figure 1.1 Measuring Resistance at the CNDR Connector (Hi6-N Controller)
+[__SOURCE](2-servo-amp-board-part/E02504.md)
+## 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
 
 ### 1. Overview
 
@@ -510,6 +534,8 @@ If a voltage of AC 242V or higher is supplied to the servo drive unit, an overvo
 
 -> Allowable Range when Motor is ON: 198V ~ 242V
 
+
+[__SOURCE](2-servo-amp-board-part/E02505.md)
 ## 2.6. E02505 AMP PN Overvoltage Detection Path Error or Discharge Error
 
 Former Error Code: E0011 AMP P-N Overvoltage Generated
@@ -573,7 +599,9 @@ Figure 1.1 Component Layout for Overvoltage Error (Hi7-N Controller)
 
 (3)	Hi7-NX Controller
 
-->	To be included in the future (TBD)## 2.7. E02506 AMP PN Undervoltage Generated
+->	To be included in the future (TBD)
+[__SOURCE](2-servo-amp-board-part/E02506.md)
+## 2.7. E02506 AMP PN Undervoltage Generated
 
 ### 1. Overview
 
@@ -627,6 +655,8 @@ The AMP undervoltage error is triggered when the DC link voltage drops to approx
 
 
 
+
+[__SOURCE](2-servo-amp-board-part/E02507.md)
 ## 2.8. E02507 AMP Diode Module Error or AC Input Voltage Insufficient
 
 
@@ -728,7 +758,9 @@ The AMP undervoltage error is triggered at approximately DC 142V. If the motor i
 
 * Hi7-NX Controller (To be included in the future)
 
--> Specifications and inspection procedures for the Hi7-NX model will be updated in a future revision.## 2.9. E02508 AMP PN Undervoltage Detection Path Error or Discharge Error
+-> Specifications and inspection procedures for the Hi7-NX model will be updated in a future revision.
+[__SOURCE](2-servo-amp-board-part/E02508.md)
+## 2.9. E02508 AMP PN Undervoltage Detection Path Error or Discharge Error
 
 
 Former Error Code: E0033 AMP PN Undervoltage Generated
@@ -788,6 +820,8 @@ Figure 1.1 Replacement of Control Module and Servo Drive Unit
 (2) Please inspect the components related to undervoltage error detection.
 
 -> To be included in the future (TBD)
+
+[__SOURCE](2-servo-amp-board-part/E02522.md)
 ## 2.10. E02522 (Axis ○) IPM Fault – Specific Step
 
 ### 1. Overview
@@ -831,6 +865,8 @@ If the error occurs at a step where a posture change causes a sudden fluctuation
 ->  Verify the error by changing the interpolation of the taught step
 
 If the axis speed continues to fluctuate drastically even after reducing the playback speed to 75% or lower, change the interpolation of the taught step to 'P' (PTP: Point-to-Point) and verify the error. If the error is resolved by changing the interpolation at the same playback speed, please modify the teaching points accordingly.
+
+[__SOURCE](2-servo-amp-board-part/E02541.md)
 ## 2.11. E02541 Drive Unit Control Voltage Low
 
 ### 1. Overview
@@ -946,6 +982,8 @@ Figure 1.1 Location of Controller Power LEDs (Location of the ‘POW LED’ on t
 
 ->  Hi7-NX : To be included in the future (TBD)
 
+
+[__SOURCE](2-servo-amp-board-part/E50300.md)
 ## 2.12. E50300 (Axis ○) IPM Fault
 
 ### 1. Overview
@@ -1086,6 +1124,8 @@ If a fan is not rotating or the rotation speed is abnormally low, please replace
 ->	Check the fan power supply voltage.
 
 If all fans are not operating, please check the input voltage supplied to the fans. The input voltage for the fans is set to 220V AC, with an allowable tolerance of within 10% of the rated voltage. If the voltage is more than 10% lower than the rating, the cooling efficiency will decrease due to the reduced fan rotation speed. If the voltage is low, please check the power connector for the rear cooling fans and the main input voltage of the controller.
+
+[__SOURCE](2-servo-amp-board-part/E50301.md)
 ## 2.13. E50301 (Axis ○) IPM Fault - Gate Drive Power Undervoltage
 
 ### 1. Overview
@@ -1143,492 +1183,560 @@ If the error does not recur after replacing the servo board, the original servo 
 
 *   Hi7-N Controller: BD642
 *   Hi7-T Controller: To be included in the future
-*   Hi7-NX Controller: To be included in the future# 3. 서보안전 보드(안전파트)## 3.1. N00088 외부비상정지 입력
-### 1. 개요
-외부 비상정지(E-Stop) 신호가 입력되었습니다.<br>
-안전을 확보하기 위해 로봇의 모든 모션은 즉시 정지되며,서보 모터는 모터 오프(Motor OFF) 상태로 전환됩니다.
+*   Hi7-NX Controller: To be included in the future
+[__SOURCE](3-safety-board-part/README.md)
+# 3. 서보안전 보드(안전파트)
+[__SOURCE](3-safety-board-part/N00088.md)
+## 3.1. N00088 External Emergency Stop (E-Stop) Input
 
-### 2. 원인 및 점검
+### 1. Overview
+An external emergency stop (E-Stop) signal has been triggered.<br>
+To ensure safety, all robot motions are immediately stopped, and the servo motors are switched to **Motor OFF** state.
+
+### 2. Causes and Checks
 {% hint style="info" %}
-(1) 실제 외부 비상정지(E-Stop) 버튼이 작동한 경우<br>
-(2) 외부 비상정지 회로의 배선 또는 접점에 이상이 발생한 경우<br>
-(3) 외부 비상정지 신호에 대한 안전 입력 할당이 설정되지 않은 경우<br>
+(1) The external emergency stop (E-Stop) button was actually pressed.<br>
+(2) There is a problem in the wiring or contacts of the external E-Stop circuit.<br>
+(3) The safety input assignment for the external E-Stop signal is not configured.<br>
 {% endhint %}<br>
 
-### (1) 실제 외부 비상정지 버튼이 작동한 경우
-외부 비상정지(E-Stop) 버튼이 실제로 작동했는지 확인하십시오. 다른 작업자 또는 관리자가 외부 비상정지 버튼을 작동시켰을 수 있습니다.<br>
-또한, 안전 펜스 내부에서 작업자가 작업 중일 가능성이 있으므로 로봇 주변에 인원이 있는지, 또는 위험 요소(공구, 지그 등)가 존재하는지 확인하십시오.<br>
-로봇을 재가동해도 안전하다고 판단되는 경우, 외부 비상정지 버튼을 해지한 후 수동 운전 모드에서 로봇을 먼저 동작시키십시오.<br>
+### (1) When the External E-Stop Button Was Actually Pressed
+Check whether the external emergency stop (E-Stop) button was actually pressed. Another operator or administrator may have triggered the E-Stop button.<br>
+Also, verify if there are any personnel around the robot or potential hazards (tools, jigs, etc.) inside the safety fence, as someone might be working within it.<br>
+If it is judged safe to restart the robot, release the external E-Stop button first and operate the robot in **Manual Mode** before resuming normal operation.<br>
 
-### (2)	외부 비상정지 회로의 배선 또는 접점에 이상이 발생한 경우
-외부 비상정지 관련 배선을 점검하기 위해서는 외부 비상정지 입력이 [안전 입출력 할당] 기능을 통해 어떤 입력 채널에 할당되어 있는지 확인하십시오.<br>
-기본 설정의 경우(공장출하 시), 외부 비상정지 입력은 기본 안전입력 0번 채널에 할당되어 있습니다.
+### (2) When There Is an Issue with the Wiring or Contacts of the External E-Stop Circuit
+To inspect the wiring related to the external E-Stop, first check which input channel the external E-Stop signal is assigned to through the **Safety I/O Assignment** function.<br>
+By default (factory setting), the external E-Stop input is assigned to the basic safety input.
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:안전 입출력 할당<br>
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: I/O Assignment<br>
 ![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
-그림 3.1.1. T/P 화면 안전 입출력 할당 화면<br>
+Figure 3.1.1. T/P Screen Safety I/O Assignment
 
-#### 2-1) 기본 안전입력에 할당되어 있는 경우
-외부 비상정지 입력이 기본 안전입력에 할당되어 있는 경우, 서보안전 보드 CNSI1 커넥터(4채널)에 연결되어 있습니다. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+#### 2-1) When Assigned to Basic Safety Input
+If the external E-Stop input is assigned to the **Basic Safety Input**, it is connected to the **CNSI1 connector (4 channels)** on the Servo Safety Board. For detailed pin mapping of this connector, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
 
 ![](../_assets/3-Safety-io/N00088/bd642_cnsi1_position.png)<br>
-그림 3.1.2. Hi7-N제어기 서보안전 보드 CNSI1 위치<br>
+Figure 3.1.2. Hi7-N Controller Servo Safety Board CNSI1 Location<br>
 
-외부 비상정지 입력이 어떤 채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 그림 3.1.1.을 통해 확인 가능합니다.<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 서보안전 보드 CNSI1의 결선 표준은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+Check which channel the external E-Stop input is assigned to. The input channel assignment can be confirmed using Figure 3.1.1.<br>
+Once the assigned input channel is confirmed, refer to the site electrical drawings or wiring diagrams to ensure that the wiring is correct. Also, check the actual wiring for proper connections and assembly.<br>
+When verifying the electrical drawings or wiring diagrams, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6** for the standard wiring of the Servo Safety Board CNSI1.
 
-#### 2-2) 부가 안전입력에 할당되어 있는 경우 
-외부 비상정지 입력이 부가 안전입력에 할당되어 있는 경우, 옵션 안전IO 보드 CNSI2 커넥터(8채널)에 연결되어 있습니다. 해당 커넥터의 자세한 핀맵은 'Hi7 제어기 보수 설명서' 5.4.6.절을 참고하세요.
-
+#### 2-2) If Assigned to Extended Safety Input  
+If the external E-Stop input is assigned to an extended safety input, it is connected to the Option Safety IO Board CNSI2 connector (8 channels). Refer to **Hi7 Controller Maintenance Manual, Section 5.4.6** for the detailed pinout of this connector.  
 ![](../_assets/3-Safety-io/N00088/bd680_cnsi2_position.png)<br>
-그림 3.1.3. Hi7-N제어기 옵션 안전IO 보드 CNSI2 위치<br>
+Figure 3.1.3. Hi7-N Controller Option Safety IO Board CNSI2 Location<br>
 
-외부 비상정지 입력이 어떤 채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 그림 3.1.1.을 통해 확인 가능합니다.<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 옵션 안전 IO 보드 CNSI2의 결선 표준은 'Hi7 제어기 보수 설명서' 5.4.6.절을 참고하세요.
+Check which channel the external E-Stop input is assigned to. The input channel assignment can be confirmed using Figure 3.1.1.<br>
+Once the assigned input channel is confirmed, refer to the site electrical drawings or wiring diagrams to ensure proper wiring. Also, inspect the actual wiring for proper connections and assembly.<br>
+When verifying the electrical drawings or wiring diagrams, refer to **Hi7 Controller Maintenance Manual, Section 5.4.6** for the standard wiring of the Option Safety IO Board CNSI2.
 
-#### 2-3) 안전 통신입력에 할당되어 있는 경우
-외부 비상정지 입력이 안전 통신입력에 할당되어 있는 경우, 'Hi7 로봇제어기 기능설명서-산업용 통신'메뉴얼을 참고하세요.
+#### 2-3) When assigned to Safety Communication Input
+If the external E-Stop input is assigned to the Safety Communication Input, refer to the **Hi7 Robot Controller Function Manual – Industrial Communication**.
 
-### (3) 외부 비상정지 신호에 대한 안전입력 할당이 설정되지 않은 경우
-외부 비상정지 입력이 안전입력 할당에서 선택되지 않은 경우, 다음 항목 중 하나를 선택하여 외부 비상정지 기능을 활성화하십시오.<br>
+### (3) When no safety input assignment is set for the external E-Stop signal
+If the external E-Stop input is not selected in the safety input assignment, activate the external E-Stop function by selecting one of the following options:<br>
 
-- 기본 안전 입력 (Basic Safety Input)<br>
-- 부가 안전 입력 (Extended Safety Input)<br>
-- 안전 통신 입력 (Safety Communication Input)<br>
+- Basic Safety Input<br>
+- Extended Safety Input<br>
+- Safety Communication Input<br>
 
-안전 입력 할당 기능은 아래의 메뉴를 통해 설정할 수 있습니다.
+The safety input assignment can be configured through the following menu:
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:안전 입출력 할당<br>
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment<br>
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-그림 3.1.4. T/P 화면 안전 입출력 할당 화면<br>
+Figure 3.1.4. T/P screen – Safety Input/Output Assignment
 
-## 3.2. E00002 주축 리밋 스위치 작동중
+[__SOURCE](3-safety-board-part/E00002.md)
+## 3.2. E00002 Primary Axis Limit Switch Activated
 
-### 1. 개요
+### 1. Overview
 
-로봇 각 축의 동작영역 끝에 설치한 리밋스위치가 작동하였습니다. 안전을 위하여 로봇은 즉각적으로 정지하며 적절한 방법으로 안전한 동작영역으로 이동할 때까지는 정상적인 운전을 할 수 없습니다.
+The limit switch installed at the end of the travel range for each robot axis has been triggered. For safety, the robot immediately stops and cannot operate normally until it is moved back to a safe operating range using the proper procedure.
 
-### 2. 원인 및 점검
+### 2. Cause and Inspection
 
 {% hint style="info" %}
-(1)	실제로 동작영역을 이탈한 것인지 확인하십시오.<br>
-* 동작영역 이탈시의 복구방법<br>
-(2)	동작영역 이탈이 아님에도 불구하고 에러가 발생하는 경우<br>
-* 시스템보드 커넥터(CNLS)에서 점검하는 방법
-* 와이어 하니스(C(M)ER1 또는 C(M)EC1)에서 점검하는 방법
-* 리밋스위치 및 본체 내부 배선을 점검하는 방법
-* 안전보드(BD632)를 점검하는 방법<br>
-(3) 주축 리밋 스위치 회로의 배선 또는 접점에 이상이 발생한 경우<br>
-(4) 주축 리밋 스위치에 대한 안전 입력 할당이 설정되지 않은 경우<br>
+(1) Verify whether the robot has actually moved outside the operating range.<br>
+* Recovery procedure when the operating range is exceeded<br>
+
+(2) If the error occurs even though the operating range has not been exceeded<br>
+* Check at the system board connector (CNLS)<br>
+* Inspect the wire harness (C(M)ER1 or C(M)EC1)<br>
+* Check the limit switch and internal wiring of the main body<br>
+* Inspect the safety board (BD632)<br>
+
+(3) If there is an abnormality in the wiring or contacts of the Primary Axis limit switch circuit<br>
+
+(4) If the safety input assignment for the Primary Axis limit switch has not been configured<br>
 {% endhint %}
 
-### (1) 실제로 동작영역을 이탈한 것인지 확인하십시오.
+### (1) Verify Whether the Robot Has Actually Exceeded the Operating Range
 
-실제로 로봇이 동작영역 밖으로 벗어났는지 확인하십시오. 소프트리밋 에러도 동시에 발생하였다면 로봇은 동작영역을 이탈한 것입니다. 적절한 조작으로 로봇을 동작영역 안으로 이동시키십시오. 동작영역은 로봇 모델에 따라 다릅니다. 따라서, 리밋스위치의 설치위치도 다를 수 있으므로 해당 로봇의 보수설명서에서 “동작범위 제한” 부분을 참조하십시오.
+Check whether the robot has moved outside its designated operating range. If a soft limit error occurs simultaneously, the robot has indeed exceeded the operating range. Move the robot back into the operating range using proper operation procedures. The operating range varies depending on the robot model, so the installation position of the limit switches may also differ. Refer to the “Operating Range Limits” section in the maintenance manual of the respective robot.
 
 ![](../_assets/3-Safety-io/E00002/그림1.jpg)<br>
-그림 3.2.1. 하드웨어 리밋스위치 설치 위치의 예(HS165/HS200 로봇)
+Figure 3.2.1. Example of Hardware Limit Switch Installation Position (HS165/HS200 Robot)
 
 ![](../_assets/3-Safety-io/E00002/그림2.png)<br>
-그림 3.2.2. 하드웨어 리밋스위치 작동 범위의 예(HS165/HS200 S축)
+Figure 3.2.2. Example of Hardware Limit Switch Operating Range (HS165/HS200 S Axis)
 
-#### [동작영역 이탈시의 복구방법]
-하드웨어 리밋스위치가 걸려있는 상태에서 로봇을 움직이기 위해서는 다음과 같은 조건과 순서로 실행해야 합니다.<br>
-A)	수동모드에서 시스템 모드로 진입합니다. <br>
-B)	티치펜던트에서 인에이블링스위치를 잡습니다.<br>
+#### [Recovery Procedure When the Operating Range Is Exceeded]
 
-『수동모드』+ 『시스템』+ 『TP의 인에이블링 스위치 ON』<br>
+To move the robot while a hardware limit switch is triggered, follow the conditions and sequence below:
 
-C)	이 상태에서 모터 ON 시킵니다.<br>
-D)	조그키를 사용하여 로봇을 동작영역 안으로 이동시킵니다.<br>
+A) Enter **System Mode** from **Manual Mode**.  
+B) Hold the **Enabling Switch** on the teach pendant.  
 
-### (2)	동작영역 이탈이 아님에도 불구하고 에러가 발생하는 경우
-우선 티칭펜던트의 전용 입력신호 창에서 리밋(Over-Travel) 항목이 계속 입력되고 있는지를 확인합니다. 이 창은 “『창조정』→『선택』→『시스템입력』”를 선택하면 볼 수 있습니다. 리밋(Over-Travel) 항목이 황색 표시가 되어 있는면 에러발생를 나타냅니다.<br>
-### [주의]
-수동모드에서는 티칭펜던트의 인에이블링 스위치를 ON 시켜야 모니터링이 됩니다. 자동모드에서는 인에이블링 스위치 상태와 관계없이 모니터링 됩니다.
+『Manual Mode』 + 『System』 + 『TP Enabling Switch ON』  
+
+C) Turn **Motor ON** in this state.  
+D) Use the **Jog Keys** to move the robot back into the operating range.
+
+### (2) Error Occurs Even When the Operating Range Is Not Exceeded
+
+First, check on the teach pendant’s dedicated input signal window whether the **Limit (Over-Travel)** item is continuously active. You can view this window by selecting **『Window Layout』 → 『Select』 → 『System Input』**. If the **Limit (Over-Travel)** item is highlighted in yellow, it indicates an error occurrence.
+
+### [Caution]
+- In **Manual Mode**, the **Enabling Switch** on the teach pendant must be ON for monitoring.  
+- In **Automatic Mode**, monitoring occurs regardless of the enabling switch status.
 
 ![](../_assets/3-Safety-io/E00002/그림3.png)<br>
-그림 3.2.3. 시스템 입력창에서 리밋(Over-Travel) 모니터링 표시
+Figure 3.2.3. Over-Travel Monitoring in the System Input Window
 
-이와 같은 경우는 리밋스위치와 관계된 구성품들에서 원인을 찾을 수 있습니다. 리밋스위치는 다음 그림과 같이 본체로부터 CEC1 – CER1 케이블을 통하여 제어기의 서보안전 보드 또는 옵션 안전 IO 보드에 연결됩니다.
+In such cases, the cause can be traced to components related to the limit switch. The limit switch is connected to the controller’s servo safety system via the **CEC1 – CER1** cable from the robot body, as shown in the following figure.
 
 ![](../_assets/3-Safety-io/E00002/hw_limit_sw_wire_0_en.png)<br>
-그림 3.2.4. 하드웨어 리밋SW 배선 구조<br>
+Figure 3.2.4. Hardware Limit Switch Wiring Structure
 
-주요 점검 포인트와 순서는<br>
-A1)	서보안전 보드(CNSI1) 또는<br>
-A2) 옵션 안전 IO 보드(CNSI2)<br>
-B)	제어기 내부의 배선 및 커넥터<br>
-C)	와이어하니스 및 커넥터<br>
-D)	리밋스위치 및 본체배선<br>
+The main inspection points and sequence are as follows:  
+A1) Servo Safety Board (CNSI1) **or**  
+A2) Optional Safety IO Board (CNSI2)  
+B) Internal wiring and connectors of the controller  
+C) Wire harness and connectors  
+D) Limit switch and robot body wiring  
 
-이며, 적절한 부위에서 리밋스위치의 입력선을 점퍼하여 모니터링 창에서 리밋(Over-Travel) 항목이 백색으로 변화하는지를 확인해야 합니다.<br>
-다음의 순서에 따라 진행하십시오.
+At the appropriate location, jumper the input line of the limit switch and check whether the **Limit (Over-Travel)** item in the monitoring window changes to white.  
+Proceed according to the following sequence.
 
-### [서보안전 보드 커넥터(CNSI1) 또는 옵션 안전IO 보드 커넥터(CNSI2)에서 점검하는 방법]
+### [How to Check from the Servo Safety Board Connector (CNSI1) or Optional Safety IO Board Connector (CNSI2)]
 
 {% hint style="warning" %}
-케이블의 연결 및 제거 시에는 반드시 제어기의 전원이 꺼진 상태에서 실행하십시오. 전기적 위험은 인명사고 및 재산사고를 일으킬 수 있습니다.<br>
+Always perform cable connection or disconnection **with the controller powered OFF**. Electrical hazards can cause personal injury or property damage.<br>
 {% endhint %}
 
-#### * 서보안전 보드 커넥터(CNSI1) 점검 방법
-서보안전 보드의 CNSI1 커넥터를 통해서 보드의 고장인지 판단하는 것입니다. 할당된 입력 채널과 관련된 핀을 점퍼쇼트 하십시오. 이 상태에서 전용입력신호 모니터링 창을 통하여 리밋(Over-Travel) 항목을 확인하십시오.<br>
-① 백색으로 바뀌었다면, 서보안전 보드 고장입니다. 보드를 교체하십시오.<br>
-② 황색으로 여전히 에러상태라면, 서보안전 보드 이후 본체 리밋스위치까지의 영역에서 고장을 체크하십시오.<br>
-아래 그림은 리밋 스위치가 1번 채널에 할당되었을 때의 점퍼쇼트의 예입니다. 실제 할당된 채널에 점퍼쇼트 연결하여 시험하십시오.
+#### * How to Check the Servo Safety Board Connector (CNSI1)
+This step determines whether the fault originates from the servo safety board via the CNSI1 connector. Jumper the pins related to the assigned input channel. Then, check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window.
+
+1. If the indicator changes to **white**, the servo safety board is faulty. Replace the board.
+2. If it remains **yellow** (error state), check for faults along the path from the servo safety board to the hardware limit switch on the robot.
+
+The figure below shows an example of jumper shorting when the limit switch is assigned to channel 1. Perform the test by connecting the jumper to the actually assigned channel.
 
 ![](../_assets/3-Safety-io/E00002/bd642_cnsi1_short.png)<br>
-그림 3.2.5. 서보안전 보드 커넥터(CNSI1)<br>
+Figure 3.2.5. Servo Safety Board Connector (CNSI1)
 
-#### * 옵션 안전IO 보드 커넥터(CNSI2) 점검 방법
-옵션 안전IO 보드의 CNSI2 커넥터를 통해서 보드의 고장인지 판단하는 것입니다. 할당된 입력 채널과 관련된 핀을 점퍼쇼트 하십시오. 이 상태에서 전용입력신호 모니터링 창을 통하여 리밋(Over-Travel) 항목을 확인하십시오.<br>
-① 백색으로 바뀌었다면, 옵션 안전IO 보드의 고장입니다. 보드를 교체하십시오.<br>
-② 황색으로 여전히 에러상태라면, 옵션 안전IO 보드 이후 본체 리밋스위치까지의 영역에서 고장을 체크하십시오.<br>
-아래 그림은 리밋 스위치가 3번 채널에 할당되었을 때의 점퍼쇼트의 예입니다. 실제 할당된 채널에 점퍼쇼트 연결하여 시험하십시오.
+#### * How to Check the Option Safety IO Board Connector (CNSI2)
+This step determines whether the fault originates from the option safety IO board via the CNSI2 connector. Jumper the pins related to the assigned input channel. Then, check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window.
+
+1. If the indicator changes to **white**, the option safety IO board is faulty. Replace the board.
+2. If it remains **yellow** (error state), check for faults along the path from the option safety IO board to the hardware limit switch on the robot.
+
+The figure below shows an example of jumper shorting when the limit switch is assigned to channel 3. Perform the test by connecting the jumper to the actually assigned channel.
 
 ![](../_assets/3-Safety-io/E00002/bd680_si_short.png)<br>
-그림 3.2.6. 하드웨어 리밋SW 배선 구조<br>
+Figure 3.2.6. Hardware Limit Switch Wiring Structure
 
-### [와이어하니스(C(M)ER1 또는 C(M)EC1)에서 점검하는 방법]
-{% hint style="warning" %}<br>
-케이블의 연결 및 제거 시에는 반드시 제어기의 전원이 꺼진 상태에서 실행하십시오. 전기적 위험은 인명사고 및 재산사고를 일으킬 수 있습니다.<br>
-{% endhint %}
-
-와이어하니스 커넥터 C(M)ER1 또는 C(M)EC1을 통해서 케이블 고장인지를 판단하는 것입니다. 우선 제어기로부터 C(M)EC1 와이어하니스 제거한 후, 제어기에 부착되어 있는 C(M)EC1 커넥터에서 리밋SW 관련 핀을 점퍼 쇼트하십시오. 이 상태에서 전용입력신호 모니터링 창을 통하여 리밋Over-Travel) 항목을 확인하십시오.<br>
-
-① 백색으로 바뀌었다면,<br>
-제어기 내부의 C(M)EC1 커넥터 – 시스템보드 간 케이블 또는 커넥터의 고장입니다. 이를 점검하거나 교체 하십시오.<br>
-② 황색으로 여전히 에러상태라면,<br>
-C(M)EC1 커넥터 이후 본체 리밋스위치까지의 영역에서 고장을 체크하십시오.<br>
-
-C(M)EC1 와이어하니스를 다시 연력하고 본체로부터 C(M)ER1 와이어하니스를 제거한 후, 와이어하니스의C(M)ER1커넥터에서 리밋SW관련 핀을 점퍼쇼트하십시오. 이 상태에서 전용입력신호 모니터링 창을 통하여 리밋(Over-Travel) 항목의 상태를 확인하십시오.<br>
-
-① 백색으로 바뀌었다면,<br>
-C(M)ER1커넥터-C(M)EC1 커넥터 간 와이어하니스 케이블 또는 커넥터의 고장입니다. 이를 점검하거나 교체하십시오.<br>
-② 황색으로 여전히 에러상태라면,<br>
-본체 쪽 C(M)ER1 커넥터 이후 리밋SW까지의 영역에서 고장을 체크하십시오.<br>
-
-### [리밋SW 및 본체 내부 배선을 점검하는 방법]
+### [How to Check the Wire Harness (C(M)ER1 or C(M)EC1)]
 
 {% hint style="warning" %}<br>
-케이블의 연결 및 제거 시에는 반드시 제어기의 전원이 꺼진 상태에서 실행하십시오. 전기적 위험은 인명사고 및 재산사고를 일으킬 수 있습니다.<br>
+Always turn off the controller power before connecting or disconnecting cables. Electrical hazards may cause personal injury or property damage.<br>
 {% endhint %}
 
-본체로부터 CER1 와이어하니스를 제거한 후, 본체의 CER1 커넥터에서 리밋SW 관련 라인에 이상이 있는지 멀티미터를 사용하여 쇼트 테스트하십시오.<br>
-① 저항이 오픈상태로 측정되었다면,<br>
-리밋SW 또는 리밋SW – CER1 간 커넥터 또는 커넥터의 고장입니다.
-이를 점검하거나 교체하십시오.<br>
-② 저항이 쇼트상태로 측정되었다면,<br>
-다른 부분의 고장을 체크하여야 합니다. 당사에 문의하십시오.<br>
+This step determines whether the fault originates from the wire harness via the C(M)ER1 or C(M)EC1 connector. First, remove the C(M)EC1 wire harness from the controller. Then, jumper the pins related to the limit switch on the C(M)EC1 connector attached to the controller. Check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window to verify the signal.
+
+① If the color changes to **white**,  
+the fault lies in the cable or connector between the C(M)EC1 connector inside the controller and the system board. Inspect or replace the cable/connector as needed.  
+
+② If the color remains **yellow**,  
+check for faults in the area from the C(M)EC1 connector to the hardware limit switch on the robot body.  
+
+Reconnect the C(M)EC1 wire harness and remove the C(M)ER1 wire harness from the robot body. Then, jumper the pins related to the limit switch on the C(M)ER1 connector of the wire harness.  
+Check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window.  
+
+① If the color changes to **white**,  
+the fault lies in the wire harness cable or connectors between the C(M)ER1 and C(M)EC1 connectors. Inspect or replace as necessary.  
+
+② If the color remains **yellow**,  
+check for faults in the area from the C(M)ER1 connector on the robot body to the limit switch.
+
+### [How to Inspect the Limit Switch (SW) and Internal Wiring of the Robot Body]
+
+{% hint style="warning" %}<br>
+Always ensure the controller power is **OFF** before connecting or disconnecting any cables. Electrical hazards can cause personal injury or property damage.<br>
+{% endhint %}
+
+After disconnecting the CER1 wire harness from the robot body, use a multimeter to perform a continuity test on the lines related to the limit switch at the CER1 connector on the robot body.
+
+① If the resistance measures **open**,  
+there is a fault in the limit switch or the connector/cable between the limit switch and CER1. Inspect or replace as needed.  
+
+② If the resistance measures **short**,  
+check other sections for faults. Contact the manufacturer for further guidance.
 
 ![](../_assets/3-Safety-io/E00002/그림8_en.png)<br>
-그림 3.2.7. 하드웨어 리밋SW 하네스 C(M)ER 구조
+Figure 3.2.7. Hardware Limit Switch (SW) Harness C(M)ER Structure
 
-### (3) 주축 리밋 스위치 회로의 배선 또는 접점에 이상이 발생한 경우
-주축 리밋 스위치 배선을 점검하기 위해서는,먼저 주축 리밋 스위치 입력이 [안전 입출력 할당] 기능을 통해 어떤 입력 채널에 할당되어 있는지 확인하십시오.<br>
-기본 설정의 경우, 주축 리밋 스위치는 비활성화 되어 있어 점검이 필요하지 않습니다. <br>
-만약 사용이 필요하신 경우 [안전 입출력 할당] 기능을 통해 1)기본 안전, 2)부가 안전, 3)안전 통신 중 하나를 선택하여 사용이 가능합니다.
+### (3) If there is a fault in the Primary Axis limit switch circuit wiring or contacts
 
-#### 3-1) 기본 안전 입력에 할당되어 있을 경우
-주축 리밋 스위치 입력이 기본 안전입력에 할당되어 있는 경우, 서보안전 보드 CNSI1 커넥터(4채널)에 연결되어 있습니다. 위 항목 (1)의 CNSI1 커넥터에 할당된 채널을 확인하십시오. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.<br>
+To inspect the Primary Axis limit switch wiring, first check which input channel the Primary Axis limit switch is assigned to via the **Safety I/O Assignment** function.  
+By default, the Primary Axis limit switch is **disabled**, so inspection is not required.  
+If use is needed, you can assign it through the **Safety I/O Assignment** function by selecting one of the following: 1) Basic Safety, 2) Additional Safety, or 3) Safety Communication.
 
-#### 3-2) 부가 안전 입력에 할당 되어 있는 경우 
-주축 리밋 스위치 입력이 부가 안전입력에 할당되어 있는 경우, 옵션 안전IO 보드 CNSI2 커넥터(8채널)에 연결되어 있습니다. 위 항목 (1)의 CNSI2 커넥터에 할당된 채널을 확인하십시오. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 5.4.6.절을 참고하세요.<br>
+#### 3-1) Assigned to Basic Safety Input
 
-#### 3-3) 안전 통신 입력에 할당 되어 있는 경우
-주축 리밋 스위치 입력이 안전 통신입력에 할당되어 있는 경우, 'Hi7 로봇제어기 기능설명서-산업용 통신'메뉴얼을 참고하세요.<br>
+If the Primary Axis limit switch input is assigned to the **Basic Safety Input**, it is connected to the **CNSI1 connector (4 channels) on the Servo Safety Board**.  
+Check which channel is assigned on the CNSI1 connector as described in item (1). For detailed pin mapping of this connector, refer to section 4.3.2.6 of the Hi7 Controller Maintenance Manual.
 
-### (4) 주축 리밋 스위치에 대한 안전 입력 할당이 설정되지 않은 경우<br>
-외부 비상정지 입력이 안전 입력 할당에서 선택되지 않은 경우, 다음 항목 중 하나를 선택하여 외부 비상정지 기능을 활성화하십시오.
+#### 3-2) Assigned to Additional Safety Input
 
-- 기본 안전 입력 (Basic Safety Input) 
-- 부가 안전 입력 (Extended Safety Input)
-- 안전 통신 입력 (Safety Communication Input)
+If the Primary Axis limit switch input is assigned to the **Additional Safety Input**, it is connected to the **CNSI2 connector (8 channels) on the Optional Safety I/O Board**.  
+Check which channel is assigned on the CNSI2 connector as described in item (1). For detailed pin mapping of this connector, refer to section 5.4.6 of the Hi7 Controller Maintenance Manual.
 
-안전 입력 할당 기능은 아래의 메뉴를 통해 설정할 수 있습니다.
+#### 3-3) Assigned to Safety Communication Input
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:입출력 할당<br>
-![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-그림 3.2.8. T/P 화면 안전 입출력 할당 화면<br>
+If the Primary Axis limit switch input is assigned to the **Safety Communication Input**, refer to the **Hi7 Robot Controller Function Manual – Industrial Communication** for details.
 
-## 3.3. E02310 자동모드 안전가드 스위치 동작중
+### (4) If the Primary Axis Limit Switch Safety Input Assignment is Not Configured
 
-### 1. 개요
-자동모드 안전가드 신호가 입력되었습니다.<br>
-자동모드일 경우 안전을 확보하기 위해 로봇의 모든 모션은 즉시 정지되며,서보 모터는 모터 오프(Motor OFF) 상태로 전환됩니다.<br>
+If the external emergency stop input is not selected in the safety input assignment, activate the external E-Stop function by selecting one of the following options:
 
-### 2. 원인 및 점검
+- **Basic Safety Input**  
+- **Extended Safety Input**  
+- **Safety Communication Input**  
+
+The Safety Input Assignment can be configured via the following menu:
+
+`System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety I/O -> 1: Input/Output Assignment`  
+
+![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)  
+Figure 3.2.8. T/P screen: Safety Input/Output Assignment
+
+
+[__SOURCE](3-safety-board-part/E02310.md)
+## 3.3. E02310 Automatic Mode Safety Guard Switch Activated
+
+### 1. Overview
+A safety guard signal in automatic mode has been detected.<br>
+In automatic mode, to ensure safety, all robot motions are immediately stopped, and the servo motors are switched to Motor OFF status.<br>
+
+### 2. Causes and Checks
 {% hint style="info" %}<br>
-(1)	실제로 자동모드 안전가드 신호가 입력된 경우<br>
-(2) 자동모드 안전가드 회로의 배선 또는 접점에 이상이 발생한 경우<br>
-(3) 자동모드 안전가드 신호에 대한 안전 입력 할당이 설정되지 않은 경우<br>
+(1) The automatic mode safety guard signal was actually activated.<br>
+(2) A wiring or contact issue occurred in the automatic mode safety guard circuit.<br>
+(3) The safety input assignment for the automatic mode safety guard signal is not configured.<br>
 {% endhint %}
 
-### (1)	실제로 자동모드 안전가드 신호가 입력된 경우
-자동모드 안전가드(SGA) 스위치가 실제로 작동했는지 확인하십시오.
-다른 작업자 또는 관리자가 자동모드 안전가드(SGA) 스위치을 작동시켰을 수 있습니다.<br>
-또한, 안전 펜스 내부에서 작업자가 작업 중일 가능성이 있으므로 로봇 주변에 인원이 있는지, 또는 위험 요소(공구, 지그 등)가 존재하는지 확인하십시오.<br>
-로봇을 재가동해도 안전하다고 판단되는 경우, 외부 비상정지 버튼을 해지한 후 수동 운전 모드에서 로봇을 먼저 동작시키십시오.
+### (1) When the Automatic Mode Safety Guard Signal is Actually Activated
+Check whether the automatic mode safety guard (SGA) switch was actually triggered.  
+Another operator or supervisor may have activated the automatic mode safety guard (SGA) switch.<br>
+Also, verify that no personnel are inside the safety fence and check for potential hazards (tools, jigs, etc.) around the robot.  
+If it is determined to be safe to restart the robot, release the external emergency stop button and operate the robot first in manual mode.
 
-### (2) 자동모드 안전가드 회로의 배선 또는 접점에 이상이 발생한 경우
-자동모드 안전가드 관련 배선을 점검하기 위해서는 먼저, 자동모드 안전가드 입력이 [안전 입출력 할당] 기능을 통해 어떤 입력 채널에 할당되어 있는지 확인하십시오.
-기본 설정의 경우, 자동모드 안전가드 입력은 기본 안전 입력의 2번 채널에 할당되어 있습니다.
+### (2) If There is a Wiring or Contact Issue in the Automatic Mode Safety Guard Circuit
+To inspect the wiring related to the automatic mode safety guard, first check which input channel the automatic mode safety guard input is assigned to via the [Safety I/O Assignment] function.  
+By default, the automatic mode safety guard input is assigned to channel 2 of the Basic Safety Input.
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:안전 입출력 할당<br>
-![](../_assets/3-Safety-io/E02310/base_add_comm_si_func_sel.png)<br>
-그림 3.3.1. T/P 화면 안전 입출력 할당 화면<br>
+System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety I/O -> 1: Safety I/O Assignment<br>
+![](../_assets/3-Safety-io/E02310/io_alloc_param1.png)<br>
+Figure 3.3.1. T/P screen showing the Safety I/O Assignment
 
-#### 2-1) 기본 안전입력에 할당되어 있는 경우
-자동모드 안전가드 입력이 기본 안전입력에 할당되어 있는 경우, 서보안전 보드 CNSI1 커넥터(4채널)에 연결되어 있습니다. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
 
+#### 2-1) If Assigned to Basic Safety Input
+If the automatic mode safety guard input is assigned to the Basic Safety Input, it is connected to the Servo Safety Board CNSI1 connector (4-channel). For a detailed pin map of this connector, refer to Section 4.3.2.6 of the Hi7 Controller Maintenance Manual.  
 ![](../_assets/3-Safety-io/E02310/bd642_cnsi1_position.png)<br>
-그림 3.3.2. Hi7-N제어기 서보안전 보드 CNSI1 위치<br>
+Figure 3.3.2. Location of Servo Safety Board CNSI1 on Hi7-N Controller
 
-자동모드 안전가드 입력이 어떤 채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 위 그림  T/P 화면 안전 입출력 할당 화면에서 확인 가능합니다.<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 서보안전 보드 CNSI1의 결선 표준은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+Check which channel the automatic mode safety guard input is assigned to. Input channel assignments can be verified on the T/P screen shown in the Safety I/O Assignment section above.  
+Once the assigned input channel is confirmed, refer to the site’s electrical diagram or wiring diagram to verify proper wiring. While checking the actual wiring, also confirm connector and assembly conditions.  
 
-#### 2-2) 부가 안전입력에 할당되어 있는 경우 
-자동모드 안전가드 입력이 부가 안전입력에 할당되어 있는 경우, 옵션 안전IO 보드 CNSI2 커넥터(8채널)에 연결되어 있습니다. 해당 커넥터의 자세한 핀맵은 'Hi7 제어기 보수 설명서' 5.4.6.절을 참고하세요.
+When reviewing the electrical diagram or wiring diagram, refer to Section 4.3.2.6 of the Hi7 Controller Maintenance Manual for the standard wiring of the Servo Safety Board CNSI1.
+
+#### 2-2) If Assigned to Extended Safety Input  
+If the automatic mode safety guard input is assigned to the extended safety input, it is connected to the CNSI2 connector (8 channels) of the Option Safety IO Board. For detailed pin mapping of this connector, refer to Section 5.4.6 of the Hi7 Controller Maintenance Manual.
 
 ![](../_assets/3-Safety-io/E02310/bd680_cnsi2_position.png)<br>
-그림 3.3.3. Hi7-N제어기 옵션 안전IO 보드 CNSI2 위치<br>
+Figure 3.3.3. Position of the CNSI2 connector on the Hi7-N Controller Option Safety IO Board
 
-자동모드 안전가드 입력이 어떤 채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 위 그림  T/P 화면 안전 입출력 할당 화면에서 확인 가능합니다.<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 옵션 안전 IO 보드 CNSI2의 결선 표준은 'Hi7 제어기 보수 설명서' 5.4.6.절을 참고하세요.
+Check which channel the automatic mode safety guard input is assigned to. The input channel assignment can be verified on the T/P screen in the Safety IO Allocation view, as shown in the figure above.<br>
+Once the assigned input channel is confirmed, refer to the site electrical schematic or wiring diagram to ensure the wiring is correct. Additionally, inspect the actual wiring to verify proper connections and assembly.<br>
+When checking the electrical schematic or wiring diagram, refer to Section 5.4.6 of the Hi7 Controller Maintenance Manual for the standard wiring of the Option Safety IO Board CNSI2.
 
-#### 2-3) 안전 통신입력에 할당되어 있는 경우
-외부 비상정지 입력이 안전 통신입력에 할당되어 있는 경우, 'Hi7 로봇제어기 기능설명서-산업용 통신'메뉴얼을 참고하세요.
+#### 2-3) If assigned to Safety Communication Input  
+If the external emergency stop input is assigned to a Safety Communication Input, refer to the "Hi7 Robot Controller Function Manual – Industrial Communication" for details.
 
-### (3) 자동모드 안전가드 신호에 대한 안전 입력 할당이 설정되지 않은 경우
-자동모드 안전가드 입력이 안전 입력 할당에서 선택되지 않은 경우, 다음 항목 중 하나를 선택하여 자동모드 안전가드 기능을 활성화하십시오.<br>
-- 기본 안전 입력 (Basic Safety Input) 
-- 부가 안전 입력 (Extended Safety Input)
-- 안전 통신 입력 (Safety Communication Input)<br>
-안전 입력 할당 기능은 아래의 메뉴를 통해 설정할 수 있습니다.
+### (3) If the Safety Input Assignment for the Automatic Mode Safety Guard Signal is Not Configured
+If the automatic mode safety guard input has not been selected in the safety input assignment, activate the automatic mode safety guard function by selecting one of the following options:<br>
+- Basic Safety Input  
+- Extended Safety Input  
+- Safety Communication Input<br>
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:입출력 할당
+The safety input assignment can be configured through the following menu:
+
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment  
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-그림 3.3.4. T/P 화면 안전 입출력 할당 화면<br>
+Figure 3.3.4. T/P screen – Safety Input/Output Assignment
 
-## 3.4. E02320 일반안전가드 스위치 동작중
+[__SOURCE](3-safety-board-part/E02320.md)
+## 3.4. E02320 General Safety Guard Switch Activated
 
-### 1. 개요
-일반안전가드 신호가 입력되었습니다.<br>
-안전을 확보하기 위해 로봇의 모든 모션은 즉시 정지되며,서보 모터는 모터 오프(Motor OFF) 상태로 전환됩니다.
+### 1. Overview
+A general safety guard signal has been received.<br>
+To ensure safety, all robot motion is immediately stopped, and the servo motors are switched to Motor OFF state.
 
-##### 2. 원인 및 점검
+### 2. Causes and Checks
 {% hint style="info" %}<br>
-(1)	실제로 일반안전가드 신호가 입력된 경우<br>
-(2) 일반안전가드 회로의 배선 또는 접점에 이상이 발생한 경우<br>
-(3) 일반안전가드 신호에 대한 안전 입력 할당이 설정되지 않은 경우<br>
+(1) The general safety guard signal was actually triggered.<br>
+(2) Abnormalities in the wiring or contacts of the general safety guard circuit.<br>
+(3) The general safety guard signal has not been assigned to a safety input.<br>
 {% endhint %}
 
-### (1)	실제로 일반안전가드 신호가 입력된 경우
-일반안전가드(SGG) 스위치가 실제로 작동했는지 확인하십시오. 다른 작업자 또는 관리자가 일반안전가드(SGG) 스위치을 작동시켰을 수 있습니다.<br>
-또한, 안전 펜스 내부에서 작업자가 작업 중일 가능성이 있으므로 로봇 주변에 인원이 있는지, 또는 위험 요소(공구, 지그 등)가 존재하는지 확인하십시오.<br>
-로봇을 재가동해도 안전하다고 판단되는 경우, 외부 비상정지 버튼을 해지한 후 수동 운전 모드에서 로봇을 먼저 동작시키십시오.<br>
+### (1) If the general safety guard signal was actually triggered
+Check whether the general safety guard (SGG) switch was physically activated. Another operator or manager may have triggered the general safety guard (SGG) switch.<br>
+Also, since someone might be working inside the safety fence, check if any personnel are near the robot or if there are any potential hazards (tools, jigs, etc.).<br>
+If it is judged safe to restart the robot, release the external emergency stop button and operate the robot in manual mode first.
 
-### (2) 일반안전가드 회로의 배선 또는 접점에 이상이 발생한 경우
-일반안전가드 관련 배선을 점검하기 위해서는 먼저, 일반안전가드 입력이 [안전 입출력 할당] 기능을 통해 어떤 입력 채널에 할당되어 있는지 확인하십시오.<br>
-기본 설정의 경우, 자동모드 안전가드 입력은 기본 안전 입력의 1번 채널에 할당되어 있습니다.
+### (2) If there is an abnormality in the wiring or contacts of the general safety guard circuit
+To inspect the wiring related to the general safety guard, first check which input channel the general safety guard signal is assigned to using the [Safety I/O Allocation] function.<br>
+By default, the general safety guard input is assigned to the basic safety input.
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:안전 입출력 할당<br>
-![](../_assets/3-Safety-io/E02320/base_add_comm_si_func_sel.png)<br>
-그림 3.4.1. T/P 화면 안전 입출력 할당 화면<br>
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: Safety I/O Allocation<br>
+![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
+Figure 3.4.1. T/P screen – Safety I/O Allocation
 
-#### 2-1) 기본 안전입력에 할당되어 있는 경우
-일반안전가드(SGG) 스위치 입력이 기본 안전입력에 할당되어 있는 경우, 서보안전 보드 CNSI1 커넥터(4채널)에 연결되어 있습니다. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+#### 2-1) If assigned to Basic Safety Input
+If the general safety guard (SGG) switch input is assigned to the basic safety input, it is connected to the servo safety board CNSI1 connector (4 channels). Refer to section 4.3.2.6 of the Hi7 controller maintenance manual for the detailed pin map of this connector.
 
 ![](../_assets/3-Safety-io/E02320/bd642_cnsi1_position.png)<br>
-그림 3.4.2. Hi7-N제어기 서보안전 보드 CNSI1 위치<br>
+Figure 3.4.2. Hi7-N Controller – Servo Safety Board CNSI1 Location
 
-일반안전가드(SGG) 스위치 입력이 어떤 채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 위 그림  T/P 화면 안전 입출력 할당 화면에서 확인 가능합니다.<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 서보안전 보드 CNSI1의 결선 표준은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+Check which channel the general safety guard (SGG) switch input is assigned to. The input channel assignment can be confirmed in the T/P screen shown above in the Safety I/O Allocation.
 
-#### 2-2) 부가 안전입력에 할당되어 있는 경우 
-일반안전가드(SGG) 스위치 입력이 부가 안전입력에 할당되어 있는 경우, 옵션 안전IO 보드 CNSI2 커넥터(8채널)에 연결되어 있습니다. 해당 커넥터의 자세한 핀맵은 'Hi7 제어기 보수 설명서' 5.4.6.절을 참고하세요.
+Once the assigned input channel is confirmed, refer to the site’s electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
+
+When checking the electrical schematics or wiring diagrams, refer to section 4.3.2.6 of the Hi7 controller maintenance manual for the wiring standard of the servo safety board CNSI1.
+
+#### 2-2) When Assigned to Extended Safety Input
+
+If the general safety guard (SGG) switch input is assigned to the extended safety input, it is connected to the option Safety I/O board CNSI2 connector (8 channels). Refer to section 5.4.6 of the Hi7 Controller Maintenance Manual for the detailed pinout of this connector.
 
 ![](../_assets/3-Safety-io/E02320/bd680_cnsi2_position.png)<br>
-그림 3.4.3. Hi7-N제어기 옵션 안전IO 보드 CNSI2 위치<br>
+Figure 3.4.3. Hi7-N Controller – Option Safety I/O Board CNSI2 Location
 
-일반안전가드(SGG) 스위치 입력이 어떤 채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 위 그림  T/P 화면 안전 입출력 할당 화면에서 확인 가능합니다.<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 옵션 안전 IO 보드 CNSI2의 결선 표준은 'Hi7 제어기 보수 설명서' 5.4.6.절을 참고하세요.
+Check which channel the general safety guard (SGG) switch input is assigned to. The input channel assignment can be confirmed in the T/P screen shown above in the Safety I/O Allocation.
 
-#### 2-3) 안전 통신입력에 할당되어 있는 경우
-외부 비상정지 입력이 안전 통신입력에 할당되어 있는 경우, 'Hi7 로봇제어기 기능설명서-산업용 통신'메뉴얼을 참고하세요.
+Once the assigned input channel is confirmed, refer to the site’s electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
 
-### (3) 일반안전가드 신호에 대한 안전 입력 할당이 설정되지 않은 경우
-일반안전가드 입력이 안전 입력 할당에서 선택되지 않은 경우, 다음 항목 중 하나를 선택하여 일반안전가드 기능을 활성화하십시오.<br>
-- 기본 안전 입력 (Basic Safety Input) 
-- 부가 안전 입력 (Extended Safety Input)
-- 안전 통신 입력 (Safety Communication Input)<br>
+When checking the electrical schematics or wiring diagrams, refer to section 5.4.6 of the Hi7 Controller Maintenance Manual for the wiring standard of the option Safety I/O board CNSI2.
 
-안전 입력 할당 기능은 아래의 메뉴를 통해 설정할 수 있습니다.<br>
+#### 2-3) When Assigned to Safety Communication Input
+If the external emergency stop input is assigned to the safety communication input, refer to the "Hi7 Robot Controller Function Manual – Industrial Communication" for details.
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:입출력 할당<br>
-![](../_assets/3-Safety-io/E02320/io_alloc_param1.png)<br>
-그림 3.4.4. T/P 화면 안전 입출력 할당 화면<br>
-## 3.5. E51431 (A ch) 전자접촉기 피드백 이상
+### (3) When Safety Input Assignment for the General Safety Guard Signal Is Not Configured
+If the general safety guard input is not selected in the safety input assignment, activate the general safety guard function by selecting one of the following options:<br>
+- Basic Safety Input  
+- Extended Safety Input  
+- Safety Communication Input<br>
 
-### 1. 개요
-전자접촉기(Magnetic contactor)가 동작하지 않았습니다.
+The safety input assignment can be configured via the following menu:<br>
 
-### 2. 원인 및 점검 방법
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: I/O Allocation<br>
+![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
+Figure 3.4.4. T/P Screen – Safety I/O Allocation
+
+[__SOURCE](3-safety-board-part/E51431.md)
+## 3.5. E51431 (A ch) Abnormal Feedback of Magnetic Contactor
+
+### 1. Overview
+The magnetic contactor (MC) did not operate as expected.
+
+### 2. Cause and Inspection
+
 {% hint style="info" %}
-(1)	모니터링 계통을 점검하십시오.<br>
-(2)	마그네트 MC를 점검하십시오.<br>
-(3)	전장보드를 점검하십시오.<br>
-(4)	전원공급모듈(H6PSM30)를 점검하십시오.<br>
-(5)	서보앰프를 점검하십시오.<br>
+(1) Check the monitoring system.<br>
+(2) Inspect the magnetic contactor (MC).<br>
+(3) Inspect the electrical board.<br>
+(4) Check the power supply module (H6PSM30).<br>
+(5) Inspect the servo amplifier.<br>
 {% endhint %}
 
-### (1)	모니터링 계통을 점검하십시오.
-전자접촉기가 설치되어 있는 전장모듈(PSM or PDM)과 모니터링 신호를 수집하는 서보안전 보드 간의 케이블링을 확인합니다. 케이블 이름은 CNPRC, CNPRC1이며 서보안전 보드의 신호가 백플레인 보드를 통하여 전장모듈로 들어 갑니다. 이 케이블의 커넥터 접속상태를 점검하십시오.
+### (1) Check the Monitoring System
+Verify the cabling between the electrical module where the magnetic contactor is installed (PSM or PDM) and the servo safety board that collects monitoring signals.  
+The cable names are CNPRC and CNPRC1. The servo safety board signals enter the electrical module through the backplane board. Check the connector connections of this cable.
 
 ![](../_assets/3-Safety-io/E51431/cnprc_cable.png)<br>
-그림 3.5.1 Hi7-N제어기
+Figure 3.5.1 Hi7-N Controller
 
-### (2)	마그네트 MC를 점검하십시오.
-전장모듈 내부에 있는 마그네트 MC1, MC2가 정상적으로 동작하는지 점검하십시오.
+### (2) Inspect the Magnetic Contactor (MC)
+Check whether the magnetic contactors MC1 and MC2 inside the electrical module are operating properly.
 
 ![](../_assets/3-Safety-io/E51431/psm_mc1_mc2.png)<br>
-그림 3.5.2 Hi7-N제어기(전장모듈의 내부에 설치된 마그네트 MC1, MC2)
+Figure 3.5.2 Hi7-N Controller (Magnetic contactors MC1 and MC2 installed inside the electrical module)
 
-### (3)	전장보드를 점검하십시오.
+### (3) Inspect the Electrical Board
 
-서보안전 보드와 마그네트를 중계하는 전장보드, 케이블 배선에 문제가 있을 수 있으므로 점검 또는 교체하십시오.
+Check or replace the electrical board and cable wiring that relay signals between the servo safety board and the magnetic contactors, as issues may exist.
 
 ![](../_assets/3-Safety-io/E51431/psm_inner_cables.png)<br>
-그림 3.5.3 Hi7-N제어기(전장모듈의 내부에 설치된 전장보드)
+Figure 3.5.3 Hi7-N Controller (Electrical board installed inside the electrical module)
 
-### (4)	서보안전 보드를 교체 시험하십시오.
+### (4) Test by Replacing the Servo Safety Board
 
-서보안전 보드를 교체한 후 에러가 발생하지 않으면 서보안전 보드의 전자접촉기 제어 및 피드백 부분의 고장으로 판단할 수 있습니다.
+If the error does not occur after replacing the servo safety board, it can be concluded that the issue lies in the electronic contactor control or feedback section of the servo safety board.
 
 ![](../_assets/3-Safety-io/E51431/hi7_controller_bd642.png)<br>
-그림 3.5.4 Hi7-N제어기 서보안전보드 교체
+Figure 3.5.4 Hi7-N Controller Servo Safety Board Replacement
 
-## 3.6. E52042 (0 ch) 안전 입력 신호의 불일치
+[__SOURCE](3-safety-board-part/E52042.md)
+## 3.6. E52042 (0 ch) Safety Input Signal Mismatch
 
 {% hint style="warning" %}
-안전입력 결선 확인작업 시, 반드시 제어기 전원을 OFF한 상태에서 확인작업 하시기 바랍니다.
+When checking the safety input wiring, always ensure that the controller power is **OFF** before performing the inspection.
 {% endhint %}
 
-### 1. 개요
+### 1. Overview
 
-기본 안전입력 채널에서 이중화된 안전 입력 신호 간 불일치가 감지되었습니다.<br>
-안전을 확보하기 위해 해당 입력 신호는 **Fail-Safe 상태(Open 또는 0)**로 처리됩니다.
+A mismatch has been detected between the redundant safety input signals on the basic safety input channel.  
+To ensure safety, the affected input signal is treated as **Fail-Safe (Open or 0)**.
 
-### 2. 원인 및 점검
+### 2. Causes and Inspection
 
 {% hint style="info" %}
-(1) 배선의 오류 또는 단선에 의한 신호 차이 발생
-(2) 단자대 및 케이블 상태에 의한 노이즈 발생
-(3) 안전 신호 파라미터의 설정 오류 (필터, 불일치 허용 시간)
+(1) Signal differences caused by wiring errors or disconnections  
+(2) Noise caused by terminal blocks or cable conditions  
+(3) Incorrect safety signal parameters (filter settings, allowed mismatch time)
 {% endhint %}
 
-### (1) 배선의 오류 또는 단선에 의한 신호 차이 발생
+### (1) Signal Differences Caused by Wiring Errors or Disconnections
 
-안전입력 신호 불일치는 서보안전 보드 CNSI1 커넥터(총 4채널)에 연결된 안전입력 신호의 불일치를 나타냅니다. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+A safety input signal mismatch indicates a discrepancy between the safety input signals connected to the Servo Safety Board CNSI1 connector (total 4 channels).  
+For detailed pin mapping of this connector, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
 
 ![](../_assets/3-Safety-io/E52042/bd642_cnsi1_position.png)<br>
-그림 3.6.1. Hi7-N제어기 서보안전 보드 CNSI1 위치
+Figure 3.6.1. Hi7-N Controller Servo Safety Board CNSI1 Position
 
-1) 안전 입력 신호를 사용하지 않는 경우<br>
-해당 에러가 발생된 채널이 사용하지 않는 채널인 경우, 외부 결선은 아래와 같이 되어 있는지 배선을 확인합니다. 또한, 커넥터와 와이어 간 접촉이 제대로 조립되어 있는지 확인합니다.
-<br>
+1) When the safety input signal is not used  
+If the error occurs on a channel that is not in use, verify that the external wiring is as shown below. Also, check that the connector and wires are properly assembled and making good contact.
+
 ![](../_assets/3-Safety-io/E52042/bd642_cnsi1_notused.png)<br>
-그림 3.6.2. 서보안전 보드 CNSI1 사용하지 않는 경우 결선도<br>
+Figure 3.6.2. Wiring Diagram for Unused Servo Safety Board CNSI1 Channel
 <br>
-2) 안전 입력 신호를 사용하는 경우<br>
-해당 에러가 발생된 채널이 사용되는 경우, 해당 입력채널이 어떤 입력채널에 할당되어 있는지 확인하십시오. 입력채널의 할당은 아래 메뉴를 통해 확인 가능합니다.
+
+2) When the safety input signal is in use  
+If the error occurs on a channel that is being used, first check which input channel the signal is assigned to. Input channel assignments can be verified through the following menu:
+
 <br>
-<br>
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:입출력 할당<br>
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment  
 ![](../_assets/3-Safety-io/E52042/io_alloc_param1.png)<br>
-그림 3.6.3. T/P 화면 안전 입력 할당 화면<br>
-<br>
-해당 입력채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 제대로 배선되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 서보안전 보드 CNSI1의 결선 표준은 Hi7 제어기 보수 설명서 4.3.2.6.절을 참고하세요.
+Figure 3.6.3. T/P Screen – Safety Input Assignment
 
-### (2) 단자대 및 케이블 상태에 의한 노이즈 발생
-#### 안전입력 신호의 모니터링 기능<br>
-안전입력 신호에 대한 모니터링 화면이 T/P에 구성되어 있습니다. 0.5초 주기로 모니터링이 가능하므로 기본적인 확인은 가능합니다.
+Once the input channel assignment is confirmed, refer to the site’s electrical schematics or wiring diagrams to ensure proper wiring. Also, inspect the actual wiring for correct connections and assembly.  
+For wiring standards of the Servo Safety Board CNSI1, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
 
-시스템 -> 8: 안전시스템 -> 3: 모니터링 -> 3: 안전 IO 상태<br>
+### (2) Noise caused by terminal blocks or cable condition
+
+#### Safety Input Signal Monitoring Function  
+A monitoring screen for safety input signals is available on the T/P. It can monitor at 0.5-second intervals, allowing for basic verification.
+
+System -> 8: Safety System -> 3: Monitoring -> 3: Safety IO Status  
 ![](../_assets/3-Safety-io/E52042/safety_io_status.png)<br>
-그림 3.6.4. T/P 화면 안전 IO 모니터링 화면<br>
+Figure 3.6.4. T/P Screen – Safety IO Monitoring
 
-### (3) 안전 신호 파라미터의 설정 오류 (필터, 불일치 허용 시간)
-안전입력 신호의 필터 시간이 너무 짧거나, 불일치 허용시간이 과도하게 짧게 설정된 경우, 안전입력 신호 불일치 알람이 빈번하게 발생할 수 있습니다.<br>
-기본적으로 권장하는 안전 입력 신호의 설정 값은 아래와 같습니다. 해당 값은 현장 환경 및 적용 조건에 따라 조정하여 사용할 수 있습니다.
+### (3) Safety Signal Parameter Setting Error (Filter, Mismatch Allow Time)
 
-- 필터 시간 : 100 (msec)
-- 불일치 허용 시간 : 1000 (msec)
+If the filter time for the safety input signal is too short, or the allowed mismatch time is set excessively short, safety input signal mismatch alarms may occur frequently.  
+The recommended default settings for safety input signals are as follows. These values can be adjusted according to the field environment and application conditions.
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 2:기본 입출력<br>
+- Filter Time: 100 (msec)  
+- Allowed Mismatch Time: 1000 (msec)  
+
+System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety IO -> 2: Basic IO  
 ![](../_assets/3-Safety-io/E52042/def_input.png)<br>
-그림 3.6.5. T/P 화면 기본 입출력 설정 화면<br>## 3.7. E52043 (0 ch) 부가 안전 입력 신호의 불일치
+Figure 3.6.5. T/P Screen – Basic IO Settings
+
+[__SOURCE](3-safety-board-part/E52043.md)
+## 3.7. E52043 (0 ch) Additional Safety Input Signal Mismatch
 
 {% hint style="warning" %}
-부가 안전입력 결선 확인작업 시, 반드시 제어기 전원을 OFF한 상태에서 확인작업 하시기 바랍니다.
+When checking the wiring of Additional safety inputs, ensure that the controller power is **OFF** before performing any verification work.
 {% endhint %}
 
-### 1. 개요
+### 1. Overview
 
-부가 안전입력 채널에서 이중화된 안전 입력신호 간 불일치가 감지되었습니다.<br>
-안전을 확보하기 위해 해당 입력 신호는 **Fail-Safe 상태(Open 또는 0)**로 처리됩니다.
+A mismatch has been detected between the redundant signals of the Additional safety input channel.  
+To ensure safety, the affected input signal is treated in a **Fail-Safe state (Open or 0)**.
 
-### 2. 원인 및 점검
+### 2. Causes and Inspection
 
 {% hint style="info" %}
-(1) 배선의 오류 또는 단선에 의한 신호 차이 발생
-(2) 단자대 및 케이블 상태에 의한 노이즈 발생
-(3) 안전 신호 파라미터의 설정 오류(필터, 불일치 허용 시간)
+(1) Signal differences due to wiring errors or disconnections  
+(2) Noise caused by terminal blocks or cable conditions  
+(3) Safety signal parameter setting errors (filter, allowed mismatch time)
 {% endhint %}
 
-### (1) 배선의 오류 또는 단선에 의한 신호 차이 발생
-부가 안전입력 신호 불일치는 옵션 안전IO 보드 CNSI2 커넥터(총 8채널)에 연결된 부가 안전입력 신호의 불일치를 나타냅니다. 해당 커넥터의 자세한 핀맵은 Hi7 제어기 보수 설명서 5.4.6.절을 참고하세요.
+### (1) Signal Differences Due to Wiring Errors or Disconnections
+
+The Additional safety input signal mismatch indicates a discrepancy in the Additional safety input signals connected to the Option Safety IO Board CNSI2 connector (total 8 channels).  
+For detailed pin assignments of this connector, refer to **Hi7 Controller Maintenance Manual, Section 5.4.6**.
 
 ![](../_assets/3-Safety-io/E52043/bd680_cnsi2_position.png)<br>
-그림 3.7.1. Hi7-N제어기 옵션 안전IO 보드 CNSI2 위치<br>
+**Figure 3.7.1. Hi7-N Controller Option Safety IO Board CNSI2 Location**
 
-1) 부가 안전입력 신호를 사용하는 경우<br>
-해당 에러가 발생된 채널이 사용되는 경우, 해당 입력채널이 어떤 입력채널에 할당되어 있는지 확인하십시오. 부가 안전입력 채널의 할당은 아래 메뉴를 통해 확인 가능합니다.
-<br>
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 1:안전 입출력 할당 -> 확장 입력<br>
+1) When using the Additional safety input signal  
+If the error occurs on a channel that is in use, verify which input channel the signal is assigned to. Assignment of Additional safety input channels can be checked through the following menu:
+
+System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety IO -> 1: Input/Output Assignment -> Additional Input <br>
+
 ![](../_assets/3-Safety-io/E52043/add_si_func_sel.png)<br>
-그림 3.7.2. T/P 화면 부가 안전 입출력 할당 화면<br>
-<br>
-해당 부가 안전입력 채널 할당된 것이 확인되면 해당 현장의 전기도면 또는 배선도면을 참조하여 도면과 실제 배선이 제대로 되어 있는지 확인합니다. 또한, 실제 배선을 확인하면서 연결 또는 조립 상태를 확인합니다.<br>
-전기도면 또는 배선도면 확인 시, 옵션 안전 IO 보드 CNSI2의 결선 표준은 Hi7 제어기 보수 설명서 5.4.6.절을 참고하세요.
+**Figure 3.7.2. T/P Screen – Additional Safety Input/Output Assignment**
 
-### (2) 단자대 및 케이블 상태에 의한 노이즈 발생
+Once the Additional safety input channel assignment is confirmed, refer to the site’s electrical schematic or wiring diagram to verify that the actual wiring matches the design.  
+Also, check the physical wiring for proper connection and assembly status.  
 
-#### 부가 안전입력 신호의 모니터링 기능<br>
-부가 안전입력 신호에 대한 모니터링 화면이 T/P에 구성되어 있습니다. 0.5초 주기로 모니터링이 가능하므로 기본적인 확인은 가능합니다.
+When verifying the electrical schematic or wiring diagram, follow the wiring standards for the Option Safety IO Board CNSI2 as specified in **Hi7 Controller Maintenance Manual, Section 5.4.6**.
 
-시스템 -> 8: 안전시스템 -> 3: 모니터링 -> 3: 안전 IO 상태<br>
+### (2) Noise Caused by Terminal Blocks or Cable Conditions
+
+#### Monitoring Function for Additional Safety Input Signals
+A monitoring screen for the Additional safety input signals is provided on the T/P.  
+Monitoring occurs every 0.5 seconds, allowing for basic verification.
+
+**Navigation:**  
+`System -> 8: Safety System -> 3: Monitoring -> 3: Safety IO Status`  
+
 ![](../_assets/3-Safety-io/E52043/add_si_monitoring.png)<br>
-그림 3.7.3. T/P 화면 안전 IO 모니터링 화면<br>
+**Figure 3.7.3. T/P Screen – Safety IO Monitoring**
 
-### (3) 안전 신호 파라미터의 설정 오류 (필터, 불일치 허용 시간)
+### (3) Incorrect Safety Signal Parameter Settings (Filter, Mismatch Allowance Time)
 
-부가 안전입력 신호의 필터 시간이 너무 짧거나, 불일치 허용 시간이 과도하게 짧게 설정된 경우, 부가 안전입력 신호 불일치 알람이 빈번하게 발생할 수 있습니다.<br>
-기본적으로 권장하는 부가 안전입력 신호의 설정 값은 아래와 같습니다. 해당 값은 현장 환경 및 적용 조건에 따라 조정하여 사용할 수 있습니다.<br>
-- 필터 시간 : 100 (msec)
-- 불일치 허용 시간 : 1000 (msec)
+If the filter time for the Additional safety input signals is set too short or the mismatch allowance time is excessively short, alarms for Additional safety input signal mismatch may occur frequently.  
 
-시스템 -> 8: 안전시스템 -> 2: 파라미터 설정 -> 3: 안전 IO -> 3:확장 입출력<br>
+The recommended default settings for Additional safety input signals are as follows. These values can be adjusted depending on site conditions and application requirements:
+
+- **Filter Time:** 100 (msec)  
+- **Mismatch Allowance Time:** 1000 (msec)  
+
+**Navigation:**  
+`System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 3: Additional IO`  
+
 ![](../_assets/3-Safety-io/E52043/add_io.png)<br>
-그림 3.7.4. T/P 화면 부가 안전 입출력 설정 화면<br>
-# 4. Servo Safety Board (Servo Part)## 4.1. E02470. (O Axis) Encoder Error: Reset Required
+**Figure 3.7.4. T/P Screen – Additional Safety IO Settings**
+
+[__SOURCE](4-servo-board-part/README.md)
+# 4. Servo Safety Board (Servo Part)
+[__SOURCE](4-servo-board-part/E02470.md)
+## 4.1. E02470. (O Axis) Encoder Error: Reset Required
 
 ### 1. Overview
 
@@ -1674,6 +1782,8 @@ Check the battery wiring status connecting from the encoder battery location to 
 If the problem is not resolved by the above measures, it is highly likely that the encoder itself is faulty. Perform a motor replacement test.
 
     
+
+[__SOURCE](4-servo-board-part/E02670.md)
 ## 4.2. E02670. (O Axis) command value abnormal
 
 ### 1. Overview
@@ -1747,6 +1857,8 @@ Check if the error occurs in a section where the motion changes abruptly during 
 If the error occurs during abrupt motion, modification of the job program is required.<br>
 The causes of errors occurring during abrupt motion are as follows. When executing a job program, there are cases where the robot's posture changes significantly while moving a short distance inevitably. At this time, the robot's axis speed suddenly increases, and if the servo board fails to follow this, an error occurs. The solution is to modify the teaching point at the point where the posture changes abruptly or change the robot posture.
 
+
+[__SOURCE](4-servo-board-part/E02680.md)
 ## 4.3. E02680. (O Axis) Maximum Speed Exceeded
 
 ### 1. Overview
@@ -1842,6 +1954,8 @@ Figure 4.3.11 External Axis Acc/Dec Check
 (6)	Adjust the job program.<br>
 Change the step conditions of the corresponding step or the immediately preceding step in the job program. First, try changing it to “Acc=0”, second, try lowering the speed of the step, and third, try adding a step to the movement path to change the program conditions.
 
+
+[__SOURCE](4-servo-board-part/E50101.md)
 ## 4.4. E50101. (O Axis) Invalid encoder command field setting
 
 ### 1. Overview
@@ -1926,6 +2040,8 @@ Figure 4.4.9 Encoder Communication Failure Monitoring
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
 
+
+[__SOURCE](4-servo-board-part/E50102.md)
 ## 4.5. E50102. (O Axis) Encoder Received Data Length Abnormality
 
 ### 1. Overview
@@ -1995,6 +2111,8 @@ Figure 4.5.7 Encoder Communication Failure Monitoring
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
 
+
+[__SOURCE](4-servo-board-part/E50103.md)
 ## 4.6. E50103. (O Axis) Invalid encoder data termination signal
 
 ### 1. Overview
@@ -2015,7 +2133,9 @@ Cases where the data frame end signal is not received from the encoder can occur
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".## 4.7. E50104. (O Axis) CRC error deteced in encoder data
+For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+[__SOURCE](4-servo-board-part/E50104.md)
+## 4.7. E50104. (O Axis) CRC error deteced in encoder data
 
 ### 1. Overview
 
@@ -2037,6 +2157,8 @@ Cases where CRC errors occur in data received from the encoder can occur mainly 
 {% endhint %}
 
 For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+
+[__SOURCE](4-servo-board-part/E50105.md)
 ## 4.8. E50105. (O Axis) Encoder line open detected (Motor Off)
 
 ### 1. Overview
@@ -2058,7 +2180,9 @@ Cases where communication from the encoder to the servo safety board is unstable
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".## 4.9. E50106. (O Axis) Encoder data abnormal variation detected
+For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+[__SOURCE](4-servo-board-part/E50106.md)
+## 4.9. E50106. (O Axis) Encoder data abnormal variation detected
 
 ### 1. Overview
 
@@ -2079,7 +2203,9 @@ Cases where the position data received from the encoder fluctuates abnormally ca
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".## 4.10. E50107. (O Axis) Encoder line open detected (Motor On)
+For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+[__SOURCE](4-servo-board-part/E50107.md)
+## 4.10. E50107. (O Axis) Encoder line open detected (Motor On)
 
 ### 1. Overview
 
@@ -2101,7 +2227,9 @@ Cases where communication between the encoder and the servo safety board is unst
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".## 4.11. E50108. (O Axis) Encoder Counting error (CE Bit Detected)
+For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+[__SOURCE](4-servo-board-part/E50108.md)
+## 4.11. E50108. (O Axis) Encoder Counting error (CE Bit Detected)
 
 ### 1. Overview
 
@@ -2150,6 +2278,8 @@ If the error does not occur after replacing the servo motor, the servo motor is 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
 Figure 4.11.4 Motor Positions for Each Axis of HS165 Robot
 
+
+[__SOURCE](4-servo-board-part/E50109.md)
 ## 4.12. E50109. (O Axis) Encoder Overspeed
 
 ### 1. Overview
@@ -2171,6 +2301,8 @@ This error may occur when the data received from the encoder itself is normal, b
 {% endhint %}
 
 For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".
+
+[__SOURCE](4-servo-board-part/E50110.md)
 ## 4.13. E50110. (O Axis) Encoder Full absolute status
 
 ### 1. Overview
@@ -2192,7 +2324,9 @@ This error may occur when the data received from the encoder itself is normal, b
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".## 4.14. E50111. (O Axis) Encoder Counting error
+For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".
+[__SOURCE](4-servo-board-part/E50111.md)
+## 4.14. E50111. (O Axis) Encoder Counting error (ME Bit Detected)
 
 ### 1. Overview
 
@@ -2213,6 +2347,8 @@ This error may occur when the data received from the encoder itself is normal, b
 {% endhint %}
 
 For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".
+
+[__SOURCE](4-servo-board-part/E50112.md)
 ## 4.15. E50112. (O Axis) Encoder Battery error
 
 ### 1. Overview
@@ -2269,6 +2405,8 @@ If the error persists upon main power OFF/ON after resetting the error, perform 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
 Figure 4.15.4 Motor Positions for Each Axis of HS165 Robot
 
+
+[__SOURCE](4-servo-board-part/E50113.md)
 ## 4.16. E50113. (O Axis) Encoder Overheat Detection (OH Bit Detection)
 
 ### 1. Overview
@@ -2312,6 +2450,8 @@ If the error does not occur after replacing the servo safety board, it can be de
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
 Figure 4.16.3 N Controller Servo Board Replacement
 
+
+[__SOURCE](4-servo-board-part/E50200.md)
 ## 4.17. E50200. (O Axis) Motor overload
 
 ### 1. Overview
@@ -2424,6 +2564,8 @@ Check if the drive unit (motor, reducer) of the corresponding axis is operating 
 
 ![](../_assets/4.서보보드/robot_axis_motor_brake.png)<br>
 Figure 4.17.14 Verification of Normal Drive Unit Operation
+
+[__SOURCE](4-servo-board-part/E50201.md)
 ## 4.18. E50201. (O Axis) Motor overload (Increased Friction Due to Low Temperature)
 
 ### 1. Overview
@@ -2446,6 +2588,8 @@ Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower)
 
 ![](../_assets/4.서보보드/엔코더온도및재생속도.png)<br>
 Figure 4.18.1 Encoder Temperature Check Screen
+
+[__SOURCE](4-servo-board-part/E50205.md)
 ## 4.19. E50205. (O Axis) Unable to sustain servo lock – abnormal current output
 
 ### 1. Overview
@@ -2519,6 +2663,8 @@ Replace components in the order of Servo Safety Board (BD642) → Amplifier Boar
 
 ![](../_assets/4.서보보드/hi7_robot_brake_power_check.png)<br>
 Figure 4.19.6 N Controller Drive Components
+
+[__SOURCE](4-servo-board-part/E50206.md)
 ## 4.20. E50206. (O Axis) Unable to sustain servo lock – abnormal parameter
 
 ### 1. Overview
@@ -2594,6 +2740,8 @@ Replace components in the order of Servo Safety Board (BD642) → Amplifier Boar
 Figure 4.20.6 Hi7-N Controller Drive Components
 
 
+
+[__SOURCE](4-servo-board-part/E50400.md)
 ## 4.21. E50400. (O Axis) Position Deviation exceeded
 
 ### 1. Overview
@@ -2703,6 +2851,8 @@ Figure 4.21.11 Hi7-N Controller Motor and Drive Module
 
 
 
+
+[__SOURCE](4-servo-board-part/E50401.md)
 ## 4.22. E50401. (O Axis) Speed-Based Position Deviation Exceeded
 
 ### 1. Overview
@@ -2727,7 +2877,9 @@ If the difference between the movement command position and the actual position 
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E50400 (O Axis) Position Deviation exceeded".## 4.23. E50402. (O Axis) Position Deviation Exceeded (Cold Temperature Friction Increase)
+For detailed inspection methods, please refer to "E50400 (O Axis) Position Deviation exceeded".
+[__SOURCE](4-servo-board-part/E50402.md)
+## 4.23. E50402. (O Axis) Position Deviation Exceeded (Cold Temperature Friction Increase)
 
 ### 1. Overview
 
@@ -2757,7 +2909,9 @@ Figure 4.23.1 Encoder Temperature Check Screen
 ![](../_assets/4.서보보드/robot_model_check.png)<br>
 Figure 4.23.2 Robot Model Check
 
-Check if the registered robot model on the TP screen matches the actually installed robot.## 4.24. E51429 Initial Charging Resistor Relay Feedback Error
+Check if the registered robot model on the TP screen matches the actually installed robot.
+[__SOURCE](4-servo-board-part/E51429.md)
+## 4.24. E51429 Initial Charging Resistor Relay Feedback Error
 
 ### 1. Overview
 
@@ -2790,6 +2944,8 @@ If the error does not occur after replacing the servo safety board, it can be de
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
 Figure 4.24.3 Replacement of Hi7-N Controller Servo Safety Board
+
+[__SOURCE](4-servo-board-part/E51441.md)
 ## 4.25. E51441 (0 Axis) Brake Feedback Error
 
 ### 1. Overview
@@ -2843,6 +2999,8 @@ If the error does not occur after replacing the servo safety board, it can be de
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
 Figure 4.25.4 Hi7-N Controller Servo Board Replacement
 
+
+[__SOURCE](4-servo-board-part/E51443.md)
 ## 4.26. E51443 Brake Power Error
 
 ### 1. Overview
@@ -2882,217 +3040,234 @@ If the error does not occur after replacing the servo safety board, it can be de
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
 Figure 4.26.3 N Controller Servo Board Replacement
 
-# 5. 통신## 5.1. E29003 전장 보드 통신 오류 (EtherCAT 연결 끊김)
 
-### 1. 개요
+[__SOURCE](5-communication/README.md)
+# 5. Communication
+[__SOURCE](5-communication/E29003.md)
+## 5.1. E29003 Board Communication Error (EtherCAT Disconnected)
 
-전장 보드 통신 오류 (EtherCAT 연결 끊김)가 발생하였습니다. 메인제어모듈(H6COM-T)과 전장 보드(BD642, BD681 등)간의 통신이 끊어졌습니다.
+### 1. Summary
 
-### 2. 원인
+Board communication error (EtherCAT Disconnected) has occurred.
+Communication between the main control module (H6COM-T) and the boards (BD642, BD681, etc.) has been disconnected.
+
+### 2. Causation
 
 {% hint style="info" %}
 
-(1) 보드 간 통신 케이블 결선상태 및 케이블을 확인하십시오.<br>
-(2) 전장 보드를 점검하십시오.<br>
+(1) Check the inter-board communication cable connection and the cable condition.<br>
+(2) Inspect the board.<br>
 
 <br>
-전장 보드는 사용하는 환경에 따라 연결 구성이 다릅니다.<br>
-- 서보안전 보드(BD642) 단독 사용<br>
-- 서보안전 보드(BD642), 사용자DIO 보드(BD681) 사용<br>
+The board connection configuration varies depending on the operating environment.<br>
+- Servo safety board (BD642) used alone<br>
+- Servo safety board (BD642) and User DIO board (BD681) used<br>
 
 {% endhint %}
 
-### (1)	보드 간 통신 케이블 결선 상태 확인.
-### [각 모듈간(메인제어모듈(H6COM-T), 전장보드) Ethernet 케이블 결선 상태 확인]
+### (1)	Check the inter-board communication cable connection status.
+### [Check the Ethernet cable connection status between each module (Main Control Module (H6COM-T) and boards)]
 
 ![](../_assets/5-Communication/ethercat_cable_hicom_bd642_r2.png)<br>
-그림 5.1.1 H6COM-T와 BD642의 EtherCAT 케이블 연결
+Figure 5.1.1 EtherCAT cable connection between the H6COM-T and BD642
 
 <br>
 
 ![](../_assets/5-Communication/BD642_BD681_cable_connection.png)<br>
-그림 5.1.2 BD642와 BD681 EtherCAT 케이블 연결 **(BD681 사용 시)**
+Figure 5.1.2 EtherCAT cable connection between BD642 and BD681 **(When using BD681)**
 
-1)	점검 대상<br>
-A.	메인제어모듈(H6COM-T) ↔ 서보안전 보드(BD642) 간 Ethernet 케이블<br>
-B.	서보안전 보드(BD642) ↔ 사용자DIO 보드(BD681) 간 Ethernet 케이블 **(BD681 사용 시)**<br>
-2)	점검 항목<br>
-A.	케이블 양쪽 커넥터가 확실히 체결되어 있는지 확인합니다.<br>
-B.	케이블에 단선, 압착 손상, 꺾임, 파손이 없는지 육안 점검합니다.<br>
-C.	커넥터 핀(단자)에 녹, 오염, 휘어짐이 없는지 확인합니다.<br>
-3)	점검 방법<br>
-A.	전원을 OFF한 상태에서 케이블 분리 및 재삽입을 수행합니다.<br>
-B.	삽입 시 '딸깍' 소리가 나도록 완전히 체결되도록 합니다.<br>
-C.	필요한 경우 예비 케이블로 교체 후 재시도합니다.<br>
-D.	연결 순서 및 올바른 LAN Port와 연결되어 있는지 재확인합니다.<br>
-4)	추가 확인<br>
-A.	반복적으로 끊김이 발생할 경우, 케이블 내부 단선 가능성 고려 → 케이블 교체가 필요할 수도 있습니다.<br>
-B.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검하시기 바랍니다.<br>
-C.	전장 보드 장치 자체에 Link/Act LED 상태를 확인합니다.<br>
-    * 정상: 녹색(좌) 점멸, 황색(우) 점등 <br>
-    * 비정상: 녹색(좌) & 황색(우) 꺼짐 또는 점등 상태 유지<br>
+1)	Inspection Targets<br>
+A. Ethernet cable between the main control module (H6COM-T) and the servo safety board (BD642).<br>
+B.	Ethernet cable between the servo safety board (BD642) and the user DIO board (BD681). **(When using the BD681).**<br>
+2)	Inspection Items<br>
+A.	Check that the connectors at both ends of the cable are securely fastened.<br>
+B.	Visually inspect the cable for breaks, crimping damage, bends, or damage.<br>
+C.	Check the connector pins (terminals) for corrosion, contamination, or bending.<br>
+3)	Inspection Method<br>
+A.	With the power turned OFF, disconnect and reconnect the cable.<br>
+B.	When inserting, ensure it is fully seated until a “click” sound is heard.<br>
+C.	If necessary, replace the cable with a spare cable and try again.<br>
+D.	Recheck the connection order and verify that it is connected to the correct LAN port.<br>
+4)	Additional Checks<br>
+A.	If disconnections occur repeatedly, consider the possibility of an internal cable break → Cable replacement may be necessary.<br>
+B.	Also check for possible damage to the Ethernet connector (PCB terminal area).<br>
+C.	Check the Link/Act LED status on the board.<br>
+    * Normal: Green (left) blinking, Yellow (right) ON <br>
+    * Abnormal: Green (left) & Yellow (right) lights remain OFF or ON.<br>
     
 ![](../_assets/5-Communication/E29003/그림2.png)<br>
 
 
-### (2) 전장 보드를 점검하십시오.
-#### [서보안전 보드(BD642)를 점검하는 방법]
+### (2) Inspect the board.
+#### [Servo safety board (BD642) inspection procedure]
 ![](../_assets/5-Communication/BD642_LED.png)<br> 
-그림 5.1.3 BD642보드 LED, Segment 
+Figure 5.1.3 BD642 Board LED, Segment 
 
 <br>
 
 ![](../_assets/5-Communication/BD642_7-Segment.png)<br> 
-그림 5.1.4 7-Segment 상태 정보
+Figure 5.1.4 7-Segment Status information
 
 <br>
 
-1) 통신 연결 상태 확인<br>
-   '그림 5.1.3'의 4 ~ 5번 초록색 LED가 켜져있는지 확인하십시오. <br>
+1) Check the communication connection status<br>
+   Verify that LEDs No. 4 to 5 (green) in 'Figure 5.1.3' are ON. <br>
 
-2) 정상 부팅 상태 확인<br>
-   메인제어모듈 (H6COM-T)이 완전히 부팅되고 난 후(전원투입후 약 50초 정도 소요) <br>
-   '그림 5.1.3'의 1 ~ 5번 초록색 LED가 켜져있고 6 ~ 10번 빨간색 LED가 꺼저있으며,<br> 7-Segment가 '2. Safe State' 상태로 점이 점멸 되어야합니다.<br>
+2) Check the normal boot status<br>
+   After the Main Control Module (H6COM-T) has completely booted (approximately 50 seconds after power-on), <br>
+   LEDs No. 1 to 5 (green) in 'Figure 5.1.3' should be ON, LEDs No. 6 to 10 (red) should be OFF, <br> and the 7-segment display should show '2. Safe State' with the decimal point blinking.
 
-1~2번 항목의 점검사항이 모두 이상이 없는 경우에도 통신 연결에 문제가 있는 경우 보드를 교체 하십시오.<br>
+If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
 
  
-#### [사용자DIO 보드(BD681)를 점검하는 방법]
+#### [User DIO board (BD681) inspection procedure]
 ![](../_assets/5-Communication/BD681_LED.png)<br> 
-그림 5.1.5 BD681보드 LED 
+Figure 5.1.5 BD681 Board LED 
 
 <br>
  
-1)	통신 연결 상태 확인<br>
-A.	'그림 5.1.5'의 3번 초록색 LED가 켜져있는지 확인하십시오.<br>
+1)	Check the communication connection status<br>
+A.	Verify that LED No. 3 (green) in 'Figure 5.1.5' is ON.<br>
 
-2)	정상 동작 상태 확인<br>
-A.	'그림 5.1.5'의 1 ~ 2번 초록색 LED가 점멸 상태 인지를 확인하십시오.<br>
+2)	Check the normal operation status<br>
+A.	Verify that LEDs No. 1 to 2 (green) in 'Figure 5.1.5' are blinking.<br>
 
-1~2번 항목의 점검사항이 모두 이상이 없는 경우에도 통신 연결에 문제가 있는 경우 보드를 교체하십시오.<br>
-## 5.2. E29016 전장보드 통신(EtherCAT) 마스터 연결 끊김 발생
+If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
 
-### 1. 개요
+[__SOURCE](5-communication/E29016.md)
+## 5.2. E29016 Board Communication (EtherCAT) Master Disconnection Detected
 
-전장보드 통신(EtherCAT) 마스터와 연결되는 첫번째 장치와의 연결이 끊어 졌습니다.
+### 1. Summary
 
-### 2. 원인
+The connection with the first device connected to the EtherCAT master has been lost.
+
+### 2. Causation
 
 {% hint style="info" %}
 
-(1) 보드 간 통신 케이블 결선 상태를 확인하십시오.<br>
-(2) 서보안전 보드(BD642)를 점검하십시오.<br>
+(1) Check the inter-board communication cable connection and the cable condition.<br>
+(2) Inspect the Servo safety board (BD642).<br>
 
 {% endhint %}
 
-### (1) 보드 간 통신 케이블 결선 상태 확인.
+### (1) Check the inter-board communication cable connection status.
 
-#### [각 모듈간(메인제어모듈(H6COM-T), 서보안전 보드(BD642)) Ethernet 케이블 결선 상태 확인]
+#### [Check the Ethernet cable connection status between each module (Main Control Module (H6COM-T) and Servo safety board (BD642))]
 ![](../_assets/5-Communication/ethercat_cable_hicom_bd642_r1.png)<br>
-그림 5.2.1 Hi7-N제어기 EtherCAT 케이블 연결
+Figure 5.2.1 EtherCAT cable connection between the H6COM-T and BD642
 
-1)	점검 대상<br>
-A.	메인제어모듈(H6COM-T) ↔ 서보안전 보드(BD642) 간 Ethernet 케이블<br>
-2)	점검 항목<br>
-A.	케이블 양쪽 커넥터가 확실히 체결되어 있는지 확인<br>
-B.	케이블에 단선, 압착 손상, 꺾임, 파손이 없는지 육안 점검<br>
-C.	커넥터 핀(단자)에 녹, 오염, 휘어짐이 없는지 확인<br>
-3)	점검 방법<br>
-A.	전원을 OFF한 상태에서 케이블 분리 및 재삽입 수행<br>
-B.	삽입 시 '딸깍' 소리가 나도록 완전히 체결<br>
-C.	필요한 경우 예비 케이블로 교체 후 재시도<br>
-D.	연결 순서 및 올바른 LAN Port와 연결되어 있는지 재확인<br>
-4)	추가 확인<br>
-A.	서보안전 보드(BD642) 장치 자체에 Link/Act LED 상태 확인<br>
-- 정상: 녹색(좌) 점멸, 황색(우) 점등 <br>
-- 비정상: 녹색(좌) & 황색(우) 꺼짐 또는 점등 상태 유지<br>
+1)	Inspection Targets<br>
+A.	Ethernet cable between the main control module (H6COM-T) and the servo safety board (BD642).<br>
+2)	Inspection Items<br>
+A.	Check that the connectors at both ends of the cable are securely fastened.<br>
+B.	Visually inspect the cable for breaks, crimping damage, bends, or damage.<br>
+C.	Check the connector pins (terminals) for corrosion, contamination, or bending.<br>
+3)	Inspection Method<br>
+A.	With the power turned OFF, disconnect and reconnect the cable.<br>
+B.	When inserting, ensure it is fully seated until a “click” sound is heard.<br>
+C.	If necessary, replace the cable with a spare cable and try again.<br>
+D.	Recheck the connection order and verify that it is connected to the correct LAN port.<br>
+4)	Additional Checks<br>
+A.	Check the Link/Act LED status on the board.<br>
+- Normal: Green (left) blinking, Yellow (right) ON <br>
+- Abnormal: Green (left) & Yellow (right) lights remain OFF or ON.<br>
 ![](../_assets/5-Communication/E29016/그림2.png)<br>
-B.	반복적으로 끊김이 발생할 경우, 케이블 내부 단선 가능성 고려 → 케이블 교체 필요<br>
-C.	이더넷 커넥터(PCB 단자부) 손상 가능성도 점검<br>
+B.	If disconnections occur repeatedly, consider the possibility of an internal cable break → Cable replacement may be necessary.<br>
+C.	Also check for possible damage to the Ethernet connector (PCB terminal area).<br>
 
-### (2) 서보안전 보드(BD642)를 점검하십시오.
-#### [서보안전 보드(BD642)를 점검하는 방법]
+### (2) Inspect the Servo safety board (BD642).
+#### [Servo safety board (BD642) inspection procedure]
 ![](../_assets/5-Communication/BD642_LED.png)<br> 
-그림 5.2.2 BD642보드 LED, Segment 
+Figure 5.2.2 BD642 Board LED, Segment 
 
 <br>
 
 ![](../_assets/5-Communication/BD642_7-Segment.png)<br> 
-그림 5.2.3 7-Segment 상태 정보
+Figure 5.2.3 7-Segment Status information
 
 <br>
 
-1) 통신 연결 상태 확인<br>
-   '그림 5.2.2'의 4 ~ 5번 초록색 LED가 켜져있는지 확인하십시오. <br>
+1) Check the communication connection status<br>
+   Verify that LEDs No. 4 to 5 (green) in 'Figure 5.2.2' are ON. <br>
 
-2) 정상 부팅 상태 확인<br>
-   메인제어모듈 (H6COM-T)이 완전히 부팅되고 난 후(전원투입후 약 50초 정도 소요) <br>
-   '그림 5.2.2'의 1 ~ 5번 초록색 LED가 켜져있고 6 ~ 10번 빨간색 LED가 꺼저있으며,<br> 7-Segment가 '2. Safe State' 상태로 점이 점멸 되어야합니다.<br>
+2) Check the normal boot status<br>
+   After the Main Control Module (H6COM-T) has completely booted (approximately 50 seconds after power-on), <br>
+   LEDs No. 1 to 5 (green) in 'Figure 5.2.2' should be ON, LEDs No. 6 to 10 (red) should be OFF, <br> and the 7-segment display should show '2. Safe State' with the decimal point blinking.
 
-1~2번 항목의 점검사항이 모두 이상이 없는 경우에도 통신 연결에 문제가 있는 경우 보드를 교체 하십시오.<br>
-## 5.3. 전장보드 통신(EtherCAT) 마스터 ENI 불일치
+If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
 
-### 1. 개요
+[__SOURCE](5-communication/EtherCAT_ENI_Missmatch.md)
+## 5.3. Board communication (EtherCAT) master ENI mismatch
 
-제어기 통신 연결 구성과 설정된 ENI파일이 불일치 합니다.<br>
+### 1. Summary
+
+Controller communication configuration and ENI file mismatch.<br>
 (ENI : EtherCAT Network Information)
 
-### 2. 원인
+### 2. Causation
 
 {% hint style="info" %}
 
-설정된 ENI파일과 일치하지 않는 제어기 통신 연결 구성입니다.<br>
+The controller communication configuration does not match the configured ENI file.<br>
 
 {% endhint %}
 
-### 제어기 통신 연결 구성 확인.
+### Verify the controller communication configuration.
 
-기본적으로 제어기에서 사용할 수 있는 통신 연결 구성이 있습니다. 올바르지 않은 통신 연결로 구성할 경우 정상적으로 사용할 수 없습니다.<br>
-또한 통신 커넥터의 [IN] / [OUT]을 구별하여 연결 해야 합니다. '1번 보드의 [OUT] 커넥터' - '2번 보드의 [IN] 커넥터' 이런 방식으로 올바른 커넥터에 연결해야 정상적으로 통신할 수 있습니다.<br>
+The controller supports predefined communication configurations. If the communication connection is configured incorrectly, normal operation is not possible.<br>
+In addition, distinguish between the [IN] and [OUT] communication connectors when connecting.
+To ensure proper communication, connect the '[OUT] connector of the first board' to the '[IN] connector of the second board'.<br>
 
-<strong><올바른 통신 연결 구성 예시></strong><br>
+<strong>< Example of a correct communication configuration ></strong><br>
 
-- 메인제어모듈(H6COM-T) ↔ **[IN]** 서보안전 보드(BD642)
-- 메인제어모듈(H6COM-T) ↔ **[IN]** 서보안전 보드(BD642) **[OUT]** ↔ **[IN]** 사용자DIO 보드(BD681)
+- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board (BD642)
+- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board (BD642) **[OUT]** ↔ **[IN]** User DIO board(BD681)
 
 <br>
 
-<strong><올바르지 않은 통신 연결 구성 예시></strong><br>
+<strong>< Example of an incorrect communication configuration ></strong><br>
 
-- 메인제어모듈(H6COM-T) ↔ **[OUT]** 서보안전 보드(BD642)
-- 메인제어모듈(H6COM-T) ↔ **[IN]** 서보안전 보드(BD642) **[OUT]** ↔ **[OUT]** 사용자DIO 보드(BD681)
-- 메인제어모듈(H6COM-T) ↔ **[IN]** 사용자DIO 보드(BD681) **[OUT]** ↔ **[IN]** 서보안전 보드(BD642)
+- Main Control Module(H6COM-T) ↔ **[OUT]** Servo safety board(BD642)
+- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board(BD642) **[OUT]** ↔ **[OUT]** User DIO board(BD681)
+- Main Control Module(H6COM-T) ↔ **[IN]** User DIO board(BD681) **[OUT]** ↔ **[IN]** Servo safety board(BD642)
 
 <br>
 
 ![](../_assets/5-Communication/BD642_EtherCAT_Connector.png)<br>
-그림 5.3.1 BD642 EtherCAT 통신 커넥터
+Figure 5.3.1 BD642 EtherCAT Connector
 
 <br>
 
 ![](../_assets/5-Communication/BD681_EtherCAT_Connector.png)<br>
-그림 5.3.1 BD681 EtherCAT 통신 커넥터
+Figure 5.3.1 BD681 EtherCAT Connector
 
 <br>
 
-올바른 통신 연결을 구성하였을 경우, 제어기 전원을 켜면 ENI파일을 자동으로 선택하여 연결을 시도합니다.<br>
+When the communication connection is configured correctly, the controller automatically selects the ENI file and attempts a connection at power-on.<br>
 
-만약 ENI파일 내부 설정이 맞지 않는 경우, 정상적으로 통신은 연결 되었는데 기능이 정상동작 하지 않을 수 있습니다. 그럴 경우 제어기 메인제어모듈(H6COM-T) 버전업데이트를 진행하거나, 당사에 문의하십시오.<br>
+If the internal settings of the ENI file are incorrect, communication may be established but the functions may not operate properly.
+In this case, update the version of the Main Control Module (H6COM-T) of the controller or contact our company.<br>
 
-사용자가 수동으로 ENI파일 선택을 변경하려면 아래의 TP 메뉴에서 설정할 수 있습니다.
-변경 후에는 제어기를 재부팅해야 정상적으로 적용됩니다.
+To manually change the ENI file selection, configure it in the TP menu below.
+After changing the setting, reboot the controller for the changes to take effect.
 
-**- 메뉴 위치 : [시스템]-[5:초기화]-[10:제어기 설정]**
+**- The location of the menu : [system]-[5:Initialization]-[10:Controller Setting]**
 
+
+[__SOURCE](appendices/README.md)
 # Appendices
   
 
 
+
+[__SOURCE](appendices/rules-occupational-safety.md)
 # Rules on Occupational Safety and Health Standards and Safety Inspection Notification
 
 This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
 
 "[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+
+[__SOURCE](quality-assurance.md)
 # Quality Assurance
 
 "[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
