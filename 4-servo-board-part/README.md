@@ -1,1 +1,1 @@
-# 4. 서보안전 보드(서보파트)
+# 4. Servo Safety Board (Servo Part)
