@@ -1,1 +1,1 @@
-# 3. 서보안전 보드(안전파트)
+# 3. Servo Safety Board (Safety Section)
