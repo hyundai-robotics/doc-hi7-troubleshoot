@@ -1,15 +1,17 @@
-﻿## 1.2. 전압점검2 – Hi7-N 제어기 입력 3상 전압 점검절차
+﻿## 1.2. Voltage Check 2 – Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
 
-(1)	제어기에 부착된 명판의 전압과 실제 입력전압을 확인하십시오.
+(1) Verify the voltage on the controller nameplate and the actual input voltage.
 
-제어기에 실제로 공급되는 전압이 명판에 표기된 전압의 허용 범위 이내인지를 확인하십시오. 입력전압의 허용 범위는 명판에 표기된 값의 10% 이내이고, AC 220V 기준으로 AC 198V 이상이어야 합니다. 아래의 그림은 제어기의 입력전압의 측정방법을 나타낸 것입니다. 측정된 전압이 허용 범위를 벗어나는 경우에는 전원 설비를 점검하여 주십시오.
+Check whether the voltage actually supplied to the controller is within the allowable range of the voltage indicated on the nameplate. The allowable range for the input voltage is within 10% of the value marked on the nameplate and must be at least 198V AC based on a 220V AC standard.
 
-*	전면 스위치의 전원라인 측 측정
+The figure below illustrates the measurement method for the controller's input voltage. If the measured voltage is outside the allowable range, please inspect the power supply facilities.
+
+*	Measurement at the power line side of the front switch
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi7-N 제어기<br>
-그림 1.2 전원 스위치의 전원라인 측 측정
+(a) Hi7-N Conroller<br>
+Figure 1.2 Measurement on the power line side of the power switch
 
 {% hint style="warning" %}
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components.
 {% endhint %}
