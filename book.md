@@ -10,169 +10,160 @@ In the event of a malfunction, the system is structured to allow easy identifica
 This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
 
 [__SOURCE](1-elec/README.md)
-# 1. 전장
+# 1. Electrical equipment
 [__SOURCE](1-elec/VOLTAGE_1.md)
-## 1.1. 전압점검1 – Hi7-N 제어기 내부 3상 전압 점검절차
+## 1.1. Voltage Check 1 – Internal 3-Phase Voltage Test for Hi7-N Controller
 
-(1) 제어기 내부의 3상 전원 전압을 확인하십시오.
+(1) Verify the 3-phase power voltage inside the controller.
 
-제어기 전면에 부착된 전장모듈(PSM)은 각종 전원의 분배 및 중계를 담당하고 있으며, 3상 전원은 전장모듈 내 마그네트 스위치를 통하여 온/오프 됩니다. 모터 오프 상태에서 전장모듈에 입력되는 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 아래와 같이 점검하십시오.
+The Power Supply Module (PSM) mounted on the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is switched ON/OFF via a magnetic switch within the PSM. With the motor in the OFF state, check whether the input voltage to the PSM is within a 10% tolerance range based on AC 220V. If the measured voltage is outside the allowable range, perform the following inspections.
 
-![](../_assets/1.전장/전압점검/전압점검1.PNG)<br>
-그림 1.1 전장모듈에 입력되는 3상 전원
+![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
+그림 1.1 3-phase power input to the PSM (Power Supply Module)
 
 
 {% hint style="warning" %}
-경고(Warning)
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Warning
+Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components."
 {% endhint %}
 
-1) 제어기 명판의 전압이 220V 인 경우
-제어기 입력 전압이 AC 220V인 경우에는 외부에서 전원 스위치 또는 터미널 블록으로 입력되는 전압과 내부의 전장모듈에 측정된 전압이 동일해야 합니다. 만약 차이가 있다면 3상 전원 배선을 점검하시기 바랍니다.
+1)  Case where the controller nameplate voltage is 220V<br>
+If the controller input voltage is 220V AC, the voltage input from the external power switch or terminal block must be identical to the voltage measured at the internal PSM (Power Supply Module). If there is a discrepancy, please inspect the 3-phase power wiring.
 
-2)	제어기 명판의 전압이 220V가 아닌 경우
-제어기 입력전원이 AC 220V 사양이 아닌 경우에는 내장된 트랜스포머를 사용하여 3상 전원을 AC220V로 변환하여 전장모듈에 연결됩니다. 전장모듈 측에서 측정된 전압이 AC 220V 기준으로 오차범위가 10%이내인지 점검합니다. 만약 측정된 전압이 허용 범위를 벗어나는 경우에는 내장된 트랜스포머의 입력과 출력 단자의 연결 상태를 점검하십시오. 내장된 트랜스포머의 1차단은 제어기 명판에 표기된 전압으로 연결되어야 합니다. 트랜스포머의 2차단은 항상 AC 3상 220V로 설정되어 있습니다. 입력단자와 출력단자가 올바르게 연결된 상태에서도 출력단자에서 AC 3상 220V가 정상적으로 출력되지 않으면 트랜스포머 불량입니다. 이때의 트랜스포머의 출력전압 오차는 5% 이내이어야 합니다.
+2)	Case where the controller nameplate voltage is NOT 220V<br>
+If the controller input power is not a 220V AC specification, the 3-phase power is converted to 220V AC using an internal transformer and then connected to the PSM. Check whether the voltage measured at the PSM is within a 10% tolerance range based on 220V AC.
+If the measured voltage is outside the allowable range, inspect the connection status of the input and output terminals of the internal transformer. The primary side of the internal transformer must be connected to the voltage indicated on the controller nameplate. The secondary side of the transformer is always set to 3-phase 220V AC.
+If 3-phase 220V AC is not output correctly from the output terminal despite the input and output terminals being properly connected, the transformer is defective. In this case, the output voltage tolerance of the transformer must be within 5%.
 
 [__SOURCE](1-elec/VOLTAGE_2.md)
-## 1.2. 전압점검2 – Hi7-N 제어기 입력 3상 전압 점검절차
+## 1.2. Voltage Check 2 – Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
 
-(1)	제어기에 부착된 명판의 전압과 실제 입력전압을 확인하십시오.
+(1) Verify the voltage on the controller nameplate and the actual input voltage.
 
-제어기에 실제로 공급되는 전압이 명판에 표기된 전압의 허용 범위 이내인지를 확인하십시오. 입력전압의 허용 범위는 명판에 표기된 값의 10% 이내이고, AC 220V 기준으로 AC 198V 이상이어야 합니다. 아래의 그림은 제어기의 입력전압의 측정방법을 나타낸 것입니다. 측정된 전압이 허용 범위를 벗어나는 경우에는 전원 설비를 점검하여 주십시오.
+Check whether the voltage actually supplied to the controller is within the allowable range of the voltage indicated on the nameplate. The allowable range for the input voltage is within 10% of the value marked on the nameplate and must be at least 198V AC based on a 220V AC standard.
 
-*	전면 스위치의 전원라인 측 측정
+The figure below illustrates the measurement method for the controller's input voltage. If the measured voltage is outside the allowable range, please inspect the power supply facilities.
+
+*	Measurement at the power line side of the front switch
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi7-N 제어기<br>
-그림 1.2 전원 스위치의 전원라인 측 측정
+(a) Hi7-N Conroller<br>
+Figure 1.2 Measurement on the power line side of the power switch
 
 {% hint style="warning" %}
-고전압 측정 시 주변 부품 및 상간 단락 가능성이 있으므로 주의하십시오.
+Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components.
 {% endhint %}
 
 [__SOURCE](1-elec/Parts_replacement_tips.md)
-## 1.3. 부품 교환 요령
+## 1.3. Replacement Procedures
 
-고장수리(troubleshooting)시 각 부품 및 기판의 교환요령을 설명합니다.
+This section describes the replacement procedures for each component and printed circuit board (PCB) during troubleshooting.
 
-### 1. 모듈 교환 요령
-
-{% hint style="warning" %}
-모듈 교환시 작업자는 다음의 주의 사항을 유념하여 주십시오.
-{% endhint %}
-
-①	작업전에 반드시 전원장치의 전원을 꺼 주십시오.
-
-②	작업자의 손을 청결하게 하여 기름이나 수분이 기판에 묻지 않도록 주의하십시오. 기판을 잡아야 할 경우에는 그 주위를 잡도록 하십시오. 전자 부품이나 패턴, 그리고 특히 커넥터의 접촉부분에는 손이 닿지 않도록 주의하여 주십시오.
-
-③	작업자의 몸(손)과 제어기와는 동전위(同電位)가 되도록 하여 주십시오.
-
-④	각 기판에는 다수의 커넥터가 있습니다. 교환시에 오삽입, 누락 또는 헐렁한 상태가 되지 않도록 정확히 삽입하여 주십시오. 커넥터의 명판과 기판상에 인쇄된 이름을 맞추어 삽입하십시오.
-
-### 1.1. 메인모듈 교환 요령
+### 1. Module Replacement Procedures
 
 {% hint style="warning" %}
-메인모듈을 빼기 전에 반드시 먼저 다음 사항을 조치하여 주십시오.
+Operators must keep the following precautions in mind when replacing modules.
 {% endhint %}
 
-①	메인모듈를 교환하고자 할 때는 먼저 필요한 프로그램 / 정수 데이터를 (Notebook) PC의 HR-VIEW S/W 또는 USB Memory를 이용하여 백업한 후에 교체하여 주십시오.
+① Ensure that the power supply is turned OFF before starting any work.</br>
+② Keep your hands clean to prevent oil or moisture from getting onto the circuit boards. When you must handle a board, hold it by its edges. Be careful not to touch electronic components, conductive patterns, or especially the contact areas of the connectors.</br>
+③ Ensure that the operator's body (hands) and the controller are at the same electrical potential (equipotential).</br>
+④ Each circuit board has multiple connectors. During replacement, ensure they are inserted correctly to avoid incorrect insertion, omission, or loose connections. Align the connector labels with the names printed on the board before insertion.</br>
 
-②	티칭한 프로그램 / 정수 데이터는 메인모듈의 RAM상에 저장되어 있으므로, 새로운 기판으로 교체하였을 때는 원하는 기존의 프로그램 / 정수 데이터가 없습니다.  
-
-③	교체한 후에는 앞서 백업(backup)받은 내용을 새로운 기판에 로드(load)하여 사용하시면 됩니다.
-
-이상의 주의사항을 지키고, 다음의 순서에 따라 기판을 교환하여 주십시오. 
-
-#### 1.1.1 컨트롤 모듈의 분리
-
-①	먼저 전원 장치의 입력 전원을 제거해 주십시오.
-
-②	모듈에 연결된 각종 커넥터를 빼십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 풀며, 커넥터에 무리가 가지 않도록 하여 빼십시오.
-
-③	상하에 있는 고정 나사를 약간만 풀고, 모듈을 위로 이동시킨 후 당겨 빼냅니다.
-
-#### 1.1.1 컨트롤 모듈의 결합
-
-①	먼저 제어기 입력전원이 OFF 상태임을 확인해 주십시오.
-
-②	상하에 있는 고정 나사에 교체할 모듈을 걸어서 장착한 후 고정나사를 체결합니다.
-
-③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
-
-④	통신선이 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
-
-### 1.2. 구동장치(Drive Module) 교환 요령
+### 1.1. Main Module Replacement Procedures
 
 {% hint style="warning" %}
-서보 구동장치 교환 시 작업자는 다음의 주의 사항을 유념하여 주십시오.
+Before removing the main module, be sure to take the following actions
 {% endhint %}
 
-다른 기종의 서보 구동장치와 호환성이 없는 경우가 있으므로, 앞면 패널의 명판을 반드시 확인 하십시오.
+① When replacing the main module, first back up all necessary programs and parameter data using the HR-VIEW S/W on a (Notebook) PC or a USB memory drive before proceeding with the replacement.</br>
+② Since the taught programs and parameter data are stored in the RAM of the main module, the existing data will not be present once the board is replaced with a new one.</br>
+③ After the replacement, you can use the system by loading the previously backed-up data onto the new board.</br>
+Please adhere to the precautions above and follow the steps below to replace the circuit board.</br>
 
-#### 1.2.1 서보 구동장치(Drive Unit)의 분리
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	서보 구동장치의 보호 커버의 고정볼트를 풀어서 떼어 냅니다.
-③	단자대에 나사로 고정된 배선을 떼어 냅니다.
-④	접속되어 있는 커넥터를 모두 떼어 냅니다.
-⑤	서보 구동장치를 고정하고 있는 나사를 떼어 냅니다.
-⑥	서보 구동장치를 꺼냅니다. 서보 구동장치는 무거우므로 꺼낼 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오.
+#### 1.1.1 Removing the Control Module
 
-#### 1.2.2 서보 구동장치(Drive Unit)의 결합
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	서보 구동장치를 잘 들어서 밀어 넣습니다. 서보 구동장치는 무거우므로 밀어 넣을 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오.
-③	서보 구동장치를 나사로 고정시키십시오.
-④	배선들을 단자대에 나사로 조이십시오.
-⑤	커넥터를 모두 접속시키십시오.
-⑥	서보 구동장치 보호 커버을 볼트로 체결합니다.
-⑤	빠트린 작업이 없는지 한번 더 확인하십시오.
+① First, disconnect the input power from the power supply unit.</br>
+② Disconnect all connectors attached to the module. For connectors fastened with screws, use an appropriate screwdriver to loosen them, and remove the connectors carefully to avoid applying excessive force.</br>
+③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it.</br>
 
-### 1.3. 1.1.4. PSM(Power Supply Module)의 교환 요령 
+#### 1.1.1 Installing the Control Module
+
+① First, verify that the controller input power is in the OFF state.</br>
+② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it.</br>
+③ Reconnect all connectors to the module. For connectors fastened with screws, use an appropriate screwdriver to secure them, ensuring they are connected firmly without applying excessive force.</br>
+④ Double-check that the communication cables are connected correctly and that no steps have been omitted.</br>
+
+### 1.2. Drive Module Replacement Procedures
 
 {% hint style="warning" %}
-PSM는 주 제어전원으로 이용되는 복합전원장치로서 정밀장치이므로 취급에 특별한 주의를 바랍니다.
+Operators must keep the following precautions in mind when replacing the servo drive module.
 {% endhint %}
 
-#### 1.2.1 PSM(Power Supply Module)의 분리
-①	먼저 전원 장치의 입력 전원을 꺼 주십시오.
-②	모듈에 연결된 각종 커넥터를 빼십시오.
-③	상하에 있는 고정 나사를 약간만 풀고, 모듈을 위로 이동시킨 후 당겨 빼냅니다. PSM은 무거우므로 꺼낼 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오. 이때 너무 갑자기 세게 잡아당기면 다칠 수도 있으니 주의하십시오.
+Be sure to check the nameplate on the front panel, as compatibility may vary between different models of servo drive modules.
 
-#### 1.2.2 PSM(Power Supply Module)의 결합
-①	먼저 제어기 입력전원이 OFF 상태임을 확인해 주십시오.
-②	상하에 있는 고정 나사에 교체할 모듈을 걸어서 장착한 후 고정나사를 체결합니다. PSM은 무거우므로 장착할 때 다치지 않도록 주의하십시오. 또한 옆의 배선들도 손상되지 않도록 주의하십시오. 이때 너무 갑자기 세게 집어넣으면 다칠 수도 있으니 주의하십시오.
-③	모듈에 연결된 각종 커넥터를 연결하십시오. 이때 나사로 체결되어 있는 커넥터의 경우에는 알맞은 드라이버를 이용하여 연결하고, 커넥터에 무리가 가지 않도록 연결하십시오.
-④	커넥터가 잘못 연결되진 않았는지, 빠트린 작업이 없는지 한번 더 확인하십시오.
+#### 1.2.1 Removing the Servo Drive Unit
+① First, turn OFF the input power to the power supply unit.</br>
+② Loosen the fixing bolts on the protective cover of the servo drive unit and remove the cover.</br>
+③ Disconnect the wiring secured by screws to the terminal block.</br>
+④ Disconnect all connected connectors.</br>
+⑤ Remove the screws securing the servo drive unit.</br>
+⑥ Carefully take out the servo drive unit. The servo drive unit is heavy; use caution to avoid injury while removing it. </br>Also, be careful not to damage any adjacent wiring.
+
+#### 1.2.2 Installing the Servo Drive Unit
+① First, verify that the input power to the power supply unit is turned OFF.</br>
+② Carefully lift and slide the servo drive unit into place. The unit is heavy; use caution to avoid injury during installation. Take care not to damage the surrounding wiring.</br>
+③ Secure the servo drive unit with screws.</br>
+④ Tighten the wiring onto the terminal block using the screws.</br>
+⑤ Reconnect all the connectors.</br>
+⑥ Fasten the protective cover of the servo drive unit with the bolts.</br>
+⑦ Double-check to ensure that no steps have been omitted.</br>
+
+### 1.3. Power Supply Module (PSM) Replacement Procedures 
+
+{% hint style="warning" %} The PSM is a multi-power supply unit used as the main control power source. As it is a precision device, please handle it with extraordinary care. {% endhint %}
+
+#### 1.3.1 Removing the Power Supply Module (PSM)
+① First, turn OFF the input power to the power supply unit.</br>
+② Disconnect all connectors attached to the module.</br>
+③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it. The PSM is heavy; use caution to avoid injury while removing it. Take care not to damage any adjacent wiring. Additionally, be careful not to pull the module too suddenly or with excessive force, as this may cause injury.</br>
+
+#### 1.3.2 Installing the Power Supply Module (PSM)
+① First, verify that the controller input power is in the OFF state.</br>
+② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it. The PSM is heavy; use caution to avoid injury during installation. Take care not to damage the surrounding wiring. Avoid pushing the module in too abruptly, as it may lead to injury.</br>
+③ Reconnect all connectors to the module. For connectors fastened with screws, use an appropriate screwdriver to secure them, ensuring they are connected firmly without applying excessive force.</br>
+④ Double-check to ensure that no connectors are misplaced and that no steps have been omitted.</br>
 
 
 [__SOURCE](1-elec/Adjustment_tips.md)
-## 1.4. 조정 요령
+## 1.4. Adjustment Procedures
 
-본 제어기는 출하시에 기본적으로 모든 것이 조정이 되어 있으므로 별도로 조정할 필요 없습니다. 그러나 부품을 교환할 경우에는 일부 조정이 필요하며 그 조정위치와 요령을 설명합니다. 필요한 경우를 제외하고는 조정하지 말고 문제가 발생하였더라도 그 원인이 밝혀지지 않은 경우에는 절대로 건드리지 않도록 하십시오. 
+This controller is fully adjusted at the factory prior to shipment; therefore, no additional adjustments are typically required. However, when replacing certain components, some adjustments may be necessary. This section describes the adjustment points and procedures. Do not perform adjustments unless absolutely necessary. If a problem occurs and the cause is not identified, do not attempt to modify the settings.
 
-### 1. 전원계통의 조정 
+### 1. Power System Adjustment 
 
-전원계통에 고장이 발생한 경우, 혹은 전원을 변경한 경우는 각 전원 전압을 측정하여 기준치를 벗어나는 것은 조정해 주십시오(디지털 전압계를 사용하여 측정하십시오). 
+In the event of a power system failure or if the power source is changed, measure each power supply voltage and adjust any values that fall outside the reference range (use a digital multimeter for measurement).
 
-### 1.1. Hi7-N 제어기 전원계통의 조정
-
-
-![](../_assets/1.전장/조정요령/Hi7-N제어기%20전원%20기준치.PNG)
-
-그림 1. Hi7-N 제어기 전원 기준치
+### 1.1. Power System Adjustment for Hi7-N Controller
 
 
-(주1) 기준치에 들어있지 않은 경우는 PSM을 교환하십시오. 
+![](../_assets/1.전장/조정요령/Hi7-N제어기%20전원%20기준치_en.PNG)
 
-(주2) 일단 측정장소에서의 기준치를 확인하고, 가능한 로봇의 엔코더에 가장 가까운 단자대, 커넥터의 핀 사이에서 측정하여 주십시오. 이때 기준치는 DC5.1V±0.1V이어야 합니다. 
+Figure 1. Power Supply Reference Values for Hi7-N Controller
 
-### 2. 변압기 (TR2)
+
+(Note 1) If the values are not within the reference range, replace the PSM (Power Supply Module).
+
+(Note 2) First, verify the reference values at the designated measurement points. If possible, measure the voltage between the terminals or connector pins closest to the robot's encoder. In this case, the reference value must be DC 5.1V ± 0.1V
+
+### 2. Transformer (TR2)
 
 {% hint style="warning" %}
-Hi7-N제어기 : 변압기(TR2)의 출력 전원은 반드시 AC220V 로 이용하여야 합니다.
-2차측 단자는 내부 부품들의 사양에 맞는 전원으로 연결되어 있으니, 절대로 손대지마십시오.
+Hi7-N Controller: The output power of Transformer (TR2) must be used at AC 220V.</br>
+The secondary terminals are wired to power sources that match the specifications of internal components. Never tamper with these connections.</br>
 {% endhint %}
 
-본 제어기내 입력전원은 반드시 AC220V 3상을 사용해야 합니다. 그외 전압 사양의 제어기는 출하 시 조정 완료된 상태이오니, 당사 요원의 허락 없이 절대로 탭을 변경할 수 없습니다.
+The input power for this controller must be 3-phase AC 220V. Controllers with other voltage specifications are fully adjusted before shipment; therefore, taps must never be changed without authorization from our technical staff.
 
 [__SOURCE](2-servo-amp-board-part/README.md)
 # 2. Servo AMP Board
@@ -1185,7 +1176,7 @@ If the error does not recur after replacing the servo board, the original servo 
 *   Hi7-T Controller: To be included in the future
 *   Hi7-NX Controller: To be included in the future
 [__SOURCE](3-safety-board-part/README.md)
-# 3. 서보안전 보드(안전파트)
+# 3. Servo Safety Board (Safety Section)
 [__SOURCE](3-safety-board-part/N00088.md)
 ## 3.1. N00088 External Emergency Stop (E-Stop) Input
 
