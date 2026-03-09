@@ -1763,7 +1763,7 @@ Encoder reset is executed in the menu below.
 
     System -> 5. Initialization -> 4. Serial Encoder Reset
 
-![](../_assets/4.서보보드/encoder_reset.png)<br>
+![](../_assets/4.서보보드/enc_reset.png)<br>
 Figure 4.1.2 Serial Encoder Reset
 
 (2)	Inspect the encoder battery wiring status.<br>
@@ -1819,17 +1819,17 @@ Figure 4.2.1 TP USB Connection
 
 When the USB is recognized by the TP, it is displayed as the following icon at the top of the screen.
 
-![](../_assets/4.서보보드/USB_check.png)<br>
+![](../_assets/4.서보보드/usb.png)<br>
 Figure 4.2.2 TP USB Recognition
 
 Enter the following path to back up files.
 
     Service -> 5. File Manager
 
-![](../_assets/4.서보보드/backup_1.png)<br>
+![](../_assets/4.서보보드/filemanage1.png)<br>
 Figure 4.2.3 Backup Step 1
 
-![](../_assets/4.서보보드/backup_2.png)<br>
+![](../_assets/4.서보보드/filemanage2.png)<br>
 Figure 4.2.4 Backup Step 2
 
 Copy the Project folder to the USB.
@@ -1876,7 +1876,7 @@ If the tool weight or inertia differs significantly from the values registered i
 
         System -> 3. Robot Parameter -> Tool Data
 
-![](../_assets/4.서보보드/tool_data_screen.png)<br>
+![](../_assets/4.서보보드/tool.png)<br>
 Figure 4.3.1 Check Tool Data
 
 To automatically set the tool weight or inertia, you can use the load estimation function in the menu below. 
@@ -1885,34 +1885,34 @@ To automatically set the tool weight or inertia, you can use the load estimation
 
         System -> 6. Auto Calibration -> 4. Load Estimation Function
 
-![](../_assets/4.서보보드/load_estimation_1.png)<br>
+![](../_assets/4.서보보드/estimation1.png)<br>
 Figure 4.3.2 Load Estimation Function 1
 
-![](../_assets/4.서보보드/load_estimation_2.png)<br>
+![](../_assets/4.서보보드/estimation2.png)<br>
 Figure 4.3.3 Load Estimation Function 2
 
-![](../_assets/4.서보보드/load_estimation_3.png)<br>
+![](../_assets/4.서보보드/estimation3.png)<br>
 Figure 4.3.4 Load Estimation Function 3
 
 * Select the tool number to save after estimating the load using the load estimation function.
 
-![](../_assets/4.서보보드/load_estimation_4.png)<br>
+![](../_assets/4.서보보드/estimation4.png)<br>
 Figure 4.3.5 Load Estimation Function 4
 
 * Click Normal Operation to execute.<br>
 Press the Motor On switch, hold the deadman switch, and then click Normal Operation.
 
-![](../_assets/4.서보보드/load_estimation_5.png)<br>
+![](../_assets/4.서보보드/estimation5.png)<br>
 Figure 4.3.6 Load Estimation Function 5
 
 * When the load estimation operation is completed, the estimation result is displayed on the screen.
 
-![](../_assets/4.서보보드/load_estimation_6.png)<br>
+![](../_assets/4.서보보드/estimation6.png)<br>
 Figure 4.3.7 Load Estimation Function 6
 
 (2)	Check if the robot model is set correctly.
 
-![](../_assets/4.서보보드/robot_model_check.png)<br>
+![](../_assets/4.서보보드/robot_model.png)<br>
 Figure 4.3.8 Check Robot Model
 
 Check if the robot model registered on the TP screen matches the actually installed robot.
@@ -1925,7 +1925,7 @@ The version of each module can be checked in the path below.
         Service -> 7. System Diagnosis -> 1. System Version
 
 
-![](../_assets/4.서보보드/tp_version_check_screen.png)<br>
+![](../_assets/4.서보보드/version.png)<br>
 Figure 4.3.9 Module Version Check
 
 (4)	Check if the robot posture is near a singularity.<br>
@@ -1939,7 +1939,7 @@ The motor torque may be insufficient because the maximum speed of the external a
 
         System -> 3. Robot Parameter -> 34. Acc/Dec Parameter
 
-![](../_assets/4.서보보드/add_axis_accdec.png)<br>
+![](../_assets/4.서보보드/acc.png)<br>
 Figure 4.3.11 External Axis Acc/Dec Check
 
 (6)	Adjust the job program.<br>
@@ -2026,7 +2026,7 @@ Figure 4.4.8 Motor Positions for Each Axis of HS165 Robot
 (5)	Check the communication status of the wiring after completing the measures.<br>
 After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
 
-![](../_assets/4.서보보드/encoder_comm_fail_screen.png)
+![](../_assets/4.서보보드/encoder_comm.png)
 Figure 4.4.9 Encoder Communication Failure Monitoring
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
@@ -2097,7 +2097,7 @@ Figure 4.5.6 N Controller Servo Safety Board Replacement
 (4)	Check the communication status of the wiring after completing the measures.<br>
 After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
 
-![](../_assets/4.서보보드/encoder_comm_fail_screen.png)<br>
+![](../_assets/4.서보보드/encoder_comm.png)<br>
 Figure 4.5.7 Encoder Communication Failure Monitoring
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
@@ -2260,7 +2260,7 @@ Error reset is performed in the menu below.
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Error Release
 
-![](../_assets/4.서보보드/encoder_error_release.png)<br>
+![](../_assets/4.서보보드/enc_error_clear.png)<br>
 Figure 4.11.3 Serial Encoder Error Release
 
 (3) If the error persists, perform a motor (encoder) replacement test.<br>
@@ -2368,7 +2368,7 @@ Error reset is performed in the menu below.
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Error Release
 
-![](../_assets/4.서보보드/encoder_error_release.png)<br>
+![](../_assets/4.서보보드/enc_error_clear.png)<br>
 Figure 4.15.1 Encoder Error Release
 
 (2) Check the encoder battery voltage.<br>
@@ -2383,7 +2383,7 @@ Encoder reset is performed in the menu below.
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Encoder Reset
 
-![](../_assets/4.서보보드/encoder_reset.png)<br>
+![](../_assets/4.서보보드/enc_reset.png)<br>
 Figure 4.15.3 Encoder Reset
 
 (3) Check the encoder battery connection status.<br>
@@ -2429,7 +2429,7 @@ Check the saturated encoder temperature while running the Job program. Encoder t
 
     Engineering Mode -> Window Adjustment -> System Characteristics -> System Characteristics List - Motor/Encoder
 
-![](../_assets/4.서보보드/encoder_temp.png)<br>
+![](../_assets/4.서보보드/enc_tmp.png)<br>
 Figure 4.16.2 Checking Encoder Temperature
 
 (3)	Check the ambient temperature around the encoder.<br>
@@ -2473,29 +2473,29 @@ The load estimation method is as follows.
 
         System -> 6. Auto Calibration -> 4. Load Estimation Function
 
-![](../_assets/4.서보보드/load_estimation_1.png)<br>
+![](../_assets/4.서보보드/estimation1.png)<br>
 Figure 4.17.1 Load Estimation Function 1
 
-![](../_assets/4.서보보드/load_estimation_2.png)<br>
+![](../_assets/4.서보보드/estimation2.png)<br>
 Figure 4.17.2 Load Estimation Function 2
 
-![](../_assets/4.서보보드/load_estimation_3.png)<br>
+![](../_assets/4.서보보드/estimation3.png)<br>
 Figure 4.17.3 Load Estimation Function 3
 
 * Select the tool number to save after estimating the load using the load estimation function.
 
-![](../_assets/4.서보보드/load_estimation_4.png)<br>
+![](../_assets/4.서보보드/estimation4.png)<br>
 Figure 4.17.4 Load Estimation Function 4
 
 * Click Normal Operation to execute.
 Press the Motor On switch, hold the deadman switch, and then click Normal Operation.
 
-![](../_assets/4.서보보드/load_estimation_5.png)<br>
+![](../_assets/4.서보보드/estimation5.png)<br>
 Figure 4.17.5 Load Estimation Function 5
 
 * When the load estimation operation is completed, the estimation result is displayed on the screen.
 
-![](../_assets/4.서보보드/load_estimation_6.png)<br>
+![](../_assets/4.서보보드/estimation6.png)<br>
 Figure 4.17.6 Load Estimation Function 6
 
 (2) Check if there are any collision factors during robot operation.<br>
@@ -2510,13 +2510,13 @@ Lock the axes except for the axis you want to verify, then repeat Motor ON/OFF t
 The method to use the Axis Lock function is as follows.<br>
         System -> 5. Initialization -> 9. Axis Lock Setting -> Confirm -> Individual Axis Lock
 
-![](../_assets/4.서보보드/axis_lock_1.png)<br>
+![](../_assets/4.서보보드/axis_lock1.png)<br>
 Figure 4.17.7 Axis Lock Setting Screen 1
 
-![](../_assets/4.서보보드/axis_lock_2.png)<br>
+![](../_assets/4.서보보드/axis_lock2.png)<br>
 Figure 4.17.8 Axis Lock Setting Screen 2
 
-![](../_assets/4.서보보드/axis_lock_3.png)<br>
+![](../_assets/4.서보보드/axis_lock3.png)<br>
 Figure 4.17.9 Axis Lock Setting Screen 3
 
 If the brake of the corresponding axis is not released, the brake output status of the servo board must be checked. Disconnect the brake wiring (CNBRK16, CNBRK78 connectors) and output the brake voltage. Measure whether the brake voltage of the corresponding axis is output as 20V or higher at the CNBRK16 and CNBRK78 connectors. If there is an axis outputting a voltage of 20V or lower, it is a failure of the servo safety board (BD642), so replace it.
@@ -2577,7 +2577,7 @@ Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower)
 
 (1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed.
 
-![](../_assets/4.서보보드/엔코더온도및재생속도.png)<br>
+![](../_assets/4.서보보드/enc_tmp2.png)<br>
 Figure 4.18.1 Encoder Temperature Check Screen
 
 [__SOURCE](4-servo-board-part/E50205.md)
@@ -2607,7 +2607,7 @@ It can also occur when parameters required for motor control (gain, maximum curr
 (1)	Check if the robot model is set correctly.<br>
 Check if the registered robot model on the TP screen matches the actually installed robot.
 
-![](../_assets/4.서보보드/robot_model_check.png)<br>
+![](../_assets/4.서보보드/robot_model.png)<br>
 Figure 4.19.1 Robot Model Check
 
 (2)	Inspect the motor power and encoder communication lines.<br>
@@ -2682,7 +2682,7 @@ It can also occur when parameters required for motor control (gain, maximum curr
 (1)	Check if the robot model is set correctly.<br>
 Check if the registered robot model on the TP screen matches the actually installed robot.
 
-![](../_assets/4.서보보드/robot_model_check.png)<br>
+![](../_assets/4.서보보드/robot_model.png)<br>
 Figure 4.20.1 Robot Model Check
 
 (2)	Inspect the motor power and encoder communication lines.<br>
@@ -2763,7 +2763,7 @@ This error may occur if there is mechanical interference or collision involving 
 
 (2) Check if the robot model is set correctly.<br>
 
-![](../_assets/4.서보보드/robot_model_check.png)<br>
+![](../_assets/4.서보보드/robot_model.png)<br>
 Figure 4.21.1 TP Robot Model Check
 
 Check if the registered robot model on the TP screen matches the actually installed robot.
@@ -2778,13 +2778,13 @@ The method to use the Axis Lock function is as follows.
 
         System -> 5. Initialization -> 9. Axis Lock Setting -> Confirm -> Individual Axis Lock
 
-![](../_assets/4.서보보드/axis_lock_1.png)<br>
+![](../_assets/4.서보보드/axis_lock1.png)<br>
 Figure 4.21.2 Axis Lock Setting Screen 1
 
-![](../_assets/4.서보보드/axis_lock_2.png)<br>
+![](../_assets/4.서보보드/axis_lock2.png)<br>
 Figure 4.21.3 Axis Lock Setting Screen 2
 
-![](../_assets/4.서보보드/axis_lock_3.png)<br>
+![](../_assets/4.서보보드/axis_lock3.png)<br>
 Figure 4.21.4 Axis Lock Setting Screen 3
 
 If the brake of the corresponding axis is not released, the brake output status of the servo safety board must be checked. Disconnect the brake wiring (CNBRK16, CNBRK78 connectors) and output the brake voltage. Measure whether the brake voltage of the corresponding axis is output as 20.0V or higher at the CNBRK16, CNBRK78 connectors. If there is an axis outputting a voltage of 20.0V or lower, it is a failure of the servo safety board (BD642), so replace it.
@@ -2819,18 +2819,18 @@ If the position deviation setting value is smaller than the following maximum me
 
         Maximum measured position deviation after operating for more than a cycle x 1.5
 
-![](../_assets/4.서보보드/position_error_monitor_screen.png)<br>
+![](../_assets/4.서보보드/pos_dev.png)<br>
 Figure 4.21.8 Position Deviation Max Measurement Monitoring Screen<br>
 
-![](../_assets/4.서보보드/position_error_change_screen.png)<br>
+![](../_assets/4.서보보드/pos_dev2.png)<br>
 Figure 4.21.9 Position Deviation Setting Change Screen
 
 (7) Check the versions of the servo safety board (BD642) and the main com.<br>
-This may occur if the compatibility between the servo safety board (BD642) and the main com version is broken. Especially, if a module has been replaced, proceed with a version upgrade to match the version of each module to the current main com version. The version of each module can be checked in the path below.
+This may occur if the compatibility between the servo safety board (BD642) and the main com version is broken. Especially, if a module has been replaced, proceed with a version upgrade to match the version of each module to the current main com version. The version of each module can be checked in the path below.<br>
 
-                Service -> 7. System Diagnosis -> 1. System Version
+        Service -> 7. System Diagnosis -> 1. System Version
 
-![](../_assets/4.서보보드/tp_version_check_screen.png)<br>
+![](../_assets/4.서보보드/version.png)<br>
 Figure 4.21.10 TP Module Version Check Window
 
 (8) Replace other components.<br>
@@ -2892,12 +2892,12 @@ Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower)
 
 (1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed.
 
-![](../_assets/4.서보보드/엔코더온도및재생속도.png)<br>
+![](../_assets/4.서보보드/enc_tmp2.png)<br>
 Figure 4.23.1 Encoder Temperature Check Screen
 
 (2)	Check if the robot model is set correctly.
 
-![](../_assets/4.서보보드/robot_model_check.png)<br>
+![](../_assets/4.서보보드/robot_model.png)<br>
 Figure 4.23.2 Robot Model Check
 
 Check if the registered robot model on the TP screen matches the actually installed robot.
