@@ -5,7 +5,7 @@
 The Power Supply Module (PSM) mounted on the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is switched ON/OFF via a magnetic switch within the PSM. With the motor in the OFF state, check whether the input voltage to the PSM is within a 10% tolerance range based on AC 220V. If the measured voltage is outside the allowable range, perform the following inspections.
 
 ![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
-그림 1.1 3-phase power input to the PSM (Power Supply Module)
+Figure 1.1 3-phase power input to the PSM (Power Supply Module)
 
 
 {% hint style="warning" %}

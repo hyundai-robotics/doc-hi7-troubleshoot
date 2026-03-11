@@ -1,4 +1,4 @@
-## 1.3. Replacement Procedures
+﻿## 1.3. Replacement Procedures
 
 This section describes the replacement procedures for each component and printed circuit board (PCB) during troubleshooting.
 
@@ -30,7 +30,7 @@ Please adhere to the precautions above and follow the steps below to replace the
 ② Disconnect all connectors attached to the module. For connectors fastened with screws, use an appropriate screwdriver to loosen them, and remove the connectors carefully to avoid applying excessive force.</br>
 ③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it.</br>
 
-#### 1.1.1 Installing the Control Module
+#### 1.1.2 Installing the Control Module
 
 ① First, verify that the controller input power is in the OFF state.</br>
 ② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it.</br>
