@@ -19,7 +19,7 @@ This section describes the troubleshooting procedures for each error code that m
 The Power Supply Module (PSM) mounted on the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is switched ON/OFF via a magnetic switch within the PSM. With the motor in the OFF state, check whether the input voltage to the PSM is within a 10% tolerance range based on AC 220V. If the measured voltage is outside the allowable range, perform the following inspections.
 
 ![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
-그림 1.1 3-phase power input to the PSM (Power Supply Module)
+Figure 1.1 3-phase power input to the PSM (Power Supply Module)
 
 
 {% hint style="warning" %}
@@ -87,7 +87,7 @@ Please adhere to the precautions above and follow the steps below to replace the
 ② Disconnect all connectors attached to the module. For connectors fastened with screws, use an appropriate screwdriver to loosen them, and remove the connectors carefully to avoid applying excessive force.</br>
 ③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it.</br>
 
-#### 1.1.1 Installing the Control Module
+#### 1.1.2 Installing the Control Module
 
 ① First, verify that the controller input power is in the OFF state.</br>
 ② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it.</br>
@@ -180,7 +180,7 @@ This error relates to the overheating of the resistor used to dissipate regenera
 
 The temperature of the regenerative discharge resistor has risen above the reference value. This is due to excessive robot playback speed or issues with the cooling system.
 
-* <If the error occurs at a specific step depending on the robot's playback speed>
+* < If the error occurs at a specific step depending on the robot's playback speed >
 
 (1)	Verify the error by adjusting the robot's playback speed.
 
@@ -266,7 +266,7 @@ This error occurs during the dissipation of regenerative power generated during 
 {% hint style="info" %}
 Overheat errors can also occur due to an open circuit in the resistor or an anomaly in the discharge control system. Additionally, an increase in the regenerative resistance value or a surge in the 3-phase power supply voltage may trigger this error.
 
-* <If the error consistently occurs at the moment the motor is turned ON>
+* < If the error consistently occurs at the moment the motor is turned ON >
 
 (1)	Inspect the resistance value of the regenerative discharge resistor.
 
@@ -349,7 +349,7 @@ This error relates to the overheating of the resistor used to dissipate regenera
 
 An anomaly has occurred in the path used to detect overheat errors, or the resistance value has changed.
 
-* <If the error consistently occurs even when the motor is OFF>
+* < If the error consistently occurs even when the motor is OFF >
 
 (1)	Inspect the cables related to overheat error detection.
 
@@ -419,7 +419,7 @@ The DC link voltage (P-N) of the servo drive unit that powers the motors has exc
 
 This error can occur when the robot's motion changes abruptly or if the resistance value of the regenerative discharge resistor has increased.
 
-* <If the error occurs at a specific step depending on the robot's playback speed>
+* < If the error occurs at a specific step depending on the robot's playback speed >
 
 (1)	Verify the error by adjusting the robot's playback speed.
 
@@ -473,7 +473,7 @@ The DC link voltage (P-N) of the servo drive unit that powers the motors has exc
 
 An anomaly in the diode module has caused the PN voltage to fall outside the allowable range. This error can also occur if the 3-phase AC voltage supplied to the servo drive unit (AMP) is abnormally high.
 
-* <If the error consistently occurs at the moment the motor is turned ON>
+* < If the error consistently occurs at the moment the motor is turned ON >
 
 (1)	Inspect the power-related components.
 
@@ -541,7 +541,7 @@ The DC link voltage (P-N) of the servo drive unit that powers the motors has exc
 
 An anomaly has occurred in the path used to detect PN voltage drops from the diode module, or a failure has occurred in the PN discharge circuit.
 
-* <If the error consistently occurs even when the motor is OFF>
+* < If the error consistently occurs even when the motor is OFF >
 
 (1)	Hi7-N Controller
 
@@ -604,7 +604,7 @@ The DC link voltage (P-N) of the servo drive unit that powers the motors has bee
 
 This error may occur at a specific step depending on the robot's playback speed. It indicates that the PN voltage has dropped due to high energy consumption. It can also be caused by an unstable 3-phase input power supply to the controller.
 
-* <If the error occurs at a specific step depending on the robot's playback speed>
+* < If the error occurs at a specific step depending on the robot's playback speed >
 
 (1)	Verify the error by adjusting the robot's playback speed.
 
@@ -664,7 +664,7 @@ The DC link voltage (P-N) of the servo drive unit that powers the motors has bee
 
 The PN voltage failed to charge due to an anomaly in the diode module. This error can also occur if the AC voltage supplied to the servo drive unit is insufficient.
 
-* <If the error occurs at the moment the motor is turned ON>
+* < If the error occurs at the moment the motor is turned ON >
 
   * Hi7-N Controller, NX Controller
 
@@ -767,7 +767,7 @@ The DC link voltage (P-N) of the servo drive unit that powers the motors has bee
 
 A problem has occurred in the path used to detect PN voltage drops starting from the diode module. Alternatively, an anomaly has occurred in the PN discharge circuit.
 
-* <If the error occurs even when the motor is OFF>
+* < If the error occurs even when the motor is OFF >
 
   * Hi7-N Controller
 
@@ -823,7 +823,7 @@ A fault output has been triggered from the IPM (Intelligent Power Module), which
 
 {% hint style="info" %}
 
-* < If the error occurs at a specific step>
+* < If the error occurs at a specific step >
 
 (1)	Inspect the robot at the step where the error occurs.
 
@@ -883,7 +883,7 @@ The +15V control power supplied to the servo drive unit has dropped below the th
     ->  Check the 24V control power voltage at the PSM (Power Supply Module).
 
 
-*   <If both the Board LEDs and PSM LEDs are OFF>
+*   < If both the Board LEDs and PSM LEDs are OFF >
 
     (2)	Please inspect the output of the control power supply (PSM).
 
@@ -904,7 +904,7 @@ The +15V control power supplied to the servo drive unit has dropped below the th
 
     ->  Replace the CMSMPS and check the status LEDs.
 
-    * <If only the Board LEDs are OFF>
+    * < If only the Board LEDs are OFF >
 
     (4)	Replace the relevant components and check the power status LEDs.
 
@@ -985,7 +985,7 @@ An IPM (Intelligent Power Module) fault output has occurred within the switching
 
 {% hint style="info" %}
 
-* <If the error occurs at the moment the motor is turned on or occurs intermittently>
+* < If the error occurs at the moment the motor is turned on or occurs intermittently >
 
 (1)	Inspect the motor drive components.
 
@@ -1001,9 +1001,9 @@ An IPM (Intelligent Power Module) fault output has occurred within the switching
 
 *	Hi7-NX Controller : To be included in the future (TBD)
 
-->	서보 구동장치를 교체한 후 에러를 확인하여 주십시오.
+->  Please check the error after replacing the servo drive.
 
-*	Hi7-N Controller : 중형 H7D6X, 소형 : H7D6A (서보보드 제외)
+*	Hi7-N Controller : Medium H7D6X, Small: H7D6A (excluding servo board)
 
 *	Hi7-T Controller : To be included in the future (TBD)
 
@@ -1012,7 +1012,7 @@ An IPM (Intelligent Power Module) fault output has occurred within the switching
 ->	Replace the servo motor and verify if the error persists.
 
 
-<If the error occurs after the robot has been operating for 5 minutes or longer>
+< If the error occurs after the robot has been operating for 5 minutes or longer >
 
 (2)	Inspect the controller's cooling fans.
 
@@ -1628,7 +1628,8 @@ Figure 3.6.2. Wiring Diagram for Unused Servo Safety Board CNSI1 Channel
 If the error occurs on a channel that is being used, first check which input channel the signal is assigned to. Input channel assignments can be verified through the following menu:
 
 <br>
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment  
+System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment
+
 ![](../_assets/3-Safety-io/E52042/io_alloc_param1.png)<br>
 Figure 3.6.3. T/P Screen – Safety Input Assignment
 
@@ -1826,7 +1827,7 @@ Enter the following path to back up files.
 
     Service -> 5. File Manager
 
-![](../_assets/4.서보보드/filemanage1.png)<br>
+![](../_assets/4.서보보드/filemanage.png)<br>
 Figure 4.2.3 Backup Step 1
 
 ![](../_assets/4.서보보드/filemanage2.png)<br>
@@ -3020,7 +3021,7 @@ The sequence for inspecting brake power wiring is as follows.<br>
 Figure 4.26.1 Power Electric Module
 
 (2)    Check for disconnection or poor contact status of the brake power cable.<br>
-Inspect the internal wiring of the controller. In the case of the Hi6-N controller, inspect the wiring between the CNPB1 (BD640) connector and the CNPB1 (power board) connector.
+Inspect the internal wiring of the controller. In the case of the Hi7-N controller, inspect the wiring between the J12(BD642) connector and the CNOBK(power board) connector.
 
 ![](../_assets/4.서보보드/brake_pwr_cable.png)<br>
 Figure 4.26.2 N Controller Brake Power Inspection
