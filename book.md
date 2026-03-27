@@ -2027,7 +2027,7 @@ Figure 4.4.8 Motor Positions for Each Axis of HS165 Robot
 (5)	Check the communication status of the wiring after completing the measures.<br>
 After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
 
-![](../_assets/4.서보보드/encoder_comm.png)
+![](../_assets/4.서보보드/encoder_comm.png)<br>
 Figure 4.4.9 Encoder Communication Failure Monitoring
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
@@ -3257,9 +3257,9 @@ After changing the setting, reboot the controller for the changes to take effect
 
 This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
 
-"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/korean/README)"
+"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
 
 [__SOURCE](quality-assurance.md)
 # Quality Assurance
 
-"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/korean/README)"
+"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/en/README)"
