@@ -1,4 +1,4 @@
-## 5.3. Board communication (EtherCAT) master ENI mismatch
+﻿## 5.3. Board communication (EtherCAT) master ENI mismatch
 
 ### 1. Summary
 
@@ -40,7 +40,7 @@ Figure 5.3.1 BD642 EtherCAT Connector
 <br>
 
 ![](../_assets/5-Communication/BD681_EtherCAT_Connector.png)<br>
-Figure 5.3.1 BD681 EtherCAT Connector
+Figure 5.3.2 BD681 EtherCAT Connector
 
 <br>
 

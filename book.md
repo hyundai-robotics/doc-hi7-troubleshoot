@@ -237,7 +237,7 @@ If a regenerative resistor overheat error occurs after the robot has been operat
 
 ![](../_assets/2.서보AMP/E02500/E02500_1.png  )
 
-Table 1-1 Installation Locations of Hi7-N00 Controller Fans
+Figure 2.1.1 Installation Locations of Hi7-N00 Controller Fans
 
 * Inspection of Fan Operational Status
 
@@ -292,15 +292,15 @@ Overheat errors may also occur due to an open circuit in the resistor or an incr
 
 If the resistance measured at the end of the CNDR cable is in the range of several mega-ohm, it indicates either an open circuit in the resistor or a poor internal wiring contact. Please replace the regenerative resistor with a known functional unit or repair the wiring.
 
-![](../_assets/2.서보AMP/E02501/E02501_1.PNG)
+![](../_assets/2.서보AMP/E02501/E02501_1.png)
+
+Figure 2.2.1. Measuring Resistance at the CNDR Connector
 
 (a) Hi7-N Controller (BD651 / BD653 Board)
 
 (b) Hi7-T Controller (To be included in the future)
 
 (c) Hi7-NX Controller (To be included in the future)
-
-Figure 1.1 Measuring Resistance at the CNDR Connector
 
 (2)	Please inspect the power-related components.
 
@@ -369,17 +369,17 @@ An anomaly has occurred in the path used to detect overheat errors, or the resis
 
 The regenerative resistor overheat error is detected by the servo drive unit by monitoring the ON/OFF status of the overheat sensor attached to the resistor via the CNTR connector. In the Hi7-N controller, the detected error signal is transmitted from the BD651/BD653 board through the BD652/BD654 and is finally processed by the software on the BD642 board.
 
-![](../_assets/2.서보AMP/E02502/E02502_1.PNG  )
+![](../_assets/2.서보AMP/E02502/E02502_1.png  )
 
-Figure 1.1 Component Layout for Regenerative Resistor Overheat Error (Hi7-N Controller)
+Figure 2.3.1. Component Layout for Regenerative Resistor Overheat Error (Hi7-N Controller)
 
 * CNTR Cable Inspection
 
 Check for any anomalies in the sensor at the CNTR connector that connects to the overheat detection sensor. Under normal conditions, the sensor resistance should measure less than 0.1 ohm.
 
-![](../_assets/2.서보AMP/E02502/E02502_2.PNG  )
+![](../_assets/2.서보AMP/E02502/E02502_2.png  )
 
-Figure 1.2 Measuring Resistance at the CNTR Connector (Hi7-N Controller)
+Figure 2.3.2. Measuring Resistance at the CNTR Connector (Hi7-N Controller)
 
 (2)	Please inspect the components related to overheat error detection.
 	
@@ -449,17 +449,17 @@ If the resistance value is higher than the specification, regenerative discharge
 
 -> Resistance value for small-sized robots (Hi7-N00-30, H7D6A): 15 ohm (N30)
 
-(2)-2 Hi6-T Controller
+(2)-2 Hi7-T Controller
 
 -> To be included in the future (TBD)
 
-(2)-3 Hi6-NX Controller 
+(2)-3 Hi7-NX Controller 
 
 -> To be included in the future (TBD)
 
-![](../_assets/2.서보AMP/E02503/E02503_1.PNG  )
+![](../_assets/2.서보AMP/E02503/E02503_1.png  )
 
-Figure 1.1 Measuring Resistance at the CNDR Connector (Hi6-N Controller)
+Figure 2.4.1. Measuring Resistance at the CNDR Connector (Hi7-N Controller)
 [__SOURCE](2-servo-amp-board-part/E02504.md)
 ## 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
 
@@ -493,17 +493,17 @@ An anomaly in the diode module has caused the PN voltage to fall outside the all
 
 Replace the module responsible for detecting the AMP overvoltage error and verify if the error recurs. A circuit failure within the module may cause the error to persist.
 
-(1)-1. Hi6-N Controller
+(1)-1. Hi7-N Controller
 
 -> Servo drive unit for mid-sized robots: H7D6X
 
 -> Servo drive unit for small-sized robots: H7D6A
 
-(1)-2. Hi6-T Controller
+(1)-2. Hi7-T Controller
 
 -> Servo drive unit for electronics industry robots: To be included in the future (TBD)
 
-(1)-3. Hi6-NX Controller
+(1)-3. Hi7-NX Controller
 
 -> Servo drive unit for large-sized robots: To be included in the future (TBD)
 
@@ -578,9 +578,9 @@ The modules responsible for detecting the AMP overvoltage error are as follows:
 
 Please verify the specific components installed in your current controller before proceeding with the inspection. Replace the unit with a known functional part and verify whether the error recurs.
 
-![](../_assets/2.서보AMP/E02505/E02505_1_en.PNG)
+![](../_assets/2.서보AMP/E02505/E02505_1_en.png)
 
-Figure 1.1 Component Layout for Overvoltage Error (Hi7-N Controller)
+Figure 2.6.1. Component Layout for Overvoltage Error (Hi7-N Controller)
 
 <br>
 
@@ -801,9 +801,9 @@ A problem has occurred in the path used to detect PN voltage drops starting from
   Please verify the specific components installed in your current controller before proceeding with the inspection. Replace the unit with a known functional part and verify whether the error recurs.
 
 
-![](../_assets/2.서보AMP/E02508/E02508_1_en.PNG  )
+![](../_assets/2.서보AMP/E02508/E02508_1_en.png  )
 
-Figure 1.1 Replacement of Control Module and Servo Drive Unit
+Figure 2.9.1. Replacement of Control Module and Servo Drive Unit
 
 <br>
 
@@ -846,7 +846,7 @@ Examine the condition of the internal robot wiring connected to the motor of the
 
 ![](../_assets/2.서보AMP/E02522/E02522_2.PNG)
 
-Figure 1.1 Internal Wiring Inspection Points by Axis for HS165
+Figure 2.10.1. Internal Wiring Inspection Points by Axis for HS165
 
 
 -> Verify the error by reducing the robot's playback speed
@@ -934,9 +934,9 @@ The drive unit control voltage low error is triggered when the +15V control powe
 
 *   Hi7-NX : To be included in the future (TBD)
 
-![](../_assets/2.서보AMP/E02541/E02541_1.PNG)
+![](../_assets/2.서보AMP/E02541/E02541_1.png )
 
-Figure 1.1 Location of Controller Power LEDs (Location of the ‘POW LED’ on the Hi7-N Servo Drive Unit)
+Figure 2.11.1. Location of Controller Power LEDs (Location of the ‘POW LED’ on the Hi7-N Servo Drive Unit)
 
 <br>
 
@@ -1030,10 +1030,10 @@ The servo drive unit that operates the motor receives commands from the servo bo
 
 Check the condition of the wiring connecting the servo drive unit to the motor. When inspecting, ensure the controller power is OFF, then disconnect the connector from the servo drive unit. Measure the resistance between each phase and the ground on the cable side to check for any short circuits.
 
-![](../_assets/2.서보AMP/E02520/E02520_1_en.PNG)
+![](../_assets/2.서보AMP/E02520/E02520_1_en.png)
 
 
-Figure 1.1 Inspection of the output cable for the Hi7-N controller servo drive unit
+Figure 2.12.1. Inspection of the output cable for the Hi7-N controller servo drive unit
 
 <br>
 
@@ -1049,14 +1049,14 @@ The switching elements of the servo drive unit output AC current for each phase 
     -	Servo drive unit for small-sized robots: H7D6A 
 
 
-*	Hi6-T제어기 (To be included in the future)
+*	Hi7-T제어기 (To be included in the future)
 
-*	Hi6-NX제어기 (To be included in the future)
+*	Hi7-NX제어기 (To be included in the future)
 
-![](../_assets/2.서보AMP/E02520/E02520_2.PNG)
+![](../_assets/2.서보AMP/E02520/E02520_2.png)
 
 
-Figure 1.2 Inspection for short circuits in the switching elements of the Hi7-N controller
+Figure 2.12.2. Inspection for short circuits in the switching elements of the Hi7-N controller
 
 <br>
 
@@ -1091,7 +1091,7 @@ If the error does not recur after replacing the servo motor, the original servo 
 
 ![](../_assets/2.서보AMP/E02520/E02520_3.PNG)
 
-Figure 1.3 Servo motor locations for each axis of the HS165 robot
+Figure 2.12.3. Servo motor locations for each axis of the HS165 robot
 
 <br>
 
@@ -1102,9 +1102,9 @@ If an IPM fault error occurs after the robot has been operating for 5 minutes or
 <br>
 
 
-Table 1-1 Installation locations of Hi6 controller fans
+Figure 2.12.4. Installation locations of Hi7 controller fans
 
-![](../_assets/2.서보AMP/E02520/E02520_4.PNG)
+![](../_assets/2.서보AMP/E02520/E02520_4.png)
 
 
 ->	Check the operating status of each fan.
@@ -1148,9 +1148,9 @@ The servo drive unit that operates the motor receives commands from the servo bo
 Check the condition of the wiring connecting the servo drive unit to the motor. During inspection, ensure the controller power is OFF, then disconnect the connector from the servo drive unit. Measure the resistance between each phase and the ground on the cable side to check for any short circuits.
 
 
-![](../_assets/2.서보AMP/E02521/E02521_1_en.PNG)
+![](../_assets/2.서보AMP/E02521/E02521_1_en.png)
 
-Figure 1.1 Inspection of the output cable for the Hi7-N controller servo drive unit
+Figure 2.13.1. Inspection of the output cable for the Hi7-N controller servo drive unit
 
 <br>
 
@@ -3231,7 +3231,7 @@ Figure 5.3.1 BD642 EtherCAT Connector
 <br>
 
 ![](../_assets/5-Communication/BD681_EtherCAT_Connector.png)<br>
-Figure 5.3.1 BD681 EtherCAT Connector
+Figure 5.3.2 BD681 EtherCAT Connector
 
 <br>
 
