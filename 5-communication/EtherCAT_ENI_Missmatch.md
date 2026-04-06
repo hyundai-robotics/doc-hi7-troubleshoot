@@ -39,7 +39,7 @@
 <br>
 
 ![](../_assets/5-Communication/BD681_EtherCAT_Connector.png)<br>
-그림 5.3.1 BD681 EtherCAT 통신 커넥터
+그림 5.3.2 BD681 EtherCAT 통신 커넥터
 
 <br>
 
