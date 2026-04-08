@@ -1,1 +1,1 @@
-# 4. Servo Safety Board (Servo Part)
+# 4. 伺服安全板 (伺服部分)

@@ -1,28 +1,28 @@
-## 1.4. Adjustment Procedures
+## 1.4. 调整程序
 
-This controller is fully adjusted at the factory prior to shipment; therefore, no additional adjustments are typically required. However, when replacing certain components, some adjustments may be necessary. This section describes the adjustment points and procedures. Do not perform adjustments unless absolutely necessary. If a problem occurs and the cause is not identified, do not attempt to modify the settings.
+该控制器在出厂前已完全调整，因此通常不需要额外的调整。然而，在更换某些组件时，可能需要进行一些调整。本节描述了调整点和程序。除非绝对必要，否则请勿进行调整。如果发生问题且原因未知，请勿尝试修改设置。
 
-### 1. Power System Adjustment 
+### 1. 电源系统调整
 
-In the event of a power system failure or if the power source is changed, measure each power supply voltage and adjust any values that fall outside the reference range (use a digital multimeter for measurement).
+在电源系统故障或电源更改的情况下，测量每个电源电压并调整任何超出参考范围的值（使用数字万用表进行测量）。
 
-### 1.1. Power System Adjustment for Hi7-N Controller
+### 1.1. Hi7-N 控制器的电源系统调整
 
 
 ![](../_assets/1.전장/조정요령/Hi7-N제어기%20전원%20기준치_en.PNG)
 
-Figure 1. Power Supply Reference Values for Hi7-N Controller
+图 1. Hi7-N 控制器的电源参考值
 
 
-(Note 1) If the values are not within the reference range, replace the PSM (Power Supply Module).
+（注 1）如果值不在参考范围内，请更换 PSM（电源模块）。
 
-(Note 2) First, verify the reference values at the designated measurement points. If possible, measure the voltage between the terminals or connector pins closest to the robot's encoder. In this case, the reference value must be DC 5.1V ± 0.1V
+（注 2）首先，请在指定的测量点验证参考值。如果可能，请测量机器人编码器附近端子或连接器引脚之间的电压。在这种情况下，参考值必须为 DC 5.1V ± 0.1V
 
-### 2. Transformer (TR2)
+### 2. 变压器 (TR2)
 
 {% hint style="warning" %}
-Hi7-N Controller: The output power of Transformer (TR2) must be used at AC 220V.</br>
-The secondary terminals are wired to power sources that match the specifications of internal components. Never tamper with these connections.</br>
+Hi7-N 控制器：变压器 (TR2) 的输出功率必须在 AC 220V 使用。</br>
+次级端子连接到与内部组件规格匹配的电源。切勿擅自篡改这些连接。</br>
 {% endhint %}
 
-The input power for this controller must be 3-phase AC 220V. Controllers with other voltage specifications are fully adjusted before shipment; therefore, taps must never be changed without authorization from our technical staff.
+该控制器的输入功率必须为 3 相 AC 220V。具有其他电压规格的控制器在出货前已完全调整；因此，未经我方技术人员授权，绝不可更改抽头。

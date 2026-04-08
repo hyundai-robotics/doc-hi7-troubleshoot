@@ -1,1 +1,1 @@
-﻿# 2. Servo AMP Board
+﻿# 2. 伺服放大器板

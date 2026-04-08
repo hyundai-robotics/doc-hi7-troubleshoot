@@ -1,3265 +1,3169 @@
 ﻿
 [__SOURCE](README.md)
-# Hi7 Controller Maintenance Manual – Troubleshooting
+# Hi7 控制器维护手册 – 故障排除
 
-The controller is designed with primary emphasis on high precision and high-speed performance.
-In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
+控制器设计时主要强调高精度和高速性能。
+在发生故障时，系统结构使得易于识别原因并迅速恢复。请阅读并完全理解本手册，以确保有效和高效的故障排除。
 
-## Troubleshooting Procedures
+## 故障排除程序
 
-This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
-
+本节描述了 Hi7-N 控制器可能发生的每个错误代码的故障排除程序。
 [__SOURCE](1-elec/README.md)
-# 1. Electrical equipment
+# 1. 电气设备
 [__SOURCE](1-elec/VOLTAGE_1.md)
-## 1.1. Voltage Check 1 – Internal 3-Phase Voltage Test for Hi7-N Controller
+## 1.1. 电压检查 1 – Hi7-N 控制器的内部三相电压测试
 
-(1) Verify the 3-phase power voltage inside the controller.
+(1) 验证控制器内部的三相电源电压。
 
-The Power Supply Module (PSM) mounted on the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is switched ON/OFF via a magnetic switch within the PSM. With the motor in the OFF state, check whether the input voltage to the PSM is within a 10% tolerance range based on AC 220V. If the measured voltage is outside the allowable range, perform the following inspections.
+安装在控制器前面的电源模块（PSM）负责分配和中继各种电源。三相电源通过 PSM 内的磁性开关切换 ON/OFF。在电机处于 OFF 状态时，检查 PSM 的输入电压是否在基于 AC 220V 的 10% 容差范围内。如果测得电压超出允许范围，请进行以下检查。
 
 ![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
-Figure 1.1 3-phase power input to the PSM (Power Supply Module)
+图 1.1 PSM（电源模块）的三相电源输入
 
 
 {% hint style="warning" %}
-Warning
-Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components."
+警告
+在测量高电压时要小心，因为存在相之间或与周围组件短路的风险。
 {% endhint %}
 
-1)  Case where the controller nameplate voltage is 220V<br>
-If the controller input voltage is 220V AC, the voltage input from the external power switch or terminal block must be identical to the voltage measured at the internal PSM (Power Supply Module). If there is a discrepancy, please inspect the 3-phase power wiring.
+1)  控制器铭牌电压为 220V 的情况<br>
+如果控制器输入电压为 220V AC，则外部电源开关或接线端子输入的电压必须与内部 PSM（电源模块）测得的电压相同。如果存在差异，请检查三相电源接线。
 
-2)	Case where the controller nameplate voltage is NOT 220V<br>
-If the controller input power is not a 220V AC specification, the 3-phase power is converted to 220V AC using an internal transformer and then connected to the PSM. Check whether the voltage measured at the PSM is within a 10% tolerance range based on 220V AC.
-If the measured voltage is outside the allowable range, inspect the connection status of the input and output terminals of the internal transformer. The primary side of the internal transformer must be connected to the voltage indicated on the controller nameplate. The secondary side of the transformer is always set to 3-phase 220V AC.
-If 3-phase 220V AC is not output correctly from the output terminal despite the input and output terminals being properly connected, the transformer is defective. In this case, the output voltage tolerance of the transformer must be within 5%.
-
+2) 控制器铭牌电压不是 220V 的情况<br>
+如果控制器输入电源不是 220V AC 规格，则三相电源通过内部变压器转换为 220V AC，然后连接到 PSM。检查在 PSM 测得的电压是否在基于 220V AC 的 10% 容差范围内。
+如果测得电压超出允许范围，请检查内部变压器的输入和输出端子的连接状态。内部变压器的初级侧必须连接到控制器铭牌上指示的电压。变压器的次级侧始终设定为三相 220V AC。
+如果尽管输入和输出端子连接正确，但输出端子未正确输出三相 220V AC，则变压器有缺陷。在这种情况下，变压器的输出电压容差必须在 5% 以内。
 [__SOURCE](1-elec/VOLTAGE_2.md)
-## 1.2. Voltage Check 2 – Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
+## 1.2. 电压检查 2 – Hi7-N 控制器输入三相电压检查程序
 
-(1) Verify the voltage on the controller nameplate and the actual input voltage.
+(1) 验证控制器铭牌上的电压和实际输入电压。
 
-Check whether the voltage actually supplied to the controller is within the allowable range of the voltage indicated on the nameplate. The allowable range for the input voltage is within 10% of the value marked on the nameplate and must be at least 198V AC based on a 220V AC standard.
+检查实际供给控制器的电压是否在铭牌所示电压的允许范围内。输入电压的允许范围在铭牌标示值的±10%之内，并且必须根据220V AC标准至少为198V AC。
 
-The figure below illustrates the measurement method for the controller's input voltage. If the measured voltage is outside the allowable range, please inspect the power supply facilities.
+下图说明了控制器输入电压的测量方法。如果测量电压超出允许范围，请检查电源设施。
 
-*	Measurement at the power line side of the front switch
+*	在前开关的电源线侧进行测量
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi7-N Conroller<br>
-Figure 1.2 Measurement on the power line side of the power switch
+(a) Hi7-N 控制器<br>
+图 1.2 电源开关电源线侧的测量
 
 {% hint style="warning" %}
-Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components.
+在测量高电压时请小心，因为存在相间短路或与周围组件短路的风险。
 {% endhint %}
-
 [__SOURCE](1-elec/Parts_replacement_tips.md)
-## 1.3. Replacement Procedures
+## 1.3. 替换程序
 
-This section describes the replacement procedures for each component and printed circuit board (PCB) during troubleshooting.
+此部分描述在故障排除过程中每个组件和印刷电路板（PCB）的更换程序。
 
-### 1. Module Replacement Procedures
-
-{% hint style="warning" %}
-Operators must keep the following precautions in mind when replacing modules.
-{% endhint %}
-
-① Ensure that the power supply is turned OFF before starting any work.</br>
-② Keep your hands clean to prevent oil or moisture from getting onto the circuit boards. When you must handle a board, hold it by its edges. Be careful not to touch electronic components, conductive patterns, or especially the contact areas of the connectors.</br>
-③ Ensure that the operator's body (hands) and the controller are at the same electrical potential (equipotential).</br>
-④ Each circuit board has multiple connectors. During replacement, ensure they are inserted correctly to avoid incorrect insertion, omission, or loose connections. Align the connector labels with the names printed on the board before insertion.</br>
-
-### 1.1. Main Module Replacement Procedures
+### 1. 模块替换程序
 
 {% hint style="warning" %}
-Before removing the main module, be sure to take the following actions
+操作员在更换模块时必须牢记以下注意事项。
 {% endhint %}
 
-① When replacing the main module, first back up all necessary programs and parameter data using the HR-VIEW S/W on a (Notebook) PC or a USB memory drive before proceeding with the replacement.</br>
-② Since the taught programs and parameter data are stored in the RAM of the main module, the existing data will not be present once the board is replaced with a new one.</br>
-③ After the replacement, you can use the system by loading the previously backed-up data onto the new board.</br>
-Please adhere to the precautions above and follow the steps below to replace the circuit board.</br>
+① 在开始任何工作之前，请确保电源已关闭。</br>
+② 保持双手干净，以防油脂或潮气弄到电路板上。当需要处理PCB时，请抓住边缘。小心不要触碰电子元件、导电图案，特别是连接器的接触区域。</br>
+③ 确保操作员的身体（手）与控制器处于相同的电位（等电位）。</br>
+④ 每个电路板都有多个连接器。在更换时，确保它们正确插入，以避免插入错误、遗漏或松动连接。在插入前，将连接器标签与电路板上打印的名称对齐。</br>
 
-#### 1.1.1 Removing the Control Module
-
-① First, disconnect the input power from the power supply unit.</br>
-② Disconnect all connectors attached to the module. For connectors fastened with screws, use an appropriate screwdriver to loosen them, and remove the connectors carefully to avoid applying excessive force.</br>
-③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it.</br>
-
-#### 1.1.2 Installing the Control Module
-
-① First, verify that the controller input power is in the OFF state.</br>
-② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it.</br>
-③ Reconnect all connectors to the module. For connectors fastened with screws, use an appropriate screwdriver to secure them, ensuring they are connected firmly without applying excessive force.</br>
-④ Double-check that the communication cables are connected correctly and that no steps have been omitted.</br>
-
-### 1.2. Drive Module Replacement Procedures
+### 1.1. 主模块替换程序
 
 {% hint style="warning" %}
-Operators must keep the following precautions in mind when replacing the servo drive module.
+在拆卸主模块之前，请务必采取以下措施。
 {% endhint %}
 
-Be sure to check the nameplate on the front panel, as compatibility may vary between different models of servo drive modules.
+① 在更换主模块之前，请首先使用HR-VIEW S/W在（笔记本）电脑或USB闪存驱动器上备份所有必要的程序和参数数据，然后再进行更换。</br>
+② 由于教导的程序和参数数据存储在主模块的RAM中，替换电路板后，现有数据将不再存在。</br>
+③ 替换后，您可以通过将先前备份的数据加载到新电路板上来使用系统。</br>
+请遵循上述注意事项，并按照以下步骤更换电路板。</br>
 
-#### 1.2.1 Removing the Servo Drive Unit
-① First, turn OFF the input power to the power supply unit.</br>
-② Loosen the fixing bolts on the protective cover of the servo drive unit and remove the cover.</br>
-③ Disconnect the wiring secured by screws to the terminal block.</br>
-④ Disconnect all connected connectors.</br>
-⑤ Remove the screws securing the servo drive unit.</br>
-⑥ Carefully take out the servo drive unit. The servo drive unit is heavy; use caution to avoid injury while removing it. </br>Also, be careful not to damage any adjacent wiring.
+#### 1.1.1 拆卸控制模块
 
-#### 1.2.2 Installing the Servo Drive Unit
-① First, verify that the input power to the power supply unit is turned OFF.</br>
-② Carefully lift and slide the servo drive unit into place. The unit is heavy; use caution to avoid injury during installation. Take care not to damage the surrounding wiring.</br>
-③ Secure the servo drive unit with screws.</br>
-④ Tighten the wiring onto the terminal block using the screws.</br>
-⑤ Reconnect all the connectors.</br>
-⑥ Fasten the protective cover of the servo drive unit with the bolts.</br>
-⑦ Double-check to ensure that no steps have been omitted.</br>
+① 首先，断开电源单元的输入电源。</br>
+② 断开所有连接到模块的连接器。对于用螺钉固定的连接器，请使用合适的螺丝刀将其松开，并小心地移除连接器，以避免施加过大力量。</br>
+③ 稍微松开顶部和底部的固定螺丝，将模块向上移动，然后拉出以进行拆卸。</br>
 
-### 1.3. Power Supply Module (PSM) Replacement Procedures 
+#### 1.1.2 安装控制模块
 
-{% hint style="warning" %} The PSM is a multi-power supply unit used as the main control power source. As it is a precision device, please handle it with extraordinary care. {% endhint %}
+① 首先，确认控制器输入电源处于关闭状态。</br>
+② 将替换模块安装在顶部和底部的固定螺丝上，然后拧紧螺丝以固定。</br>
+③ 重新连接所有连接器到模块。对于用螺钉固定的连接器，请使用合适的螺丝刀将其拧紧，确保连接牢固而不施加过大力量。</br>
+④ 再次检查通信电缆连接正确，确保没有步骤被遗漏。</br>
 
-#### 1.3.1 Removing the Power Supply Module (PSM)
-① First, turn OFF the input power to the power supply unit.</br>
-② Disconnect all connectors attached to the module.</br>
-③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it. The PSM is heavy; use caution to avoid injury while removing it. Take care not to damage any adjacent wiring. Additionally, be careful not to pull the module too suddenly or with excessive force, as this may cause injury.</br>
+### 1.2. 驱动模块替换程序
 
-#### 1.3.2 Installing the Power Supply Module (PSM)
-① First, verify that the controller input power is in the OFF state.</br>
-② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it. The PSM is heavy; use caution to avoid injury during installation. Take care not to damage the surrounding wiring. Avoid pushing the module in too abruptly, as it may lead to injury.</br>
-③ Reconnect all connectors to the module. For connectors fastened with screws, use an appropriate screwdriver to secure them, ensuring they are connected firmly without applying excessive force.</br>
-④ Double-check to ensure that no connectors are misplaced and that no steps have been omitted.</br>
+{% hint style="warning" %}
+操作员在更换伺服驱动模块时必须牢记以下注意事项。
+{% endhint %}
 
+请务必检查前面板上的铭牌，因为不同型号的伺服驱动模块之间的兼容性可能会有所不同。
 
+#### 1.2.1 拆卸伺服驱动单元
+① 首先，关闭电源单元的输入电源。</br>
+② 松开伺服驱动单元保护盖上的固定螺栓并移除该盖。</br>
+③ 断开固定在接线端子上的布线。</br>
+④ 断开所有连接的连接器。</br>
+⑤ 拆下固定伺服驱动单元的螺丝。</br>
+⑥ 小心地取出伺服驱动单元。伺服驱动单元比较重；拆卸时要小心以免受伤。</br>此外，要小心不要损坏任何相邻的布线。
+
+#### 1.2.2 安装伺服驱动单元
+① 首先，确认电源单元的输入电源已关闭。</br>
+② 小心地将伺服驱动单元提升并滑入到位。该单元较重；在安装过程中要小心以免受伤。注意不要损坏周围的布线。</br>
+③ 用螺丝固定伺服驱动单元。</br>
+④ 用螺丝将布线固定到接线端子上。</br>
+⑤ 重新连接所有连接器。</br>
+⑥ 用螺栓固定伺服驱动单元的保护盖。</br>
+⑦ 再次检查以确保没有遗漏步骤。</br>
+
+### 1.3. 电源模块（PSM）替换程序 
+
+{% hint style="warning" %} PSM是一种多电源单元，用作主要控制电源。由于它是精密设备，请格外小心处理。 {% endhint %}
+
+#### 1.3.1 拆卸电源模块（PSM）
+① 首先，关闭电源单元的输入电源。</br>
+② 断开所有连接到模块的连接器。</br>
+③ 稍微松开顶部和底部的固定螺丝，将模块向上移动，然后拉出以进行拆卸。PSM较重；拆卸时要小心以免受伤。注意不要损坏任何相邻的布线。此外，要小心不要突然或过大力度拉出模块，以免造成伤害。</br>
+
+#### 1.3.2 安装电源模块（PSM）
+① 首先，确认控制器输入电源处于关闭状态。</br>
+② 将替换模块安装在顶部和底部的固定螺丝上，然后拧紧螺丝以固定。PSM较重；安装时要小心以免受伤。注意不要损坏周围的布线。避免过于突然地推动模块，因为这可能会导致受伤。</br>
+③ 重新连接所有连接器到模块。对于用螺钉固定的连接器，请使用合适的螺丝刀将其拧紧，确保连接牢固而不施加过大力量。</br>
+④ 再次检查以确保没有连接器被放错位置，并且没有步骤被遗漏。</br>
 [__SOURCE](1-elec/Adjustment_tips.md)
-## 1.4. Adjustment Procedures
+## 1.4. 调整程序
 
-This controller is fully adjusted at the factory prior to shipment; therefore, no additional adjustments are typically required. However, when replacing certain components, some adjustments may be necessary. This section describes the adjustment points and procedures. Do not perform adjustments unless absolutely necessary. If a problem occurs and the cause is not identified, do not attempt to modify the settings.
+该控制器在出厂前已完全调整，因此通常不需要额外的调整。然而，在更换某些组件时，可能需要进行一些调整。本节描述了调整点和程序。除非绝对必要，否则请勿进行调整。如果发生问题且原因未知，请勿尝试修改设置。
 
-### 1. Power System Adjustment 
+### 1. 电源系统调整
 
-In the event of a power system failure or if the power source is changed, measure each power supply voltage and adjust any values that fall outside the reference range (use a digital multimeter for measurement).
+在电源系统故障或电源更改的情况下，测量每个电源电压并调整任何超出参考范围的值（使用数字万用表进行测量）。
 
-### 1.1. Power System Adjustment for Hi7-N Controller
+### 1.1. Hi7-N 控制器的电源系统调整
 
 
 ![](../_assets/1.전장/조정요령/Hi7-N제어기%20전원%20기준치_en.PNG)
 
-Figure 1. Power Supply Reference Values for Hi7-N Controller
+图 1. Hi7-N 控制器的电源参考值
 
 
-(Note 1) If the values are not within the reference range, replace the PSM (Power Supply Module).
+（注 1）如果值不在参考范围内，请更换 PSM（电源模块）。
 
-(Note 2) First, verify the reference values at the designated measurement points. If possible, measure the voltage between the terminals or connector pins closest to the robot's encoder. In this case, the reference value must be DC 5.1V ± 0.1V
+（注 2）首先，请在指定的测量点验证参考值。如果可能，请测量机器人编码器附近端子或连接器引脚之间的电压。在这种情况下，参考值必须为 DC 5.1V ± 0.1V
 
-### 2. Transformer (TR2)
+### 2. 变压器 (TR2)
 
 {% hint style="warning" %}
-Hi7-N Controller: The output power of Transformer (TR2) must be used at AC 220V.</br>
-The secondary terminals are wired to power sources that match the specifications of internal components. Never tamper with these connections.</br>
+Hi7-N 控制器：变压器 (TR2) 的输出功率必须在 AC 220V 使用。</br>
+次级端子连接到与内部组件规格匹配的电源。切勿擅自篡改这些连接。</br>
 {% endhint %}
 
-The input power for this controller must be 3-phase AC 220V. Controllers with other voltage specifications are fully adjusted before shipment; therefore, taps must never be changed without authorization from our technical staff.
-
+该控制器的输入功率必须为 3 相 AC 220V。具有其他电压规格的控制器在出货前已完全调整；因此，未经我方技术人员授权，绝不可更改抽头。
 [__SOURCE](2-servo-amp-board-part/README.md)
-# 2. Servo AMP Board
+# 2. 伺服放大器板
 [__SOURCE](2-servo-amp-board-part/E02500.md)
 ## 2.1. E02500 AMP Regenerative Discharge Resistor Overheat
 
 ### 1. Overview
 
-This error relates to the overheating of the resistor used to dissipate regenerative power generated during robot deceleration or downward movement in the direction of gravity. It can be caused by decreased cooling fan performance, temporary rapid movements, or exceeding the regenerative discharge capacity due to continuous robot operation.
+此错误与用于消散机器人减速或向下运动过程中产生的再生电力的电阻器过热有关。它可能是由于冷却风扇性能下降、暂时快速移动或因连续操作机器人而超过再生放电能力引起的。
 
 ### 2. Causes and Inspection Methods
 
 {% hint style="info" %}
 
-The temperature of the regenerative discharge resistor has risen above the reference value. This is due to excessive robot playback speed or issues with the cooling system.
+再生放电电阻的温度已超过参考值。这是由于机器人回放速度过快或冷却系统存在问题。
 
-* < If the error occurs at a specific step depending on the robot's playback speed >
+* < 如果错误发生在特定步骤，取决于机器人的回放速度 >
 
-(1)	Verify the error by adjusting the robot's playback speed.
+(1)	通过调整机器人的回放速度来验证错误。
 
-(2)	Inspect the resistance value of the regenerative discharge resistor.
+(2)	检查再生放电电阻的阻值。
 
-* <If the error occurs after the robot has been operating for 5 minutes or longer>
+* <如果错误发生在机器人运行超过5分钟后>
 
-(3)	Inspect the controller's cooling system and the amount of regenerative power.
+(3)	检查控制器的冷却系统和再生电力的数量。
 
-->	Check the operational status of each fan.
+->	检查每个风扇的运行状态。
 
-->	Inspect the power supply voltage provided to the fans.
+->	检查提供给风扇的电源电压。
 
-(4)	Inspect the robot's regenerative power load.
+(4)	检查机器人的再生电力负载。
 
-->	Verify the error by reducing the robot's playback speed to see if the thermal load decreases.
+->	通过降低机器人的回放速度来确认错误，以查看热负载是否减少。
 
 {% endhint %}
 
-(1)	Verify the error by adjusting the robot's playback speed.
+(1)	通过调整机器人的回放速度来验证错误。
 
-During robot deceleration or downward movement in the direction of gravity, the DC voltage of the servo drive unit increases. To prevent component damage caused by this voltage surge, electrical power is consumed through the regenerative discharge resistor. Rapid deceleration or high-speed movement in the direction of gravity can trigger this error. Please verify whether the error occurs according to the robot's playback speed.
+在机器人减速或沿重力方向向下移动时，伺服驱动单元的直流电压会增加。为了防止因这种电压激增而导致组件损坏，电能通过再生放电电阻耗散。快速减速或高速向下运动可能会触发此错误。请确认该错误是否根据机器人的回放速度出现。
 
-* Changing the Robot Playback Speed
+* 更改机器人的回放速度
 
-An "Regenerative Resistor Overheat" error may occur if the regenerative power generated by the robot's motion exceeds the controller's design specifications. Please operate the robot after reducing the speed of the step where the error occurs and verify if the error persists.
+如果机器人运动产生的再生电力超过控制器的设计规格，则可能会出现“再生电阻过热”错误。请在降低错误发生步骤的速度后操作机器人，并确认错误是否持续存在。
 
 
-(2)	Inspect the resistance value of the regenerative discharge resistor.
+(2)	检查再生放电电阻的阻值。
 
-* Inspection of Regenerative Discharge Resistance Value
+* 检查再生放电阻值
 
-If the resistance value measured at the end of the CNDR cable deviates by 10% or more from the value specified in the manual, the resistor is defective. Please replace the resistor. Refer to the previous page for the detailed measurement procedure.
+如果在CNDR电缆末端测得的阻值偏离手册规定的值10%或以上，则电阻器存在缺陷。请更换电阻器。有关详细的测量程序，请参阅前一页。
 
  (2)-1. Hi7-N Controller
 
--> Resistance value for mid-sized robots (H7D6X): 5 ohm (Models N00-00, N00-70: Two 2.5 ohm resistors connected in series)
+-> 中型机器人（H7D6X）的阻值：5 ohm（型号N00-00, N00-70：两个2.5 ohm电阻串联连接）
 
--> Resistance value for large-sized robots (H7D6X): 4 ohm (Model N00-80)
+-> 大型机器人（H7D6X）的阻值：4 ohm（型号N00-80）
 
--> Resistance value for small-sized robots (H7D6A): 15 ohm (Model N00-30)
+-> 小型机器人（H7D6A）的阻值：15 ohm（型号N00-30）
 
 (2)-2. Hi7-T Controller
 
--> To be included in the future (TBD)
+-> 将在未来包含（待定）
 
 (2)-3. Hi7-NX Controller
 
--> To be included in the future (TBD)
+-> 将在未来包含（待定）
 
-(3)	Please inspect the controller's cooling conditions and the amount of regenerative power.
+(3)	请检查控制器的冷却条件和再生电力的数量。
 
-If a regenerative resistor overheat error occurs after the robot has been operating for 5 minutes or longer, it indicates either a malfunction in the controller’s cooling system or that the robot’s playback speed exceeds the controller’s design specifications. Fans are installed at the rear of the controller to cool the servo drive unit's heatsink and the regenerative discharge resistor.
+如果在机器人运行超过5分钟后发生再生电阻过热错误，则表明控制器的冷却系统出现故障，或者机器人的回放速度超过了控制器的设计规格。风扇安装在控制器后部，以冷却伺服驱动单元的散热器和再生放电电阻。
 
 ![](../_assets/2.서보AMP/E02500/E02500_1.png  )
 
-Figure 2.1.1 Installation Locations of Hi7-N00 Controller Fans
+图2.1.1 Hi7-N00控制器风扇的安装位置
 
-* Inspection of Fan Operational Status
+* 检查风扇运行状态
 
-If a fan is not rotating or its speed is abnormally low, please replace the corresponding fan. The lifespan of a cooling fan varies depending on the operating environment and total usage hours.
+如果风扇不转动或其速度异常低，请更换相应的风扇。冷却风扇的寿命取决于运行环境和总使用小时数。
 
 
-* Inspection of Fan Power Supply Voltage
+* 检查风扇电源电压
 
-If all fans are inoperative, please verify the fan input voltage. The fan input voltage is set to AC 220V, with an allowable range within 10% of the rated voltage. If the voltage is more than 10% below the rating, the cooling efficiency will decrease due to the reduced fan rotation speed. If the voltage is low, please inspect the fan power connector (CNFN2) and the overall input voltage of the controller.
+如果所有风扇均无法正常运行，请确认风扇输入电压。风扇输入电压设定为AC 220V，允许范围在额定电压的10%以内。如果电压低于额定值的10%以上，冷却效率将因风扇转速降低而下降。如果电压低，请检查风扇电源连接器（CNFN2）及控制器的整体输入电压。
 
-(4)	Please inspect the robot's regenerative power load.
+(4)	请检查机器人的再生电力负载。
 
-* Verify the error according to the robot's playback speed.
+* 根据机器人的回放速度验证错误。
 
-If an overheat error occurs during continuous playback for 5 minutes or longer, it is likely because the robot's repetitive motions have exceeded the controller's cooling capacity. Please reduce the robot's playback speed and verify if the error persists. If the overheat error is resolved by lowering the speed but the required cycle time for the task cannot be achieved, please contact our technical support department.
-
+如果在连续播放5分钟或更长时间内发生过热错误，可能是由于机器人的重复运动超过了控制器的冷却能力。请降低机器人的回放速度，并确认错误是否持续存在。如果通过降低速度解决了过热错误但无法达到任务所需的周期时间，请与我们的技术支持部门联系。
 [__SOURCE](2-servo-amp-board-part/E02501.md)
-## 2.2. E02501 AMP Regenerative Discharge Resistor Open Circuit, Resistor or Circuit Error
+## 2.2. E02501 AMP 再生放电电阻开路、电阻或电路错误
 
-### 1. Overview
+### 1. 概述
 
-This error occurs during the dissipation of regenerative power generated during robot deceleration or downward movement in the direction of gravity. It can be caused by a failure in the overheat detection sensor circuit, an open circuit in the resistor, or an overvoltage in the 3-phase power supply.
+此错误在机器人减速或沿重力方向向下移动时发生的再生能量耗散过程中出现。可能是由于过热检测传感器电路故障、电阻开路或三相电源过电压引起的。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
-Overheat errors can also occur due to an open circuit in the resistor or an anomaly in the discharge control system. Additionally, an increase in the regenerative resistance value or a surge in the 3-phase power supply voltage may trigger this error.
+过热错误也可能是由于电阻开路或放电控制系统异常造成的。此外，再生电阻值的增加或三相电源电压的激增也可能触发此错误。
 
-* < If the error consistently occurs at the moment the motor is turned ON >
+* < 如果在电机开机瞬间持续发生错误 >
 
-(1)	Inspect the resistance value of the regenerative discharge resistor.
+(1) 检查再生放电电阻的电阻值。
 
--> Check the resistance value at the CNDR cable.
+-> 检查 CNDR 电缆的电阻值。
 
-(2)	Inspect the servo drive unit.
+(2) 检查伺服驱动单元。
 
--> Replace the servo drive unit and verify if the error persists.
+-> 更换伺服驱动单元，并验证错误是否持续存在。
 
-(3)	Inspect the power-related components.
+(3) 检查电源相关组件。
 
--> Check the internal 3-phase voltage of the controller.
+-> 检查控制器内部的三相电压。
 
--> Check the input 3-phase voltage supplied to the controller.
+-> 检查供应给控制器的输入三相电压。
 
 {% endhint %}
 
-(1)	Please inspect the resistance value of the regenerative discharge resistor.
+(1) 请检查再生放电电阻的电阻值。
 
-Overheat errors may also occur due to an open circuit in the resistor or an increase in the regenerative resistance value.
- 
-* Inspection for Open Circuit in the Regenerative Resistor
+过热错误也可能是由于电阻开路或再生电阻值增加导致的。
 
-If the resistance measured at the end of the CNDR cable is in the range of several mega-ohm, it indicates either an open circuit in the resistor or a poor internal wiring contact. Please replace the regenerative resistor with a known functional unit or repair the wiring.
+* 检查再生电阻开路情况
+
+如果在 CNDR 电缆末端测得的电阻值在几个兆欧的范围内，则表示电阻开路或内部接线接触不良。请更换已知功能正常的再生电阻或修复接线。
 
 ![](../_assets/2.서보AMP/E02501/E02501_1.png)
 
-Figure 2.2.1. Measuring Resistance at the CNDR Connector
+图 2.2.1. 在 CNDR 连接器测量电阻
 
-(a) Hi7-N Controller (BD651 / BD653 Board)
+(a) Hi7-N 控制器 (BD651 / BD653 板)
 
-(b) Hi7-T Controller (To be included in the future)
+(b) Hi7-T 控制器 (未来将包含)
 
-(c) Hi7-NX Controller (To be included in the future)
+(c) Hi7-NX 控制器 (未来将包含)
 
-(2)	Please inspect the power-related components.
+(2) 请检查电源相关组件。
 
-Overheat errors can also occur due to anomalies in the discharge control circuit.
+过热错误也可能是由于放电控制电路异常造成的。
 
-* Replacement Inspection of the Drive Unit
+* 驱动单元更换检查
 
-Replace the module that detects the regenerative discharge resistor overheat error and verify if the error recurs. A circuit failure within the module may cause the error to persist.
+更换检测再生放电电阻过热错误的模块，并验证错误是否再次出现。模块内部的电路故障可能导致错误持续存在。
 
-(2)-1. Hi7-N Controller
+(2)-1. Hi7-N 控制器
 
--> Servo drive unit for mid-sized robots: H7D6X
+-> 中型机器人的伺服驱动单元：H7D6X
 
--> Servo drive unit for small-sized robots: H7D6A
+-> 小型机器人的伺服驱动单元：H7D6A
 
-(2)-2 Hi7-T Controller
+(2)-2 Hi7-T 控制器
 
--> To be included in the future (TBD)
+-> 未来将包含 (待定)
 
-(2)-3 Hi7-NX Controller
+(2)-3 Hi7-NX 控制器
 
--> To be included in the future (TBD)
+-> 未来将包含 (待定)
 
+(3) 请检查电源相关组件。
 
-(3)	Please inspect the power-related components.
+过热错误可能是由于电阻开路或放电控制系统异常造成的。此外，再生电阻值的增加或三相电源电压的激增也可能触发此错误。
 
-Overheat errors can occur due to an open circuit in the resistor or an anomaly in the discharge control system. Furthermore, an increase in the regenerative resistance value or a surge in the 3-phase power supply voltage may also trigger this error.
+* 控制器内部三相电压的检查
 
-* Inspection of Internal 3-Phase Voltage of the Controller
+再生放电操作大约在直流 375V 时开始。如果伺服驱动单元供电的电压为交流 242V 或更高，则在电机开机的瞬间可能触发再生电阻过热错误。如果输入电压超过允许范围，请按照控制器输入电压和内部三相电压检查程序进行检查。
 
-Regenerative discharge operation begins at approximately DC 375V. If a voltage of AC 242V or higher is supplied to the servo drive unit, a regenerative resistor overheat error may be triggered the moment the motor is turned ON. If the input voltage exceeds the allowable range, please perform inspections according to the controller input voltage and internal 3-phase voltage inspection procedures.
-
--> Servo Drive Unit Input Voltage Specification: 3-phase AC 220V
--> Allowable Range when Motor is ON: 198V ~ 242V
-
+-> 伺服驱动单元输入电压规格：三相交流 220V  
+-> 电机开启时的允许范围：198V ~ 242V  
 [__SOURCE](2-servo-amp-board-part/E02502.md)
-## 2.3. E02502 AMP Regenerative Discharge Resistor Detection Circuit Error
+## 2.3. E02502 AMP 再生放电电阻检测电路错误
 
-### 1. Overview
+### 1. 概述
 
-This error relates to the overheating of the resistor used to dissipate regenerative power generated during robot deceleration or downward movement in the direction of gravity. It is typically caused by a failure in the overheat detection sensor circuit or a cable-related issue.
+该错误与用于在机器人减速或沿重力方向下移动时散发再生功率的电阻过热有关。通常是由于过热检测传感器电路故障或电缆相关问题引起的。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-An anomaly has occurred in the path used to detect overheat errors, or the resistance value has changed.
+在用于检测过热错误的路径中发生了异常，或电阻值已改变。
 
-* < If the error consistently occurs even when the motor is OFF >
+* < 如果错误在电机关闭时仍然持续发生 >
 
-(1)	Inspect the cables related to overheat error detection.
+(1) 检查与过热错误检测相关的电缆。
 
--> Check the resistance of the CNTR cable.
+-> 检查 CNTR 电缆的电阻。
 
-(2)	Inspect the components related to overheat error detection.
+(2) 检查与过热错误检测相关的组件。
 
--> Hi7-N Controller: Replace the Control Module (including the BD642 board) and verify if the error persists.
+-> Hi7-N 控制器：更换控制模块（包括 BD642 板）并确认错误是否仍然存在。
 
--> Hi7-T Controller: (To be included in the future)
+-> Hi7-T 控制器：（将来包括）
 
--> Servo Drive Unit: Replace the servo drive unit and verify if the error persists.
+-> 伺服驱动单元：更换伺服驱动单元并确认错误是否仍然存在。
 
 {% endhint %}
 
-(1)	Please inspect the overheat error detection cable.
+(1) 请检查过热错误检测电缆。
 
-The regenerative resistor overheat error is detected by the servo drive unit by monitoring the ON/OFF status of the overheat sensor attached to the resistor via the CNTR connector. In the Hi7-N controller, the detected error signal is transmitted from the BD651/BD653 board through the BD652/BD654 and is finally processed by the software on the BD642 board.
+再生电阻过热错误由伺服驱动单元通过监测通过 CNTR 连接器连接到电阻的过热传感器的 ON/OFF 状态来检测。在 Hi7-N 控制器中，检测到的错误信号从 BD651/BD653 板通过 BD652/BD654 传输，最后由 BD642 板上的软件处理。
 
 ![](../_assets/2.서보AMP/E02502/E02502_1.png  )
 
-Figure 2.3.1. Component Layout for Regenerative Resistor Overheat Error (Hi7-N Controller)
+图 2.3.1. 再生电阻过热错误的组件布局（Hi7-N 控制器）
 
-* CNTR Cable Inspection
+* CNTR 电缆检查
 
-Check for any anomalies in the sensor at the CNTR connector that connects to the overheat detection sensor. Under normal conditions, the sensor resistance should measure less than 0.1 ohm.
+检查连接到过热检测传感器的 CNTR 连接器处的传感器是否存在任何异常。在正常情况下，传感器电阻应少于 0.1 欧姆。
 
 ![](../_assets/2.서보AMP/E02502/E02502_2.png  )
 
-Figure 2.3.2. Measuring Resistance at the CNTR Connector (Hi7-N Controller)
+图 2.3.2. 在 CNTR 连接器处测量电阻（Hi7-N 控制器）
 
-(2)	Please inspect the components related to overheat error detection.
+(2) 请检查与过热错误检测相关的组件。
 	
-* Servo Control Board Replacement Inspection
+* 伺服控制板更换检查
 
-Replace the servo control board with a known functional unit. If the error does not recur, the original board is defective. Please replace it with a normal part for continued use.
+用已知功能正常的单元更换伺服控制板。如果错误没有再次出现，则原板损坏。请更换为正常部件以继续使用。
 
--> Hi7-N Controller: BD642
+-> Hi7-N 控制器：BD642
 
--> Hi7-T Controller: To be included in the future (TBD)
+-> Hi7-T 控制器：将来包含（待定）
 
--> Hi7-NX Controller: To be included in the future (TBD)
+-> Hi7-NX 控制器：将来包含（待定）
 
 
-* Replacement Inspection of the Servo Drive Unit
+* 伺服驱动单元更换检查
 
-The modules responsible for detecting the regenerative discharge resistor overheat error are as follows.
+负责检测再生放电电阻过热错误的模块如下。
 
--> Hi7-N Controller: H7D6X for mid-sized robots, H7D6A for small-sized robots (excluding the servo board).
+-> Hi7-N 控制器：中型机器人的 H7D6X，小型机器人的 H7D6A（不包括伺服板）。
 
--> Hi7-T Controller: To be included in the future (TBD).
+-> Hi7-T 控制器：将来包含（待定）。
 
--> Hi7-NX Controller: To be included in the future (TBD).
+-> Hi7-NX 控制器：将来包含（待定）。
 
-Please identify the specific components installed in your current controller before proceeding with the inspection. Replace the unit with a known functional part and verify whether the error recurs.
-
+请在进行检查之前识别您当前控制器中安装的特定组件。用已知功能正常的部件更换该单元，并确认错误是否再次出现。
 [__SOURCE](2-servo-amp-board-part/E02503.md)
-## 2.4. E02503 AMP PN Overvoltage Generated
+## 2.4. E02503 AMP PN 过电压生成
 
-### 1. Overview
+### 1. 概述
 
-The DC link voltage (P-N) of the servo drive unit that powers the motors has exceeded the preset threshold.
+驱动电机的伺服驱动单元的直流链路电压 (P-N) 超过了预设阈值。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检测方法
 
 {% hint style="info" %}
 
-This error can occur when the robot's motion changes abruptly or if the resistance value of the regenerative discharge resistor has increased.
+当机器人的运动突然变化或再生放电电阻的电阻值增加时，可能会发生此错误。
 
-* < If the error occurs at a specific step depending on the robot's playback speed >
+* < 如果错误发生在特定步骤，取决于机器人的播放速度 >
 
-(1)	Verify the error by adjusting the robot's playback speed.
+(1)	通过调整机器人的播放速度来验证错误。
 
-(2)	nspect the resistance value of the regenerative discharge resistor.
+(2)	检查再生放电电阻的电阻值。
 
 {% endhint %}
 
-(1)	Please verify the error occurrence according to the robot's playback speed.
+(1)	请根据机器人的播放速度验证错误发生情况。
 
-Rapid deceleration or high-speed downward movement in the direction of gravity can trigger an overvoltage error. Please verify whether the error occurs depending on the robot's playback speed. An AMP overvoltage error can also be caused by a defective regenerative discharge resistor or an anomaly in the regenerative discharge control system.
+在重力方向上快速减速或高速下落可能会触发过电压错误。请验证错误是否根据机器人的播放速度而发生。AMP过电压错误也可能由有缺陷的再生放电电阻或再生放电控制系统的异常引起。
 
-* Changing the Robot Playback Speed
+* 更改机器人播放速度
 
-An overvoltage error may occur if the regenerative power generated by the robot's motion exceeds the controller's design specifications. Please operate the robot after reducing the speed of the step where the error occurs and verify if the error persists. If the error does not occur at a lower speed, please adjust the taught speed of that step before further use.
+如果机器人运动产生的再生功率超过控制器的设计规范，则可能会发生过电压错误。请在发生错误的步骤降低速度后操作机器人，并验证错误是否仍然存在。如果在较低速度下没有发生错误，请在进一步使用前调整该步骤的教导速度。
 
-(2)	Please verify the error occurrence according to the robot's playback speed.
+(2)	请根据机器人的播放速度验证错误发生情况。
 
-* Inspection of Regenerative Discharge Resistance Value
+* 检查再生放电电阻值
 
-If the resistance value is higher than the specification, regenerative discharge cannot be performed smoothly, which may lead to an overvoltage error. The specifications for the regenerative resistor may vary depending on the controller model. Please refer to the manual and the Controller Check Sheet provided at the time of purchase. If the measured resistance value deviates from the specification by more than 10%, please replace the resistor.
+如果电阻值高于规格，再生放电将无法顺利进行，这可能导致过电压错误。再生电阻的规格可能因控制器型号而异。请参考购买时提供的手册和控制器检查表。如果测得的电阻值偏离规格超过10%，请更换电阻。
 
-(2)-1. Hi7-N Controller
+(2)-1. Hi7-N 控制器
 
--> Resistance value for mid-sized robots (Hi7-N00-00, H7D6X): 5 ohm (N00)
+-> 中型机器人 (Hi7-N00-00, H7D6X) 的电阻值：5 欧姆 (N00)
 
--> Resistance value for large-sized robots (Hi7-N00-80, H7D6X): 4 ohm (N80)
+-> 大型机器人 (Hi7-N00-80, H7D6X) 的电阻值：4 欧姆 (N80)
 
--> Resistance value for small-sized robots (Hi7-N00-30, H7D6A): 15 ohm (N30)
+-> 小型机器人 (Hi7-N00-30, H7D6A) 的电阻值：15 欧姆 (N30)
 
-(2)-2 Hi7-T Controller
+(2)-2 Hi7-T 控制器
 
--> To be included in the future (TBD)
+-> 待添加 (TBD)
 
-(2)-3 Hi7-NX Controller 
+(2)-3 Hi7-NX 控制器 
 
--> To be included in the future (TBD)
+-> 待添加 (TBD)
 
 ![](../_assets/2.서보AMP/E02503/E02503_1.png  )
 
-Figure 2.4.1. Measuring Resistance at the CNDR Connector (Hi7-N Controller)
+图 2.4.1. 在 CNDR 连接器处测量电阻 (Hi7-N 控制器)
 [__SOURCE](2-servo-amp-board-part/E02504.md)
-## 2.5. E02504 AMP Diode Module Error or AC Input Voltage Exceeded
+## 2.5. E02504 AMP 二极管模块错误或交流输入电压超出
 
-### 1. Overview
+### 1. 概述
 
-The DC link voltage (P-N) of the servo drive unit that powers the motors has exceeded the preset threshold of DC 395V.
+为电动机供电的伺服驱动单元的直流链路电压 (P-N) 超出了预设阈值 DC 395V。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-An anomaly in the diode module has caused the PN voltage to fall outside the allowable range. This error can also occur if the 3-phase AC voltage supplied to the servo drive unit (AMP) is abnormally high.
+二极管模块中的异常导致 PN 电压超出了允许范围。如果供电给伺服驱动单元 (AMP) 的三相交流电压异常高，也可能发生此错误。
 
-* < If the error consistently occurs at the moment the motor is turned ON >
+* < 如果错误在电动机开启的时刻持续发生 >
 
-(1)	Inspect the power-related components.
+(1) 检查与电源相关的组件。
 
--> Replace the servo drive unit and verify if the error persists.
+-> 更换伺服驱动单元，并确认错误是否仍然存在。
 
-(2) Inspect the power supply voltage.
+(2) 检查电源电压。
 
--> Check the internal 3-phase voltage of the controller.
+-> 检查控制器内部的三相电压。
 
--> Check the input 3-phase voltage supplied to the controller.
+-> 检查供给控制器的输入三相电压。
 
 {% endhint %}
 
-(1)	Please inspect the power-related components.
+(1) 请检查与电源相关的组件。
 
-* Replacement Inspection of the Servo Drive Unit
+* 伺服驱动单元替换检查
 
-Replace the module responsible for detecting the AMP overvoltage error and verify if the error recurs. A circuit failure within the module may cause the error to persist.
+更换负责检测 AMP 过电压错误的模块，并确认错误是否重现。模块内部的电路故障可能导致错误持续存在。
 
-(1)-1. Hi7-N Controller
+(1)-1. Hi7-N 控制器
 
--> Servo drive unit for mid-sized robots: H7D6X
+-> 中型机器人的伺服驱动单元：H7D6X
 
--> Servo drive unit for small-sized robots: H7D6A
+-> 小型机器人的伺服驱动单元：H7D6A
 
-(1)-2. Hi7-T Controller
+(1)-2. Hi7-T 控制器
 
--> Servo drive unit for electronics industry robots: To be included in the future (TBD)
+-> 电子行业机器人的伺服驱动单元：待后续更新 (TBD)
 
-(1)-3. Hi7-NX Controller
+(1)-3. Hi7-NX 控制器
 
--> Servo drive unit for large-sized robots: To be included in the future (TBD)
+-> 大型机器人的伺服驱动单元：待后续更新 (TBD)
 
-(2)	Please inspect the power supply voltage.
+(2) 请检查电源电压。
 
-* Hi7-N and NX Controller: 3-Phase Voltage Inspection
+* Hi7-N 和 NX 控制器：三相电压检查
 
-If a voltage of AC 242V or higher is supplied to the servo drive unit, an overvoltage error may be triggered at the moment the motor is turned ON. If the input voltage exceeds the allowable range, please inspect the voltage following the controller input voltage and internal 3-phase voltage inspection procedures.
+如果供电给伺服驱动单元的电压为 AC 242V 或更高，电动机开启时可能会触发过电压错误。如果输入电压超过允许范围，请按照控制器输入电压和内部三相电压检查程序检查电压。
 
--> Servo Drive Unit Input Voltage Specification: 3-phase AC 220V
+-> 伺服驱动单元输入电压规格：三相 AC 220V
 
--> Allowable Range when Motor is ON: 198V ~ 242V
+-> 电动机开启时的允许范围：198V ~ 242V
 
-* Hi7-T Controller: Single-Phase Voltage Inspection (To be included in the future)
+* Hi7-T 控制器：单相电压检查（待后续更新）
 
-If a voltage of AC 242V or higher is supplied to the servo drive unit, an overvoltage error may be triggered at the moment the motor is turned ON. If the input voltage exceeds the allowable range, please inspect the voltage following the controller input voltage and internal single-phase voltage inspection procedures.
+如果供电给伺服驱动单元的电压为 AC 242V 或更高，电动机开启时可能会触发过电压错误。如果输入电压超过允许范围，请按照控制器输入电压和内部单相电压检查程序检查电压。
 
--> Servo Drive Unit Input Voltage Specification: Single-phase AC 220V
+-> 伺服驱动单元输入电压规格：单相 AC 220V
 
--> Allowable Range when Motor is ON: 198V ~ 242V
-
-
+-> 电动机开启时的允许范围：198V ~ 242V
 [__SOURCE](2-servo-amp-board-part/E02505.md)
-## 2.6. E02505 AMP PN Overvoltage Detection Path Error or Discharge Error
+## 2.6. E02505 AMP PN 过电压检测路径错误或放电错误
 
-Former Error Code: E0011 AMP P-N Overvoltage Generated
+Former Error Code: E0011 AMP P-N 过电压产生
 
-### 1. Overview
+### 1. 概述
 
-The DC link voltage (P-N) of the servo drive unit that powers the motors has exceeded the preset threshold.
+驱动电机的伺服驱动单元的 DC 连接电压 (P-N) 超过了预设阈值。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-An anomaly has occurred in the path used to detect PN voltage drops from the diode module, or a failure has occurred in the PN discharge circuit.
+在用于检测二极管模块的 PN 电压下降的路径中发生了异常，或者 PN 放电电路发生了故障。
 
-* < If the error consistently occurs even when the motor is OFF >
+* < 如果即使在电机关闭时错误仍然持续发生 >
 
-(1)	Hi7-N Controller
+(1)	Hi7-N 控制器
 
-->  Replace the BD642 board and verify if the error persists.
+->  更换 BD642 板并验证错误是否仍然存在。
 
-->  Replace the Control Module and verify if the error persists.
+->  更换控制模块并验证错误是否仍然存在。
 
-->	Replace the servo drive unit and verify if the error persists.
+->	更换伺服驱动单元并验证错误是否仍然存在。
 
-(2)	Hi7-T Controller
+(2)	Hi7-T 控制器
 
-->	To be included in the future (TBD)
+->	未来会包含 (TBD)
 
-(3)	Hi7-NX Controller
+(3)	Hi7-NX 控制器
 
-->	To be included in the future (TBD)
-
+->	未来会包含 (TBD)
 
 {% endhint %}
 
-(1)	Hi7-N Controller
+(1)	Hi7-N 控制器
 
-The overvoltage error in the Hi7-N controller AMP is detected by the servo drive unit when the DC link power (P-N) supplied to the unit exceeds the preset level. The detected error is then processed by the BD642 board via the AMP boards (BD651, BD652, BD653, or BD654).
+Hi7-N 控制器 AMP 中的过电压错误在 DC 连接电源 (P-N) 超过预设水平时被伺服驱动单元检测到。所检测到的错误随后通过 AMP 板 (BD651, BD652, BD653 或 BD654) 由 BD642 板处理。
 
--> Replacement Inspection of the BD642 Board
+-> BD642 板的更换检查
 
-Replace the BD642 board with a known functional unit. If the error does not recur, the original board is defective. Please replace the BD642 with a normal part for continued operation.
+用已知功能正常的单元更换 BD642 板。如果错误不再发生，则原始板有缺陷。请用正常的部件更换 BD642 以继续运行。
 
--> Replacement Inspection of the Servo Drive Unit
+-> 伺服驱动单元的更换检查
 
-The modules responsible for detecting the AMP overvoltage error are as follows:
+负责检测 AMP 过电压错误的模块如下：
 
-* Hi7-N Controller: H7D6X (for mid-sized robots) or H7D6A (for small-sized robots), excluding the servo board.
+* Hi7-N 控制器: H7D6X (中型机器人) 或 H7D6A (小型机器人)，不包括伺服板。
 
-Please verify the specific components installed in your current controller before proceeding with the inspection. Replace the unit with a known functional part and verify whether the error recurs.
+请在进行检查之前验证当前控制器中安装的特定组件。用已知功能正常的部件替换单元，并验证错误是否复发。
 
 ![](../_assets/2.서보AMP/E02505/E02505_1_en.png)
 
-Figure 2.6.1. Component Layout for Overvoltage Error (Hi7-N Controller)
+图 2.6.1. 过电压错误的组件布局 (Hi7-N 控制器)
 
 <br>
 
-(2)	Hi7-T Controller
+(2)	Hi7-T 控制器
 
-->	To be included in the future (TBD)
+->	未来会包含 (TBD)
 
-(3)	Hi7-NX Controller
+(3)	Hi7-NX 控制器
 
-->	To be included in the future (TBD)
+->	未来会包含 (TBD)
 [__SOURCE](2-servo-amp-board-part/E02506.md)
-## 2.7. E02506 AMP PN Undervoltage Generated
+## 2.7. E02506 AMP PN 欠电压产生
 
-### 1. Overview
+### 1. 概述
 
-The DC link voltage (P-N) of the servo drive unit that powers the motors has been measured below the preset undervoltage threshold.
+为电动机供电的伺服驱动单元的直流链接电压（P-N）测量低于预设的欠电压阈值。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-This error may occur at a specific step depending on the robot's playback speed. It indicates that the PN voltage has dropped due to high energy consumption. It can also be caused by an unstable 3-phase input power supply to the controller.
+此错误可能在特定步骤中发生，具体取决于机器人的播放速度。它表明由于能量消耗过大，PN电压已下降。也可能是由于控制器的3相输入电源不稳定引起的。
 
-* < If the error occurs at a specific step depending on the robot's playback speed >
+* < 如果错误在特定步骤中发生，具体取决于机器人的播放速度 >
 
-(1)	Verify the error by adjusting the robot's playback speed.
+(1)	通过调整机器人的播放速度来验证该错误。
 
-(2)	Inspect the controller's power supply voltage.
+(2)	检查控制器的供电电压。
 
-->	Check the 3-phase or single-phase input voltage of the controller while the robot is in motion.
+->	在机器人运动时检查控制器的3相或单相输入电压。
 
-->	If the input voltage is not 220V, inspect the internal 3-phase or single-phase voltage settings and levels.
+->	如果输入电压不是220V，请检查内部3相或单相电压设置和水平。
 
 {% endhint %}
 
-(1)	Please verify the error occurrence by adjusting the robot's playback speed.
+(1)	请通过调整机器人的播放速度来验证错误发生。
 
-An AMP undervoltage error occurs when the input power capacity is insufficient or when the robot undergoes rapid acceleration. Please verify whether the error occurs according to the robot's playback speed and monitor the fluctuations in the 3-phase voltage supplied to the servo drive unit.
+当输入电源容量不足或机器人快速加速时，会发生AMP欠电压错误。请确认错误是否根据机器人的播放速度发生，并监测供给伺服驱动单元的3相电压波动。
 
-* Changing the Robot Playback Speed
+* 改变机器人的播放速度
 
-An undervoltage error may occur if the instantaneous power required by the robot's motion exceeds the controller's design specifications. Please operate the robot after reducing the speed of the step where the error occurs and verify if the error persists. If the error is resolved at a lower speed, please adjust the taught speed of that step before further use.
+如果机器人运动所需的瞬时功率超过控制器的设计规格，可能会发生欠电压错误。请在降低发生错误的步骤的速度后操作机器人，并确认错误是否仍然存在。如果在较低速度下错误得以解决，请在进一步使用之前调整该步骤的教导速度。
 
+(2)	请检查控制器的供电电压。
 
-(2)	Please inspect the controller's power supply voltage.
+* Hi7-N 和 NX 控制器：在错误步骤时的3相电压检查
 
-* Hi7-N and NX Controller: 3-Phase Voltage Inspection at the Error Step
+当直流链接电压降至大约DC 142V（或210V）时，会触发AMP欠电压错误。如果在发生错误的步骤中，供给伺服驱动单元的3相输入电压低于AC 100V（或148V），可能会产生欠电压故障。如果输入电压超出允许范围，请按照控制器输入电压和内部3相电压检查程序进行检查。
 
-The AMP undervoltage error is triggered when the DC link voltage drops to approximately DC 142V (or 210V). If the 3-phase input voltage supplied to the servo drive unit falls below AC 100V (or 148V) during the step where the error occurs, an undervoltage fault may be generated. If the input voltage falls outside the allowable range, please perform inspections following the controller input voltage and internal 3-phase voltage inspection procedures.
+->	伺服驱动单元输入电压规格：3相AC 220V
 
-->	Servo Drive Unit Input Voltage Specification: 3-phase AC 220V
+->	电动机开启时的允许范围：AC 198V ~ 242V
 
-->	Allowable Range when Motor is ON: AC 198V ~ 242V
+* Hi7-T 控制器：在错误步骤时的单相电压检查
 
+当直流链接电压降至大约DC 142V（或210V）时，会触发AMP欠电压错误。如果在发生错误的步骤中，供给伺服驱动单元的单相输入电压低于AC 100V（或148V），可能会产生欠电压故障。如果输入电压超出允许范围，请按照控制器输入电压和内部单相电压检查程序进行检查。
 
-* Hi7-T Controller: Single-Phase Voltage Inspection at the Error Step
+->	伺服驱动单元输入电压规格：单相AC 220V
 
-The AMP undervoltage error is triggered when the DC link voltage drops to approximately DC 142V (or 210V). If the single-phase input voltage supplied to the servo drive unit falls below AC 100V (or 148V) during the step where the error occurs, an undervoltage fault may be generated. If the input voltage falls outside the allowable range, please perform inspections following the controller input voltage and internal single-phase voltage inspection procedures.
-
-->	Servo Drive Unit Input Voltage Specification: Single-phase AC 220V
-
-->	Allowable Range when Motor is ON: AC 198V ~ 242V
-
-
-
-
+->	电动机开启时的允许范围：AC 198V ~ 242V
 [__SOURCE](2-servo-amp-board-part/E02507.md)
-## 2.8. E02507 AMP Diode Module Error or AC Input Voltage Insufficient
+## 2.8. E02507 AMP二极管模块错误或交流输入电压不足
 
+Former Error Code: E0033 AMP PN欠压生成
 
-Former Error Code: E0033 AMP PN Undervoltage Generated
+### 1. 概述
 
+为电动机供电的伺服驱动单元的DC链路电压（P-N）已测量低于预设的欠压阈值。
 
-### 1. Overview
-
-The DC link voltage (P-N) of the servo drive unit that powers the motors has been measured below the preset undervoltage threshold.
-
-### 2. Causes and Inspection Methods
+### 2. 原因及检查方法
 
 {% hint style="info" %}
 
-The PN voltage failed to charge due to an anomaly in the diode module. This error can also occur if the AC voltage supplied to the servo drive unit is insufficient.
+由于二极管模块的异常，PN电压未能充电。如果提供给伺服驱动单元的交流电压不足，也可能发生此错误。
 
-* < If the error occurs at the moment the motor is turned ON >
+* < 如果错误发生在电动机开启的瞬间 >
 
-  * Hi7-N Controller, NX Controller
+  * Hi7-N 控制器, NX 控制器
 
-     (1)	Inspect the power-related components.
+     (1)	检查电源相关组件。
      
-     -> Replace the servo drive unit and verify if the error persists.
+     -> 更换伺服驱动单元，并验证错误是否仍然存在。
 
-     (2)	Inspect the controller's power supply voltage.
+     (2)	检查控制器的电源电压。
 
-     ->	Check the internal 3-phase voltage of the controller.
+     ->	检查控制器的内部三相电压。
      
-     ->	Check the input 3-phase voltage supplied to the controller.
+     ->	检查提供给控制器的输入三相电压。
 
-  * Hi7-T Controller
+  * Hi7-T 控制器
 
-     (3)	Inspect the power-related components.
+     (3)	检查电源相关组件。
      
-     -> Replace the BD667T board and verify if the error persists.
+     -> 更换BD667T板，并验证错误是否仍然存在。
 
-     (4)	Inspect the controller's power supply voltage.
+     (4)	检查控制器的电源电压。
 
-     ->	Check the internal single-phase voltage of the controller.
+     ->	检查控制器的内部单相电压。
 
-     ->	Check the input single-phase voltage supplied to the controller.
+     ->	检查提供给控制器的输入单相电压。
 
 {% endhint %}
 
 
-* Hi7-N Controller
+* Hi7-N 控制器
 
-(1)	Please inspect the power-related components.
+(1)	请检查电源相关组件。
 
-The AMP undervoltage error occurs when the 3-phase AC 220V input to the servo drive unit falls outside the allowable range. It may also occur if an anomaly in the regenerative discharge control circuit triggers a discharge operation at the moment the motor is turned ON.
+当伺服驱动单元的三相AC 220V输入电压超出允许范围时，将发生AMP欠压错误。如果再生放电控制电路中的异常在电动机开启的瞬间触发放电操作，也可能发生此错误。
 
-** Replacement Inspection of the Servo Drive Unit
+** 伺服驱动单元的更换检查
 
-Replace the module responsible for detecting the AMP undervoltage error and verify if the error recurs. A circuit failure within the module may cause the error to persist.
+更换负责检测AMP欠压错误的模块，并验证错误是否重新出现。模块内部的电路故障可能导致错误持续存在。
 
-The modules responsible for detecting the AMP undervoltage error are as follows:
+负责检测AMP欠压错误的模块如下：
 
-->	For mid-sized robots: H7D6X
+->	中型机器人: H7D6X
 
--> For small-sized robots: H7D6A
-
-
-(2)	Please inspect the controller's power supply voltage.
-
-** 3-Phase Voltage Inspection
-
-The AMP undervoltage error is triggered at approximately DC 142V. If the motor is turned ON while the voltage supplied to the servo drive unit is below AC 100V, an undervoltage error may occur. If the input voltage falls outside the allowable range, please perform inspections following the controller input 3-phase voltage and internal 3-phase voltage inspection procedures.
-
-->	Servo Drive Unit Input Voltage Specification: 3-phase AC 220V
-
-->	Allowable Range when Motor is ON: AC 198V ~ 242V
+-> 小型机器人: H7D6A
 
 
-* Hi7-T Controller (To be included in the future)
+(2)	请检查控制器的电源电压。
 
-(3)	Please inspect the power-related components.
+** 三相电压检查
 
-The AMP undervoltage error occurs when the single-phase AC 220V input to the servo drive unit falls outside the allowable range. It may also occur if an anomaly in the regenerative discharge control circuit triggers a discharge operation at the moment the motor is turned ON.
+AMP欠压错误在大约DC 142V时触发。如果在提供给伺服驱动单元的电压低于AC 100V时电动机开启，则可能会发生欠压错误。如果输入电压超出允许范围，请按照控制器输入三相电压和内部三相电压检查程序进行检查。
 
-**	Replacement Inspection of the Servo Drive Unit
+->	伺服驱动单元输入电压规范: 三相AC 220V
 
-Replace the module responsible for detecting the AMP overvoltage error and verify if the error recurs. A circuit failure within the module may cause the error to persist.
-
-The modules responsible for detecting the AMP undervoltage error are as follows:
-
-->	To be included in the future (TBD)
+->	电动机开启时的允许范围: AC 198V ~ 242V
 
 
-(4)	Please inspect the controller's power supply voltage.
+* Hi7-T 控制器（将来包含）
 
-**	Single-Phase Voltage Inspection
+(3)	请检查电源相关组件。
 
-The AMP undervoltage error is triggered at approximately DC 142V. If the motor is turned ON while the voltage supplied to the servo drive unit is below AC 100V, an undervoltage error may occur. If the input voltage falls outside the allowable range, please perform inspections following the controller input single-phase voltage and internal single-phase voltage inspection procedures.
+当伺服驱动单元的单相AC 220V输入电压超出允许范围时，将发生AMP欠压错误。如果再生放电控制电路中的异常在电动机开启的瞬间触发放电操作，也可能发生此错误。
 
-->	Servo Drive Unit Input Voltage Specification: Single-phase AC 220V
+** 伺服驱动单元的更换检查
 
-->	Allowable Range when Motor is ON: AC 198V ~ 242V
+更换负责检测AMP过压错误的模块，并验证错误是否重新出现。模块内部的电路故障可能导致错误持续存在。
+
+负责检测AMP欠压错误的模块如下：
+
+-> 将来包含（待定）
 
 
-* Hi7-NX Controller (To be included in the future)
+(4)	请检查控制器的电源电压。
 
--> Specifications and inspection procedures for the Hi7-NX model will be updated in a future revision.
+** 单相电压检查
+
+AMP欠压错误在大约DC 142V时触发。如果在提供给伺服驱动单元的电压低于AC 100V时电动机开启，则可能会发生欠压错误。如果输入电压超出允许范围，请按照控制器输入单相电压和内部单相电压检查程序进行检查。
+
+->	伺服驱动单元输入电压规范: 单相AC 220V
+
+->	电动机开启时的允许范围: AC 198V ~ 242V
+
+
+* Hi7-NX 控制器（将来包含）
+
+-> Hi7-NX模型的规格和检查过程将在将来的修订中更新。
 [__SOURCE](2-servo-amp-board-part/E02508.md)
-## 2.9. E02508 AMP PN Undervoltage Detection Path Error or Discharge Error
+## 2.9. E02508 AMP PN 低压检测路径错误或放电错误
 
+Former Error Code: E0033 AMP PN 低压生成
 
-Former Error Code: E0033 AMP PN Undervoltage Generated
+### 1. 概述
 
+为电机供电的伺服驱动单元的直流链接电压（P-N）已测量低于预设的低压阈值。
 
-### 1. Overview
-
-The DC link voltage (P-N) of the servo drive unit that powers the motors has been measured below the preset undervoltage threshold.
-
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-A problem has occurred in the path used to detect PN voltage drops starting from the diode module. Alternatively, an anomaly has occurred in the PN discharge circuit.
+在用于检测PN电压下降的路径中从二极管模块开始发生了问题。或者，在PN放电电路中发生了异常。
 
-* < If the error occurs even when the motor is OFF >
+* < 如果在电机关闭时仍然发生错误 >
 
-  * Hi7-N Controller
+  * Hi7-N 控制器
 
-     (1)	Inspect the components related to undervoltage error detection.
+     (1)	检查与低压错误检测相关的组件。
      
-     -> Replace the BD642 board and verify if the error persists.
+     -> 更换BD642板并确认错误是否仍然存在。
 
-     ->	Replace the servo drive unit and verify if the error persists.
+     -> 更换伺服驱动单元并确认错误是否仍然存在。
 
     
-  * Hi7-T Controller (To be included in the future)
+  * Hi7-T 控制器（待将来加入）
 
-     (2)	Inspect the components related to undervoltage error detection.
+     (2)	检查与低压错误检测相关的组件。
      
-     -> To be included in the future (TBD)
+     -> 待将来加入（待定）
 
 {% endhint %}
 
-(1)	Please inspect the components related to undervoltage error detection.
+(1)	请检查与低压错误检测相关的组件。
 
-* Replacement Inspection of the BD642 Board
+* BD642板的更换检查
 
-   Replace the BD642 board with a known functional unit. If the error does not recur, the original board is defective and should be replaced.
+   用已知功能正常的单元替换BD642板。如果错误未复发，原板有缺陷，应进行更换。
 
-* Replacement Inspection of the Servo Drive Unit
+* 伺服驱动单元的更换检查
 
-   The modules responsible for detecting the AMP undervoltage error are as follows:
+   负责检测AMP低压错误的模块如下：
 
-  -> Hi7-N Controller: H7D6X (for mid-sized robots) or H7D6A (for small-sized robots), excluding the servo board.
+  -> Hi7-N 控制器：H7D6X（用于中型机器人）或H7D6A（用于小型机器人），不包括伺服板。
 
-  Please verify the specific components installed in your current controller before proceeding with the inspection. Replace the unit with a known functional part and verify whether the error recurs.
+  请在进行检查之前确认当前控制器中安装的特定组件。用已知功能正常的部件替换该单元，并确认错误是否复发。
 
 
 ![](../_assets/2.서보AMP/E02508/E02508_1_en.png  )
 
-Figure 2.9.1. Replacement of Control Module and Servo Drive Unit
+图 2.9.1. 控制模块和伺服驱动单元的更换
 
 <br>
 
+(2) 请检查与低压错误检测相关的组件。
 
-(2) Please inspect the components related to undervoltage error detection.
-
--> To be included in the future (TBD)
-
+-> 待将来加入（待定）
 [__SOURCE](2-servo-amp-board-part/E02522.md)
-## 2.10. E02522 (Axis ○) IPM Fault – Specific Step
+## 2.10. E02522 (Axis ○) IPM故障 – 特定步骤
 
-### 1. Overview
+### 1. 概述
 
-A fault output has been triggered from the IPM (Intelligent Power Module), which is the switching element within the servo drive unit that powers the motor. An IPM fault can be caused by a temperature rise in the heat sink, a drop in the IPM control voltage, or an overcurrent output.
+来自IPM（智能电源模块）的故障输出已被触发，IPM是驱动单元中的开关元件，为电机供电。IPM故障可能由散热器温度升高、IPM控制电压下降或过电流输出引起。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-* < If the error occurs at a specific step >
+* < 如果错误发生在特定步骤 >
 
-(1)	Inspect the robot at the step where the error occurs.
+(1)	检查错误发生的步骤中的机器人。
 
-->  Inspect the robot's wiring at the position where the error is triggered.
+->  检查触发错误时机器人的接线位置。
 
-->  Verify the error by reducing the robot's playback speed.
+->  通过降低机器人的播放速度来验证错误。
 
-->  Verify the error after changing the interpolation of the taught step.
+->  在更改所教步骤的插补后验证错误。
 
 {% endhint %}
 
 
-(1)	Please inspect the robot at the step where the error occurs.
+(1)	请检查错误发生的步骤中的机器人。
 
-An IPM fault error occurring at a specific step can be triggered when damage to the internal wiring becomes more pronounced at that particular taught position, or when the axis speed changes drastically during a posture transition in the taught program.
+特定步骤中发生的IPM故障可能在该特定所教位置内部接线损坏变得更加明显时，或者在所教程序中的姿态转换期间轴速度发生剧烈变化时触发。
 
-->  Inspect the internal wiring at the position where the error occurs.
+->  检查错误发生位置的内部接线。
 
-Examine the condition of the internal robot wiring connected to the motor of the corresponding axis. During inspection, turn OFF the controller power, disconnect the output connector from the servo drive unit, and measure the resistance between each phase and the ground on the cable side to check for a short circuit.
+检查与相应轴电机连接的内部机器人接线的状态。在检查期间，关闭控制器电源，断开伺服驱动单元的输出连接器，并测量电缆侧每个相与地之间的电阻，以检查是否短路。
 
 ![](../_assets/2.서보AMP/E02522/E02522_2.PNG)
 
-Figure 2.10.1. Internal Wiring Inspection Points by Axis for HS165
+图2.10.1. HS165的轴内部接线检查点
 
 
--> Verify the error by reducing the robot's playback speed
+->  通过降低机器人的播放速度验证错误
 
-If the error occurs at a step where a posture change causes a sudden fluctuation in axis speed, reduce the playback speed to verify the error. If the error is resolved after lowering the playback speed, adjust the taught speed for that specific step and save the task program before further use.
+如果错误发生在由于姿态变化导致轴速度突然波动的步骤中，请降低播放速度以验证错误。如果在降低播放速度后错误得到解决，请调整该特定步骤的教导速度，并在进一步使用前保存任务程序。
 
-->  Verify the error by changing the interpolation of the taught step
+->  通过更改所教步骤的插补验证错误
 
-If the axis speed continues to fluctuate drastically even after reducing the playback speed to 75% or lower, change the interpolation of the taught step to 'P' (PTP: Point-to-Point) and verify the error. If the error is resolved by changing the interpolation at the same playback speed, please modify the teaching points accordingly.
-
+如果在将播放速度降低至75%或更低之后，轴速度仍然剧烈波动，请将所教步骤的插补更改为'P'（PTP: 点对点），并验证错误。如果在相同播放速度下通过更改插补解决了错误，请相应修改教导点。
 [__SOURCE](2-servo-amp-board-part/E02541.md)
-## 2.11. E02541 Drive Unit Control Voltage Low
+## 2.11. E02541 驱动单元控制电压低
 
-### 1. Overview
+### 1. 概述
 
-The +15V control power supplied to the servo drive unit has dropped below the threshold. This error is detected through different paths depending on the controller model and then transmitted to the servo board.
+供应给伺服驱动单元的 +15V 控制电源已降至阈值以下。此错误通过根据控制器型号的不同路径检测，然后传输到伺服板。
 
-*   Hi7-N: Detected directly by the servo drive unit.
+*   Hi7-N：由伺服驱动单元直接检测。
 
-### 2. Causes and Inspection Methods
+### 2. 原因和检查方法
 
 {% hint style="info" %}
 
-*   < Checking the Power LEDs >
+*   < 检查电源 LED 指示灯 >
 
-    (1)	Please inspect the power status LEDs.
+    (1)	请检查电源状态 LED。
 
-    ->  Hi7-N: Check the 'POW' LED located on the servo drive unit.
+    ->  Hi7-N：检查伺服驱动单元上的“POW” LED。
 
-    ->  Hi7-T: To be included in the future (TBD)
+    ->  Hi7-T：将来会包含（待定）
     
-    ->  Hi7-NX: To be included in the future (TBD)
+    ->  Hi7-NX：将来会包含（待定）
 
-    ->  Check the 24V control power voltage at the PSM (Power Supply Module).
-
-
-*   < If both the Board LEDs and PSM LEDs are OFF >
-
-    (2)	Please inspect the output of the control power supply (PSM).
-
-    -> Hi7-N Controller
-
-    *  Disconnect the CN24VB1 connector connected to the BD604 of the Control Module, then check the 24V output status LED on the PSM.
-
-    *   Remove the BD642 board, then check if the 'POW' LED on the servo drive unit lights up.
-
-    ->  Hi7-T Controller: To be included in the future (TBD)
-
-    -> Hi7-NX Controller: To be included in the future (TBD)
+    ->  检查 PSM（电源模块）上的 24V 控制电源电压。
 
 
-    (3)	Please inspect the control power supply unit (CMSMPS).
+*   < 如果板 LED 和 PSM LED 都是关闭状态 >
 
-    ->  Check the input voltage supplied to the CMSMPS.
+    (2)	请检查控制电源（PSM）的输出。
 
-    ->  Replace the CMSMPS and check the status LEDs.
+    -> Hi7-N 控制器
 
-    * < If only the Board LEDs are OFF >
+    *  断开连接到控制模块 BD604 的 CN24VB1 连接器，然后检查 PSM 上的 24V 输出状态 LED。
 
-    (4)	Replace the relevant components and check the power status LEDs.
+    *   拆下 BD642 板，然后检查伺服驱动单元上的“POW” LED 是否亮起。
 
-    -> Hi7-N Controller
+    ->  Hi7-T 控制器：将来会包含（待定）
 
-    * Replace the CN24VB1 cable that connects the PSM and the Control Module, then check the LEDs.
+    -> Hi7-NX 控制器：将来会包含（待定）
 
-    * Replace the servo board (BD642) and check the LEDs.
 
-    * Replace the servo drive unit and check the LEDs.
+    (3)	请检查控制电源单元（CMSMPS）。
 
-    ->  Hi7-T : To be included in the future (TBD)
+    ->  检查供给 CMSMPS 的输入电压。
 
-    ->  Hi7-NX : To be included in the future (TBD)
+    ->  更换 CMSMPS 并检查状态 LED。
+
+    * < 如果只有板 LED 是关闭状态 >
+
+    (4)	更换相关组件并检查电源状态 LED。
+
+    -> Hi7-N 控制器
+
+    * 更换连接 PSM 和控制模块的 CN24VB1 电缆，然后检查 LED。
+
+    * 更换伺服板 (BD642) 并检查 LED。
+
+    * 更换伺服驱动单元并检查 LED。
+
+    ->  Hi7-T : 将来会包含（待定）
+
+    ->  Hi7-NX : 将来会包含（待定）
 
 
 {% endhint %}
 
 
-(1)	Please inspect the power status LEDs.
+(1)	请检查电源状态 LED。
 
-The drive unit control voltage low error is triggered when the +15V control power drops. This fault is detected through different paths depending on the controller model and is then transmitted to the servo board.
+驱动单元控制电压低错误在 +15V 控制电源下降时被触发。此故障通过根据控制器型号的不同路径检测，然后传输到伺服板。
 
-*   Hi7-N: Detected directly by the servo drive unit.
+*   Hi7-N：由伺服驱动单元直接检测。
 
-*   Hi7-T : To be included in the future (TBD)
+*   Hi7-T : 将来会包含（待定）
 
-*   Hi7-NX : To be included in the future (TBD)
+*   Hi7-NX : 将来会包含（待定）
 
 ![](../_assets/2.서보AMP/E02541/E02541_1.png )
 
-Figure 2.11.1. Location of Controller Power LEDs (Location of the ‘POW LED’ on the Hi7-N Servo Drive Unit)
+图 2.11.1. 控制器电源 LED 的位置（Hi7-N 伺服驱动单元上的“POW LED”的位置）
 
 <br>
 
 
-(2)	Please inspect the output of the control power supply (PSM).
+(2)	请检查控制电源（PSM）的输出。
 
-->  Hi7-N Controller
+->  Hi7-N 控制器
 
-*   Disconnect the CN24VB1 connector from the BD642 board, then check the 'SMPS OK' LED on the PSM.
+*   断开 BD642 板上的 CN24VB1 连接器，然后检查 PSM 上的“SMPS OK” LED。
 
-*   Remove the BD642 board, then check the 'POW' LED on the servo drive unit.
+*   拆下 BD642 板，然后检查伺服驱动单元上的“POW” LED。
 
-->  Hi7-T : To be included in the future (TBD)
+->  Hi7-T : 将来会包含（待定）
 
-->  Hi7-NX : To be included in the future (TBD)
+->  Hi7-NX : 将来会包含（待定）
 
-(3)	Check the control power supply unit.
+(3)	检查控制电源单元。
 
-->  Check the input voltage supplied to the CMSMPS.
+->  检查供给 CMSMPS 的输入电压。
 
-->  Replace the CMSMPS and verify the status of the LED.
+->  更换 CMSMPS 并验证 LED 的状态。
 
-(4)	Replace related components and check the power indicator LED.
+(4)	更换相关组件并检查电源指示 LED。
 
 ->  Hi7-N
 
-*   Replace the CN24VB1 cable connecting the PSM and BD604 of the Control Module, then check the LED.
+*   更换连接 PSM 和控制模块 BD604 的 CN24VB1 电缆，然后检查 LED。
 
-*   Replace the Servo Board and check the LED.
+*   更换伺服板并检查 LED。
 
-*   Replace the Servo Drive Unit and check the LED.
+*   更换伺服驱动单元并检查 LED。
 
-->  Hi7-T : To be included in the future (TBD)
+->  Hi7-T : 将来会包含（待定）
 
-->  Hi7-NX : To be included in the future (TBD)
-
-
+->  Hi7-NX : 将来会包含（待定）
 [__SOURCE](2-servo-amp-board-part/E50300.md)
-## 2.12. E50300 (Axis ○) IPM Fault
+## 2.12. E50300 (Axis ○) IPM 故障
 
-### 1. Overview
+### 1. 概述
 
-An IPM (Intelligent Power Module) fault output has occurred within the switching element of the servo drive unit that operates the motor. An IPM fault can be triggered by an increase in heat sink temperature, a drop in the IPM control voltage, or an overcurrent output.
+在操作电机的伺服驱动单元的开关元件内发生了IPM（智能电源模块）故障输出。IPM故障可能由于散热器温度升高、IPM控制电压下降或过电流输出引发。
 
-### 2. Causes and Inspection Procedures
+### 2. 原因与检查程序
 
 {% hint style="info" %}
 
-* < If the error occurs at the moment the motor is turned on or occurs intermittently >
+* < 如果错误在电机开启时或间歇性发生 >
 
-(1)	Inspect the motor drive components.
+(1) 检查电机驱动组件。
 
-->	Check the output cables connected to the servo drive unit.
+-> 检查连接到伺服驱动单元的输出电缆。
 
-->	Inspect the terminals of the switching elements inside the servo drive unit.
+-> 检查伺服驱动单元内部开关元件的端子。
 
-->	Replace the servo board and verify if the error persists.
+-> 更换伺服板并验证错误是否持续。
 
-*	Hi7-N Controller : BD642
+* Hi7-N 控制器 : BD642
 
-*	Hi7-T Controller : To be included in the future (TBD)
+* Hi7-T 控制器 : 将在未来包含 (TBD)
 
-*	Hi7-NX Controller : To be included in the future (TBD)
+* Hi7-NX 控制器 : 将在未来包含 (TBD)
 
-->  Please check the error after replacing the servo drive.
+-> 更换伺服驱动后请检查错误。
 
-*	Hi7-N Controller : Medium H7D6X, Small: H7D6A (excluding servo board)
+* Hi7-N 控制器 : 中型 H7D6X, 小型: H7D6A（不包括伺服板）
 
-*	Hi7-T Controller : To be included in the future (TBD)
+* Hi7-T 控制器 : 将在未来包含 (TBD)
 
-*	Hi7-NX Controller : To be included in the future (TBD)
+* Hi7-NX 控制器 : 将在未来包含 (TBD)
 
-->	Replace the servo motor and verify if the error persists.
+-> 更换伺服电机并验证错误是否持续。
 
 
-< If the error occurs after the robot has been operating for 5 minutes or longer >
+< 如果错误在机器人运行5分钟或更长时间后发生 >
 
-(2)	Inspect the controller's cooling fans.
+(2) 检查控制器的冷却风扇。
 
-->	Check the operating status of each fan.
+-> 检查每个风扇的工作状态。
 
-->	Check the power supply voltage of the fans.
+-> 检查风扇的电源电压。
 
 {% endhint %}
 
-(1)	Inspect the motor drive components.
+(1) 检查电机驱动组件。
 
-The servo drive unit that operates the motor receives commands from the servo board (BD642) through a direct board-to-board connector. The current output from the internal amplification circuit is then delivered to the motor via the wiring connected to each axis connector.
+操作电机的伺服驱动单元通过直接的板对板连接从伺服板（BD642）接收命令。然后，从内部放大电路输出的电流通过连接到每个轴连接器的线路传递到电机。
 
-->	Inspect the output cables connected to the servo drive unit.
+-> 检查连接到伺服驱动单元的输出电缆。
 
-Check the condition of the wiring connecting the servo drive unit to the motor. When inspecting, ensure the controller power is OFF, then disconnect the connector from the servo drive unit. Measure the resistance between each phase and the ground on the cable side to check for any short circuits.
+检查连接伺服驱动单元与电机的线路状态。在检查时，确保控制器电源为关闭状态，然后断开伺服驱动单元的连接器。测量电缆侧每个相与地之间的电阻，以检查是否存在短路。
 
 ![](../_assets/2.서보AMP/E02520/E02520_1_en.png)
 
 
-Figure 2.12.1. Inspection of the output cable for the Hi7-N controller servo drive unit
+图 2.12.1. Hi7-N 控制器伺服驱动单元输出电缆的检查
 
 <br>
 
 
-->	Inspect the switching elements of the servo drive unit.
+-> 检查伺服驱动单元的开关元件。
 
-The switching elements of the servo drive unit output AC current for each phase by switching the DC voltage supplied from the diode module. If a short circuit occurs at the internal terminals of the switching element, overcurrent flows, triggering an IPM fault error. With the connectors disconnected, check for a short circuit between the output terminals (U, V, or W) and the P or N terminals of the switching element. If a short circuit is confirmed, the servo drive unit must be replaced, and the cable connecting the servo drive unit to the motor should also be inspected.
+伺服驱动单元的开关元件通过切换从二极管模块提供的直流电压，为每个相输出交流电流。如果开关元件内部端子发生短路，过电流流动将引发IPM故障错误。在断开连接器的情况下，检查输出端子（U、V 或 W）与开关元件的P或N端子之间是否存在短路。如果确认存在短路，必须更换伺服驱动单元，并检查连接伺服驱动单元与电机的电缆。
 
-*	Hi7-N Controller
+* Hi7-N 控制器
 
-    -	Servo drive unit for mid-sized robots: H7D6X
+    - 中型机器人伺服驱动单元：H7D6X
 
-    -	Servo drive unit for small-sized robots: H7D6A 
+    - 小型机器人伺服驱动单元：H7D6A 
 
 
-*	Hi7-T제어기 (To be included in the future)
+* Hi7-T 控制器 (将在未来包含)
 
-*	Hi7-NX제어기 (To be included in the future)
+* Hi7-NX 控制器 (将在未来包含)
 
 ![](../_assets/2.서보AMP/E02520/E02520_2.png)
 
 
-Figure 2.12.2. Inspection for short circuits in the switching elements of the Hi7-N controller
+图 2.12.2. Hi7-N 控制器开关元件短路检查
 
 <br>
 
-->	Replacement and inspection of the servo board.
+-> 伺服板的更换和检查。
 
-If the error does not recur after replacing the servo board, the original servo board is defective. Please replace the servo board with a known-good unit.
+如果更换伺服板后错误不再复发，则原伺服板存在缺陷。请将伺服板更换为已知良好的单元。
 
-*	Hi7-N Controller: BD642
+* Hi7-N 控制器: BD642
 
-*	Hi7-T Controller : To be included in the future
+* Hi7-T 控制器 : 将在未来包含
 
-*	Hi7-NX Controller : To be included in the future
+* Hi7-NX 控制器 : 将在未来包含
 
-->	Replacement and inspection of the servo drive unit.
+-> 伺服驱动单元的更换和检查。
 
-If the error does not recur after replacing the servo drive unit, the original servo drive unit is defective. Please replace the servo drive unit with a known-good unit.
+如果更换伺服驱动单元后错误不再复发，则原伺服驱动单元存在缺陷。请将伺服驱动单元更换为已知良好的单元。
 
-*	Hi7-N Controller
+* Hi7-N 控制器
 
-    -	Servo drive unit for mid-sized robots: H7D6X
+    - 中型机器人伺服驱动单元：H7D6X
 
-    -	Servo drive unit for small-sized robots: H7D6A 
+    - 小型机器人伺服驱动单元：H7D6A 
 
-*	Hi7-T Controller : To be included in the future
+* Hi7-T 控制器 : 将在未来包含
 
-*	Hi7-NX Controller : To be included in the future
+* Hi7-NX 控制器 : 将在未来包含
 
 
-->	Replacement and inspection of the servo motor.
+-> 伺服电机的更换和检查。
 
-If the error does not recur after replacing the servo motor, the original servo motor is defective. Please replace the servo motor with a known-good unit. The figure below shows the location of the motors for each axis of the HS165 robot. For other robot models, please refer to the corresponding mechanical maintenance manual for replacement.
+如果更换伺服电机后错误不再复发，则原伺服电机存在缺陷。请将伺服电机更换为已知良好的单元。下图显示HS165机器人每个轴的电机位置。有关其他机器人模型，请参阅相应的机械维护手册进行更换。
 
 ![](../_assets/2.서보AMP/E02520/E02520_3.PNG)
 
-Figure 2.12.3. Servo motor locations for each axis of the HS165 robot
+图 2.12.3. HS165机器人每个轴的伺服电机位置
 
 <br>
 
-(2)	Inspect the controller’s cooling fans.
+(2) 检查控制器的冷却风扇。
 
-If an IPM fault error occurs after the robot has been operating for 5 minutes or longer, it indicates that the controller's cooling system is malfunctioning, causing the IPM to exceed its specified operating temperature range. The rear of the controller is equipped with fans to cool the heat sinks of the servo drive units and the regenerative discharge resistors.
+如果机器人运行5分钟或更长时间后发生IPM故障错误，则表示控制器的冷却系统出现故障，导致IPM超出其规定的工作温度范围。控制器的后面配备风扇，以冷却伺服驱动单元的散热器和再生放电电阻。
 
 <br>
 
 
-Figure 2.12.4. Installation locations of Hi7 controller fans
+图 2.12.4. Hi7 控制器风扇的安装位置
 
 ![](../_assets/2.서보AMP/E02520/E02520_4.png)
 
 
-->	Check the operating status of each fan.
+-> 检查每个风扇的工作状态。
 
-If a fan is not rotating or the rotation speed is abnormally low, please replace the affected fan. The lifespan of a fan varies depending on the operating environment and total usage hours.
+如果风扇未旋转或旋转速度异常低，请更换受影响的风扇。风扇的使用寿命因操作环境和总使用时间而异。
 
 
-->	Check the fan power supply voltage.
+-> 检查风扇电源电压。
 
-If all fans are not operating, please check the input voltage supplied to the fans. The input voltage for the fans is set to 220V AC, with an allowable tolerance of within 10% of the rated voltage. If the voltage is more than 10% lower than the rating, the cooling efficiency will decrease due to the reduced fan rotation speed. If the voltage is low, please check the power connector for the rear cooling fans and the main input voltage of the controller.
-
+如果所有风扇都不工作，请检查提供给风扇的输入电压。风扇的输入电压设置为220V AC，允许公差在额定电压的10%范围内。如果电压低于额定值的10%，由于风扇旋转速度降低，冷却效率将会下降。如果电压过低，请检查后冷却风扇的电源连接器和控制器的主输入电压。
 [__SOURCE](2-servo-amp-board-part/E50301.md)
-## 2.13. E50301 (Axis ○) IPM Fault - Gate Drive Power Undervoltage
+## 2.13. E50301 (Axis ○) IPM故障 - 驱动电源欠压
 
-### 1. Overview
+### 1. 概述
 
-An IPM (Intelligent Power Module) fault output has occurred within the switching element of the servo drive unit that operates the motor. While an IPM fault can be caused by an increase in heat sink temperature, a drop in IPM control voltage, or an overcurrent output, this specific error is detected while the servo is in the OFF state. Since the system only monitors for a drop in control voltage when the servo is OFF, you must inspect items related to the amplifier's Gate drive power supply.
+在操作电机的伺服驱动单元的开关元件中发生了IPM（智能功率模块）故障输出。虽然IPM故障可能是由散热器温度升高、IPM控制电压下降或过电流输出引起的，但此特定错误是在伺服处于关闭状态时检测到的。因为系统仅在伺服关闭时监测控制电压的下降，所以必须检查与放大器的驱动电源相关的项目。
 
-### 2. Causes and Inspection Procedures
+### 2. 原因和检查程序
 
 {% hint style="info" %}
 
-* < If the IPM fault error occurs while the servo is in the OFF state >
+* < 如果在伺服关闭状态下发生IPM故障错误 >
 
-(1) Inspect the motor drive components.
+(1) 检查电机驱动组件。
 
-->  Check the output cables connected to the servo drive unit.
+-> 检查连接到伺服驱动单元的输出电缆。
 
-->  Replace the servo drive unit and verify if the error persists.
+-> 更换伺服驱动单元并验证错误是否仍然存在。
 
-->  Replace the servo board and verify if the error persists.
+-> 更换伺服板并验证错误是否仍然存在。
 
 {% endhint %}
 
-(1)	Inspect the motor drive components.
+(1) 检查电机驱动组件。
 
-The servo drive unit that operates the motor receives commands from the servo board through an interface board and board-to-board connector. The current output from the internal amplification circuit is then delivered to the motor via the wiring connected to each axis connector.
+操作电机的伺服驱动单元通过接口板和板对板连接器从伺服板接收命令。然后，内部放大电路的电流输出通过连接到各轴连接器的接线传递给电机。
 
-->  Inspect the output cables connected to the servo drive unit.
+-> 检查连接到伺服驱动单元的输出电缆。
 
-Check the condition of the wiring connecting the servo drive unit to the motor. During inspection, ensure the controller power is OFF, then disconnect the connector from the servo drive unit. Measure the resistance between each phase and the ground on the cable side to check for any short circuits.
-
+检查连接伺服驱动单元和电机的接线状态。在检查过程中，确保控制器电源关闭，然后从伺服驱动单元断开连接器。测量电缆侧每个相位与接地之间的电阻，以检查是否存在短路。
 
 ![](../_assets/2.서보AMP/E02521/E02521_1_en.png)
 
-Figure 2.13.1. Inspection of the output cable for the Hi7-N controller servo drive unit
+图2.13.1. Hi7-N控制器伺服驱动单元输出电缆的检查
 
 <br>
 
+-> 更换和检查伺服驱动单元。
 
-->  Replacement and inspection of the servo drive unit.
+如果更换伺服驱动单元后错误不再出现，则原伺服驱动单元存在缺陷。请用已知良好的单元更换伺服驱动单元。
 
-If the error does not recur after replacing the servo drive unit, the original servo drive unit is defective. Please replace the servo drive unit with a known-good unit.
+* Hi7-N控制器
 
-*   Hi7-N Controller
+    - 中型机器人的伺服驱动单元：H7D6X
+    - 小型机器人的伺服驱动单元：H7D6A
 
-    -  Servo drive unit for mid-sized robots: H7D6X
-    -  Servo drive unit for small-sized robots: H7D6A
+* Hi7-T控制器：将来包含
 
-*   Hi7-T Controller: To be included in the future
+* Hi7-NX控制器：将来包含
 
-*   Hi7-NX Controller: To be included in the future
+-> 更换和检查伺服板。
 
-->  Replacement and inspection of the servo board.
+如果更换伺服板后错误不再出现，则原伺服板存在缺陷。请用已知良好的单元更换伺服板。
 
-If the error does not recur after replacing the servo board, the original servo board is defective. Please replace the servo board with a known-good unit.
-
-*   Hi7-N Controller: BD642
-*   Hi7-T Controller: To be included in the future
-*   Hi7-NX Controller: To be included in the future
+* Hi7-N控制器：BD642
+* Hi7-T控制器：将来包含
+* Hi7-NX控制器：将来包含
 [__SOURCE](3-safety-board-part/README.md)
-# 3. Servo Safety Board (Safety Section)
+# 3. 伺服安全板 (安全部分)
 [__SOURCE](3-safety-board-part/N00088.md)
-## 3.1. N00088 External Emergency Stop (E-Stop) Input
+## 3.1. N00088 外部紧急停止 (E-Stop) 输入
 
-### 1. Overview
-An external emergency stop (E-Stop) signal has been triggered.<br>
-To ensure safety, all robot motions are immediately stopped, and the servo motors are switched to **Motor OFF** state.
+### 1. 概述
+外部紧急停止 (E-Stop) 信号已被触发。<br>
+为确保安全，所有机器人动作立即停止，伺服电机切换至 **Motor OFF** 状态。
 
-### 2. Causes and Checks
+### 2. 原因和检查
 {% hint style="info" %}
-(1) The external emergency stop (E-Stop) button was actually pressed.<br>
-(2) There is a problem in the wiring or contacts of the external E-Stop circuit.<br>
-(3) The safety input assignment for the external E-Stop signal is not configured.<br>
+(1) 外部紧急停止 (E-Stop) 按钮实际上被按下。<br>
+(2) 外部 E-Stop 电路的接线或接触存在问题。<br>
+(3) 外部 E-Stop 信号的安全输入分配未配置。<br>
 {% endhint %}<br>
 
-### (1) When the External E-Stop Button Was Actually Pressed
-Check whether the external emergency stop (E-Stop) button was actually pressed. Another operator or administrator may have triggered the E-Stop button.<br>
-Also, verify if there are any personnel around the robot or potential hazards (tools, jigs, etc.) inside the safety fence, as someone might be working within it.<br>
-If it is judged safe to restart the robot, release the external E-Stop button first and operate the robot in **Manual Mode** before resuming normal operation.<br>
+### (1) 当外部 E-Stop 按钮实际上被按下时
+检查外部紧急停止 (E-Stop) 按钮是否实际上被按下。其他操作员或管理员可能触发了 E-Stop 按钮。<br>
+另外，请核实周围是否有工作人员或潜在危险（工具、夹具等）在安全围栏内，因为可能有人在里面工作。<br>
+如果判断安全，可以重新启动机器人，请首先释放外部 E-Stop 按钮，然后在恢复正常操作之前以 **手动模式** 操作机器人。<br>
 
-### (2) When There Is an Issue with the Wiring or Contacts of the External E-Stop Circuit
-To inspect the wiring related to the external E-Stop, first check which input channel the external E-Stop signal is assigned to through the **Safety I/O Assignment** function.<br>
-By default (factory setting), the external E-Stop input is assigned to the basic safety input.
+### (2) 当外部 E-Stop 电路的接线或接触存在问题时
+要检查与外部 E-Stop 相关的接线，首先通过 **安全 I/O 分配** 功能检查外部 E-Stop 信号分配到哪个输入通道。<br>
+默认情况下（出厂设置），外部 E-Stop 输入分配给基本安全输入。
 
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: I/O Assignment<br>
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全 I/O -> 1: I/O 分配<br>
 ![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
-Figure 3.1.1. T/P Screen Safety I/O Assignment
+图 3.1.1. T/P 屏幕 安全 I/O 分配
 
-#### 2-1) When Assigned to Basic Safety Input
-If the external E-Stop input is assigned to the **Basic Safety Input**, it is connected to the **CNSI1 connector (4 channels)** on the Servo Safety Board. For detailed pin mapping of this connector, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
+#### 2-1) 当分配给基本安全输入时
+如果外部 E-Stop 输入分配给 **基本安全输入**，则连接到伺服安全板上的 **CNSI1 连接器（4 通道）**。有关此连接器的详细引脚映射，请参见 **Hi7 控制器维护手册，第 4.3.2.6 节**。
 
 ![](../_assets/3-Safety-io/N00088/bd642_cnsi1_position.png)<br>
-Figure 3.1.2. Hi7-N Controller Servo Safety Board CNSI1 Location<br>
+图 3.1.2. Hi7-N 控制器伺服安全板 CNSI1 位置<br>
 
-Check which channel the external E-Stop input is assigned to. The input channel assignment can be confirmed using Figure 3.1.1.<br>
-Once the assigned input channel is confirmed, refer to the site electrical drawings or wiring diagrams to ensure that the wiring is correct. Also, check the actual wiring for proper connections and assembly.<br>
-When verifying the electrical drawings or wiring diagrams, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6** for the standard wiring of the Servo Safety Board CNSI1.
+检查外部 E-Stop 输入分配到哪个通道。输入通道分配可以使用图 3.1.1 确认。<br>
+确认所分配的输入通道后，请参考现场电气图或接线图以确保接线正确。同时，检查实际接线以确保连接和组装正确。<br>
+在验证电气图或接线图时，请参阅 **Hi7 控制器维护手册，第 4.3.2.6 节** 以获取伺服安全板 CNSI1 的标准接线。
 
-#### 2-2) If Assigned to Extended Safety Input  
-If the external E-Stop input is assigned to an extended safety input, it is connected to the Option Safety IO Board CNSI2 connector (8 channels). Refer to **Hi7 Controller Maintenance Manual, Section 5.4.6** for the detailed pinout of this connector.  
+#### 2-2) 如果分配给扩展安全输入
+如果外部 E-Stop 输入分配给扩展安全输入，则连接到选项安全 I/O 板的 CNSI2 连接器（8 通道）。有关此连接器的详细引脚图，请参见 **Hi7 控制器维护手册，第 5.4.6 节**。  
 ![](../_assets/3-Safety-io/N00088/bd680_cnsi2_position.png)<br>
-Figure 3.1.3. Hi7-N Controller Option Safety IO Board CNSI2 Location<br>
+图 3.1.3. Hi7-N 控制器选项安全 I/O 板 CNSI2 位置<br>
 
-Check which channel the external E-Stop input is assigned to. The input channel assignment can be confirmed using Figure 3.1.1.<br>
-Once the assigned input channel is confirmed, refer to the site electrical drawings or wiring diagrams to ensure proper wiring. Also, inspect the actual wiring for proper connections and assembly.<br>
-When verifying the electrical drawings or wiring diagrams, refer to **Hi7 Controller Maintenance Manual, Section 5.4.6** for the standard wiring of the Option Safety IO Board CNSI2.
+检查外部 E-Stop 输入分配到哪个通道。输入通道分配可以使用图 3.1.1 确认。<br>
+确认所分配的输入通道后，请参考现场电气图或接线图以确保接线正确。同时，检查实际接线以确保连接和组装正确。<br>
+在验证电气图或接线图时，请参阅 **Hi7 控制器维护手册，第 5.4.6 节** 以获取选项安全 I/O 板 CNSI2 的标准接线。
 
-#### 2-3) When assigned to Safety Communication Input
-If the external E-Stop input is assigned to the Safety Communication Input, refer to the **Hi7 Robot Controller Function Manual – Industrial Communication**.
+#### 2-3) 当分配给安全通信输入时
+如果外部 E-Stop 输入分配给安全通信输入，请参阅 **Hi7 机器人控制器功能手册 – 工业通信**。
 
-### (3) When no safety input assignment is set for the external E-Stop signal
-If the external E-Stop input is not selected in the safety input assignment, activate the external E-Stop function by selecting one of the following options:<br>
+### (3) 当外部 E-Stop 信号没有安全输入分配时
+如果在安全输入分配中未选择外部 E-Stop 输入，请通过选择以下选项之一来激活外部 E-Stop 功能：<br>
 
-- Basic Safety Input<br>
-- Extended Safety Input<br>
-- Safety Communication Input<br>
+- 基本安全输入<br>
+- 扩展安全输入<br>
+- 安全通信输入<br>
 
-The safety input assignment can be configured through the following menu:
+安全输入分配可以通过以下菜单进行配置：
 
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment<br>
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全 I/O -> 1: 输入/输出分配<br>
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-Figure 3.1.4. T/P screen – Safety Input/Output Assignment
-
+图 3.1.4. T/P 屏幕 – 安全输入/输出分配
 [__SOURCE](3-safety-board-part/E00002.md)
-## 3.2. E00002 Primary Axis Limit Switch Activated
+## 3.2. E00002 主轴限位开关激活
 
-### 1. Overview
+### 1. 概述
 
-The limit switch installed at the end of the travel range for each robot axis has been triggered. For safety, the robot immediately stops and cannot operate normally until it is moved back to a safe operating range using the proper procedure.
+每个机器人轴的行程末端安装的限位开关已被触发。为安全起见，机器人立即停止，并且在使用正确的程序将其移动回安全操作范围之前无法正常操作。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
-(1) Verify whether the robot has actually moved outside the operating range.<br>
-* Recovery procedure when the operating range is exceeded<br>
+(1) 验证机器人是否确实已移动出操作范围。<br>
+* 超出操作范围时的恢复程序<br>
 
-(2) If the error occurs even though the operating range has not been exceeded<br>
-* Check at the system board connector (CNLS)<br>
-* Inspect the wire harness (C(M)ER1 or C(M)EC1)<br>
-* Check the limit switch and internal wiring of the main body<br>
-* Inspect the safety board (BD632)<br>
+(2) 如果错误发生，即使操作范围没有超出<br>
+* 检查系统板连接器 (CNLS)<br>
+* 检查电线束 (C(M)ER1 或 C(M)EC1)<br>
+* 检查限位开关和机体内部接线<br>
+* 检查安全板 (BD632)<br>
 
-(3) If there is an abnormality in the wiring or contacts of the Primary Axis limit switch circuit<br>
+(3) 如果主轴限位开关电路的接线或触点存在异常<br>
 
-(4) If the safety input assignment for the Primary Axis limit switch has not been configured<br>
+(4) 如果主轴限位开关的安全输入分配未配置<br>
 {% endhint %}
 
-### (1) Verify Whether the Robot Has Actually Exceeded the Operating Range
+### (1) 验证机器人是否确实超过了操作范围
 
-Check whether the robot has moved outside its designated operating range. If a soft limit error occurs simultaneously, the robot has indeed exceeded the operating range. Move the robot back into the operating range using proper operation procedures. The operating range varies depending on the robot model, so the installation position of the limit switches may also differ. Refer to the “Operating Range Limits” section in the maintenance manual of the respective robot.
+检查机器人是否已移动出其指定的操作范围。如果同时发生软限位错误，则机器人确实已超出操作范围。使用正确的操作程序将机器人移回操作范围。操作范围因机器人型号而异，因此限位开关的安装位置也可能不同。请参阅相应机器人维护手册中的“操作范围限制”部分。
 
 ![](../_assets/3-Safety-io/E00002/그림1.jpg)<br>
-Figure 3.2.1. Example of Hardware Limit Switch Installation Position (HS165/HS200 Robot)
+图 3.2.1. 硬件限位开关安装位置示例 (HS165/HS200 机器人)
 
 ![](../_assets/3-Safety-io/E00002/그림2.png)<br>
-Figure 3.2.2. Example of Hardware Limit Switch Operating Range (HS165/HS200 S Axis)
+图 3.2.2. 硬件限位开关操作范围示例 (HS165/HS200 S 轴)
 
-#### [Recovery Procedure When the Operating Range Is Exceeded]
+#### [超出操作范围时的恢复程序]
 
-To move the robot while a hardware limit switch is triggered, follow the conditions and sequence below:
+在硬件限位开关被触发时移动机器人，请遵循以下条件和顺序：
 
-A) Enter **System Mode** from **Manual Mode**.  
-B) Hold the **Enabling Switch** on the teach pendant.  
+A) 从 **手动模式** 进入 **系统模式**。  
+B) 按住教导 Pendant 上的 **启用开关**。  
 
-『Manual Mode』 + 『System』 + 『TP Enabling Switch ON』  
+『手动模式』 + 『系统』 + 『TP 启用开关开启』  
 
-C) Turn **Motor ON** in this state.  
-D) Use the **Jog Keys** to move the robot back into the operating range.
+C) 在此状态下打开 **电机**。  
+D) 使用 ** jog 键 ** 将机器人移回操作范围。
 
-### (2) Error Occurs Even When the Operating Range Is Not Exceeded
+### (2) 即使没有超出操作范围也发生错误
 
-First, check on the teach pendant’s dedicated input signal window whether the **Limit (Over-Travel)** item is continuously active. You can view this window by selecting **『Window Layout』 → 『Select』 → 『System Input』**. If the **Limit (Over-Travel)** item is highlighted in yellow, it indicates an error occurrence.
+首先，检查教导 Pendant 上专用输入信号窗口是否 **限位 (超行程)** 项目持续处于活动状态。您可以通过选择 **『窗口布局』 → 『选择』 → 『系统输入』** 来查看此窗口。如果 **限位 (超行程)** 项目显示为黄色，则表示发生错误。
 
-### [Caution]
-- In **Manual Mode**, the **Enabling Switch** on the teach pendant must be ON for monitoring.  
-- In **Automatic Mode**, monitoring occurs regardless of the enabling switch status.
+### [注意]
+- 在 **手动模式** 下，教导 Pendant 上的 **启用开关** 必须处于开启状态，以进行监控。  
+- 在 **自动模式** 下，监控会无视启用开关状态进行。
 
 ![](../_assets/3-Safety-io/E00002/그림3.png)<br>
-Figure 3.2.3. Over-Travel Monitoring in the System Input Window
+图 3.2.3. 系统输入窗口中的超行程监控
 
-In such cases, the cause can be traced to components related to the limit switch. The limit switch is connected to the controller’s servo safety system via the **CEC1 – CER1** cable from the robot body, as shown in the following figure.
+在这种情况下，原因可以追溯到与限位开关相关的组件。限位开关通过 **CEC1 – CER1** 电缆与控制器的伺服安全系统连接，如下图所示。
 
 ![](../_assets/3-Safety-io/E00002/hw_limit_sw_wire_0_en.png)<br>
-Figure 3.2.4. Hardware Limit Switch Wiring Structure
+图 3.2.4. 硬件限位开关接线结构
 
-The main inspection points and sequence are as follows:  
-A1) Servo Safety Board (CNSI1) **or**  
-A2) Optional Safety IO Board (CNSI2)  
-B) Internal wiring and connectors of the controller  
-C) Wire harness and connectors  
-D) Limit switch and robot body wiring  
+主要检查点和顺序如下：  
+A1) 伺服安全板 (CNSI1) **或**  
+A2) 选配安全 IO 板 (CNSI2)  
+B) 控制器的内部接线和连接器  
+C) 电缆束和连接器  
+D) 限位开关和机器人机体接线  
 
-At the appropriate location, jumper the input line of the limit switch and check whether the **Limit (Over-Travel)** item in the monitoring window changes to white.  
-Proceed according to the following sequence.
+在适当位置，跳线限位开关的输入线，并检查监控窗口中的 **限位 (超行程)** 项目是否变为白色。  
+按照以下顺序进行。
 
-### [How to Check from the Servo Safety Board Connector (CNSI1) or Optional Safety IO Board Connector (CNSI2)]
+### [如何从伺服安全板连接器 (CNSI1) 或选配安全 IO 板连接器 (CNSI2) 进行检查]
 
 {% hint style="warning" %}
-Always perform cable connection or disconnection **with the controller powered OFF**. Electrical hazards can cause personal injury or property damage.<br>
+在 **控制器通电关闭状态** 下始终执行电缆连接或断开。电气危害可能导致人身伤害或财产损失。<br>
 {% endhint %}
 
-#### * How to Check the Servo Safety Board Connector (CNSI1)
-This step determines whether the fault originates from the servo safety board via the CNSI1 connector. Jumper the pins related to the assigned input channel. Then, check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window.
+#### * 如何检查伺服安全板连接器 (CNSI1)
+此步骤确定故障是否源自伺服安全板，通过CNSI1连接器检查相关的输入通道跳线插脚。然后，检查专用输入信号监控窗口中的 **限位 (超行程)** 项目。
 
-1. If the indicator changes to **white**, the servo safety board is faulty. Replace the board.
-2. If it remains **yellow** (error state), check for faults along the path from the servo safety board to the hardware limit switch on the robot.
+1. 如果指示灯变为 **白色**，则伺服安全板故障。请更换该板。
+2. 如果保持 **黄色** (错误状态)，请检查从伺服安全板到机器人硬件限位开关的路径是否有故障。
 
-The figure below shows an example of jumper shorting when the limit switch is assigned to channel 1. Perform the test by connecting the jumper to the actually assigned channel.
+下图显示了将限位开关分配给通道1时的跳线短接示例。通过将跳线连接到实际分配的通道进行测试。
 
 ![](../_assets/3-Safety-io/E00002/bd642_cnsi1_short.png)<br>
-Figure 3.2.5. Servo Safety Board Connector (CNSI1)
+图 3.2.5. 伺服安全板连接器 (CNSI1)
 
-#### * How to Check the Option Safety IO Board Connector (CNSI2)
-This step determines whether the fault originates from the option safety IO board via the CNSI2 connector. Jumper the pins related to the assigned input channel. Then, check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window.
+#### * 如何检查选配安全 IO 板连接器 (CNSI2)
+此步骤确定是否故障源自选配安全 IO 板，通过CNSI2连接器检查相关的输入通道跳线插脚。然后，检查专用输入信号监控窗口中的 **限位 (超行程)** 项目。
 
-1. If the indicator changes to **white**, the option safety IO board is faulty. Replace the board.
-2. If it remains **yellow** (error state), check for faults along the path from the option safety IO board to the hardware limit switch on the robot.
+1. 如果指示灯变为 **白色**，则选配安全 IO 板故障。请更换该板。
+2. 如果保持 **黄色** (错误状态)，请检查从选配安全 IO 板到机器人硬件限位开关的路径是否有故障。
 
-The figure below shows an example of jumper shorting when the limit switch is assigned to channel 3. Perform the test by connecting the jumper to the actually assigned channel.
+下图显示了将限位开关分配给通道3时的跳线短接示例。通过将跳线连接到实际分配的通道进行测试。
 
 ![](../_assets/3-Safety-io/E00002/bd680_si_short.png)<br>
-Figure 3.2.6. Hardware Limit Switch Wiring Structure
+图 3.2.6. 硬件限位开关接线结构
 
-### [How to Check the Wire Harness (C(M)ER1 or C(M)EC1)]
-
-{% hint style="warning" %}<br>
-Always turn off the controller power before connecting or disconnecting cables. Electrical hazards may cause personal injury or property damage.<br>
-{% endhint %}
-
-This step determines whether the fault originates from the wire harness via the C(M)ER1 or C(M)EC1 connector. First, remove the C(M)EC1 wire harness from the controller. Then, jumper the pins related to the limit switch on the C(M)EC1 connector attached to the controller. Check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window to verify the signal.
-
-① If the color changes to **white**,  
-the fault lies in the cable or connector between the C(M)EC1 connector inside the controller and the system board. Inspect or replace the cable/connector as needed.  
-
-② If the color remains **yellow**,  
-check for faults in the area from the C(M)EC1 connector to the hardware limit switch on the robot body.  
-
-Reconnect the C(M)EC1 wire harness and remove the C(M)ER1 wire harness from the robot body. Then, jumper the pins related to the limit switch on the C(M)ER1 connector of the wire harness.  
-Check the **Limit (Over-Travel)** item in the dedicated input signal monitoring window.  
-
-① If the color changes to **white**,  
-the fault lies in the wire harness cable or connectors between the C(M)ER1 and C(M)EC1 connectors. Inspect or replace as necessary.  
-
-② If the color remains **yellow**,  
-check for faults in the area from the C(M)ER1 connector on the robot body to the limit switch.
-
-### [How to Inspect the Limit Switch (SW) and Internal Wiring of the Robot Body]
+### [如何检查电缆束 (C(M)ER1 或 C(M)EC1)]
 
 {% hint style="warning" %}<br>
-Always ensure the controller power is **OFF** before connecting or disconnecting any cables. Electrical hazards can cause personal injury or property damage.<br>
+在连接或断开电缆之前，请始终关闭控制器电源。电气危害可能导致人身伤害或财产损失。<br>
 {% endhint %}
 
-After disconnecting the CER1 wire harness from the robot body, use a multimeter to perform a continuity test on the lines related to the limit switch at the CER1 connector on the robot body.
+此步骤确定故障是否源自电缆束，通过C(M)ER1或C(M)EC1连接器。首先，断开控制器的C(M)EC1电缆束。然后，在控制器连接的C(M)EC1连接器上跳线限位开关相关的插脚。检查专用输入信号监控窗口中的 **限位 (超行程)** 项目以验证信号。
 
-① If the resistance measures **open**,  
-there is a fault in the limit switch or the connector/cable between the limit switch and CER1. Inspect or replace as needed.  
+① 如果颜色变为 **白色**，  
+则故障在于C(M)EC1连接器内部到系统板之间的电缆或连接器。根据需要检查或更换电缆/连接器。
 
-② If the resistance measures **short**,  
-check other sections for faults. Contact the manufacturer for further guidance.
+② 如果颜色保持 **黄色**，  
+请检查从C(M)EC1连接器到机器人机体上的硬件限位开关的路径是否存在故障。
+
+重新连接C(M)EC1电缆束，并断开机器人机体上的C(M)ER1电缆束。然后，在C(M)ER1电缆束的连接器上跳线限位开关相关的插脚。  
+检查专用输入信号监控窗口中的 **限位 (超行程)** 项目。
+
+① 如果颜色变为 **白色**，  
+则故障在于C(M)ER1和C(M)EC1连接器之间的电缆束电缆或连接器。根据需要检查或更换。
+
+② 如果颜色保持 **黄色**，  
+请检查从机器人机体上的C(M)ER1连接器到限位开关的路径是否存在故障。
+
+### [如何检查限位开关 (SW) 和机器人机体内部接线]
+
+{% hint style="warning" %}<br>
+在连接或断开任何电缆之前，请始终确保控制器电源为 **OFF**。电气危害可能导致人身伤害或财产损失。<br>
+{% endhint %}
+
+断开机器人机体上的CER1电缆束后，使用万用表对与限位开关相关的CER1连接器上的线路进行连续性测试。
+
+① 如果电阻测量为 **开路**，  
+则限位开关或限位开关和CER1之间的连接器/电缆存在故障。根据需要进行检查或更换。
+
+② 如果电阻测量为 **短路**，  
+请检查其他部分是否存在故障。请联系制造商寻求进一步指导。
 
 ![](../_assets/3-Safety-io/E00002/그림8_en.png)<br>
-Figure 3.2.7. Hardware Limit Switch (SW) Harness C(M)ER Structure
+图 3.2.7. 硬件限位开关 (SW) 电缆 C(M)ER 结构
 
-### (3) If there is a fault in the Primary Axis limit switch circuit wiring or contacts
+### (3) 如果主轴限位开关电路接线或触点有故障
 
-To inspect the Primary Axis limit switch wiring, first check which input channel the Primary Axis limit switch is assigned to via the **Safety I/O Assignment** function.  
-By default, the Primary Axis limit switch is **disabled**, so inspection is not required.  
-If use is needed, you can assign it through the **Safety I/O Assignment** function by selecting one of the following: 1) Basic Safety, 2) Additional Safety, or 3) Safety Communication.
+要检查主轴限位开关接线，请首先通过 **安全 I/O 分配** 功能检查主轴限位开关分配到哪个输入通道。  
+默认情况下，主轴限位开关被 **禁用**，因此无需检查。  
+如需使用，可以通过选择以下其中之一在 **安全 I/O 分配** 功能中进行分配：1) 基本安全，2) 附加安全或3) 安全通信。
 
-#### 3-1) Assigned to Basic Safety Input
+#### 3-1) 分配给基本安全输入
 
-If the Primary Axis limit switch input is assigned to the **Basic Safety Input**, it is connected to the **CNSI1 connector (4 channels) on the Servo Safety Board**.  
-Check which channel is assigned on the CNSI1 connector as described in item (1). For detailed pin mapping of this connector, refer to section 4.3.2.6 of the Hi7 Controller Maintenance Manual.
+如果主轴限位开关输入分配到 **基本安全输入**，则连接到 **伺服安全板上的CNSI1连接器 (4通道)**。  
+请按照 (1) 中所述检查CNSI1连接器上分配的通道。有关该连接器的详细引脚映射，请参阅 Hi7 控制器维护手册的第 4.3.2.6 节。
 
-#### 3-2) Assigned to Additional Safety Input
+#### 3-2) 分配给附加安全输入
 
-If the Primary Axis limit switch input is assigned to the **Additional Safety Input**, it is connected to the **CNSI2 connector (8 channels) on the Optional Safety I/O Board**.  
-Check which channel is assigned on the CNSI2 connector as described in item (1). For detailed pin mapping of this connector, refer to section 5.4.6 of the Hi7 Controller Maintenance Manual.
+如果主轴限位开关输入分配到 **附加安全输入**，则连接到 **选配安全 I/O 板上的CNSI2连接器 (8通道)**。  
+请按照 (1) 中所述检查CNSI2连接器上分配的通道。有关该连接器的详细引脚映射，请参阅 Hi7 控制器维护手册的第 5.4.6 节。
 
-#### 3-3) Assigned to Safety Communication Input
+#### 3-3) 分配给安全通信输入
 
-If the Primary Axis limit switch input is assigned to the **Safety Communication Input**, refer to the **Hi7 Robot Controller Function Manual – Industrial Communication** for details.
+如果主轴限位开关输入分配到 **安全通信输入**，请参阅 **Hi7 机器人控制器功能手册 – 工业通信** 的详细信息。
 
-### (4) If the Primary Axis Limit Switch Safety Input Assignment is Not Configured
+### (4) 如果未配置主轴限位开关安全输入分配
 
-If the external emergency stop input is not selected in the safety input assignment, activate the external E-Stop function by selecting one of the following options:
+如果在安全输入分配中未选择外部紧急停止输入，请选择以下选项之一，激活外部 E-Stop 功能：
 
-- **Basic Safety Input**  
-- **Extended Safety Input**  
-- **Safety Communication Input**  
+- **基本安全输入**  
+- **扩展安全输入**  
+- **安全通信输入**  
 
-The Safety Input Assignment can be configured via the following menu:
+安全输入分配可以通过以下菜单配置：
 
 `System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety I/O -> 1: Input/Output Assignment`  
 
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)  
-Figure 3.2.8. T/P screen: Safety Input/Output Assignment
-
-
+图 3.2.8. T/P 屏幕：安全输入/输出分配
 [__SOURCE](3-safety-board-part/E02310.md)
-## 3.3. E02310 Automatic Mode Safety Guard Switch Activated
+## 3.3. E02310 自动模式安全 guard 开关已激活
 
-### 1. Overview
-A safety guard signal in automatic mode has been detected.<br>
-In automatic mode, to ensure safety, all robot motions are immediately stopped, and the servo motors are switched to Motor OFF status.<br>
+### 1. 概述
+在自动模式下检测到安全 guard 信号。<br>
+在自动模式下，为确保安全，所有机器人动作立即停止，伺服电机切换为电机关闭状态。<br>
 
-### 2. Causes and Checks
+### 2. 原因和检查
 {% hint style="info" %}<br>
-(1) The automatic mode safety guard signal was actually activated.<br>
-(2) A wiring or contact issue occurred in the automatic mode safety guard circuit.<br>
-(3) The safety input assignment for the automatic mode safety guard signal is not configured.<br>
+(1) 自动模式安全 guard 信号确实被激活。<br>
+(2) 在自动模式安全 guard 电路中发生了接线或接触问题。<br>
+(3) 自动模式安全 guard 信号的安全输入分配未配置。<br>
 {% endhint %}
 
-### (1) When the Automatic Mode Safety Guard Signal is Actually Activated
-Check whether the automatic mode safety guard (SGA) switch was actually triggered.  
-Another operator or supervisor may have activated the automatic mode safety guard (SGA) switch.<br>
-Also, verify that no personnel are inside the safety fence and check for potential hazards (tools, jigs, etc.) around the robot.  
-If it is determined to be safe to restart the robot, release the external emergency stop button and operate the robot first in manual mode.
+### (1) 当自动模式安全 guard 信号确实被激活时
+检查自动模式安全 guard (SGA) 开关是否确实被触发。  
+其他操作员或监督员可能已激活自动模式安全 guard (SGA) 开关。<br>
+同时，确认没有人员在安全围栏内，并检查机器人周围的潜在危险（工具、夹具等）。  
+如果确定重启机器人是安全的，请释放外部紧急停止按钮，首先在手动模式下操作机器人。
 
-### (2) If There is a Wiring or Contact Issue in the Automatic Mode Safety Guard Circuit
-To inspect the wiring related to the automatic mode safety guard, first check which input channel the automatic mode safety guard input is assigned to via the [Safety I/O Assignment] function.  
-By default, the automatic mode safety guard input is assigned to channel 2 of the Basic Safety Input.
+### (2) 如果在自动模式安全 guard 电路中存在接线或接触问题
+要检查与自动模式安全 guard 相关的接线，首先通过【安全 I/O 分配】功能检查自动模式安全 guard 输入分配到哪个输入通道。  
+默认情况下，自动模式安全 guard 输入分配给基本安全输入的通道 2。
 
-System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety I/O -> 1: Safety I/O Assignment<br>
+系统 -> 8：安全系统 -> 2：参数设置 -> 3：安全 I/O -> 1：安全 I/O 分配<br>
 ![](../_assets/3-Safety-io/E02310/io_alloc_param1.png)<br>
-Figure 3.3.1. T/P screen showing the Safety I/O Assignment
+图 3.3.1. T/P 屏幕显示安全 I/O 分配
 
 
-#### 2-1) If Assigned to Basic Safety Input
-If the automatic mode safety guard input is assigned to the Basic Safety Input, it is connected to the Servo Safety Board CNSI1 connector (4-channel). For a detailed pin map of this connector, refer to Section 4.3.2.6 of the Hi7 Controller Maintenance Manual.  
+#### 2-1) 如果分配给基本安全输入
+如果自动模式安全 guard 输入分配给基本安全输入，则连接到伺服安全板 CNSI1 接头（4 通道）。有关此接头的详细引脚图，请参考 Hi7 控制器维护手册的第 4.3.2.6 节。  
 ![](../_assets/3-Safety-io/E02310/bd642_cnsi1_position.png)<br>
-Figure 3.3.2. Location of Servo Safety Board CNSI1 on Hi7-N Controller
+图 3.3.2. Hi7-N 控制器上伺服安全板 CNSI1 的位置
 
-Check which channel the automatic mode safety guard input is assigned to. Input channel assignments can be verified on the T/P screen shown in the Safety I/O Assignment section above.  
-Once the assigned input channel is confirmed, refer to the site’s electrical diagram or wiring diagram to verify proper wiring. While checking the actual wiring, also confirm connector and assembly conditions.  
+检查自动模式安全 guard 输入分配到哪个通道。输入通道分配可在上述安全 I/O 分配部分显示的 T/P 屏幕上确认。  
+一旦确认分配的输入通道，请参考现场的电气图或接线图以验证接线是否正确。在检查实际接线时，也要确认连接器和组装状况。  
 
-When reviewing the electrical diagram or wiring diagram, refer to Section 4.3.2.6 of the Hi7 Controller Maintenance Manual for the standard wiring of the Servo Safety Board CNSI1.
+在查看电气图或接线图时，请参考 Hi7 控制器维护手册第 4.3.2.6 节以获取伺服安全板 CNSI1 的标准接线。
 
-#### 2-2) If Assigned to Extended Safety Input  
-If the automatic mode safety guard input is assigned to the extended safety input, it is connected to the CNSI2 connector (8 channels) of the Option Safety IO Board. For detailed pin mapping of this connector, refer to Section 5.4.6 of the Hi7 Controller Maintenance Manual.
+#### 2-2) 如果分配给扩展安全输入  
+如果自动模式安全 guard 输入分配给扩展安全输入，则连接到选项安全 I/O 板的 CNSI2 接头（8 通道）。有关此接头的详细引脚映射，请参考 Hi7 控制器维护手册的第 5.4.6 节。
 
 ![](../_assets/3-Safety-io/E02310/bd680_cnsi2_position.png)<br>
-Figure 3.3.3. Position of the CNSI2 connector on the Hi7-N Controller Option Safety IO Board
+图 3.3.3. Hi7-N 控制器选项安全 I/O 板上 CNSI2 接头的位置
 
-Check which channel the automatic mode safety guard input is assigned to. The input channel assignment can be verified on the T/P screen in the Safety IO Allocation view, as shown in the figure above.<br>
-Once the assigned input channel is confirmed, refer to the site electrical schematic or wiring diagram to ensure the wiring is correct. Additionally, inspect the actual wiring to verify proper connections and assembly.<br>
-When checking the electrical schematic or wiring diagram, refer to Section 5.4.6 of the Hi7 Controller Maintenance Manual for the standard wiring of the Option Safety IO Board CNSI2.
+检查自动模式安全 guard 输入分配到哪个通道。输入通道分配可在上述安全 I/O 分配视图的 T/P 屏幕上进行验证。<br>
+一旦确认分配的输入通道，请参考现场电气原理图或接线图以确保接线正确。此外，检查实际接线以验证连接和组装是否正确。<br>
+在检查电气原理图或接线图时，请参考 Hi7 控制器维护手册第 5.4.6 节以获取选项安全 I/O 板 CNSI2 的标准接线。
 
-#### 2-3) If assigned to Safety Communication Input  
-If the external emergency stop input is assigned to a Safety Communication Input, refer to the "Hi7 Robot Controller Function Manual – Industrial Communication" for details.
+#### 2-3) 如果分配给安全通信输入  
+如果外部紧急停止输入分配给安全通信输入，请参考《Hi7 机器人控制器功能手册 – 工业通信》以获取详细信息。
 
-### (3) If the Safety Input Assignment for the Automatic Mode Safety Guard Signal is Not Configured
-If the automatic mode safety guard input has not been selected in the safety input assignment, activate the automatic mode safety guard function by selecting one of the following options:<br>
-- Basic Safety Input  
-- Extended Safety Input  
-- Safety Communication Input<br>
+### (3) 如果自动模式安全 guard 信号的安全输入分配未配置
+如果未在安全输入分配中选择自动模式安全 guard 输入，请通过选择以下选项之一来激活自动模式安全 guard 功能：<br>
+- 基本安全输入  
+- 扩展安全输入  
+- 安全通信输入<br>
 
-The safety input assignment can be configured through the following menu:
+安全输入分配可以通过以下菜单配置：
 
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment  
+系统 -> 8：安全系统 -> 2：参数设置 -> 3：安全 I/O -> 1：输入/输出分配  
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-Figure 3.3.4. T/P screen – Safety Input/Output Assignment
-
+图 3.3.4. T/P 屏幕 – 安全输入/输出分配
 [__SOURCE](3-safety-board-part/E02320.md)
-## 3.4. E02320 General Safety Guard Switch Activated
+## 3.4. E02320 一般安全防护开关激活
 
-### 1. Overview
-A general safety guard signal has been received.<br>
-To ensure safety, all robot motion is immediately stopped, and the servo motors are switched to Motor OFF state.
+### 1. 概述
+已接收到一般安全防护信号。<br>
+为确保安全，所有机器人运动立即停止，伺服电机切换到电机关闭状态。
 
-### 2. Causes and Checks
+### 2. 原因和检查
 {% hint style="info" %}<br>
-(1) The general safety guard signal was actually triggered.<br>
-(2) Abnormalities in the wiring or contacts of the general safety guard circuit.<br>
-(3) The general safety guard signal has not been assigned to a safety input.<br>
+(1) 一般安全防护信号确实被触发。<br>
+(2) 一般安全防护电路的接线或接触点存在异常。<br>
+(3) 一般安全防护信号未分配给安全输入。<br>
 {% endhint %}
 
-### (1) If the general safety guard signal was actually triggered
-Check whether the general safety guard (SGG) switch was physically activated. Another operator or manager may have triggered the general safety guard (SGG) switch.<br>
-Also, since someone might be working inside the safety fence, check if any personnel are near the robot or if there are any potential hazards (tools, jigs, etc.).<br>
-If it is judged safe to restart the robot, release the external emergency stop button and operate the robot in manual mode first.
+### (1) 如果一般安全防护信号确实被触发
+检查一般安全防护（SGG）开关是否被物理激活。另一个操作员或管理者可能触发了一般安全防护（SGG）开关。<br>
+此外，由于可能有人在安全围栏内工作，检查是否有人员靠近机器人或是否存在潜在危险（工具、夹具等）。<br>
+如果判断重新启动机器人是安全的，请释放外部紧急停止按钮，首先以手动模式操作机器人。
 
-### (2) If there is an abnormality in the wiring or contacts of the general safety guard circuit
-To inspect the wiring related to the general safety guard, first check which input channel the general safety guard signal is assigned to using the [Safety I/O Allocation] function.<br>
-By default, the general safety guard input is assigned to the basic safety input.
+### (2) 如果一般安全防护电路的接线或接触点存在异常
+要检查与一般安全防护相关的接线，首先使用[安全 I/O 分配]功能检查一般安全防护信号分配到哪个输入通道。<br>
+默认情况下，一般安全防护输入分配给基本安全输入。
 
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: Safety I/O Allocation<br>
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全 I/O -> 1: 安全 I/O 分配<br>
 ![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
-Figure 3.4.1. T/P screen – Safety I/O Allocation
+图 3.4.1. T/P 屏幕 – 安全 I/O 分配
 
-#### 2-1) If assigned to Basic Safety Input
-If the general safety guard (SGG) switch input is assigned to the basic safety input, it is connected to the servo safety board CNSI1 connector (4 channels). Refer to section 4.3.2.6 of the Hi7 controller maintenance manual for the detailed pin map of this connector.
+#### 2-1) 如果分配给基本安全输入
+如果一般安全防护（SGG）开关输入被分配给基本安全输入，它连接到伺服安全板 CNSI1 连接器（4 通道）。有关此连接器的详细引脚图，请参见 Hi7 控制器维护手册的 4.3.2.6 节。
 
 ![](../_assets/3-Safety-io/E02320/bd642_cnsi1_position.png)<br>
-Figure 3.4.2. Hi7-N Controller – Servo Safety Board CNSI1 Location
+图 3.4.2. Hi7-N 控制器 – 伺服安全板 CNSI1 位置
 
-Check which channel the general safety guard (SGG) switch input is assigned to. The input channel assignment can be confirmed in the T/P screen shown above in the Safety I/O Allocation.
+检查一般安全防护（SGG）开关输入分配到哪个通道。输入通道分配可以在上面显示的安全 I/O 分配的 T/P 屏幕中确认。
 
-Once the assigned input channel is confirmed, refer to the site’s electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
+确认分配的输入通道后，参考现场的电气原理图或接线图以验证接线的正确性。此外，物理检查接线以确保正确连接和装配。
 
-When checking the electrical schematics or wiring diagrams, refer to section 4.3.2.6 of the Hi7 controller maintenance manual for the wiring standard of the servo safety board CNSI1.
+在检查电气原理图或接线图时，请参考 Hi7 控制器维护手册的 4.3.2.6 节以获得伺服安全板 CNSI1 的接线标准。
 
-#### 2-2) When Assigned to Extended Safety Input
+#### 2-2) 当分配给扩展安全输入时
 
-If the general safety guard (SGG) switch input is assigned to the extended safety input, it is connected to the option Safety I/O board CNSI2 connector (8 channels). Refer to section 5.4.6 of the Hi7 Controller Maintenance Manual for the detailed pinout of this connector.
+如果一般安全防护（SGG）开关输入被分配给扩展安全输入，它连接到选项安全 I/O 板 CNSI2 连接器（8 通道）。有关此连接器的详细引脚图，请参见 Hi7 控制器维护手册的 5.4.6 节。
 
 ![](../_assets/3-Safety-io/E02320/bd680_cnsi2_position.png)<br>
-Figure 3.4.3. Hi7-N Controller – Option Safety I/O Board CNSI2 Location
+图 3.4.3. Hi7-N 控制器 – 选项安全 I/O 板 CNSI2 位置
 
-Check which channel the general safety guard (SGG) switch input is assigned to. The input channel assignment can be confirmed in the T/P screen shown above in the Safety I/O Allocation.
+检查一般安全防护（SGG）开关输入分配到哪个通道。输入通道分配可以在上面显示的安全 I/O 分配的 T/P 屏幕中确认。
 
-Once the assigned input channel is confirmed, refer to the site’s electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
+确认分配的输入通道后，参考现场的电气原理图或接线图以验证接线的正确性。此外，物理检查接线以确保正确连接和装配。
 
-When checking the electrical schematics or wiring diagrams, refer to section 5.4.6 of the Hi7 Controller Maintenance Manual for the wiring standard of the option Safety I/O board CNSI2.
+在检查电气原理图或接线图时，请参考 Hi7 控制器维护手册的 5.4.6 节以获得选项安全 I/O 板 CNSI2 的接线标准。
 
-#### 2-3) When Assigned to Safety Communication Input
-If the external emergency stop input is assigned to the safety communication input, refer to the "Hi7 Robot Controller Function Manual – Industrial Communication" for details.
+#### 2-3) 当分配给安全通信输入时
+如果外部紧急停止输入被分配给安全通信输入，请参考《Hi7 机器人控制器功能手册 – 工业通信》以获取详细信息。
 
-### (3) When Safety Input Assignment for the General Safety Guard Signal Is Not Configured
-If the general safety guard input is not selected in the safety input assignment, activate the general safety guard function by selecting one of the following options:<br>
-- Basic Safety Input  
-- Extended Safety Input  
-- Safety Communication Input<br>
+### (3) 当未配置一般安全防护信号的安全输入分配时
+如果未在安全输入分配中选择一般安全防护输入，通过选择以下选项之一激活一般安全防护功能：<br>
+- 基本安全输入  
+- 扩展安全输入  
+- 安全通信输入<br>
 
-The safety input assignment can be configured via the following menu:<br>
+安全输入分配可以通过以下菜单进行配置：<br>
 
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: I/O Allocation<br>
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全 I/O -> 1: I/O 分配<br>
 ![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
-Figure 3.4.4. T/P Screen – Safety I/O Allocation
-
+图 3.4.4. T/P 屏幕 – 安全 I/O 分配
 [__SOURCE](3-safety-board-part/E51431.md)
-## 3.5. E51431 (A ch) Abnormal Feedback of Magnetic Contactor
+## 3.5. E51431 (A ch) 磁接触器的异常反馈
 
-### 1. Overview
-The magnetic contactor (MC) did not operate as expected.
+### 1. 概述
+磁接触器 (MC) 未按预期操作。
 
-### 2. Cause and Inspection
+### 2. 原因和检测
 
 {% hint style="info" %}
-(1) Check the monitoring system.<br>
-(2) Inspect the magnetic contactor (MC).<br>
-(3) Inspect the electrical board.<br>
-(4) Check the power supply module (H6PSM30).<br>
-(5) Inspect the servo amplifier.<br>
+(1) 检查监控系统。<br>
+(2) 检查磁接触器 (MC)。<br>
+(3) 检查电气板。<br>
+(4) 检查电源模块 (H6PSM30)。<br>
+(5) 检查伺服放大器。<br>
 {% endhint %}
 
-### (1) Check the Monitoring System
-Verify the cabling between the electrical module where the magnetic contactor is installed (PSM or PDM) and the servo safety board that collects monitoring signals.  
-The cable names are CNPRC and CNPRC1. The servo safety board signals enter the electrical module through the backplane board. Check the connector connections of this cable.
+### (1) 检查监控系统
+验证安装了磁接触器的电气模块 (PSM 或 PDM) 与收集监控信号的伺服安全板之间的布线。  
+电缆名称为 CNPRC 和 CNPRC1。伺服安全板信号通过背板电路进入电气模块。检查该电缆的连接器连接。
 
 ![](../_assets/3-Safety-io/E51431/cnprc_cable.png)<br>
-Figure 3.5.1 Hi7-N Controller
+图 3.5.1 Hi7-N 控制器
 
-### (2) Inspect the Magnetic Contactor (MC)
-Check whether the magnetic contactors MC1 and MC2 inside the electrical module are operating properly.
+### (2) 检查磁接触器 (MC)
+检查电气模块内部的磁接触器 MC1 和 MC2 是否正常工作。
 
 ![](../_assets/3-Safety-io/E51431/psm_mc1_mc2.png)<br>
-Figure 3.5.2 Hi7-N Controller (Magnetic contactors MC1 and MC2 installed inside the electrical module)
+图 3.5.2 Hi7-N 控制器 (电气模块内部安装的磁接触器 MC1 和 MC2)
 
-### (3) Inspect the Electrical Board
+### (3) 检查电气板
 
-Check or replace the electrical board and cable wiring that relay signals between the servo safety board and the magnetic contactors, as issues may exist.
+检查或更换电气板和传递信号的电缆布线，这些信号在伺服安全板与磁接触器之间传递，可能存在问题。
 
 ![](../_assets/3-Safety-io/E51431/psm_inner_cables.png)<br>
-Figure 3.5.3 Hi7-N Controller (Electrical board installed inside the electrical module)
+图 3.5.3 Hi7-N 控制器 (电气模块内部安装的电气板)
 
-### (4) Test by Replacing the Servo Safety Board
+### (4) 通过更换伺服安全板进行测试
 
-If the error does not occur after replacing the servo safety board, it can be concluded that the issue lies in the electronic contactor control or feedback section of the servo safety board.
+如果在更换伺服安全板后不再发生错误，可以得出结论，问题出在伺服安全板的电子接触器控制或反馈部分。
 
 ![](../_assets/3-Safety-io/E51431/hi7_controller_bd642.png)<br>
-Figure 3.5.4 Hi7-N Controller Servo Safety Board Replacement
-
+图 3.5.4 Hi7-N 控制器伺服安全板更换
 [__SOURCE](3-safety-board-part/E52042.md)
-## 3.6. E52042 (0 ch) Safety Input Signal Mismatch
+## 3.6. E52042 (0 ch) 安全输入信号不匹配
 
 {% hint style="warning" %}
-When checking the safety input wiring, always ensure that the controller power is **OFF** before performing the inspection.
+检查安全输入接线时，请始终确保控制器电源为**关闭**状态，然后再进行检查。
 {% endhint %}
 
-### 1. Overview
+### 1. 概述
 
-A mismatch has been detected between the redundant safety input signals on the basic safety input channel.  
-To ensure safety, the affected input signal is treated as **Fail-Safe (Open or 0)**.
+检测到基础安全输入通道的冗余安全输入信号之间存在不匹配。  
+为确保安全，受影响的输入信号将被视为**安全失效（开路或0）**。
 
-### 2. Causes and Inspection
+### 2. 原因及检查
 
 {% hint style="info" %}
-(1) Signal differences caused by wiring errors or disconnections  
-(2) Noise caused by terminal blocks or cable conditions  
-(3) Incorrect safety signal parameters (filter settings, allowed mismatch time)
+(1) 由于接线错误或断开引起的信号差异  
+(2) 由接线端子或电缆条件引起的噪声  
+(3) 安全信号参数不正确（过滤设置、允许的不匹配时间）
 {% endhint %}
 
-### (1) Signal Differences Caused by Wiring Errors or Disconnections
+### (1) 由于接线错误或断开引起的信号差异
 
-A safety input signal mismatch indicates a discrepancy between the safety input signals connected to the Servo Safety Board CNSI1 connector (total 4 channels).  
-For detailed pin mapping of this connector, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
+安全输入信号不匹配表示连接到伺服安全板CNSI1连接器（共4个通道）的安全输入信号之间存在差异。  
+有关该连接器的详细引脚映射，请参阅**Hi7 控制器维护手册，第4.3.2.6节**。
 
 ![](../_assets/3-Safety-io/E52042/bd642_cnsi1_position.png)<br>
-Figure 3.6.1. Hi7-N Controller Servo Safety Board CNSI1 Position
+图 3.6.1. Hi7-N 控制器伺服安全板CNSI1位置
 
-1) When the safety input signal is not used  
-If the error occurs on a channel that is not in use, verify that the external wiring is as shown below. Also, check that the connector and wires are properly assembled and making good contact.
+1) 当安全输入信号未使用时  
+如果错误发生在未使用的通道上，请确认外部接线是否如下面所示。同时，检查连接器和电线是否正确组装并良好接触。
 
 ![](../_assets/3-Safety-io/E52042/bd642_cnsi1_notused.png)<br>
-Figure 3.6.2. Wiring Diagram for Unused Servo Safety Board CNSI1 Channel
+图 3.6.2. 未使用的伺服安全板CNSI1通道接线图
 <br>
 
-2) When the safety input signal is in use  
-If the error occurs on a channel that is being used, first check which input channel the signal is assigned to. Input channel assignments can be verified through the following menu:
+2) 当安全输入信号在使用时  
+如果错误发生在正在使用的通道上，请首先检查该信号分配到哪个输入通道。输入通道的分配可以通过以下菜单进行确认：
 
 <br>
-System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全IO -> 1: 输入/输出分配
 
 ![](../_assets/3-Safety-io/E52042/io_alloc_param1.png)<br>
-Figure 3.6.3. T/P Screen – Safety Input Assignment
+图 3.6.3. T/P屏幕 – 安全输入分配
 
-Once the input channel assignment is confirmed, refer to the site’s electrical schematics or wiring diagrams to ensure proper wiring. Also, inspect the actual wiring for correct connections and assembly.  
-For wiring standards of the Servo Safety Board CNSI1, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
+一旦确认输入通道分配，请参考现场的电气原理图或接线图以确保接线正确。此外，检查实际接线以确保连接和组装正确。  
+有关伺服安全板CNSI1的接线标准，请参阅**Hi7 控制器维护手册，第4.3.2.6节**。
 
-### (2) Noise caused by terminal blocks or cable condition
+### (2) 由于接线端子或电缆条件引起的噪声
 
-#### Safety Input Signal Monitoring Function  
-A monitoring screen for safety input signals is available on the T/P. It can monitor at 0.5-second intervals, allowing for basic verification.
+#### 安全输入信号监控功能  
+T/P上有一个安全输入信号的监控屏幕。它能够以0.5秒的间隔进行监控，允许进行基本验证。
 
-System -> 8: Safety System -> 3: Monitoring -> 3: Safety IO Status  
+系统 -> 8: 安全系统 -> 3: 监控 -> 3: 安全IO状态  
 ![](../_assets/3-Safety-io/E52042/safety_io_status.png)<br>
-Figure 3.6.4. T/P Screen – Safety IO Monitoring
+图 3.6.4. T/P屏幕 – 安全IO监控
 
-### (3) Safety Signal Parameter Setting Error (Filter, Mismatch Allow Time)
+### (3) 安全信号参数设置错误（过滤器，不匹配允许时间）
 
-If the filter time for the safety input signal is too short, or the allowed mismatch time is set excessively short, safety input signal mismatch alarms may occur frequently.  
-The recommended default settings for safety input signals are as follows. These values can be adjusted according to the field environment and application conditions.
+如果安全输入信号的过滤时间设置过短，或者允许的不匹配时间设置过短，可能会频繁出现安全输入信号不匹配警报。  
+安全输入信号的推荐默认设置如下。这些值可以根据现场环境和应用条件进行调整。
 
-- Filter Time: 100 (msec)  
-- Allowed Mismatch Time: 1000 (msec)  
+- 过滤时间: 100 (毫秒)  
+- 允许不匹配时间: 1000 (毫秒)  
 
-System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety IO -> 2: Basic IO  
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全IO -> 2: 基本IO  
 ![](../_assets/3-Safety-io/E52042/def_input.png)<br>
-Figure 3.6.5. T/P Screen – Basic IO Settings
-
+图 3.6.5. T/P屏幕 – 基本IO设置
 [__SOURCE](3-safety-board-part/E52043.md)
-## 3.7. E52043 (0 ch) Additional Safety Input Signal Mismatch
+## 3.7. E52043 (0 ch) 额外安全输入信号不匹配
 
 {% hint style="warning" %}
-When checking the wiring of Additional safety inputs, ensure that the controller power is **OFF** before performing any verification work.
+在检查额外安全输入的接线时，确保控制器电源为 **关闭** 状态，然后再进行任何验证工作。
 {% endhint %}
 
-### 1. Overview
+### 1. 概述
 
-A mismatch has been detected between the redundant signals of the Additional safety input channel.  
-To ensure safety, the affected input signal is treated in a **Fail-Safe state (Open or 0)**.
+已检测到额外安全输入通道的冗余信号之间存在不匹配。  
+为确保安全，受影响的输入信号将在 **故障安全状态（打开或 0）** 下处理。
 
-### 2. Causes and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
-(1) Signal differences due to wiring errors or disconnections  
-(2) Noise caused by terminal blocks or cable conditions  
-(3) Safety signal parameter setting errors (filter, allowed mismatch time)
+(1) 由于接线错误或断开造成的信号差异  
+(2) 由于端子块或电缆状况引起的噪声  
+(3) 安全信号参数设置错误（滤波器、允许的不匹配时间）
 {% endhint %}
 
-### (1) Signal Differences Due to Wiring Errors or Disconnections
+### (1) 由于接线错误或断开造成的信号差异
 
-The Additional safety input signal mismatch indicates a discrepancy in the Additional safety input signals connected to the Option Safety IO Board CNSI2 connector (total 8 channels).  
-For detailed pin assignments of this connector, refer to **Hi7 Controller Maintenance Manual, Section 5.4.6**.
+额外安全输入信号不匹配表明连接到选项安全IO板CNSI2连接器的额外安全输入信号之间存在差异（共8个通道）。  
+有关此连接器的详细引脚分配，请参阅 **Hi7控制器维护手册，第5.4.6节**。
 
 ![](../_assets/3-Safety-io/E52043/bd680_cnsi2_position.png)<br>
-**Figure 3.7.1. Hi7-N Controller Option Safety IO Board CNSI2 Location**
+**图3.7.1. Hi7-N控制器选项安全IO板CNSI2位置**
 
-1) When using the Additional safety input signal  
-If the error occurs on a channel that is in use, verify which input channel the signal is assigned to. Assignment of Additional safety input channels can be checked through the following menu:
+1) 使用额外安全输入信号时  
+如果在使用中的通道上发生错误，请确认信号分配到了哪个输入通道。可以通过以下菜单检查额外安全输入通道的分配：
 
-System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety IO -> 1: Input/Output Assignment -> Additional Input <br>
+系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全IO -> 1: 输入/输出分配 -> 额外输入 <br>
 
 ![](../_assets/3-Safety-io/E52043/add_si_func_sel.png)<br>
-**Figure 3.7.2. T/P Screen – Additional Safety Input/Output Assignment**
+**图3.7.2. T/P屏幕 – 额外安全输入/输出分配**
 
-Once the Additional safety input channel assignment is confirmed, refer to the site’s electrical schematic or wiring diagram to verify that the actual wiring matches the design.  
-Also, check the physical wiring for proper connection and assembly status.  
+一旦确认额外安全输入通道的分配，请参阅现场的电气原理图或接线图，以验证实际接线是否与设计相符。  
+此外，检查物理接线的连接和组装状态。  
 
-When verifying the electrical schematic or wiring diagram, follow the wiring standards for the Option Safety IO Board CNSI2 as specified in **Hi7 Controller Maintenance Manual, Section 5.4.6**.
+在验证电气原理图或接线图时，请遵循**Hi7控制器维护手册，第5.4.6节**中规定的选项安全IO板CNSI2的接线标准。
 
-### (2) Noise Caused by Terminal Blocks or Cable Conditions
+### (2) 由于端子块或电缆状况引起的噪声
 
-#### Monitoring Function for Additional Safety Input Signals
-A monitoring screen for the Additional safety input signals is provided on the T/P.  
-Monitoring occurs every 0.5 seconds, allowing for basic verification.
+#### 额外安全输入信号的监控功能
+在T/P上提供了额外安全输入信号的监控屏幕。  
+监控每0.5秒进行一次，以便进行基本的验证。
 
-**Navigation:**  
-`System -> 8: Safety System -> 3: Monitoring -> 3: Safety IO Status`  
+**导航:**  
+`系统 -> 8: 安全系统 -> 3: 监控 -> 3: 安全IO状态`  
 
 ![](../_assets/3-Safety-io/E52043/add_si_monitoring.png)<br>
-**Figure 3.7.3. T/P Screen – Safety IO Monitoring**
+**图3.7.3. T/P屏幕 – 安全IO监控**
 
-### (3) Incorrect Safety Signal Parameter Settings (Filter, Mismatch Allowance Time)
+### (3) 安全信号参数设置不正确（滤波器、不匹配容许时间）
 
-If the filter time for the Additional safety input signals is set too short or the mismatch allowance time is excessively short, alarms for Additional safety input signal mismatch may occur frequently.  
+如果额外安全输入信号的滤波时间设置过短或不匹配容许时间过短，则可能频繁发生额外安全输入信号不匹配的警报。  
 
-The recommended default settings for Additional safety input signals are as follows. These values can be adjusted depending on site conditions and application requirements:
+额外安全输入信号的推荐默认设置如下。这些值可以根据现场条件和应用要求进行调整：
 
-- **Filter Time:** 100 (msec)  
-- **Mismatch Allowance Time:** 1000 (msec)  
+- **滤波时间:** 100 (毫秒)  
+- **不匹配容许时间:** 1000 (毫秒)  
 
-**Navigation:**  
-`System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 3: Additional IO`  
+**导航:**  
+`系统 -> 8: 安全系统 -> 2: 参数设置 -> 3: 安全IO -> 3: 额外IO`  
 
 ![](../_assets/3-Safety-io/E52043/add_io.png)<br>
-**Figure 3.7.4. T/P Screen – Additional Safety IO Settings**
-
+**图3.7.4. T/P屏幕 – 额外安全IO设置**
 [__SOURCE](4-servo-board-part/README.md)
-# 4. Servo Safety Board (Servo Part)
+# 4. 伺服安全板 (伺服部分)
 [__SOURCE](4-servo-board-part/E02470.md)
-## 4.1. E02470. (O Axis) Encoder Error: Reset Required
+## 4.1. E02470. (O 轴) 编码器错误：需要重置
 
-### 1. Overview
+### 1. 概述
 
-In order for the encoder to preserve the motor's position data, power must be supplied to the encoder at all times.
+为了使编码器能够保存电机的位置数据，必须始终为编码器提供电源。
 
-Power is supplied to the encoder by keeping the controller power ON or by an encoder backup battery. If the controller power is turned OFF while the encoder backup battery is discharged, an error occurs because the encoder loses its position data.
+通过保持控制器电源开启或通过编码器备用电池为编码器供电。如果在编码器备用电池放电时关闭控制器电源，将发生错误，因为编码器失去了其位置信息。
 
-Similarly, when replacing a motor, the same error occurs because the encoder of the new motor has already been in a state where power was not supplied.
+类似地，当更换电机时，发生相同的错误，因为新电机的编码器已处于未供电的状态。
 
-Since resetting the encoder changes the reference position data of the corresponding axis, you must move the robot to the reference posture through manual operation of the axis coordinate system and re-perform the encoder calibration for that axis.
+由于重置编码器会改变相应轴的参考位置信息，您必须通过手动操作轴坐标系统将机器人移动到参考姿势，并重新执行该轴的编码器校准。
 
 
-### 2. Cause and Inspection
+### 2. 原因和检验
 
 {% hint style="info" %}
 
-(1)	Check the encoder battery voltage.<br>
-(2)	Inspect the encoder battery wiring status.<br>
-(3)	Perform a motor replacement test.<br>
-(4)	After resetting the encoder, encoder calibration must be re-performed at the robot's reference position.<br>
+(1) 检查编码器电池电压。<br>
+(2) 检查编码器电池接线状态。<br>
+(3) 执行电机更换测试。<br>
+(4) 重置编码器后，必须在机器人的参考位置重新执行编码器校准。<br>
 
 {% endhint %}
 
-(1)	Check the encoder battery voltage.<br>
-The encoder battery is 3.6V. If this voltage drops to 3.0V~3.2V, it is displayed as "W0104 ○ Axis Encoder Battery voltage low." The encoder battery should be replaced when this warning occurs. The encoder battery must be replaced while the controller power is ON. If the battery is replaced with a normal encoder battery in this state, the robot can continue to be used without any problems.
+(1) 检查编码器电池电压。<br>
+编码器电池为3.6V。如果电压降至3.0V~3.2V，将显示为"W0104 ○ 轴编码器电池电压低。" 当出现此警告时，应更换编码器电池。更换编码器电池时，控制器电源必须保持开启。如果在这种状态下更换为正常的编码器电池，机器人可以继续无故障使用。
 
-If the encoder battery replacement time is passed and the encoder battery voltage drops to 2.5V~3.0V, the error "E2470 Axis ○ Encoder Abnormality: Encoder Reset Required" occurs. When this error occurs, the encoder's position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture through manual operation of the axis coordinate system and re-perform the encoder calibration for that axis.
+如果超过了编码器电池更换的时间且电池电压降至2.5V~3.0V，则会发生错误"E2470 轴 ○ 编码器异常：需要重置编码器"。当发生此错误时，编码器的位置数据已丢失。更换编码器电池并重置编码器后，您必须通过手动操作轴坐标系统将机器人移动到参考姿势，并重新执行该轴的编码器校准。
 
 ![](../_assets/4.서보보드/battery_replace_position.png)<br>
-Figure 4.1.1 Encoder Battery Replacement Position
+图 4.1.1 编码器电池更换位置
 
-Encoder reset is executed in the menu below.
+编码器重置在以下菜单中执行。
 
-    System -> 5. Initialization -> 4. Serial Encoder Reset
+    系统 -> 5. 初始化 -> 4. 串行编码器重置
 
 ![](../_assets/4.서보보드/enc_reset.png)<br>
-Figure 4.1.2 Serial Encoder Reset
+图 4.1.2 串行编码器重置
 
-(2)	Inspect the encoder battery wiring status.<br>
-Check the battery wiring status connecting from the encoder battery location to the motor.
+(2) 检查编码器电池接线状态。<br>
+检查连接从编码器电池位置到电机的电池接线状态。
 
-(3)	Perform a motor replacement test.<br>
-If the problem is not resolved by the above measures, it is highly likely that the encoder itself is faulty. Perform a motor replacement test.
-
-    
-
+(3) 执行电机更换测试。<br>
+如果上述措施不能解决问题，编码器本身很可能出现故障。执行电机更换测试。
 [__SOURCE](4-servo-board-part/E02670.md)
-## 4.2. E02670. (O Axis) command value abnormal
+## 4.2. E02670. (O 轴) 命令值异常
 
-### 1. Overview
+### 1. 概述
 
-Errors may occur due to communication abnormalities between the main board and the servo safety board or due to abrupt motion changes.<br> 
-If a communication problem between boards occurs, normal commands cannot be transmitted from the main board to the servo safety board. At this time, since the robot may operate abnormally due to incorrect commands, an error is generated and the robot is stopped.<br>
-In addition, in the case of abrupt motion, the drive unit may fail to follow the position command, so an error is generated and the robot is stopped.
+由于主板与伺服安全板之间的通信异常或突发运动变化，可能会发生错误。<br>
+如果板之间发生通信问题，则正常命令无法从主板传输到伺服安全板。此时，由于命令不正确，机器人可能会异常操作，因此会产生错误并停止机器人。<br>
+此外，在突发运动的情况下，驱动单元可能无法遵循位置命令，因此会产生错误并停止机器人。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Check if the main board and servo safety board are installed correctly.<br>
-* Check if the boards are installed correctly.<br>
-* Check the boards for abnormalities.<br>
+(1)	检查主板和伺服安全板是否正确安装。<br>
+* 检查板是否正确安装。<br>
+* 检查板是否有异常。<br>
 
-(2)	Check if there is a job program where the robot moves abruptly.<br>
+(2)	检查是否存在机器人突然移动的作业程序。<br>
 
 {% endhint %}
 
+(1)	检查主板和伺服安全板是否正确安装。
 
-(1)	Check if the main board and servo safety board are installed correctly.
-
-If the main board and servo safety board are not correctly installed in the rack or if there is a problem with the boards, communication problems may occur, resulting in an error.
+如果主板和伺服安全板没有正确安装在机架中，或者板存在问题，可能会导致通信问题，从而产生错误。
 
 ---
 
 <div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
 
-### ⚠️ Warning
+### ⚠️ 警告
 
-**To protect previous job programs, make sure to back up all files on the main board using a USB memory before removing the board from the rack.**
+**为了保护之前的作业程序，请务必在从机架上拆下板之前使用 USB 存储器备份主板上的所有文件。**
 
 </div>
 
 ---
 
-The method for backing up main board files to a USB memory is as follows.
+备份主板文件到 USB 存储器的方法如下。
 
 ![](../_assets/4.서보보드/USB_connector.png)<br>
-Figure 4.2.1 TP USB Connection
+图 4.2.1 TP USB 连接
 
-When the USB is recognized by the TP, it is displayed as the following icon at the top of the screen.
+当 USB 被 TP 识别时，屏幕顶部将显示如下图标。
 
 ![](../_assets/4.서보보드/usb.png)<br>
-Figure 4.2.2 TP USB Recognition
+图 4.2.2 TP USB 识别
 
-Enter the following path to back up files.
+输入以下路径以备份文件。
 
-    Service -> 5. File Manager
+    Service -> 5. 文件管理器
 
 ![](../_assets/4.서보보드/filemanage.png)<br>
-Figure 4.2.3 Backup Step 1
+图 4.2.3 备份步骤 1
 
 ![](../_assets/4.서보보드/filemanage2.png)<br>
-Figure 4.2.4 Backup Step 2
+图 4.2.4 备份步骤 2
 
-Copy the Project folder to the USB.
+将项目文件夹复制到 USB。
 
-* Check if the board is installed correctly.<br>
-Check the connection status of the EtherCAT cable, which is the interface between the boards. Please remove and reinstall it.
+* 检查板是否正确安装。<br>
+检查 EtherCAT 电缆的连接状态，它是板之间的接口。请拆下并重新安装它。
 
 ![](../_assets/4.서보보드/ethercat_cable_hicom_bd642_r1.png)<br>
-Figure 4.2.5 N Controller EtherCAT Cable Connection
+图 4.2.5 N 控制器 EtherCAT 电缆连接
 
-* Check the boards for abnormalities.<br>
-Please replace the board to determine if the board is faulty.
+* 检查板是否有异常。<br>
+请更换板以判断板是否故障。
 
-(2)	Check if there is a job program where the robot moves abruptly.<br>
-Check if the error occurs in a section where the motion changes abruptly during robot operation.
-If the error occurs during abrupt motion, modification of the job program is required.<br>
-The causes of errors occurring during abrupt motion are as follows. When executing a job program, there are cases where the robot's posture changes significantly while moving a short distance inevitably. At this time, the robot's axis speed suddenly increases, and if the servo board fails to follow this, an error occurs. The solution is to modify the teaching point at the point where the posture changes abruptly or change the robot posture.
-
-
+(2)	检查是否存在机器人突然移动的作业程序。<br>
+检查错误是否发生在机器人操作期间突发运动的部分。
+如果在突发运动期间发生错误，则需要修改作业程序。<br>
+发生在突发运动期间的错误原因如下。当执行作业程序时，有时机器人在不可避免的情况下移动短距离时姿势会发生显著变化。这时，机器人的轴速度突然增加，如果伺服板未能跟随，则会发生错误。解决方案是在姿势突然变化的地方修改教学点或改变机器人姿势。
 [__SOURCE](4-servo-board-part/E02680.md)
-## 4.3. E02680. (O Axis) Maximum Speed Exceeded
+## 4.3. E02680. (O 轴) 超过最大速度
 
-### 1. Overview
+### 1. 概述
 
-The robot axis operated at a speed exceeding the maximum speed. Since the robot is in a state where it is not controlled normally, it is treated as an error and the robot is stopped.
+机器人轴的操作速度超过了最大速度。由于机器人处于无法正常控制的状态，因此将其视为错误，并停止机器人。
 
-When sending commands from the main board to the servo safety board, limited commands are sent to ensure the maximum speed is not exceeded. A maximum speed exceeded error may occur when the robot fails to follow these generated commands and speed overshoot occurs.
+当从主板发送命令到伺服安全板时，会发送有限的命令以确保不超过最大速度。当机器人未能遵循这些生成的命令而发生速度超调时，可能会发生超过最大速度的错误。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Check if the tool data is entered correctly.<br>
-(2)	Check if the robot model is set correctly.<br>
-(3)	Check the versions of the servo board (BD640) and main com.<br>
-(4)	Check if the robot posture is near a singularity.<br>
-(5)	For external axes, check the acceleration/deceleration parameter settings and the load factor during operation.<br>
-(6)	Adjust the job program.<br>
+(1)	检查工具数据是否正确输入。<br>
+(2)	检查机器人型号是否正确设置。<br>
+(3)	检查伺服板(BD640)和主通讯的版本。<br>
+(4)	检查机器人姿态是否接近奇异点。<br>
+(5)	对于外部轴，检查运行期间的加速度/减速度参数设置和负载因子。<br>
+(6)	调整作业程序。<br>
 
 {% endhint %}
 
-(1)	Check if the tool data is entered correctly.<br>
-If the tool weight or inertia differs significantly from the values registered in the controller, robot control performance may deteriorate, and a maximum speed exceeded error may occur. Tool weight and inertia can be registered according to the tool number in the menu below.
+(1)	检查工具数据是否正确输入。<br>
+如果工具重量或惯性与控制器中注册的值差异明显，机器人控制性能可能会下降，并可能出现超过最大速度的错误。工具重量和惯性可以按照下面菜单中的工具编号进行注册。
 
         System -> 3. Robot Parameter -> Tool Data
 
 ![](../_assets/4.서보보드/tool.png)<br>
-Figure 4.3.1 Check Tool Data
+图 4.3.1 检查工具数据
 
-To automatically set the tool weight or inertia, you can use the load estimation function in the menu below. 
+要自动设置工具重量或惯性，您可以使用下面菜单中的负载估计功能。
 
-* Enter the load estimation function.
+* 输入负载估计功能。
 
         System -> 6. Auto Calibration -> 4. Load Estimation Function
 
 ![](../_assets/4.서보보드/estimation1.png)<br>
-Figure 4.3.2 Load Estimation Function 1
+图 4.3.2 负载估计功能 1
 
 ![](../_assets/4.서보보드/estimation2.png)<br>
-Figure 4.3.3 Load Estimation Function 2
+图 4.3.3 负载估计功能 2
 
 ![](../_assets/4.서보보드/estimation3.png)<br>
-Figure 4.3.4 Load Estimation Function 3
+图 4.3.4 负载估计功能 3
 
-* Select the tool number to save after estimating the load using the load estimation function.
+* 在使用负载估计功能估计负载后，选择工具编号以进行保存。
 
 ![](../_assets/4.서보보드/estimation4.png)<br>
-Figure 4.3.5 Load Estimation Function 4
+图 4.3.5 负载估计功能 4
 
-* Click Normal Operation to execute.<br>
-Press the Motor On switch, hold the deadman switch, and then click Normal Operation.
+* 点击正常操作以执行。<br>
+按下电机开启开关，保持死人开关，然后点击正常操作。
 
 ![](../_assets/4.서보보드/estimation5.png)<br>
-Figure 4.3.6 Load Estimation Function 5
+图 4.3.6 负载估计功能 5
 
-* When the load estimation operation is completed, the estimation result is displayed on the screen.
+* 当负载估计操作完成时，估计结果将在屏幕上显示。
 
 ![](../_assets/4.서보보드/estimation6.png)<br>
-Figure 4.3.7 Load Estimation Function 6
+图 4.3.7 负载估计功能 6
 
-(2)	Check if the robot model is set correctly.
+(2)	检查机器人型号是否正确设置。
 
 ![](../_assets/4.서보보드/robot_model.png)<br>
-Figure 4.3.8 Check Robot Model
+图 4.3.8 检查机器人型号
 
-Check if the robot model registered on the TP screen matches the actually installed robot.
+检查TP屏幕上注册的机器人型号是否与实际安装的机器人相匹配。
 
-(3)	Check the versions of the servo safety board (BD642) and main com.<br>
-This may occur due to broken compatibility between the servo safety board (BD642) and the main com version. Especially if a module has been replaced, proceed with a version update to match the version of each module to the current main com version.
+(3)	检查伺服安全板(BD642)和主通讯的版本。<br>
+这可能是由于伺服安全板(BD642)与主通讯版本之间的兼容性破裂而导致的。特别是如果模块被替换，需进行版本更新以使每个模块与当前的主通讯版本相匹配。
 
-The version of each module can be checked in the path below.
+每个模块的版本可以在以下路径中检查。
 
         Service -> 7. System Diagnosis -> 1. System Version
 
-
 ![](../_assets/4.서보보드/version.png)<br>
-Figure 4.3.9 Module Version Check
+图 4.3.9 模块版本检查
 
-(4)	Check if the robot posture is near a singularity.<br>
-If L interpolation or C interpolation, rather than PtP interpolation, is executed in a posture near a singularity, an error may occur. A singularity occurs when the B-axis is close to 0 deg and when the center of the wrist is close to the S-axis rotation center axis. When passing near a singularity, please change the corresponding step to PtP interpolation.
+(4)	检查机器人姿态是否接近奇异点。<br>
+如果在接近奇异点的姿态下执行L插补或C插补，而不是PtP插补，可能会发生错误。奇异点发生在B轴接近0度时，以及手腕中心接近S轴旋转中心轴时。经过接近奇异点时，请将相应步骤更改为PtP插补。
 
 ![](../_assets/4.서보보드/robot_special_action.png)<br>
-Figure 4.3.10 Singularity Posture Check
+图 4.3.10 奇异姿态检查
 
-(5)	For external axes, check the acceleration/deceleration parameter settings and the load factor during operation.<br>
-The motor torque may be insufficient because the maximum speed of the external axis acceleration/deceleration parameter is too high or the acceleration time is too short. While observing the load factor during robot operation, you must lower the I/Ip maximum speed or significantly increase the acceleration time.
+(5)	对于外部轴，检查运行期间的加速度/减速度参数设置和负载因子。<br>
+由于外部轴加速度/减速度参数的最大速度过高或加速度时间过短，电机扭矩可能不足。在观察机器人运行期间的负载因子时，必须降低I/Ip最大速度或显著增加加速度时间。
 
         System -> 3. Robot Parameter -> 34. Acc/Dec Parameter
 
 ![](../_assets/4.서보보드/acc.png)<br>
-Figure 4.3.11 External Axis Acc/Dec Check
+图 4.3.11 外部轴加/减速度检查
 
-(6)	Adjust the job program.<br>
-Change the step conditions of the corresponding step or the immediately preceding step in the job program. First, try changing it to “Acc=0”, second, try lowering the speed of the step, and third, try adding a step to the movement path to change the program conditions.
-
-
+(6)	调整作业程序。<br>
+更改作业程序中相应步骤或紧接着的步骤的步骤条件。首先尝试将其更改为“Acc=0”，其次尝试降低步骤的速度，第三，尝试在运动路径中添加一个步骤以更改程序条件。
 [__SOURCE](4-servo-board-part/E50101.md)
-## 4.4. E50101. (O Axis) Invalid encoder command field setting
+## 4.4. E50101. (O Axis) 无效编码器命令字段设置
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the data received from the encoder does not comply with the specified communication standard.<br>
+伺服安全板与编码器进行串行通信，以控制伺服电机，并定期接收编码器数据。<br>
+当从编码器接收的数据不符合指定的通信标准时，会发生此错误。<br>
 
-The above error may occur due to failure of components related to encoder data transmission and reception, wiring defects, or problems with encoder shield line processing.
+上述错误可能由于与编码器数据传输和接收相关的组件故障、接线缺陷或编码器屏蔽线处理问题引起。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Check the encoder supply voltage.<br>
-(2)	Inspect the encoder wiring.<br>
-(3)	Perform a servo board replacement test.<br>
-(4)	Perform a motor (encoder) replacement test.<br>
-(5)	After completing the measures, check the communication status of the wiring.<br>
+(1)	检查编码器供电电压。<br>
+(2)	检查编码器接线。<br>
+(3)	进行伺服板更换测试。<br>
+(4)	进行电机（编码器）更换测试。<br>
+(5)	在完成措施后，检查接线的通信状态。<br>
 
 {% endhint %}
 
-(1)	Check the encoder supply voltage.<br>
-The power voltage supplied to the encoder must be within the range of 5.0V±5% (4.75V ~ 5.25V) at the encoder-side connector. If the encoder-side connector voltage drops below 4.75V, the encoder will not operate normally, and there is a possibility that the above error may occur.
+(1)	检查编码器供电电压。<br>
+供电给编码器的电压必须在编码器侧连接器范围内为5.0V±5%（4.75V ~ 5.25V）。如果编码器侧连接器电压低于4.75V，编码器将无法正常工作，并且上述错误可能会发生。
 
-Measure the voltage of the encoder-side connector pins (3-4).
+测量编码器侧连接器引脚的电压（3-4）。
 
 ![](../_assets/4.서보보드/encoder_connector_pin_info_en.png)<br>
-Figure 4.4.1 Encoder Connector Pin Information
+图4.4.1 编码器连接器引脚信息
 
-If the measured voltage is lower than the reference voltage, turn the VR1 variable resistor on the servo safety board (BD642) to adjust the encoder-side connector voltage so that it falls within the reference voltage range.
+如果测得电压低于参考电压，请旋转伺服安全板（BD642）上的VR1可变电阻，以调整编码器侧连接器电压，使其落在参考电压范围内。
 
 ![](../_assets/4.서보보드/BD642_encoder_voltage_adjustment.png)<br>
-Figure 4.4.2 BD642 Encoder Voltage Variable Resistor
+图4.4.2 BD642编码器电压可变电阻
 
-(2)	Inspect the encoder wiring.
-The inspection sequence for encoder wiring is as follows.<br>
-1st: Check for poor contact in the connectors related to the encoder wiring.<br>
-2nd: Check for short circuits in the encoder wiring. Check the wiring of each phase 1:1 using equipment such as a multimeter (tester).<br>
-3rd: Perform an encoder wiring replacement test.<br>
+(2)	检查编码器接线。
+编码器接线的检查顺序如下。<br>
+1st: 检查与编码器接线相关的连接器是否接触良好。<br>
+2nd: 检查编码器接线是否短路。使用万用表（测试仪）1:1检查每个相位的接线。<br>
+3rd: 进行编码器接线更换测试。<br>
 
-If there is no disconnection in the encoder wiring but issues such as poor contact of the shield wire or contact between the encoder signal wire and other power lines or metal parts of the robot body exist, these cannot be detected by a short circuit check. Therefore, perform a wiring replacement test.
+如果编码器接线没有断开，但存在屏蔽线接触不良或编码器信号线与其他电源线或机器人本体金属部分接触等问题，这些不能通过短路检查来检测。因此，请进行接线更换测试。
 
-* Check the internal wiring of the controller.<br>
-Check the wiring between the CNEN13,46 (BD642) connector and CEC1.
+* 检查控制器内部接线。<br>
+检查CNEN13,46（BD642）连接器与CEC1之间的接线。
 
 ![](../_assets/4.서보보드/hi7_controller_encoder_cable.png)<br>
-Figure 4.4.3 Hi7-N Controller Encoder Wiring Inspection
+图4.4.3 Hi7-N控制器编码器接线检查
 
-* Check the wiring between the controller and the robot.<br>
-In the case of the Hi7-N controller, check the wiring between CEC1 and CER1.
+* 检查控制器与机器人之间的接线。<br>
+在Hi7-N控制器的情况下，检查CEC1与CER1之间的接线。
 
 ![](../_assets/4.서보보드/hi7_robot_encoder_cable.png)<br>
-Figure 4.4.4 Basic Installation Configuration Diagram between Hi7-N Controller and Robot
+图4.4.4 Hi7-N控制器与机器人之间的基本安装配置图
 
 ![](../_assets/4.서보보드/hi7_robot_encoder_cable_detail.png)<br>
-Figure 4.4.5 Detail of Basic Installation Configuration Diagram between Hi7-N Controller and Robot
+图4.4.5 Hi7-N控制器与机器人之间的基本安装配置图细节
 
-* Check the internal wiring of the robot body.<br>
-Check the wiring between CER1 and the encoder-side connector.
-For wiring inspection, please refer to the wiring connection diagram in the robot maintenance manual.
+* 检查机器人本体内部接线。<br>
+检查CER1与编码器侧连接器之间的接线。
+有关接线检查，请参阅机器人维护手册中的接线连接图。
 
 ![](../_assets/4.서보보드/robot_inner_cable.png)<br>
-Figure 4.4.6 Robot Internal Wiring
+图4.4.6 机器人内部接线
 
-(3)	Perform a servo safety board replacement test.<br>
-If the error does not occur after replacing the servo safety board, the encoder receiving section of the servo safety board is faulty. Please replace the servo safety board with a normal unit.
+(3)	进行伺服安全板更换测试。<br>
+如果在更换伺服安全板后不再发生错误，则伺服安全板的编码器接收部分出现故障。请用正常单元更换伺服安全板。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.4.7 Hi7-N Controller Servo Board Replacement
+图4.4.7 Hi7-N控制器伺服板更换
 
-(4)	Perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+(4)	进行电机（编码器）更换测试。<br>
+如果在更换伺服电机后不再发生错误，则伺服电机出现故障。请用正常单元更换伺服电机。下图显示HS165机器人每个轴的电机位置。有关其他机器人的更换，请参阅相应的机械维护手册。
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.4.8 Motor Positions for Each Axis of HS165 Robot
+图4.4.8 HS165机器人每个轴的电机位置
 
-(5)	Check the communication status of the wiring after completing the measures.<br>
-After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
+(5)	在完成措施后检查接线的通信状态。<br>
+在完成有问题部件的措施后，请参照《编码器通信故障计数显示功能手册》检查通信状态。
 
 ![](../_assets/4.서보보드/encoder_comm.png)<br>
-Figure 4.4.9 Encoder Communication Failure Monitoring
+图4.4.9 编码器通信故障监视
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
-
-
 [__SOURCE](4-servo-board-part/E50102.md)
-## 4.5. E50102. (O Axis) Encoder Received Data Length Abnormality
+## 4.5. E50102. (O轴) 编码器接收数据长度异常
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the length of the data received from the encoder does not comply with the specified value.<br>
+伺服安全板与编码器进行串行通信以控制伺服电机，并定期接收编码器数据。<br>
+当从编码器接收到的数据长度不符合规定值时，会发生此错误。<br>
 
-Cases where the length of data received from the encoder does not match can occur mainly when noise enters the encoder signal line due to wiring defects or problems with encoder shield line processing.
+收到的数据长度与编码器不匹配的情况主要发生在由于接线缺陷或编码器屏蔽线处理问题导致噪声进入编码器信号线时。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Inspect the encoder wiring.<br>
-(2) Perform a motor (encoder) replacement test.<br>
-(3)	Perform a servo safety board replacement test.<br>
-(4)	Check the communication status of the wiring after completing the measures.<br>
+(1) 检查编码器接线。<br>
+(2) 执行电机（编码器）更换测试。<br>
+(3) 执行伺服安全板更换测试。<br>
+(4) 完成措施后检查接线的通信状态。<br>
 
 {% endhint %}
 
-(1)	Inspect the encoder wiring.<br>
-The inspection sequence for encoder wiring is as follows.<br>
-1st: Check for poor contact in the connectors related to the encoder wiring.<br>
-2nd: Check for short circuits in the encoder wiring. Check the wiring of each phase 1:1 using equipment such as a multimeter (tester).<br>
-3rd: Perform an encoder wiring replacement test.<br>
+(1) 检查编码器接线。<br>
+编码器接线的检查顺序如下。<br>
+1st: 检查与编码器接线相关的连接器是否接触不良。<br>
+2nd: 检查编码器接线是否短路。使用万用表（测试仪）逐相1:1检查接线。<br>
+3rd: 执行编码器接线更换测试。<br>
 
-If there is no disconnection in the encoder wiring but issues such as poor contact of the shield wire or contact between the encoder signal wire and other power lines or metal parts of the robot body exist, these cannot be detected by a short circuit check. Therefore, perform a wiring replacement test.
+如果编码器接线没有断开，但存在屏蔽线接触不良或编码器信号线与其他电源线或机器人的金属部分接触等问题，这些在短路检查中无法检测到。因此，请执行接线更换测试。
 
-* Check the internal wiring of the controller.<br>
-Check the wiring between the CNEN13,46 (BD642) connector and CEC1.
+* 检查控制器内部接线。<br>
+检查CNEN13,46（BD642）连接器与CEC1之间的接线。
 
 ![](../_assets/4.서보보드/hi7_controller_encoder_cable.png)<br>
-Figure 4.5.1 Hi7-N Controller Encoder Wiring Inspection
+图4.5.1 Hi7-N控制器编码器接线检查
 
-* Check the wiring between the controller and the robot.<br>
-In the case of the Hi7-N controller, check the wiring between CEC1 and CER1.
+* 检查控制器与机器人之间的接线。<br>
+在Hi7-N控制器的情况下，检查CEC1与CER1之间的接线。
 
 ![](../_assets/4.서보보드/hi7_robot_encoder_cable.png)<br>
-Figure 4.5.2 Basic Installation Configuration Diagram between Hi7-N Controller and Robot
+图4.5.2 Hi7-N控制器与机器人之间的基本安装配置图
 
 ![](../_assets/4.서보보드/hi7_robot_encoder_cable_detail.png)<br>
-Figure 4.5.3 Detail of Basic Installation Configuration Diagram between Hi7-N Controller and Robot
+图4.5.3 Hi7-N控制器与机器人之间的基本安装配置图详细信息
 
-* Check the internal wiring of the robot body.<br>
-Check the wiring between CER1 and the encoder-side connector. For wiring inspection, please refer to the wiring connection diagram in the robot maintenance manual.
+* 检查机器人内部接线。<br>
+检查CER1与编码器侧连接器之间的接线。有关接线检查，请参考机器人维护手册中的接线连接图。
 
 ![](../_assets/4.서보보드/robot_inner_cable.png)<br>
-Figure 4.5.4 Robot Internal Wiring
+图4.5.4 机器人内部接线
 
-(2)	Perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+(2) 执行电机（编码器）更换测试。<br>
+如果更换伺服电机后未出现错误，则伺服电机故障。请将伺服电机更换为正常单元。下图显示了HS165机器人每轴电机的位置。有关其他机器人，请参考相应的机械维护手册进行更换。
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.5.5 Motor Positions for Each Axis of HS165 Robot
+图4.5.5 HS165机器人每轴电机位置
 
-(3)	Perform a servo safety board replacement test.<br>
-If the error does not occur after replacing the servo safety board, the servo safety board is faulty. Please replace the servo safety board with a normal unit.
+(3) 执行伺服安全板更换测试。<br>
+如果更换伺服安全板后未出现错误，则伺服安全板故障。请将伺服安全板更换为正常单元。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.5.6 N Controller Servo Safety Board Replacement
+图4.5.6 N控制器伺服安全板更换
 
-(4)	Check the communication status of the wiring after completing the measures.<br>
-After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
+(4) 完成措施后检查接线的通信状态。<br>
+在问题部分的措施完成后，请参考《编码器通信故障计数显示功能手册》检查通信状态。
 
 ![](../_assets/4.서보보드/encoder_comm.png)<br>
-Figure 4.5.7 Encoder Communication Failure Monitoring
+图4.5.7 编码器通信故障监控
 
 ![](../_assets/4.서보보드/encoder_comm_fail_number_en.png)
-
-
 [__SOURCE](4-servo-board-part/E50103.md)
-## 4.6. E50103. (O Axis) Invalid encoder data termination signal
+## 4.6. E50103. (O Axis) 无效的编码器数据终止信号
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the signal indicating the end of the data frame (Ser_End) is not received from the encoder.<br>
+伺服安全板与编码器进行串行通信，以控制伺服电动机，并定期接收编码器数据。<br>
+当未从编码器接收到表示数据帧结束的信号（Ser_End）时，便会发生此错误。<br>
 
-Cases where the data frame end signal is not received from the encoder can occur mainly when noise enters the encoder signal line due to wiring defects or problems with encoder shield line processing.
+未从编码器接收到数据帧结束信号的情况主要发生在由于接线缺陷或编码器屏蔽线处理问题而导致噪音进入编码器信号线时。
 
-### 2. Cause and Inspection
+### 2. 原因及检查
 
 {% hint style="info" %}
 
-(1)	Inspect the encoder wiring.<br>
-(2)	Perform a motor (encoder) replacement test.<br>
-(3)	Perform a servo safety board replacement test.<br>
-(4)	Check the communication status of the wiring after completing the measures.<br>
+(1) 检查编码器接线。<br>
+(2) 执行电动机（编码器）更换测试。<br>
+(3) 执行伺服安全板更换测试。<br>
+(4) 在完成措施后检查接线的通信状态。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+有关详细的检查方法，请参阅“E50101 (O Axis) 无效的编码器命令字段设置”。
 [__SOURCE](4-servo-board-part/E50104.md)
-## 4.7. E50104. (O Axis) CRC error deteced in encoder data
+## 4.7. E50104. (O轴) 在编码器数据中检测到CRC错误
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the CRC value of the data received from the encoder does not match the CRC value calculated by the servo safety board.<br>
+伺服安全板与编码器进行串行通信，以控制伺服电机，并定期接收编码器数据。<br>
+当从编码器接收到的数据的CRC值与伺服安全板计算的CRC值不匹配时，会发生此错误。<br>
 
-Cases where CRC errors occur in data received from the encoder can occur mainly when noise enters the encoder signal line due to wiring defects or problems with encoder shield line processing.
+从编码器接收的数据中发生CRC错误的情况主要是由于接线缺陷或编码器屏蔽线处理问题导致噪声进入编码器信号线。
 
-
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Inspect the encoder wiring.<br>
-(2)	Perform a motor (encoder) replacement test.<br>
-(3)	Perform a servo safety board replacement test.<br>
-(4)	Check the communication status of the wiring after completing the measures.<br>
+(1)	检查编码器接线。<br>
+(2)	执行电机（编码器）更换测试。<br>
+(3)	执行伺服安全板更换测试。<br>
+(4)	在完成措施后检查接线的通信状态。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
-
+有关详细的检查方法，请参阅“E50101 (O轴) 无效编码器命令字段设置”。
 [__SOURCE](4-servo-board-part/E50105.md)
-## 4.8. E50105. (O Axis) Encoder line open detected (Motor Off)
+## 4.8. E50105. (O 轴) 编码器线路开放检测到 (电机关闭)
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when communication between the encoder and the servo safety board is unstable or when no signal is received at all.<br>
-Cases where communication from the encoder to the servo safety board is unstable or signals are not received can occur mainly due to disconnection or poor contact of the encoder cable.
+伺服安全板与编码器进行串行通信，以实现伺服电机控制，并定期接收编码器数据。<br>
+当编码器与伺服安全板之间的通信不稳定或根本没有信号接收时，便会发生此错误。<br>
+编码器到伺服安全板的通信不稳定或信号未接收的情况，主要由于编码器电缆的断开或接触不良引起。
 
-
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Check the encoder supply voltage.<br>
-(2)	Inspect the encoder wiring.<br>
-(3)	Perform a servo board replacement test.<br>
-(4)	Perform a motor (encoder) replacement test.<br>
-(5)	Check the communication status of the wiring after completing the measures.<br>
+(1)	检查编码器供电电压。<br>
+(2)	检查编码器接线。<br>
+(3)	进行伺服板更换测试。<br>
+(4)	进行电机（编码器）更换测试。<br>
+(5)	完成措施后，检查接线的通信状态。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+有关详细检查方法，请参阅 "E50101 (O 轴) 无效编码器命令字段设置"。
 [__SOURCE](4-servo-board-part/E50106.md)
-## 4.9. E50106. (O Axis) Encoder data abnormal variation detected
+## 4.9. E50106. (O 轴) 检测到编码器数据异常变化
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the position data received from the encoder fluctuates abnormally.<br>
+伺服安全板与编码器进行串行通信，以控制伺服电动机，并定期接收编码器数据。<br>
+当从编码器接收到的位置数据异常波动时，会发生此错误。<br>
 
-Cases where the position data received from the encoder fluctuates abnormally can occur mainly when noise enters the encoder signal line due to wiring defects or problems with encoder shield line processing.
+从编码器接收到的位置数据异常波动的情况主要发生在由于接线缺陷或编码器屏蔽线处理问题导致噪声进入编码器信号线时。
 
-
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1)	Inspect the encoder wiring.<br>
-(2)	Perform a motor (encoder) replacement test.<br>
-(3)	Perform a servo board replacement test.<br>
-(4)	Check the communication status of the wiring after completing the measures.<br>
+(1) 检查编码器接线。<br>
+(2) 进行电动机（编码器）更换测试。<br>
+(3) 进行伺服板更换测试。<br>
+(4) 完成措施后检查接线的通信状态。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+有关详细的检查方法，请参阅 "E50101 (O 轴) 无效编码器命令字段设置"。
 [__SOURCE](4-servo-board-part/E50107.md)
-## 4.10. E50107. (O Axis) Encoder line open detected (Motor On)
+## 4.10. E50107. (O Axis) 编码器线路开放检测到 (电机开启)
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when communication between the encoder and the servo safety board is unstable or when no signal is received at all.<br>
+伺服安全板与编码器执行串行通信以控制伺服电机，并定期接收编码器数据。<br>
+当编码器与伺服安全板之间的通信不稳定或根本没有信号接收时，将会出现此错误。<br>
 
-Cases where communication between the encoder and the servo safety board is unstable or signals are not received can occur mainly due to disconnection or poor contact of the encoder cable.
+编码器与伺服安全板之间通信不稳定或没有信号接收的情况主要发生在编码器电缆断开或接触不良时。
 
-
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Check the encoder supply voltage.<br>
-(2)	Inspect the encoder wiring.<br>
-(3)	Perform a servo board replacement test.<br>
-(4)	Perform a motor (encoder) replacement test.<br>
-(5)	Check the communication status of the wiring after completing the measures.<br>
+(1)	检查编码器供电电压。<br>
+(2)	检查编码器接线。<br>
+(3)	进行伺服板更换测试。<br>
+(4)	进行电机（编码器）更换测试。<br>
+(5)	在完成措施后检查接线的通信状态。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50101 (O Axis) Invalid encoder command field setting".
+有关详细的检查方法，请参考“E50101 (O Axis) 无效编码器命令字段设置”。
 [__SOURCE](4-servo-board-part/E50108.md)
-## 4.11. E50108. (O Axis) Encoder Counting error (CE Bit Detected)
+## 4.11. E50108. (O 轴) 编码器计数错误 (检测到 CE 位)
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when a rotation value calculation error occurs inside the encoder and the CE (Counter Error) bit is set.<br>
-This error may occur when the data received from the encoder itself is normal, but the encoder internal status monitoring result determines it as an error state (CE).<br>
+伺服安全板与编码器进行串行通信以控制伺服电机，并定期接收编码器数据。<br>
+当编码器内部发生旋转值计算错误并且 CE (计数错误) 位被设置时，会发生此错误。<br>
+当从编码器本身接收到的数据正常，但编码器内部状态监控结果将其确定为错误状态 (CE) 时，也可能发生此错误。<br>
 
-**CE (Counter Error)**: Set when a position misalignment occurs in the single-turn data due to malfunction or failure when the main power is applied to the encoder.
+**CE (计数错误)**: 当主电源施加到编码器时，由于故障或失效导致单圈数据发生位置失配时设置。
 
-
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1) Check the encoder supply voltage.<br>
-(2) After resetting the serial encoder error, turn the controller power off and on again.<br>
-(3) If the error persists, perform a motor (encoder) replacement test.<br>
+(1) 检查编码器供电电压。<br>
+(2) 重置串行编码器错误后，重新打开和关闭控制器电源。<br>
+(3) 如果错误仍然存在，请进行电机 (编码器) 更换测试。<br>
 
 {% endhint %}
 
-(1) Check the encoder supply voltage.<br>
-The power voltage supplied to the encoder must be within the range of 5.0V±5% (4.75V ~ 5.25V) at the encoder-side connector. If the voltage at the encoder-side connector drops below 4.75V, the encoder will not operate normally, and there is a possibility that the above error may occur.
+(1) 检查编码器供电电压。<br>
+施加到编码器的电源电压必须在编码器侧连接器的范围内为 5.0V±5% (4.75V ~ 5.25V)。如果编码器侧连接器的电压降到 4.75V 以下，编码器将无法正常工作，并且可能会出现上述错误。
 
-Measure the voltage of the encoder-side connector pins (3-4).
+测量编码器侧连接器引脚 (3-4) 的电压。
 
 ![](../_assets/4.서보보드/encoder_connector_pin_info_en.png)<br>
-Figure 4.11.1 Encoder Connector Pin Information
+图 4.11.1 编码器连接器引脚信息
 
-If the measured voltage is lower than the reference voltage, turn the VR1 variable resistor on the servo safety board (BD642) to adjust the encoder-side connector voltage so that it falls within the reference voltage range.
+如果测量的电压低于参考电压，请调节伺服安全板 (BD642) 上的 VR1 可变电阻，以确保编码器侧连接器电压落在参考电压范围内。
 
 ![](../_assets/4.서보보드/BD642_encoder_voltage_adjustment.png)<br>
-Figure 4.11.2 BD642 Encoder Voltage Variable Resistor
+图 4.11.2 BD642 编码器电压可变电阻
 
-(2) After resetting the serial encoder error, turn the controller power off and on again.<br>
-If the error persists upon main power OFF/ON after resetting the error, perform a motor (encoder) replacement test.
-Error reset is performed in the menu below.
+(2) 重置串行编码器错误后，重新打开和关闭控制器电源。<br>
+如果在重置错误后主电源 OFF/ON 时错误仍然存在，请进行电机 (编码器) 更换测试。
+错误重置在以下菜单中执行。
 
-        System -> 5. Initialization -> 4. Serial Encoder Reset - Error Release
+        系统 -> 5. 初始化 -> 4. 串行编码器重置 - 错误释放
 
 ![](../_assets/4.서보보드/enc_error_clear.png)<br>
-Figure 4.11.3 Serial Encoder Error Release
+图 4.11.3 串行编码器错误释放
 
-(3) If the error persists, perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+(3) 如果错误仍然存在，请进行电机 (编码器) 更换测试。<br>
+如果更换伺服电机后错误不再发生，则伺服电机是故障的。请用正常单元更换伺服电机。下图显示了 HS165 机器人每个轴的电机位置。对于其他机器人，请参考相应的机械维护手册进行更换。
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.11.4 Motor Positions for Each Axis of HS165 Robot
-
-
+图 4.11.4 HS165 机器人每个轴的电机位置
 [__SOURCE](4-servo-board-part/E50109.md)
-## 4.12. E50109. (O Axis) Encoder Overspeed
+## 4.12. E50109. (O轴) 编码器过速
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the encoder rotation speed exceeds the allowable range and the OS (OverSpeed) bit is set. This may be an actual overspeed condition or a false detection of overspeed due to signal abnormalities.<br>
+伺服安全板与编码器进行串行通信以控制伺服电机，并定期接收编码器数据。<br>
+当编码器旋转速度超过允许范围并且OS（过速）位被设置时，会发生此错误。这可能是实际的过速情况，也可能是由于信号异常导致的错误过速检测。<br>
 
-This error may occur when the data received from the encoder itself is normal, but the encoder internal status monitoring result determines it as an error state (OS).
+当从编码器本身接收到的数据正常，但编码器内部状态监测结果确定为错误状态（OS）时，可能会发生此错误。
 
-### 2. Cause and Inspection
+### 2. 原因及检查
 
 {% hint style="info" %}
 
-(1)	Check the encoder supply voltage.<br>
-(2)	Inspect the encoder wiring.<br>
-(3)	After resetting the serial encoder error, turn the controller power off and on again.<br>
-(4)	If the error persists, perform a motor (encoder) replacement test. 
+(1)	检查编码器供电电压。<br>
+(2)	检查编码器接线。<br>
+(3)	在重置串行编码器错误后，关闭并重新打开控制器电源。<br>
+(4)	如果错误仍然存在，请执行电动机（编码器）更换测试。 
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".
-
+有关详细检查方法，请参阅“E50108 (O轴) 编码器计数错误”。
 [__SOURCE](4-servo-board-part/E50110.md)
-## 4.13. E50110. (O Axis) Encoder Full absolute status
+## 4.13. E50110. (O Axis) 编码器完整绝对状态
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the Full Absolute status is not reached inside the encoder, meaning accurate position information has not yet been secured. This can occur immediately after encoder power-on due to data initialization failure or loss of backup information.<br>
-This error may occur when the data received from the encoder itself is normal, but the encoder internal status monitoring result determines it as an error state (FS).<br>
+伺服安全板与编码器进行串行通信以控制伺服电动机，并定期接收编码器数据。<br>
+当编码器内部未达到完整绝对状态时，会出现此错误，这意味着尚未获得准确的位置数据信息。此情况可能在编码器通电后立即发生，原因是数据初始化失败或备份信息丢失。<br>
+当从编码器自身接收到的数据正常，但编码器内部状态监测结果将其判定为错误状态（FS）时，可能会出现此错误。<br>
 
-**FS (Full Absolute)**: If this bit is 0, it means the position data has not been initialized or backup information is incomplete; if this bit is 1, it indicates that the encoder internal data is complete and in a normal state.
+**FS (完整绝对)**：如果此位为0，则表示位置数据尚未初始化或备份信息不完整；如果此位为1，则表示编码器内部数据完整且处于正常状态。
 
-
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1)	Check the encoder supply voltage.<br>
-(2)	After resetting the serial encoder error, turn the controller power off and on again.<br>
-(3)	If the error persists, perform a motor (encoder) replacement test.<br>
+(1) 检查编码器供电电压。<br>
+(2) 重置串行编码器错误后，关闭控制器电源并重新开启。<br>
+(3) 如果错误仍然存在，请进行电机（编码器）更换测试。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".
+有关详细的检查方法，请参阅“E50108 (O Axis) 编码器计数错误”。
 [__SOURCE](4-servo-board-part/E50111.md)
-## 4.14. E50111. (O Axis) Encoder Counting error (ME Bit Detected)
+## 4.14. E50111. (O轴) 编码器计数错误 (检测到 ME 位)
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the ME bit is set because the multi-turn (rotation count) data is not saved normally due to causes such as battery backup failure, internal storage circuit error, or unexpected power cutoff during operation.<br>
+伺服安全板与编码器进行串行通信，以控制伺服电机，并定期接收编码器数据。<br>
+当 ME 位被设置时，会发生此错误，因为多圈（旋转计数）数据由于电池备份故障、内部存储电路错误或意外断电等原因未能正常保存。<br>
 
-This error may occur when the data received from the encoder itself is normal, but the encoder internal status monitoring result determines it as an error state (ME).
+当从编码器本身接收到的数据正常，但编码器内部状态监测结果将其确定为错误状态（ME）时，也可能发生此错误。
 
-
-### 2. Cause and Inspection
+### 2. 原因及检查
 
 {% hint style="info" %}
 
-(1)	Check the encoder supply voltage.<br>
-(2)	After resetting the serial encoder error, turn the controller power off and on again.<br>
-(3)	If the error persists, perform a motor (encoder) replacement test.<br>
+(1)	检查编码器供电电压。<br>
+(2)	在重置串行编码器错误后，关闭并重新开启控制器电源。<br>
+(3)	如果错误仍然存在，进行电机（编码器）更换测试。<br>
 
 {% endhint %}
 
-For detailed inspection methods, refer to "E50108 (O Axis) Encoder Counting error".
-
+有关详细检查方法，请参考 “E50108 (O轴) 编码器计数错误”。
 [__SOURCE](4-servo-board-part/E50112.md)
-## 4.15. E50112. (O Axis) Encoder Battery error
+## 4.15. E50112. (O Axis) 编码器电池错误
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.<br>
-This error occurs when the BE (Battery Error) bit is set because the voltage of the battery connected to the encoder drops below the standard value or a problem occurs with the battery connection.<br>
-This error may occur when the data received from the encoder itself is normal, but the encoder internal status monitoring result determines it as an error state (BE).
+伺服安全板通过串行通信与编码器进行伺服电机控制，并定期接收编码器数据。<br>
+当连接到编码器的电池电压低于标准值或电池连接出现问题时，设置BE（电池错误）位时会发生此错误。<br>
+当从编码器本身接收的数据正常时，可能会发生此错误，但编码器内部状态监测结果将其判断为错误状态（BE）。
 
-**BE (Battery Error)**: Set when the external battery voltage drops to 3.1V or lower while the encoder main power is Off.
+**BE（电池错误）**：当外部电池电压降至3.1V或更低且编码器主电源处于关闭状态时设置。
 
-
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1) After resetting the serial encoder error, turn the controller power off and on again.<br>
-(2) Check the encoder backup battery voltage.<br>
-(3) Inspect the encoder battery connection status.<br>
-(4) Perform a motor (encoder) replacement test.<br>
+(1) 在重置串行编码器错误后，关闭并重新开启控制器电源。<br>
+(2) 检查编码器备用电池电压。<br>
+(3) 检查编码器电池连接状态。<br>
+(4) 执行电机（编码器）更换测试。<br>
 
 {% endhint %}
 
-(1) After resetting the serial encoder error, turn the controller power off and on again.<br>
-If the error persists upon main power OFF/ON after resetting the error, perform a motor (encoder) replacement test.
-Error reset is performed in the menu below.
+(1) 在重置串行编码器错误后，关闭并重新开启控制器电源。<br>
+如果在重置错误后，主电源关闭/开启时错误仍然存在，则执行电机（编码器）更换测试。
+错误重置在下面的菜单中执行。
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Error Release
 
 ![](../_assets/4.서보보드/enc_error_clear.png)<br>
-Figure 4.15.1 Encoder Error Release
+图 4.15.1 编码器错误释放
 
-(2) Check the encoder battery voltage.<br>
-The encoder battery is 3.6V. If this voltage drops to 3.0V~3.2V, “W0104 ○ Axis Encoder Battery Voltage Low” is displayed. When this warning occurs, the encoder battery must be replaced. Encoder battery replacement must be performed while the controller power is ON. If you replace it with a normal encoder battery in this state, you can continue to use the robot without any problems.
+(2) 检查编码器电池电压。<br>
+编码器电池为3.6V。如果此电压降至3.0V~3.2V，将显示“W0104 ○ 轴编码器电池电压低”警告。当出现此警告时，必须更换编码器电池。编码器电池更换必须在控制器电源开启时进行。如果在此状态下更换为正常的编码器电池，则可以继续正常使用机器人。
 
-If the encoder battery replacement time is passed and the voltage drops to 2.5V~3.0V, the error “E2470 ○ Axis Encoder Abnormal: Encoder Reset Required” occurs when the controller power is turned ON. If this error occurs, the encoder position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture using manual operation in the axis coordinate system and perform encoder calibration for the corresponding axis again.
+如果编码器电池更换时间已过且电压降至2.5V~3.0V，则在控制器电源开启时会出现错误“E2470 ○ 轴编码器异常：需要重置编码器”。如果出现此错误，则编码器位置信息已经丢失。在更换编码器电池并重置编码器后，必须使用手动操作将机器人移动到参考姿态，并为相应的轴执行编码器标定。
 
 ![](../_assets/4.서보보드/battery_replace_position.png)<br>
-Figure 4.15.2 Encoder Battery Replacement Position
+图 4.15.2 编码器电池更换位置
 
-Encoder reset is performed in the menu below.
+编码器重置在下面的菜单中执行。
 
         System -> 5. Initialization -> 4. Serial Encoder Reset - Encoder Reset
 
 ![](../_assets/4.서보보드/enc_reset.png)<br>
-Figure 4.15.3 Encoder Reset
+图 4.15.3 编码器重置
 
-(3) Check the encoder battery connection status.<br>
-Check the status of the battery wiring connecting from the encoder battery location to the motor.
+(3) 检查编码器电池连接状态。<br>
+检查从编码器电池位置到电机的电池接线状态。
 
-
-(4) Perform a motor (encoder) replacement test.<br>
-If the error persists upon main power OFF/ON after resetting the error, perform a motor (encoder) replacement test. If the error does not occur after replacement, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+(4) 执行电机（编码器）更换测试。<br>
+如果在重置错误后，主电源关闭/开启时错误仍然存在，则执行电机（编码器）更换测试。如果更换后错误不再出现，则伺服电机故障。请更换为正常的伺服电机。下图显示了HS165机器人每个轴的电机位置。对于其他机器人，请参考相应的机械维护手册进行更换。
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.15.4 Motor Positions for Each Axis of HS165 Robot
-
-
+图 4.15.4 HS165机器人每个轴的电机位置
 [__SOURCE](4-servo-board-part/E50113.md)
-## 4.16. E50113. (O Axis) Encoder Overheat Detection (OH Bit Detection)
+## 4.16. E50113. (O轴) 编码器过热检测 (OH位检测)
 
-### 1. Overview
+### 1. 概述
 
-The servo safety board performs serial communication with the encoder for servo motor control and receives encoder data periodically.
-This error occurs when the OH bit is detected from the encoder.<br>
-The OH bit is set when the internal temperature of the encoder exceeds the allowable range. The threshold temperature is around 90 ℃ to 100 ℃, and since specifications vary depending on the encoder model, please check the manufacturer's manual.
+伺服安全板与编码器进行串行通信，以控制伺服电动机，并定期接收编码器数据。<br>
+当从编码器检测到OH位时，会发生此错误。<br>
+当编码器内部温度超过允许范围时，OH位被设置。阈值温度大约在90 ℃到100 ℃之间，由于规格因编码器型号而异，请查阅制造商的手册。
 
-
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1)	Perform a motor (encoder) replacement test.<br>
-(2)	Check the operating conditions (speed, load, etc.).<br>
-(3)	Check the ambient temperature around the encoder.<br>
-(4)	Replace the servo safety board (BD642).
+(1)	进行电动机（编码器）更换测试。<br>
+(2)	检查操作条件（速度、负载等）。<br>
+(3)	检查编码器周围的环境温度。<br>
+(4)	更换伺服安全板（BD642）。
 
 {% endhint %}
 
-(1)	Perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+(1)	进行电动机（编码器）更换测试。<br>
+如果在更换伺服电动机后错误没有发生，则伺服电动机有故障。请将伺服电动机更换为正常单位。下图显示了HS165机器人每个轴的电动机位置。对于其他机器人，请参考相应的机械维护手册进行更换。
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.16.1 Motor (Encoder) Replacement Position
+图4.16.1 电动机（编码器）更换位置
 
-(2)	Check the operating conditions (speed, load, etc.).<br>
-Check the saturated encoder temperature while running the Job program. Encoder temperature can be checked as follows.
+(2)	检查操作条件（速度、负载等）。<br>
+在运行作业程序时检查饱和的编码器温度。编码器温度可以通过以下方式检查。
 
-    Engineering Mode -> Window Adjustment -> System Characteristics -> System Characteristics List - Motor/Encoder
+    工程模式 -> 窗口调整 -> 系统特性 -> 系统特性列表 - 电动机/编码器
 
 ![](../_assets/4.서보보드/enc_tmp.png)<br>
-Figure 4.16.2 Checking Encoder Temperature
+图4.16.2 检查编码器温度
 
-(3)	Check the ambient temperature around the encoder.<br>
-Errors may occur if the encoder's internal temperature rises due to the external temperature.
+(3)	检查编码器周围的环境温度。<br>
+如果由于外部温度导致编码器内部温度升高，可能会发生错误。
 
-(4)	Perform a servo safety board replacement test.<br>
-If the error does not occur after replacing the servo safety board, it can be determined that the encoder data receiving section of the servo board is faulty.
+(4)	进行伺服安全板更换测试。<br>
+如果在更换伺服安全板后错误没有发生，则可以判断伺服板的编码器数据接收部分有故障。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.16.3 N Controller Servo Board Replacement
-
-
+图4.16.3 N控制器伺服板更换
 [__SOURCE](4-servo-board-part/E50200.md)
-## 4.17. E50200. (O Axis) Motor overload
+## 4.17. E50200. (O Axis) 马达过载
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the motor current accumulates exceeding the set continuous rated current or overload judgment criteria during servo control.<br>
-This can occur when excessive torque is required from the motor due to causes such as mechanical overload, increased friction, or excessive acceleration/deceleration conditions. The servo safety board detects this and stops the robot.
+当马达电流超过设定的连续额定电流或过载判断标准时，会发生这种情况。<br>
+这可能是由于机械过载、摩擦增大或过大的加速/减速条件导致马达需要过大的扭矩而发生。伺服安全板检测到此情况并停止机器人。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1) Check if the installed load is within the robot's rating.<br>
-(2) Check if there are any collision factors during robot operation.<br>
-(3) Check if the axis brake is operating normally.<br>
-(4) Inspect the connection status of the motor cable and connector.<br>
-(5) Replace the servo board to check for abnormalities.<br>
-(6) Check if the drive unit is operating normally.<br>
+(1) 检查安装负载是否在机器人的额定范围内。<br>
+(2) 检查机器人操作过程中是否存在碰撞因素。<br>
+(3) 检查轴制动是否正常工作。<br>
+(4) 检查马达电缆和连接器的连接状态。<br>
+(5) 更换伺服板以检查是否有异常。<br>
+(6) 检查驱动单元是否正常工作。<br>
 
 {% endhint %}
 
-(1) Check if the installed load is within the robot's rating.<br>
-Confirm that the installed load is within the robot's maximum specifications. If the specifications are exceeded, an error may occur (here, "load" includes not only the tool installed at the robot end but also cables and all other parts attached to the robot mechanism).<br>
-The most accurate way to check the load is to use a measuring instrument, but if that is not feasible, you can check using the load estimation function among the controller functions. The load estimation function can only estimate the tool installed at the robot end.
+(1) 检查安装负载是否在机器人的额定范围内。<br>
+确认安装负载是否在机器人的最大规格范围内。如果超过规格，可能会发生错误（此处，“负载”不仅包括安装在机器人端的工具，还包括电缆和所有附加到机器人机构的部件）。<br>
+检查负载的最准确方法是使用测量仪器，但如果不可行，可以使用控制器功能中的负载估算功能进行检查。负载估算功能只能估算安装在机器人端的工具。
 
-The load estimation method is as follows.
+负载估算的方法如下。
 
-* Enter the load estimation function.
+* 进入负载估算功能。
 
         System -> 6. Auto Calibration -> 4. Load Estimation Function
 
 ![](../_assets/4.서보보드/estimation1.png)<br>
-Figure 4.17.1 Load Estimation Function 1
+图 4.17.1 负载估算功能 1
 
 ![](../_assets/4.서보보드/estimation2.png)<br>
-Figure 4.17.2 Load Estimation Function 2
+图 4.17.2 负载估算功能 2
 
 ![](../_assets/4.서보보드/estimation3.png)<br>
-Figure 4.17.3 Load Estimation Function 3
+图 4.17.3 负载估算功能 3
 
-* Select the tool number to save after estimating the load using the load estimation function.
+* 在使用负载估算功能估算负载后，选择要保存的工具编号。
 
 ![](../_assets/4.서보보드/estimation4.png)<br>
-Figure 4.17.4 Load Estimation Function 4
+图 4.17.4 负载估算功能 4
 
-* Click Normal Operation to execute.
-Press the Motor On switch, hold the deadman switch, and then click Normal Operation.
+* 点击正常操作以执行。
+按下马达开关，保持死人开关，然后点击正常操作。
 
 ![](../_assets/4.서보보드/estimation5.png)<br>
-Figure 4.17.5 Load Estimation Function 5
+图 4.17.5 负载估算功能 5
 
-* When the load estimation operation is completed, the estimation result is displayed on the screen.
+* 当负载估算操作完成时，估算结果将显示在屏幕上。
 
 ![](../_assets/4.서보보드/estimation6.png)<br>
-Figure 4.17.6 Load Estimation Function 6
+图 4.17.6 负载估算功能 6
 
-(2) Check if there are any collision factors during robot operation.<br>
-Check if there is any interference or collision with the robot in the robot's workspace. If interference occurs between the robot and other mechanisms, an error may occur. In this case, modify the work program to prevent interference.
+(2) 检查机器人操作过程中是否存在碰撞因素。<br>
+检查机器人工作空间内是否与机器人有干扰或碰撞。如果机器人与其他机构之间发生干扰，可能会发生错误。在这种情况下，请修改工作程序以防止干扰。
 
-(3) Check if the brake release is operating normally.<br>
-There may be a problem with the release function of the brake for the corresponding axis or an abnormality in the brake release voltage.
- * Inspection of individual axis brake release anomalies<br>
-Use the Axis Lock function to verify the operation of the brake release function for the corresponding axis.
-Lock the axes except for the axis you want to verify, then repeat Motor ON/OFF to check if the brake release sound ("click") is heard from the motor of the mechanical unit.
+(3) 检查制动释放是否正常工作。<br>
+对应轴的制动释放功能可能存在问题，或制动释放电压异常。
+ * 检查单个轴制动释放异常<br>
+使用轴锁功能验证对应轴的制动释放功能是否正常。锁定除要验证的轴之外的其他轴，然后重复马达开/关，检查机械单元的马达是否发出制动释放声（“咔嗒”）。
 
-The method to use the Axis Lock function is as follows.<br>
+使用轴锁功能的方法如下。<br>
         System -> 5. Initialization -> 9. Axis Lock Setting -> Confirm -> Individual Axis Lock
 
 ![](../_assets/4.서보보드/axis_lock1.png)<br>
-Figure 4.17.7 Axis Lock Setting Screen 1
+图 4.17.7 轴锁设置界面 1
 
 ![](../_assets/4.서보보드/axis_lock2.png)<br>
-Figure 4.17.8 Axis Lock Setting Screen 2
+图 4.17.8 轴锁设置界面 2
 
 ![](../_assets/4.서보보드/axis_lock3.png)<br>
-Figure 4.17.9 Axis Lock Setting Screen 3
+图 4.17.9 轴锁设置界面 3
 
-If the brake of the corresponding axis is not released, the brake output status of the servo board must be checked. Disconnect the brake wiring (CNBRK16, CNBRK78 connectors) and output the brake voltage. Measure whether the brake voltage of the corresponding axis is output as 20V or higher at the CNBRK16 and CNBRK78 connectors. If there is an axis outputting a voltage of 20V or lower, it is a failure of the servo safety board (BD642), so replace it.
+如果对应轴的制动未释放，则必须检查伺服板的制动输出状态。断开制动接线（CNBRK16，CNBRK78连接器）并输出制动电压。测量对应轴的制动电压是否在CNBRK16和CNBRK78连接器的输出为20V或更高。如果有轴输出电压低于20V，则为伺服安全板（BD642）故障，应更换。
 
 ![](../_assets/4.서보보드/bd642_brake_connector.png)<br>
-Figure 4.17.10 Pin Layout of CNBRK16, CNBRK78 Connectors
+图 4.17.10 CNBRK16，CNBRK78连接器引脚布局
 
-* Inspection of Brake Power Supply Abnormalities<br>
-The sequence for inspecting brake power wiring is as follows.<br>
-1st: Check for poor contact in connectors related to brake power wiring.<br>
-2nd: Check for short circuits in the brake power wiring. Check 1:1 using equipment such as a multimeter (tester).<br>
-Inspect the internal wiring of the power electric module.<br>
+* 检查制动电源供电异常<br>
+检查制动电源接线的顺序如下。<br>
+1st: 检查与制动电源接线相关的连接器是否接触不良。<br>
+2nd: 检查制动电源接线是否短路。使用万用表（测试仪）进行1:1检查。<br>
+检查电力电子模块的内部接线。<br>
 
 ![](../_assets/4.서보보드/psm_psbd.png)<br>
-Figure 4.17.11 Power Electric Module and Power Board
+图 4.17.11 电力电子模块和电源板
 
-* Check the servo safety board (BD642).<br>
-If the power electric module is normal, measure the brake power (DC24V) on the servo safety board. It is normal if the measured value across the capacitor (EC9) or across the connector (J12) in the red area of the figure below is DC24V or higher. If it is less than 20V, there is a malfunction in the power supply device generating the brake power. Replace the electric module.
+* 检查伺服安全板（BD642）。<br>
+如果电力电子模块正常，测量伺服安全板上的制动电源（DC24V）。如果在下面图示的红色区域内，电容器（EC9）或连接器（J12）之间的测量值为DC24V或更高，则是正常的。如果低于20V，则表示生成制动电源的电源设备故障。请更换电气模块。
 
 ![](../_assets/4.서보보드/bd642_brake_power.png)<br>
-Figure 4.17.12 Servo Safety Board Brake Power
+图 4.17.12 伺服安全板制动电源
 
-(4) Inspect the connection status of the motor cable and connector.<br>
-* Inspect the internal wiring of the controller.
-* Inspect the wiring between the controller and the robot.
-* Inspect the internal wiring of the robot.
+(4) 检查马达电缆和连接器的连接状态。<br>
+* 检查控制器的内部接线。
+* 检查控制器与机器人的接线。
+* 检查机器人的内部接线。
 
-(5) Replace the servo safety board to check for abnormalities.<br>
-An error may occur if there is an abnormality in the servo safety board. Replace the board to verify.
+(5) 更换伺服安全板以检查是否有异常。<br>
+如果伺服安全板存在异常，则可能会发生错误。更换板以进行验证。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.17.13 N Controller Servo Board Replacement
+图 4.17.13 N 控制器伺服板更换
 
-(6) Check if the drive unit is operating normally.<br>
-Check if the drive unit (motor, reducer) of the corresponding axis is operating normally.
+(6) 检查驱动单元是否正常工作。<br>
+检查对应轴的驱动单元（马达，减速器）是否正常工作。
 
 ![](../_assets/4.서보보드/robot_axis_motor_brake.png)<br>
-Figure 4.17.14 Verification of Normal Drive Unit Operation
-
+图 4.17.14 驱动单元正常运行的验证
 [__SOURCE](4-servo-board-part/E50201.md)
-## 4.18. E50201. (O Axis) Motor overload (Increased Friction Due to Low Temperature)
+## 4.18. E50201. (O 轴) 电机过载 (由于低温引起的摩擦增加)
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the current flowing in the motor or drive unit exceeds the set continuous rated current criteria and is determined to be in an overload state.<br>
-If an excessive load is applied to the motor during servo control, the servo safety board detects this as an error and stops the robot.
+当电机或驱动单元中的电流超过设定的连续额定电流标准时，会发生此情况，并被认定为过载状态。<br>
+如果在伺服控制过程中对电机施加了过大负载，伺服安全板会将其检测为错误并停止机器人。
 
-This error primarily occurs when there is an overload condition while the encoder temperature is low.<br>
-Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower), friction components increase due to increased grease viscosity, requiring a larger driving torque than in the normal state. If the robot is operated at high speed in this state, this error may occur.
+此错误主要发生在编码器温度较低时的过载状态。<br>
+通常在低温环境中（编码器温度为 5 ℃ 或更低），由于润滑脂粘度增加，摩擦部件的摩擦力增加，因此需要比正常状态更大的驱动扭矩。如果机器人在这种状态下以高速运行，可能会发生此错误。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed. 
+(1)	以低速（播放速度 30% 或更低）操作，直至编码器温度达到正常水平（约 15 ℃ 或更高），然后以正常速度重新启动。 
 
 {% endhint %}
 
-(1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed.
+(1)	以低速（播放速度 30% 或更低）操作，直至编码器温度达到正常水平（约 15 ℃ 或更高），然后以正常速度重新启动。
 
 ![](../_assets/4.서보보드/enc_tmp2.png)<br>
-Figure 4.18.1 Encoder Temperature Check Screen
-
+图 4.18.1 编码器温度检查屏幕
 [__SOURCE](4-servo-board-part/E50205.md)
-## 4.19. E50205. (O Axis) Unable to sustain servo lock – abnormal current output
+## 4.19. E50205. (O Axis) 无法维持伺服锁定 – 异常电流输出
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the current required for the motor or drive unit is not applied normally.<br>
-It can be caused by poor wiring between the motor and the controller, or failures in the current command and feedback circuits.<br>
-It can also occur when parameters required for motor control (gain, maximum current, etc.) do not match the actual motor specifications due to a robot model registration error.
+当电机或驱动单元所需的电流未正常施加时，会发生此情况。<br>
+这可能是由于电机与控制器之间的布线不良或电流命令和反馈电路的故障引起的。<br>
+当电机控制所需的参数（增益、最大电流等）由于机器人模型注册错误而与实际电机规格不匹配时，也可能发生此情况。
 
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1) Check if the robot model is set correctly.<br>
-(2) Inspect the motor power line and encoder communication line.<br>
-* Check the wiring connecting the robot and the controller.
-* Check the internal wiring of the robot.
-* Check the internal wiring of the controller.
+(1) 检查机器人模型是否正确设置。<br>
+(2) 检查电机电源线和编码器通信线。<br>
+* 检查连接机器人和控制器的布线。
+* 检查机器人的内部布线。
+* 检查控制器的内部布线。
 
-(3) Inspect the cable or connection connector between the servo safety board and the amplifier board inside the controller.<br>
-(4) Replace other components.<br>
+(3) 检查控制器内部伺服安全板与放大器板之间的电缆或连接器。<br>
+(4) 更换其他组件。<br>
 
 {% endhint %}
 
-(1)	Check if the robot model is set correctly.<br>
-Check if the registered robot model on the TP screen matches the actually installed robot.
+(1) 检查机器人模型是否正确设置。<br>
+检查TP屏幕上注册的机器人模型是否与实际安装的机器人匹配。
 
 ![](../_assets/4.서보보드/robot_model.png)<br>
-Figure 4.19.1 Robot Model Check
+图 4.19.1 机器人模型检查
 
-(2)	Inspect the motor power and encoder communication lines.<br>
-Turn off the controller power, disconnect U, V, W of the corresponding axis drive unit, and check for short circuits or open circuits in each phase. Check the wiring of each phase 1:1 using equipment such as a multimeter (tester). Check for disconnection of the encoder communication line.
+(2) 检查电机电源和编码器通信线。<br>
+关闭控制器电源，断开相应轴驱动单元的U、V、W，并检查每个相位的短路或开路。使用万用表（测试仪）逐相1:1检查每个相位的布线。检查编码器通信线是否断开。
 
 ---
 
 <div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
 
-### ⚠️ Warning
+### ⚠️ 警告
 
-**Be careful as there is a risk of electric shock when inspecting while the power is on.**
+**在通电检查时要小心，存在触电风险。**
 
 </div>
 
 ---
 
-* Check the wiring connecting the robot and the controller.
-Disconnect the wiring connecting the controller and the robot or drive unit, and check if each phase (U phase, V phase, W phase) is shorted to each other or to ground. If any short circuit is found, the corresponding wiring must be replaced.
+* 检查连接机器人和控制器的布线。
+断开连接控制器和机器人或驱动单元的布线，检查每个相位（U相、V相、W相）是否相互短路或接地。如果发现任何短路，必须更换相应的布线。
 
 ![](../_assets/4.서보보드/hi7_robot_power_cable.png)<br>
-Figure 4.19.2 Wiring between N Controller and Robot
+图 4.19.2 N 控制器与机器人之间的布线
 
-* Inspect the internal wiring of the robot.<br>
-It is necessary to check if there are any short circuits or incorrect wiring in the wiring connected to the motor inside the robot.
+* 检查机器人的内部布线。<br>
+有必要检查机器人内部连接到电机的布线是否存在短路或错误布线。
 
 ![](../_assets/4.서보보드/robot_inner_cable.png)<br>
-Figure 4.19.3 Robot Internal Wiring
+图 4.19.3 机器人内部布线
 
-* Inspect the internal wiring of the controller.<br>
-It is necessary to inspect the wiring installed with the amplifier inside the controller.
+* 检查控制器的内部布线。<br>
+需要检查控制器内部与放大器一起安装的布线。
 
 ![](../_assets/4.서보보드/hi7_brake_cable.png)<br>
-Figure 4.19.4 N Controller Internal Wiring Inspection
+图 4.19.4 N 控制器内部布线检查
 
-(2)	Inspect the connector (Board to Board) between the servo safety board and the amplifier board inside the controller.<br>
-Check if the installation of the connector (Board to Board) connecting and fastening the servo safety board and the amplifier board is correct. If the fastening status is poor, this error may occur.
+(2) 检查控制器内部伺服安全板与放大器板之间的连接器（板对板）。<br>
+检查连接和固定伺服安全板与放大器板的连接器（板对板）是否正确。如果固定状态差，则可能发生此错误。
 
 ![](../_assets/4.서보보드/conncet_bd642_amp.png)<br>
-Figure 4.19.5 Connection between Hi7-N Controller Servo Board and Amplifier Board
+图 4.19.5 Hi7-N 控制器伺服板与放大器板的连接
 
-(3)	Replace other components.<br>
-Replace components in the order of Servo Safety Board (BD642) → Amplifier Board → Wire Harness → Motor → PSM to check for error occurrence.
+(3) 更换其他组件。<br>
+按照伺服安全板（BD642）→ 放大器板 → 电缆束 → 电机 → PSM 的顺序更换组件，以检查错误的发生。
 
 ![](../_assets/4.서보보드/hi7_robot_brake_power_check.png)<br>
-Figure 4.19.6 N Controller Drive Components
-
+图 4.19.6 N 控制器驱动组件
 [__SOURCE](4-servo-board-part/E50206.md)
-## 4.20. E50206. (O Axis) Unable to sustain servo lock – abnormal parameter
+## 4.20. E50206. (O轴) 无法维持伺服锁定 – 异常参数
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the current required for the motor or drive unit is not applied normally.<br>
-It can be caused by poor wiring between the motor and the controller, or failures in the current command and feedback circuits.<br>
-It can also occur when parameters required for motor control (gain, maximum current, etc.) do not match the actual motor specifications due to a robot model registration error.
+当电机或驱动单元所需的电流未正常应用时，会发生此情况。<br>
+这可能是由于电机与控制器之间的接线不良，或电流命令和反馈电路的故障引起的。<br>
+如果用于电机控制的参数（增益、最大电流等）由于机器人模型注册错误而与实际电机规格不匹配，也可能发生此情况。
 
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1)	Check if the robot model is set correctly.<br>
-(2)	Inspect the motor power line and encoder communication line.<br>
-* Check the wiring connecting the robot and the controller.
-* Check the internal wiring of the robot.
-* Check the internal wiring of the controller.
+(1)	检查机器人模型是否设置正确。<br>
+(2)	检查电机电源线和编码器通信线。<br>
+* 检查连接机器人和控制器的接线。
+* 检查机器人的内部接线。
+* 检查控制器的内部接线。
 
-(3) Inspect the cable between the servo board and the amplifier board inside the controller.<br>
-(4) Replace other components.<br>
+(3) 检查控制器内部伺服板与放大器板之间的电缆。<br>
+(4) 更换其他组件。<br>
 
 {% endhint %}
 
-(1)	Check if the robot model is set correctly.<br>
-Check if the registered robot model on the TP screen matches the actually installed robot.
+(1)	检查机器人模型是否设置正确。<br>
+检查TP屏幕上注册的机器人模型是否与实际安装的机器人匹配。
 
 ![](../_assets/4.서보보드/robot_model.png)<br>
-Figure 4.20.1 Robot Model Check
+图 4.20.1 机器人模型检查
 
-(2)	Inspect the motor power and encoder communication lines.<br>
-Turn off the controller power, disconnect U, V, W of the corresponding axis drive unit, and check for short circuits or open circuits in each phase. Check the wiring of each phase 1:1 using equipment such as a multimeter (tester). Check for disconnection of the encoder communication line.
+(2)	检查电机电源和编码器通信线。<br>
+关闭控制器电源，断开对应轴驱动单元的U, V, W，并检查每个相位是否短路或开路。使用多用表（测试仪）1:1检查每个相位的接线。检查编码器通信线是否断开。
 
 ---
 
 <div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
 
-### ⚠️ Warning
+### ⚠️ 警告
 
-**Be careful as there is a risk of electric shock when inspecting while the power is on.**
+**检查时请注意，通电状态下存在电击风险。**
 
 </div>
 
 ---
 
-* Check the wiring connecting the robot and the controller.<br>
-Disconnect the wiring connecting the controller and the robot or drive unit, and check if each phase (U phase, V phase, W phase) is shorted to each other or to ground. If any short circuit is found, the corresponding wiring must be replaced.
+* 检查连接机器人和控制器的接线。<br>
+断开连接控制器和机器人或驱动单元的接线，检查每个相位（U相、V相、W相）是否相互短路或接地。如果发现短路相，必须更换相应的接线。
 
 ![](../_assets/4.서보보드/hi7_robot_power_cable.png)<br>
-Figure 4.20.2 Wiring between N Controller and Robot
+图 4.20.2 N 控制器与机器人之间的接线
 
-* Inspect the internal wiring of the robot.<br>
-It is necessary to check if there are any short circuits or incorrect wiring in the wiring connected to the motor inside the robot.
+* 检查机器人的内部接线。<br>
+有必要检查连接至电机的内部接线是否存在短路或接线错误。
 
 ![](../_assets/4.서보보드/robot_inner_cable.png)<br>
-Figure 4.20.3 Robot Internal Wiring
+图 4.20.3 机器人内部接线
 
-* Inspect the internal wiring of the controller.<br>
-It is necessary to inspect the wiring installed with the amplifier inside the controller.
+* 检查控制器的内部接线。<br>
+有必要检查控制器内部与放大器连接的接线。
 
 ![](../_assets/4.서보보드/hi7_brake_cable.png)<br>
-Figure 4.20.4 Hi7-N Controller Internal Wiring Inspection
+图 4.20.4 Hi7-N 控制器内部接线检查
 
-(2)	Inspect the connector (Board to Board) between the servo board and the amplifier board inside the controller.<br>
-Check if the installation of the connector (Board to Board) connecting and fastening the servo safety board and the amplifier board is correct. If the fastening status is poor, this error may occur.
+(2)	检查控制器内部伺服板与放大器板之间的连接器（板对板）。<br>
+检查连接和固定伺服安全板与放大器板的连接器（板对板）的安装是否正确。如果固定状态不良，可能会出现此错误。
 
 ![](../_assets/4.서보보드/conncet_bd642_amp.png)<br>
-Figure 4.20.5 Connection between N Controller Servo Board and Amplifier Board
+图 4.20.5 N 控制器伺服板与放大器板之间的连接
 
-(3)	Replace other components.<br>
-Replace components in the order of Servo Safety Board (BD642) → Amplifier Board → Wire Harness → Motor → PSM to check for error occurrence.
+(3)	更换其他组件。<br>
+按顺序更换组件：伺服安全板（BD642）→ 放大器板 → 线束 → 电机 → PSM，以检查错误发生情况。
 
 ![](../_assets/4.서보보드/hi7_robot_brake_power_check.png)<br>
-Figure 4.20.6 Hi7-N Controller Drive Components
-
-
-
+图 4.20.6 Hi7-N 控制器驱动组件
 [__SOURCE](4-servo-board-part/E50400.md)
-## 4.21. E50400. (O Axis) Position Deviation exceeded
+## 4.21. E50400. (O轴) 位置偏差超出
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the position deviation exceeds the set value during robot operation.<br>
-While the robot is operating under servo control, if the difference between the movement command position and the actual position exceeds the allowable range, the servo board detects this as an error and stops the robot.
+当机器人操作期间位置偏差超过设定值时，就会发生此情况。<br>
+在伺服控制下操作时，如果运动指令位置与实际位置之间的差异超过允许范围，伺服板会将其检测为错误并停止机器人。
 
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1)	Check if the axis where the error occurred has mechanical interference with other equipment.<br>
-(2)	Check if the robot model is set correctly.<br>
-(3)	Check if the brake release is operating normally.<br>
-* Inspection of individual axis brake release anomalies.
-* Inspection of brake power supply abnormalities.
+(1) 检查发生错误的轴是否与其他设备有机械干扰。<br>
+(2) 检查机器人型号是否设置正确。<br>
+(3) 检查刹车释放是否正常工作。<br>
+* 检查各个轴的刹车释放异常。
+* 检查刹车电源异常。
 
-(4)	Inspect the wiring status.<br>
-(5)	Check if the rated load is being used.<br>
-(6)	Check the position deviation setting level.<br>
-(7)	Check the versions of the servo safety board (BD642) and the main com.<br>
-(8)	Replace other components.<br>
+(4) 检查接线状态。<br>
+(5) 检查是否使用额定负载。<br>
+(6) 检查位置偏差设置水平。<br>
+(7) 检查伺服安全板（BD642）和主通信的版本。<br>
+(8) 更换其他组件。<br>
 
 {% endhint %}
 
-(1) Check if the axis where the error occurred has mechanical interference with other equipment.<br>
-This error may occur if there is mechanical interference or collision involving the robot. If the robot is outside the restricted area, you must move it to a safe area using manual operation.
+(1) 检查发生错误的轴是否与其他设备有机械干扰。<br>
+如果存在机械干扰或与机器人有关的碰撞，则可能会发生此错误。如果机器人位于限制区域外，必须使用手动操作将其移动到安全区域。
 
-(2) Check if the robot model is set correctly.<br>
+(2) 检查机器人型号是否设置正确。<br>
 
 ![](../_assets/4.서보보드/robot_model.png)<br>
-Figure 4.21.1 TP Robot Model Check
+图 4.21.1 TP 机器人型号检查
 
-Check if the registered robot model on the TP screen matches the actually installed robot.
+检查 TP 屏幕上注册的机器人型号是否与实际安装的机器人匹配。
 
-(3) Check if the brake release is operating normally.<br>
-There may be a problem with the release function of the brake for the corresponding axis or an abnormality in the brake release voltage.
+(3) 检查刹车释放是否正常工作。<br>
+对应轴的刹车释放功能可能存在问题，或刹车释放电压存在异常。
 
-* Inspection of individual axis brake release anomalies<br>
-Use the Axis Lock function to verify the operation of the brake release function for the corresponding axis.
-Lock the axes except for the axis you want to verify, then repeat Motor ON/OFF to check if the brake release sound ("click") is heard from the motor of the mechanical unit.<br>
-The method to use the Axis Lock function is as follows.
+* 检查各个轴的刹车释放异常<br>
+使用轴锁功能验证对应轴的刹车释放功能是否正常工作。
+锁定希望验证的轴之外的轴，然后重复 Motor ON/OFF，以检查机械单元的电机是否发出刹车释放声（“咔嗒”）。<br>
+使用轴锁功能的方法如下。
 
         System -> 5. Initialization -> 9. Axis Lock Setting -> Confirm -> Individual Axis Lock
 
 ![](../_assets/4.서보보드/axis_lock1.png)<br>
-Figure 4.21.2 Axis Lock Setting Screen 1
+图 4.21.2 轴锁设置屏幕 1
 
 ![](../_assets/4.서보보드/axis_lock2.png)<br>
-Figure 4.21.3 Axis Lock Setting Screen 2
+图 4.21.3 轴锁设置屏幕 2
 
 ![](../_assets/4.서보보드/axis_lock3.png)<br>
-Figure 4.21.4 Axis Lock Setting Screen 3
+图 4.21.4 轴锁设置屏幕 3
 
-If the brake of the corresponding axis is not released, the brake output status of the servo safety board must be checked. Disconnect the brake wiring (CNBRK16, CNBRK78 connectors) and output the brake voltage. Measure whether the brake voltage of the corresponding axis is output as 20.0V or higher at the CNBRK16, CNBRK78 connectors. If there is an axis outputting a voltage of 20.0V or lower, it is a failure of the servo safety board (BD642), so replace it.
+如果对应轴的刹车未释放，则必须检查伺服安全板的刹车输出状态。断开刹车接线（CNBRK16，CNBRK78 连接器），并输出刹车电压。测量 CNBRK16，CNBRK78 连接器的对应轴的刹车电压是否输出为 20.0V 或更高。如果有轴输出电压为 20.0V 或更低，则是伺服安全板（BD642）的故障，需要更换。
 
 ![](../_assets/4.서보보드/bd642_brake_connector.png)<br>
-Figure 4.21.5 CNBRK16, CNBRK78 Connector Pin Layout
+图 4.21.5 CNBRK16，CNBRK78 连接器引脚布局
 
-* Inspection of Brake Power Supply Abnormalities<br>
-The sequence for inspecting brake power wiring is as follows.<br>
-1st: Check for poor contact in connectors related to brake power wiring.<br>
-2nd: Check for short circuits in the brake power wiring. Check 1:1 using equipment such as a multimeter (tester).<br>
-Inspect the internal wiring of the power electric module.<br>
+* 检查刹车电源异常<br>
+检查刹车电源接线的顺序如下。<br>
+1: 检查与刹车电源接线有关的连接器是否接触不良。<br>
+2: 检查刹车电源接线是否短路。使用万用表（测试仪）进行 1:1 检查。<br>
+检查电源电气模块的内部接线。<br>
 
 ![](../_assets/4.서보보드/psm_psbd.png)<br>
-Figure 4.21.6 Power Electric Module and Power Board
+图 4.21.6 电源电气模块和电源板
 
-* Check the servo safety board (BD642).<br>
-If the power electric module is normal, measure the brake power (DC24V) on the servo safety board. It is normal if the measured value across the capacitor (EC9) or across the connector (J12) in the red area of the figure below is DC24V or higher. If it is less than 20V, there is a malfunction in the power supply device generating the brake power. Replace the electric module.
+* 检查伺服安全板（BD642）。<br>
+如果电源电气模块正常，测量伺服安全板上的刹车电压（DC24V）。如果下图中红色区域的电容器（EC9）或连接器（J12）测量值为 DC24V 或更高，则正常。如果低于 20V，则生成刹车电源的电源设备存在故障。更换电气模块。
 
 ![](../_assets/4.서보보드/bd642_brake_power.png)<br>
-Figure 4.21.7 Servo Board Brake Power
+图 4.21.7 伺服板刹车电源
 
-(4) Inspect the wiring status.<br>
-Check if the motor wiring (U, V, W phases) is connected correctly.
-Also, check if the motor wiring is shorted to other wiring or the ground wire (FG).
+(4) 检查接线状态。<br>
+检查电机接线（U, V, W 相）是否正确连接。
+同时检查电机接线是否与其他接线或接地线（FG）短路。
 
-(5) Check if the rated load is being used.<br>
-If the total weight including the workpiece exceeds the rated load, refer to the robot's specification sheet and adjust the load to be within the rating.
+(5) 检查是否使用额定负载。<br>
+如果包括工件在内的总重量超过额定负载，请参考机器人的规格说明书并将负载调整为在额定值范围内。
 
-(6) Position Deviation Setting Level Error<br>
-If the position deviation setting value is smaller than the following maximum measured value, adjust the setting value upward.
+(6) 位置偏差设置水平错误<br>
+如果位置偏差设置值小于以下最大测量值，请向上调整设置值。
 
-        Maximum measured position deviation after operating for more than a cycle x 1.5
+        超过一个周期操作后的最大测量位置偏差 x 1.5
 
 ![](../_assets/4.서보보드/pos_dev.png)<br>
-Figure 4.21.8 Position Deviation Max Measurement Monitoring Screen<br>
+图 4.21.8 位置偏差最大测量监控屏幕<br>
 
 ![](../_assets/4.서보보드/pos_dev2.png)<br>
-Figure 4.21.9 Position Deviation Setting Change Screen
+图 4.21.9 位置偏差设置变更屏幕
 
-(7) Check the versions of the servo safety board (BD642) and the main com.<br>
-This may occur if the compatibility between the servo safety board (BD642) and the main com version is broken. Especially, if a module has been replaced, proceed with a version upgrade to match the version of each module to the current main com version. The version of each module can be checked in the path below.<br>
+(7) 检查伺服安全板（BD642）和主通信的版本。<br>
+如果伺服安全板（BD642）和主通信版本之间的兼容性中断，可能会发生此情况。特别是，如果某个模块已被更换，则需进行版本升级，以使每个模块的版本与当前主通信版本匹配。每个模块的版本可以在以下路径中检查。<br>
 
         Service -> 7. System Diagnosis -> 1. System Version
 
 ![](../_assets/4.서보보드/version.png)<br>
-Figure 4.21.10 TP Module Version Check Window
+图 4.21.10 TP 模块版本检查窗口
 
-(8) Replace other components.<br>
-Replace components in the order of Servo Safety Board (BD642) → Servo Drive Unit → Power Electric Module → Motor to check for error occurrence.
+(8) 更换其他组件。<br>
+按照伺服安全板（BD642）→伺服驱动单元→电源电气模块→电机的顺序更换组件以检查错误发生情况。
 
 ![](../_assets/4.서보보드/hi7_robot_brake_power_check.png)<br>
-Figure 4.21.11 Hi7-N Controller Motor and Drive Module
-
-
-
-
-
+图 4.21.11 Hi7-N 控制器电机和驱动模块
 [__SOURCE](4-servo-board-part/E50401.md)
-## 4.22. E50401. (O Axis) Speed-Based Position Deviation Exceeded
+## 4.22. E50401. (O 轴) 基于速度的位置偏差超出
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the position deviation generated during jog operation or low-speed operation exceeds the set value.<br>
-If the difference between the movement command position and the actual position is outside the allowable range while the robot is operating under servo control, the servo safety board detects this as an error during servo calculation and stops the robot.
+当在慢速操作或步进操作过程中生成的位置偏差超过设定值时，将会发生此情况。<br>
+如果在机器人处于伺服控制下操作时，运动指令位置与实际位置之间的差异超出允许范围，伺服安全板会在伺服计算时将其检测为错误，并停止机器人。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)	Check if the axis where the error occurred has mechanical interference with other equipment.<br>
-(2)	Check if the brake release is operating normally.<br>
-* Inspection of individual axis brake release anomalies.<br>
-* Inspection of brake power supply abnormalities.<br>
+(1) 检查发生错误的轴是否与其他设备存在机械干涉。<br>
+(2) 检查刹车释放是否正常工作。<br>
+* 检查各轴刹车释放异常。<br>
+* 检查刹车电源供应异常。<br>
 
-(3)	Inspect the wiring status.<br>
-(4)	Check if the rated load is being used.<br>
-(5)	Check the position deviation setting level.<br>
-(6)	Check the versions of the servo safety board (BD642) and the main com.<br>
-(7)	Replace other components.<br>
+(3) 检查接线状态。<br>
+(4) 检查是否使用了额定负载。<br>
+(5) 检查位置偏差设定水平。<br>
+(6) 检查伺服安全板 (BD642) 和主控的版本。<br>
+(7) 更换其他组件。<br>
 
 {% endhint %}
 
-For detailed inspection methods, please refer to "E50400 (O Axis) Position Deviation exceeded".
+有关详细检查方法，请参阅 "E50400 (O 轴) 位置偏差超出"。
 [__SOURCE](4-servo-board-part/E50402.md)
-## 4.23. E50402. (O Axis) Position Deviation Exceeded (Cold Temperature Friction Increase)
+## 4.23. E50402. (O轴) 位置偏差超出 (低温摩擦增加)
 
-### 1. Overview
+### 1. 概述
 
-This occurs when the position (speed) deviation exceeds the set value.
-If the difference between the movement command position and the actual position is outside the allowable range while the robot is operating under servo control, the servo safety board detects this as an error during servo calculation and stops the robot.<br>
-This error primarily occurs when the position deviation is large while the encoder temperature is low.
+当位置（速度）偏差超过设定值时，会发生此情况。
+如果运动指令位置与实际位置之间的差异超出允许范围，而机器人在伺服控制下操作，则伺服安全板会在伺服计算过程中检测到此错误并停止机器人。<br>
+此错误主要发生在编码器温度较低时位置偏差较大。
 
-Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower), friction components increase due to increased grease viscosity, requiring a larger driving torque than in the normal state. If the robot is operated at high speed in this state, this error may occur.
+通常，在低温环境中（编码器温度5 ℃或以下），由于润滑脂的粘度增加，摩擦部件增加，需要比正常状态更大的驱动扭矩。如果机器人在此状态下高速运行，则可能会发生此错误。
 
-
-### 2. Cause and Inspection
+### 2. 原因及检查
 
 {% hint style="info" %}
 
-(1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed.<br>
-(2)	Check if the robot model is set correctly.<br>\
+(1) 在编码器温度达到正常水平（约15℃或更高）之前，以低速（回放速度30%或更低）操作，然后以正常速度重新启动。<br>
+(2) 检查机器人型号是否设置正确。<br>\
 
 {% endhint %}
 
-(1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed.
+(1) 在编码器温度达到正常水平（约15℃或更高）之前，以低速（回放速度30%或更低）操作，然后以正常速度重新启动。
 
 ![](../_assets/4.서보보드/enc_tmp2.png)<br>
-Figure 4.23.1 Encoder Temperature Check Screen
+图 4.23.1 编码器温度检查屏幕
 
-(2)	Check if the robot model is set correctly.
+(2) 检查机器人型号是否设置正确。
 
 ![](../_assets/4.서보보드/robot_model.png)<br>
-Figure 4.23.2 Robot Model Check
+图 4.23.2 机器人型号检查
 
-Check if the registered robot model on the TP screen matches the actually installed robot.
+检查TP屏幕上注册的机器人型号是否与实际安装的机器人匹配。
 [__SOURCE](4-servo-board-part/E51429.md)
-## 4.24. E51429 Initial Charging Resistor Relay Feedback Error
+## 4.24. E51429 初始充电电阻继电器反馈错误
 
-### 1. Overview
+### 1. 概述
 
-The Servo Safety Board (BD642) activates the initial charge relay during the process of applying motor power and monitors the operation status of the initial charge relay to generate an error. Since the initial charge relay functions to suppress inrush current, an error occurs for safety in case of relay operation abnormality, and the motor power application is blocked.
+伺服安全板 (BD642) 在施加电动机电源的过程中激活初始充电继电器，并监测初始充电继电器的运行状态以生成错误。由于初始充电继电器的功能是抑制涌入电流，若继电器运行异常，将发生错误以确保安全，并阻止电动机电源的应用。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)    Inspect the monitoring system.<br>
-(2)    Inspect the power board.<br>
-(3)    Inspect the Servo Safety Board (BD642).<br>
+(1)    检查监控系统。<br>
+(2)    检查电源板。<br>
+(3)    检查伺服安全板 (BD642)。<br>
 
 {% endhint %}
 
-(1)    Inspect the monitoring system.<br>
-Check the cabling between the power electric module (PSM or PDM), where the initial charging resistor and relay are installed, and the servo safety board (BD642) that collects monitoring signals. The cable name is CNPRC, and it enters the power electric module from the servo safety board through the backplane board. Inspect the connection status of this cable's connector.
+(1)    检查监控系统。<br>
+检查电源电气模块 (PSM 或 PDM) 与收集监控信号的伺服安全板 (BD642) 之间的电缆连接状态，其中安装了初始充电电阻和继电器。电缆名称为 CNPRC，它通过背板电路从伺服安全板进入电源电气模块。检查此电缆连接器的连接状态。
 
 ![](../_assets/4.서보보드/cnprc_cable.png)<br>
-Figure 4.24.1 CNPRC Cable Connection
+图 4.24.1 CNPRC 电缆连接
 
-(2)    Inspect the power board.<br>
-In the case of the Hi7-N controller, there may be a problem with the servo board, power board, or cable wiring, so inspect or replace them.
+(2)    检查电源板。<br>
+对于 Hi7-N 控制器，可能存在伺服板、电源板或电缆接线的问题，因此需要检查或更换它们。
 
 ![](../_assets/4.서보보드/psm_psbd.png)<br>
-Figure 4.24.2 Power Board inside Power Electric Module
+图 4.24.2 电源电气模块内部的电源板
 
-(3)    Replace and test the servo safety board.<br>
-If the error does not occur after replacing the servo safety board, it can be determined as a failure of the encoder data receiving part of the servo board.
+(3)    更换并测试伺服安全板。<br>
+如果更换伺服安全板后没有发生错误，则可以确定为伺服板的编码器数据接收部分故障。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.24.3 Replacement of Hi7-N Controller Servo Safety Board
-
+图 4.24.3 更换 Hi7-N 控制器伺服安全板
 [__SOURCE](4-servo-board-part/E51441.md)
-## 4.25. E51441 (0 Axis) Brake Feedback Error
+## 4.25. E51441 (0轴) 刹车反馈错误
 
-### 1. Overview
+### 1. 概述
 
-The Servo Safety Board (BD642) monitors the brake operation command and the signal from the brake feedback circuit, and generates an error if the two signals do not match.<br>
-If the output of the brake circuit is not executed normally, brake operation may fail, so the servo board detects this and stops the robot. 
+伺服安全板 (BD642) 监控刹车操作命令和来自刹车反馈电路的信号，如果两个信号不匹配，则会生成错误。<br>
+如果刹车电路的输出未正常执行，刹车操作可能会失败，因此伺服板会检测到这一点并停止机器人。
 
-### 2. Cause and Inspection
+### 2. 原因和检查
 
 {% hint style="info" %}
 
-(1)    Inspect the brake wiring.<br>
-(2)    Inspect the Servo Safety Board (BD642).<br>
+(1)    检查刹车接线。<br>
+(2)    检查伺服安全板 (BD642)。<br>
 
 {% endhint %}
 
-(1)    Inspect the brake wiring.<br>
-The sequence for inspecting brake wiring is as follows.<br>
-1st: Check for poor contact in connectors related to brake wiring.<br>
-2nd: Check for short circuits in the brake wiring. Check the wiring of each axis 1:1 using equipment such as a multimeter (tester).<br>
-3rd: Perform a replacement test of the brake wiring.<br>
+(1)    检查刹车接线。<br>
+检查刹车接线的序列如下。<br>
+第1步：检查与刹车接线相关的连接器中的接触不良。<br>
+第2步：检查刹车接线中的短路。使用万用表（测试仪）逐一检查每个轴的接线。<br>
+第3步：进行刹车接线的更换测试。<br>
 
-If the brake wiring is not disconnected but has poor contact, or if there is contact between the brake power line and other power lines or the metal part of the robot body, it cannot be detected by a short circuit test, so please perform a wiring replacement test.
+如果刹车接线没有断开但接触不良，或者刹车电源线与其他电源线或机器人机身的金属部分接触，短路测试无法检测到，因此请进行接线更换测试。
 
-* Inspect the internal wiring of the controller.<br>
-In the case of the Hi7-N controller, inspect the wiring between the CNBRK16 (BD642) connector and CMC1, CMC2.
+* 检查控制器内部接线。<br>
+对于 Hi7-N 控制器，检查 CNBRK16 (BD642) 连接器与 CMC1、CMC2 之间的接线。
 
 ![](../_assets/4.서보보드/hi7_brake_cable.png)<br>
-Figure 4.25.1 Hi7-N Controller Brake Output Wiring
+图 4.25.1 Hi7-N 控制器刹车输出接线
 
-* Inspect the wiring between the controller and the robot.<br>
-In the case of the Hi7-N controller, inspect the wiring between CMC1 and CMR1, and between CMC2 and CMR2.
+* 检查控制器与机器人之间的接线。<br>
+对于 Hi7-N 控制器，检查 CMC1 与 CMR1 之间的接线，以及 CMC2 与 CMR2 之间的接线。
 
 ![](../_assets/4.서보보드/hi7_robot_power_cable.png)<br>
-Figure 4.25.2 N Controller Brake Output Wiring
+图 4.25.2 N 控制器刹车输出接线
 
-(2)    Check the servo safety board.<br>
-The sequence for checking the servo safety board is as follows.<br>
-1st: Check for blown fuses in the brake circuit.<br>
-2nd: If there are no issues with the fuses of all brake channels, replace the servo safety board and check.<br>
+(2)    检查伺服安全板。<br>
+检查伺服安全板的序列如下。<br>
+第1步：检查刹车电路中的保险丝是否熔断。<br>
+第2步：如果所有刹车通道的保险丝没有问题，请更换伺服安全板并检查。<br>
 
-* Inspect the brake-related fuses.<br>
-In the case of the servo safety board, fuses are designed for each brake in the dotted area shown in the figure below. Inspect using a tester or by checking the blinking of the LEDs on the servo safety board.<br>
+* 检查与刹车相关的保险丝。<br>
+在伺服安全板的情况下，保险丝设计用于每个刹车，位于下图所示的虚线区域。使用测试仪或检查伺服安全板上的 LED 闪烁进行检查。<br>
 
 ![](../_assets/4.서보보드/bd642_brake_fuse.png)<br>
-Figure 4.25.3 Servo Safety Board Brake Fuse
+图 4.25.3 伺服安全板刹车保险丝
 
-* Perform a replacement test of the servo safety board.<br>
-If the error does not occur after replacing the servo safety board, it can be determined as a failure of the encoder data receiving part of the servo board.
+* 进行伺服安全板的更换测试。<br>
+如果在更换伺服安全板后错误不再发生，可以确定为伺服板编码器数据接收部分的故障。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.25.4 Hi7-N Controller Servo Board Replacement
-
-
+图 4.25.4 Hi7-N 控制器伺服板更换
 [__SOURCE](4-servo-board-part/E51443.md)
-## 4.26. E51443 Brake Power Error
+## 4.26. E51443 刹车电源错误
 
-### 1. Overview
+### 1. 概述
 
-This error occurs when the Servo Safety Board monitors the brake power supply (24.0V) and it deviates from the set normal voltage range.<br>
-If the brake power is not supplied normally, the holding of the robot axis may become unstable, so the servo controller detects this, generates an error, and safely stops the robot.
+当伺服安全板监控刹车电源（24.0V）并且偏离设定的正常电压范围时，就会发生此错误。<br>
+如果刹车电源未正常供应，则机器人轴的保持可能会变得不稳定，因此伺服控制器检测到这一点，生成错误并安全停止机器人。
 
-### 2. Cause and Inspection
+### 2. 原因与检查
 
 {% hint style="info" %}
 
-(1)    Check if the brake power (24V) is being supplied normally.<br>
-(2)    Check for disconnection or poor contact in the brake power cable.<br>
-(3)    Replace the Servo Safety Board (BD642).<br>
+(1)    检查刹车电源（24V）是否正常供应。<br>
+(2)    检查刹车电源电缆是否有断开或接触不良。<br>
+(3)    更换伺服安全板（BD642）。<br>
 
 {% endhint %}
 
-(1)    Check if the brake power (24V) is being supplied normally.<br>
-The sequence for inspecting brake power wiring is as follows.<br>
-1st: Check for poor contact in connectors related to brake power wiring.<br>
-2nd: Check for short circuits in the brake power wiring. Check 1:1 using equipment such as a multimeter (tester).<br>
+(1)    检查刹车电源（24V）是否正常供应。<br>
+检查刹车电源布线的顺序如下。<br>
+第一步：检查与刹车电源布线相关的连接器是否接触不良。<br>
+第二步：检查刹车电源布线是否存在短路。使用多用表（测试仪）进行1:1检查。<br>
 
-* Inspect the internal wiring of the power electric module.<br>
+* 检查电力电模块的内部布线。<br>
 
 ![](../_assets/4.서보보드/psm_psbd.png)<br>
-Figure 4.26.1 Power Electric Module
+图 4.26.1 电力电模块
 
-(2)    Check for disconnection or poor contact status of the brake power cable.<br>
-Inspect the internal wiring of the controller. In the case of the Hi7-N controller, inspect the wiring between the J12(BD642) connector and the CNOBK(power board) connector.
+(2)    检查刹车电源电缆的断开或接触不良状态。<br>
+检查控制器的内部布线。在 Hi7-N 控制器的情况下，检查 J12(BD642) 连接器和 CNOBK（电源板）连接器之间的布线。
 
 ![](../_assets/4.서보보드/brake_pwr_cable.png)<br>
-Figure 4.26.2 N Controller Brake Power Inspection
+图 4.26.2 N 控制器刹车电源检查
 
-(3)    Perform a replacement test of the servo safety board.<br>
-If the error does not occur after replacing the servo safety board, it can be determined as a failure of the encoder data receiving part of the servo board.
+(3)    进行伺服安全板的更换测试。<br>
+如果在更换伺服安全板后错误不再发生，可以判断为伺服板的编码器数据接收部分故障。
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
-Figure 4.26.3 N Controller Servo Board Replacement
-
-
+图 4.26.3 N 控制器伺服板更换
 [__SOURCE](5-communication/README.md)
-# 5. Communication
+# 5. 通信
 [__SOURCE](5-communication/E29003.md)
-## 5.1. E29003 Board Communication Error (EtherCAT Disconnected)
+## 5.1. E29003 板通信错误 (EtherCAT 断开)
 
-### 1. Summary
+### 1. 概述
 
-Board communication error (EtherCAT Disconnected) has occurred.
-Communication between the main control module (H6COM-T) and the boards (BD642, BD681, etc.) has been disconnected.
+发生了板通信错误 (EtherCAT 断开)。  
+主控制模块 (H6COM-T) 与板 (BD642, BD681 等) 之间的通信已断开。
 
-### 2. Causation
+### 2. 原因
 
 {% hint style="info" %}
 
-(1) Check the inter-board communication cable connection and the cable condition.<br>
-(2) Inspect the board.<br>
+(1) 检查板间通信电缆连接及电缆状态。<br>
+(2) 检查板。<br>
 
 <br>
-The board connection configuration varies depending on the operating environment.<br>
-- Servo safety board (BD642) used alone<br>
-- Servo safety board (BD642) and User DIO board (BD681) used<br>
+板的连接配置因操作环境而异。<br>
+- 单独使用伺服安全板 (BD642)<br>
+- 使用伺服安全板 (BD642) 和用户 DIO 板 (BD681)<br>
 
 {% endhint %}
 
-### (1)	Check the inter-board communication cable connection status.
-### [Check the Ethernet cable connection status between each module (Main Control Module (H6COM-T) and boards)]
+### (1) 检查板间通信电缆连接状态。
+### [检查每个模块之间的以太网电缆连接状态 (主控制模块 (H6COM-T) 和板)]
 
 ![](../_assets/5-Communication/ethercat_cable_hicom_bd642_r2.png)<br>
-Figure 5.1.1 EtherCAT cable connection between the H6COM-T and BD642
+图 5.1.1 H6COM-T 和 BD642 之间的 EtherCAT 电缆连接
 
 <br>
 
 ![](../_assets/5-Communication/BD642_BD681_cable_connection.png)<br>
-Figure 5.1.2 EtherCAT cable connection between BD642 and BD681 **(When using BD681)**
+图 5.1.2 BD642 和 BD681 之间的 EtherCAT 电缆连接 **(使用 BD681 时)**
 
-1)	Inspection Targets<br>
-A. Ethernet cable between the main control module (H6COM-T) and the servo safety board (BD642).<br>
-B.	Ethernet cable between the servo safety board (BD642) and the user DIO board (BD681). **(When using the BD681).**<br>
-2)	Inspection Items<br>
-A.	Check that the connectors at both ends of the cable are securely fastened.<br>
-B.	Visually inspect the cable for breaks, crimping damage, bends, or damage.<br>
-C.	Check the connector pins (terminals) for corrosion, contamination, or bending.<br>
-3)	Inspection Method<br>
-A.	With the power turned OFF, disconnect and reconnect the cable.<br>
-B.	When inserting, ensure it is fully seated until a “click” sound is heard.<br>
-C.	If necessary, replace the cable with a spare cable and try again.<br>
-D.	Recheck the connection order and verify that it is connected to the correct LAN port.<br>
-4)	Additional Checks<br>
-A.	If disconnections occur repeatedly, consider the possibility of an internal cable break → Cable replacement may be necessary.<br>
-B.	Also check for possible damage to the Ethernet connector (PCB terminal area).<br>
-C.	Check the Link/Act LED status on the board.<br>
-    * Normal: Green (left) blinking, Yellow (right) ON <br>
-    * Abnormal: Green (left) & Yellow (right) lights remain OFF or ON.<br>
+1) 检查目标<br>
+A. 主控制模块 (H6COM-T) 与伺服安全板 (BD642) 之间的以太网电缆。<br>
+B. 伺服安全板 (BD642) 与用户 DIO 板 (BD681) 之间的以太网电缆。 **(使用 BD681 时)。**<br>
+2) 检查项目<br>
+A. 检查电缆两端的连接器是否牢固固定。<br>
+B. 目视检查电缆有无断裂、压接损坏、弯曲或损坏。<br>
+C. 检查连接器引脚（端子）是否有腐蚀、污染或弯曲。<br>
+3) 检查方法<br>
+A. 在断电的状态下，断开并重新连接电缆。<br>
+B. 插入时，确保完全插入，直到听到“咔嗒”声。<br>
+C. 如有必要，使用备用电缆更换电缆并重试。<br>
+D. 重新检查连接顺序，确保连接到正确的 LAN 端口。<br>
+4) 其他检查<br>
+A. 如果重复发生断开，请考虑内部电缆断裂的可能性 → 可能需要更换电缆。<br>
+B. 还要检查以太网连接器（PCB 端子区域）是否可能受损。<br>
+C. 检查板上的 Link/Act LED 状态。<br>
+    * 正常: 绿色（左）闪烁，黄色（右）常亮 <br>
+    * 异常: 绿色（左）和黄色（右）灯保持熄灭或常亮。<br>
     
 ![](../_assets/5-Communication/E29003/그림2.png)<br>
 
 
-### (2) Inspect the board.
-#### [Servo safety board (BD642) inspection procedure]
+### (2) 检查板。
+#### [伺服安全板 (BD642) 检查程序]
 ![](../_assets/5-Communication/BD642_LED.png)<br> 
-Figure 5.1.3 BD642 Board LED, Segment 
+图 5.1.3 BD642 板 LED, 段 
 
 <br>
 
 ![](../_assets/5-Communication/BD642_7-Segment.png)<br> 
-Figure 5.1.4 7-Segment Status information
+图 5.1.4 7 段状态信息
 
 <br>
 
-1) Check the communication connection status<br>
-   Verify that LEDs No. 4 to 5 (green) in 'Figure 5.1.3' are ON. <br>
+1) 检查通信连接状态<br>
+   验证 '图 5.1.3' 中的 LED 4 到 5 (绿色) 是否亮起。<br>
 
-2) Check the normal boot status<br>
-   After the Main Control Module (H6COM-T) has completely booted (approximately 50 seconds after power-on), <br>
-   LEDs No. 1 to 5 (green) in 'Figure 5.1.3' should be ON, LEDs No. 6 to 10 (red) should be OFF, <br> and the 7-segment display should show '2. Safe State' with the decimal point blinking.
+2) 检查正常启动状态<br>
+   在主控制模块 (H6COM-T) 完全启动后 (开机后约 50 秒)，<br>
+   '图 5.1.3' 中的 LED 1 到 5 (绿色) 应该亮起，LED 6 到 10 (红色) 应该熄灭，<br>
+   7 段显示器应显示 '2. 安全状态'，并且小数点闪烁。
 
-If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
+如果即使在检查项目 1 和 2 中没有异常，仍然存在通信连接问题，则更换板。<br>
 
  
-#### [User DIO board (BD681) inspection procedure]
+#### [用户 DIO 板 (BD681) 检查程序]
 ![](../_assets/5-Communication/BD681_LED.png)<br> 
-Figure 5.1.5 BD681 Board LED 
+图 5.1.5 BD681 板 LED 
 
 <br>
  
-1)	Check the communication connection status<br>
-A.	Verify that LED No. 3 (green) in 'Figure 5.1.5' is ON.<br>
+1) 检查通信连接状态<br>
+A. 验证 '图 5.1.5' 中的 LED 3 (绿色) 是否亮起。<br>
 
-2)	Check the normal operation status<br>
-A.	Verify that LEDs No. 1 to 2 (green) in 'Figure 5.1.5' are blinking.<br>
+2) 检查正常操作状态<br>
+A. 验证 '图 5.1.5' 中的 LED 1 到 2 (绿色) 是否闪烁。<br>
 
-If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
-
+如果即使在检查项目 1 和 2 中没有异常，仍然存在通信连接问题，则更换板。<br>
 [__SOURCE](5-communication/E29016.md)
-## 5.2. E29016 Board Communication (EtherCAT) Master Disconnection Detected
+## 5.2. E29016 板通信 (EtherCAT) 主设备断开检测
 
-### 1. Summary
+### 1. 概述
 
-The connection with the first device connected to the EtherCAT master has been lost.
+与连接到 EtherCAT 主设备的第一个设备的连接丢失。
 
-### 2. Causation
+### 2. 原因
 
 {% hint style="info" %}
 
-(1) Check the inter-board communication cable connection and the cable condition.<br>
-(2) Inspect the Servo safety board (BD642).<br>
+(1) 检查板间通信电缆连接和电缆状态。<br>
+(2) 检查伺服安全板 (BD642)。<br>
 
 {% endhint %}
 
-### (1) Check the inter-board communication cable connection status.
+### (1) 检查板间通信电缆连接状态。
 
-#### [Check the Ethernet cable connection status between each module (Main Control Module (H6COM-T) and Servo safety board (BD642))]
+#### [检查每个模块之间的以太网电缆连接状态 (主控制模块 (H6COM-T) 和伺服安全板 (BD642))]
 ![](../_assets/5-Communication/ethercat_cable_hicom_bd642_r1.png)<br>
-Figure 5.2.1 EtherCAT cable connection between the H6COM-T and BD642
+图 5.2.1 H6COM-T 和 BD642 之间的 EtherCAT 电缆连接
 
-1)	Inspection Targets<br>
-A.	Ethernet cable between the main control module (H6COM-T) and the servo safety board (BD642).<br>
-2)	Inspection Items<br>
-A.	Check that the connectors at both ends of the cable are securely fastened.<br>
-B.	Visually inspect the cable for breaks, crimping damage, bends, or damage.<br>
-C.	Check the connector pins (terminals) for corrosion, contamination, or bending.<br>
-3)	Inspection Method<br>
-A.	With the power turned OFF, disconnect and reconnect the cable.<br>
-B.	When inserting, ensure it is fully seated until a “click” sound is heard.<br>
-C.	If necessary, replace the cable with a spare cable and try again.<br>
-D.	Recheck the connection order and verify that it is connected to the correct LAN port.<br>
-4)	Additional Checks<br>
-A.	Check the Link/Act LED status on the board.<br>
-- Normal: Green (left) blinking, Yellow (right) ON <br>
-- Abnormal: Green (left) & Yellow (right) lights remain OFF or ON.<br>
+1) 检查目标<br>
+A. 主控制模块 (H6COM-T) 和伺服安全板 (BD642) 之间的以太网电缆。<br>
+2) 检查项目<br>
+A. 检查电缆两端的连接器是否牢固固定。<br>
+B. 目视检查电缆是否有断裂、压痕损坏、弯曲或损坏。<br>
+C. 检查连接器引脚（端子）是否有腐蚀、污染或弯曲。<br>
+3) 检查方法<br>
+A. 在断电的情况下，断开并重新连接电缆。<br>
+B. 插入时，确保连接器完全插入，直到听到“咔嗒”声。<br>
+C. 如有必要，用备份电缆替换电缆并重试。<br>
+D. 重新检查连接顺序，确认连接到正确的 LAN 端口。<br>
+4) 额外检查<br>
+A. 检查板上的 Link/Act LED 状态。<br>
+- 正常：绿色（左侧）闪烁，黄色（右侧）常亮 <br>
+- 异常：绿色（左侧）和黄色（右侧）灯保持熄灭或常亮。<br>
 ![](../_assets/5-Communication/E29016/그림2.png)<br>
-B.	If disconnections occur repeatedly, consider the possibility of an internal cable break → Cable replacement may be necessary.<br>
-C.	Also check for possible damage to the Ethernet connector (PCB terminal area).<br>
+B. 如果断开连接频繁发生，请考虑内部电缆断裂的可能性 → 可能需要更换电缆。<br>
+C. 还要检查以太网连接器（PCB 端子区域）是否有可能的损坏。<br>
 
-### (2) Inspect the Servo safety board (BD642).
-#### [Servo safety board (BD642) inspection procedure]
+### (2) 检查伺服安全板 (BD642)。
+#### [伺服安全板 (BD642) 检查程序]
 ![](../_assets/5-Communication/BD642_LED.png)<br> 
-Figure 5.2.2 BD642 Board LED, Segment 
+图 5.2.2 BD642 板 LED，段 
 
 <br>
 
 ![](../_assets/5-Communication/BD642_7-Segment.png)<br> 
-Figure 5.2.3 7-Segment Status information
+图 5.2.3 7 段状态信息
 
 <br>
 
-1) Check the communication connection status<br>
-   Verify that LEDs No. 4 to 5 (green) in 'Figure 5.2.2' are ON. <br>
+1) 检查通信连接状态<br>
+   验证 '图 5.2.2' 中的 LED 4 到 5（绿色）是否亮起。<br>
 
-2) Check the normal boot status<br>
-   After the Main Control Module (H6COM-T) has completely booted (approximately 50 seconds after power-on), <br>
-   LEDs No. 1 to 5 (green) in 'Figure 5.2.2' should be ON, LEDs No. 6 to 10 (red) should be OFF, <br> and the 7-segment display should show '2. Safe State' with the decimal point blinking.
+2) 检查正常启动状态<br>
+   在主控制模块 (H6COM-T) 完全启动后（开机约 50 秒后），<br>
+   '图 5.2.2' 中的 LED 1 到 5（绿色）应亮起，LED 6 到 10（红色）应熄灭，<br>
+   且 7 段显示应显示 '2. 安全状态'，小数点闪烁。
 
-If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
-
+如果在检查项目 1 和 2 中没有异常的情况下仍然存在通信连接问题，请更换板。<br>
 [__SOURCE](5-communication/EtherCAT_ENI_Missmatch.md)
-## 5.3. Board communication (EtherCAT) master ENI mismatch
+## 5.3. 板通信 (EtherCAT) 主控 ENI 不匹配
 
-### 1. Summary
+### 1. 概述
 
-Controller communication configuration and ENI file mismatch.<br>
-(ENI : EtherCAT Network Information)
+控制器通信配置与 ENI 文件不匹配。<br>
+(ENI : EtherCAT 网络信息)
 
-### 2. Causation
+### 2. 成因
 
 {% hint style="info" %}
 
-The controller communication configuration does not match the configured ENI file.<br>
+控制器通信配置与配置的 ENI 文件不匹配。<br>
 
 {% endhint %}
 
-### Verify the controller communication configuration.
+### 验证控制器通信配置。
 
-The controller supports predefined communication configurations. If the communication connection is configured incorrectly, normal operation is not possible.<br>
-In addition, distinguish between the [IN] and [OUT] communication connectors when connecting.
-To ensure proper communication, connect the '[OUT] connector of the first board' to the '[IN] connector of the second board'.<br>
+控制器支持预定义的通信配置。如果通信连接配置不正确，则无法正常操作。<br>
+此外，连接时区分 [IN] 和 [OUT] 通信连接器。
+为了确保正确的通信，将“第一块板的 [OUT] 连接器”连接到“第二块板的 [IN] 连接器”。<br>
 
-<strong>< Example of a correct communication configuration ></strong><br>
+<strong>< 正确通信配置的示例 ></strong><br>
 
-- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board (BD642)
-- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board (BD642) **[OUT]** ↔ **[IN]** User DIO board(BD681)
+- 主控制模块(H6COM-T) ↔ **[IN]** 伺服安全板 (BD642)
+- 主控制模块(H6COM-T) ↔ **[IN]** 伺服安全板 (BD642) **[OUT]** ↔ **[IN]** 用户 DIO 板(BD681)
 
 <br>
 
-<strong>< Example of an incorrect communication configuration ></strong><br>
+<strong>< 不正确通信配置的示例 ></strong><br>
 
-- Main Control Module(H6COM-T) ↔ **[OUT]** Servo safety board(BD642)
-- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board(BD642) **[OUT]** ↔ **[OUT]** User DIO board(BD681)
-- Main Control Module(H6COM-T) ↔ **[IN]** User DIO board(BD681) **[OUT]** ↔ **[IN]** Servo safety board(BD642)
+- 主控制模块(H6COM-T) ↔ **[OUT]** 伺服安全板(BD642)
+- 主控制模块(H6COM-T) ↔ **[IN]** 伺服安全板(BD642) **[OUT]** ↔ **[OUT]** 用户 DIO 板(BD681)
+- 主控制模块(H6COM-T) ↔ **[IN]** 用户 DIO 板(BD681) **[OUT]** ↔ **[IN]** 伺服安全板(BD642)
 
 <br>
 
 ![](../_assets/5-Communication/BD642_EtherCAT_Connector.png)<br>
-Figure 5.3.1 BD642 EtherCAT Connector
+图 5.3.1 BD642 EtherCAT 连接器
 
 <br>
 
 ![](../_assets/5-Communication/BD681_EtherCAT_Connector.png)<br>
-Figure 5.3.2 BD681 EtherCAT Connector
+图 5.3.2 BD681 EtherCAT 连接器
 
 <br>
 
-When the communication connection is configured correctly, the controller automatically selects the ENI file and attempts a connection at power-on.<br>
+当通信连接配置正确时，控制器会在开机时自动选择 ENI 文件并尝试建立连接。<br>
 
-If the internal settings of the ENI file are incorrect, communication may be established but the functions may not operate properly.
-In this case, update the version of the Main Control Module (H6COM-T) of the controller or contact our company.<br>
+如果 ENI 文件的内部设置不正确，可能建立通信但功能可能无法正常操作。
+在此情况下，请更新控制器主控制模块(H6COM-T)的版本或联系我们的公司。<br>
 
-To manually change the ENI file selection, configure it in the TP menu below.
-After changing the setting, reboot the controller for the changes to take effect.
+要手动更改 ENI 文件选择，请在下面的 TP 菜单中配置。
+更改设置后，重新启动控制器以使更改生效。
 
-**- The location of the menu : [system]-[5:Initialization]-[10:Controller Setting]**
-
-
+**- 菜单位置 : [system]-[5:Initialization]-[10:Controller Setting]**
 [__SOURCE](appendices/README.md)
-# Appendices
-  
-
-
-
+# 附录
 [__SOURCE](appendices/rules-occupational-safety.md)
-# Rules on Occupational Safety and Health Standards and Safety Inspection Notification
+# 职业安全与健康标准及安全检查通知的规则
 
-This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
+本工业机器人应根据职业安全与健康标准及安全检查通知中规定的检查要求进行安装（如适用）。
 
-"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
-
+"[职业安全与健康标准](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/zh/README)"
 [__SOURCE](quality-assurance.md)
-# Quality Assurance
+# 质量保证
 
-"[Quality Assurance](https://hrbook-hrc.web.app/#/view/quality-assurance/en/README)"
+"[质量保证](https://hrbook-hrc.web.app/#/view/quality-assurance/zh/README)"

@@ -1,12 +1,14 @@
 ﻿{
-    "langCode": "en",
-    "series": "Hi7 Controller",
-    "title": "Maintenance Manual – Troubleshooting",
-    "publisher": "HD Hyundai Robotics",
-    "tocTitle": "Contents",
+    "langCode": "zh",
+    "series": "Hi7 控制器",
+    "title": "维护手册 – 故障排除",
+    "publisher": "HD 现代机器人",
+    "tocTitle": "内容",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
-    "docId": "HI7TROUBLESHOOT_EN_001",
+    "docId": "HI7TROUBLESHOOT_ZH_001",
     "references": [
-        { "rpath" : "doc-hi7-n-maintenance/en" }
+        {
+            "rpath": "doc-hi7-n-maintenance/zh"
+        }
     ]
 }
