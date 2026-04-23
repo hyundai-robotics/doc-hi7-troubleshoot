@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# Hi7 Controller Maintenance Manual – Troubleshooting
+# Hi7-N Controller Maintenance Manual – Troubleshooting
 
 The controller is designed with primary emphasis on high precision and high-speed performance.
 In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
@@ -8,6 +8,11 @@ In the event of a malfunction, the system is structured to allow easy identifica
 ## Troubleshooting Procedures
 
 This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
+
+[__SOURCE](0-about-this-manual/precautions.md)
+# Precautions
+
+{% include file="en/precautions.md" %}
 
 [__SOURCE](1-elec/README.md)
 # 1. Electrical equipment
@@ -1268,10 +1273,10 @@ The limit switch installed at the end of the travel range for each robot axis ha
 Check whether the robot has moved outside its designated operating range. If a soft limit error occurs simultaneously, the robot has indeed exceeded the operating range. Move the robot back into the operating range using proper operation procedures. The operating range varies depending on the robot model, so the installation position of the limit switches may also differ. Refer to the “Operating Range Limits” section in the maintenance manual of the respective robot.
 
 ![](../_assets/3-Safety-io/E00002/그림1.jpg)<br>
-Figure 3.2.1. Example of Hardware Limit Switch Installation Position (HS165/HS200 Robot)
+Figure 3.2.1. Example of Hardware Limit Switch Installation Position
 
 ![](../_assets/3-Safety-io/E00002/그림2.png)<br>
-Figure 3.2.2. Example of Hardware Limit Switch Operating Range (HS165/HS200 S Axis)
+Figure 3.2.2. Example of Hardware Limit Switch Operating Range
 
 #### [Recovery Procedure When the Operating Range Is Exceeded]
 
@@ -2019,10 +2024,10 @@ If the error does not occur after replacing the servo safety board, the encoder 
 Figure 4.4.7 Hi7-N Controller Servo Board Replacement
 
 (4)	Perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.4.8 Motor Positions for Each Axis of HS165 Robot
+Figure 4.4.8 Motor Positions for Each Axis of Robot
 
 (5)	Check the communication status of the wiring after completing the measures.<br>
 After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
@@ -2084,10 +2089,10 @@ Check the wiring between CER1 and the encoder-side connector. For wiring inspect
 Figure 4.5.4 Robot Internal Wiring
 
 (2)	Perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.5.5 Motor Positions for Each Axis of HS165 Robot
+Figure 4.5.5 Motor Positions for Each Axis of Robot
 
 (3)	Perform a servo safety board replacement test.<br>
 If the error does not occur after replacing the servo safety board, the servo safety board is faulty. Please replace the servo safety board with a normal unit.
@@ -2265,10 +2270,10 @@ Error reset is performed in the menu below.
 Figure 4.11.3 Serial Encoder Error Release
 
 (3) If the error persists, perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.11.4 Motor Positions for Each Axis of HS165 Robot
+Figure 4.11.4 Motor Positions for Each Axis of Robot
 
 
 [__SOURCE](4-servo-board-part/E50109.md)
@@ -2392,10 +2397,10 @@ Check the status of the battery wiring connecting from the encoder battery locat
 
 
 (4) Perform a motor (encoder) replacement test.<br>
-If the error persists upon main power OFF/ON after resetting the error, perform a motor (encoder) replacement test. If the error does not occur after replacement, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error persists upon main power OFF/ON after resetting the error, perform a motor (encoder) replacement test. If the error does not occur after replacement, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
-Figure 4.15.4 Motor Positions for Each Axis of HS165 Robot
+Figure 4.15.4 Motor Positions for Each Axis of Robot
 
 
 [__SOURCE](4-servo-board-part/E50113.md)
@@ -2420,7 +2425,7 @@ The OH bit is set when the internal temperature of the encoder exceeds the allow
 {% endhint %}
 
 (1)	Perform a motor (encoder) replacement test.<br>
-If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the HS165 robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not occur after replacing the servo motor, the servo motor is faulty. Please replace the servo motor with a normal unit. The figure below shows the positions of motors for each axis of the robot. For other robots, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/4.서보보드/HS165_motor_position.png)<br>
 Figure 4.16.1 Motor (Encoder) Replacement Position
