@@ -1,6 +1,7 @@
 ﻿# Table of contents
 
 * [Hi7 控制器维护手册 – 故障排除](README.md)
+* [注意事项](0-about-this-manual/precautions.md)
 * [1. 电气设备](1-elec/README.md)
   * [1.1. 电压检查 1 – Hi7-N 控制器的内部三相电压测试](1-elec/VOLTAGE_1.md)
   * [1.2. 电压检查 2 – Hi7-N 控制器输入三相电压检查程序](1-elec/VOLTAGE_2.md)

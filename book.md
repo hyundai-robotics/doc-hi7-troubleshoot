@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# Hi7 控制器维护手册 – 故障排除
+# Hi7-N 控制器维护手册 – 故障排除
 
 控制器设计时主要强调高精度和高速性能。
 在发生故障时，系统结构使得易于识别原因并迅速恢复。请阅读并完全理解本手册，以确保有效和高效的故障排除。
@@ -8,6 +8,10 @@
 ## 故障排除程序
 
 本节描述了 Hi7-N 控制器可能发生的每个错误代码的故障排除程序。
+[__SOURCE](0-about-this-manual/precautions.md)
+# 注意事项
+
+{% include file="zh/precautions.md" %}
 [__SOURCE](1-elec/README.md)
 # 1. 电气设备
 [__SOURCE](1-elec/VOLTAGE_1.md)
