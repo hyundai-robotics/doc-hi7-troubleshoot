@@ -7,6 +7,6 @@
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
     "docId": "HI7TROUBLESHOOT_KO_001",
     "references": [
-        { "rpath" : "doc-hi7-n-maintenance/ko" }
+        { "title" : "Hi7-N 제어기 보수설명서", "id" : "HI7NMAINTENANCE_KO_001" }
     ]
 }
