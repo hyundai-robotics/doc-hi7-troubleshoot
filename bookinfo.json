@@ -7,8 +7,6 @@
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
     "docId": "HI7TROUBLESHOOT_ZH_001",
     "references": [
-        {
-            "rpath": "doc-hi7-n-maintenance/zh"
-        }
+        { "title" : "Hi7-N 控制器 - 维护手册", "id" : "HI7NMAINTENANCE_ZH_001" }
     ]
 }
