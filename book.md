@@ -851,7 +851,7 @@ Examine the condition of the internal robot wiring connected to the motor of the
 
 ![](../_assets/2.서보AMP/E02522/E02522_2.PNG)
 
-Figure 2.10.1. Internal Wiring Inspection Points by Axis for HS165
+Figure 2.10.1. Internal Wiring Inspection Points by Axis
 
 
 -> Verify the error by reducing the robot's playback speed
@@ -1092,11 +1092,11 @@ If the error does not recur after replacing the servo drive unit, the original s
 
 ->	Replacement and inspection of the servo motor.
 
-If the error does not recur after replacing the servo motor, the original servo motor is defective. Please replace the servo motor with a known-good unit. The figure below shows the location of the motors for each axis of the HS165 robot. For other robot models, please refer to the corresponding mechanical maintenance manual for replacement.
+If the error does not recur after replacing the servo motor, the original servo motor is defective. Please replace the servo motor with a known-good unit. The figure below shows the location of the motors for each axis of the robot. For other robot models, please refer to the corresponding mechanical maintenance manual for replacement.
 
 ![](../_assets/2.서보AMP/E02520/E02520_3.PNG)
 
-Figure 2.12.3. Servo motor locations for each axis of the HS165 robot
+Figure 2.12.3. Servo motor locations for each axis of the robot
 
 <br>
 

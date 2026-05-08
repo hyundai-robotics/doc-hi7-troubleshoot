@@ -7,6 +7,6 @@
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
     "docId": "HI7TROUBLESHOOT_EN_001",
     "references": [
-        { "rpath" : "doc-hi7-n-maintenance/en" }
+        { "title" : "Hi7-N Controller Maintenance Manual", "id" : "HI7NMAINTENANCE_EN_001" }
     ]
 }
