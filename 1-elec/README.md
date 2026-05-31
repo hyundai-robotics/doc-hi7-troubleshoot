@@ -1,1 +1,1 @@
-# 1. Electrical equipment
+﻿# 1. Electrical equipment

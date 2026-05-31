@@ -1,6 +1,6 @@
 ﻿
 [__SOURCE](README.md)
-# Hi7-N Controller Maintenance Manual – Troubleshooting
+# Hi7-N Controller Maintenance Manual - Troubleshooting
 
 The controller is designed with primary emphasis on high precision and high-speed performance.
 In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
@@ -17,7 +17,7 @@ This section describes the troubleshooting procedures for each error code that m
 [__SOURCE](1-elec/README.md)
 # 1. Electrical equipment
 [__SOURCE](1-elec/VOLTAGE_1.md)
-## 1.1. Voltage Check 1 – Internal 3-Phase Voltage Test for Hi7-N Controller
+## 1.1. Voltage Check 1 - Internal 3-Phase Voltage Test for Hi7-N Controller
 
 (1) Verify the 3-phase power voltage inside the controller.
 
@@ -41,7 +41,7 @@ If the measured voltage is outside the allowable range, inspect the connection s
 If 3-phase 220V AC is not output correctly from the output terminal despite the input and output terminals being properly connected, the transformer is defective. In this case, the output voltage tolerance of the transformer must be within 5%.
 
 [__SOURCE](1-elec/VOLTAGE_2.md)
-## 1.2. Voltage Check 2 – Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
+## 1.2. Voltage Check 2 - Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
 
 (1) Verify the voltage on the controller nameplate and the actual input voltage.
 
@@ -238,7 +238,7 @@ If the resistance value measured at the end of the CNDR cable deviates by 10% or
 
 (3)	Please inspect the controller's cooling conditions and the amount of regenerative power.
 
-If a regenerative resistor overheat error occurs after the robot has been operating for 5 minutes or longer, it indicates either a malfunction in the controller’s cooling system or that the robot’s playback speed exceeds the controller’s design specifications. Fans are installed at the rear of the controller to cool the servo drive unit's heatsink and the regenerative discharge resistor.
+If a regenerative resistor overheat error occurs after the robot has been operating for 5 minutes or longer, it indicates either a malfunction in the controller's cooling system or that the robot's playback speed exceeds the controller's design specifications. Fans are installed at the rear of the controller to cool the servo drive unit's heatsink and the regenerative discharge resistor.
 
 ![](../_assets/2.서보AMP/E02500/E02500_1.png  )
 
@@ -818,7 +818,7 @@ Figure 2.9.1. Replacement of Control Module and Servo Drive Unit
 -> To be included in the future (TBD)
 
 [__SOURCE](2-servo-amp-board-part/E02522.md)
-## 2.10. E02522 (Axis ○) IPM Fault – Specific Step
+## 2.10. E02522 (Axis o) IPM Fault - Specific Step
 
 ### 1. Overview
 
@@ -941,7 +941,7 @@ The drive unit control voltage low error is triggered when the +15V control powe
 
 ![](../_assets/2.서보AMP/E02541/E02541_1.png )
 
-Figure 2.11.1. Location of Controller Power LEDs (Location of the ‘POW LED’ on the Hi7-N Servo Drive Unit)
+Figure 2.11.1. Location of Controller Power LEDs (Location of the 'POW LED' on the Hi7-N Servo Drive Unit)
 
 <br>
 
@@ -980,7 +980,7 @@ Figure 2.11.1. Location of Controller Power LEDs (Location of the ‘POW LED’ 
 
 
 [__SOURCE](2-servo-amp-board-part/E50300.md)
-## 2.12. E50300 (Axis ○) IPM Fault
+## 2.12. E50300 (Axis o) IPM Fault
 
 ### 1. Overview
 
@@ -1100,7 +1100,7 @@ Figure 2.12.3. Servo motor locations for each axis of the robot
 
 <br>
 
-(2)	Inspect the controller’s cooling fans.
+(2)	Inspect the controller's cooling fans.
 
 If an IPM fault error occurs after the robot has been operating for 5 minutes or longer, it indicates that the controller's cooling system is malfunctioning, causing the IPM to exceed its specified operating temperature range. The rear of the controller is equipped with fans to cool the heat sinks of the servo drive units and the regenerative discharge resistors.
 
@@ -1122,7 +1122,7 @@ If a fan is not rotating or the rotation speed is abnormally low, please replace
 If all fans are not operating, please check the input voltage supplied to the fans. The input voltage for the fans is set to 220V AC, with an allowable tolerance of within 10% of the rated voltage. If the voltage is more than 10% lower than the rating, the cooling efficiency will decrease due to the reduced fan rotation speed. If the voltage is low, please check the power connector for the rear cooling fans and the main input voltage of the controller.
 
 [__SOURCE](2-servo-amp-board-part/E50301.md)
-## 2.13. E50301 (Axis ○) IPM Fault - Gate Drive Power Undervoltage
+## 2.13. E50301 (Axis o) IPM Fault - Gate Drive Power Undervoltage
 
 ### 1. Overview
 
@@ -1229,7 +1229,7 @@ Once the assigned input channel is confirmed, refer to the site electrical drawi
 When verifying the electrical drawings or wiring diagrams, refer to **Hi7 Controller Maintenance Manual, Section 5.4.6** for the standard wiring of the Option Safety IO Board CNSI2.
 
 #### 2-3) When assigned to Safety Communication Input
-If the external E-Stop input is assigned to the Safety Communication Input, refer to the **Hi7 Robot Controller Function Manual – Industrial Communication**.
+If the external E-Stop input is assigned to the Safety Communication Input, refer to the **Hi7 Robot Controller Function Manual - Industrial Communication**.
 
 ### (3) When no safety input assignment is set for the external E-Stop signal
 If the external E-Stop input is not selected in the safety input assignment, activate the external E-Stop function by selecting one of the following options:<br>
@@ -1242,7 +1242,7 @@ The safety input assignment can be configured through the following menu:
 
 System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment<br>
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-Figure 3.1.4. T/P screen – Safety Input/Output Assignment
+Figure 3.1.4. T/P screen - Safety Input/Output Assignment
 
 [__SOURCE](3-safety-board-part/E00002.md)
 ## 3.2. E00002 Primary Axis Limit Switch Activated
@@ -1270,7 +1270,7 @@ The limit switch installed at the end of the travel range for each robot axis ha
 
 ### (1) Verify Whether the Robot Has Actually Exceeded the Operating Range
 
-Check whether the robot has moved outside its designated operating range. If a soft limit error occurs simultaneously, the robot has indeed exceeded the operating range. Move the robot back into the operating range using proper operation procedures. The operating range varies depending on the robot model, so the installation position of the limit switches may also differ. Refer to the “Operating Range Limits” section in the maintenance manual of the respective robot.
+Check whether the robot has moved outside its designated operating range. If a soft limit error occurs simultaneously, the robot has indeed exceeded the operating range. Move the robot back into the operating range using proper operation procedures. The operating range varies depending on the robot model, so the installation position of the limit switches may also differ. Refer to the "Operating Range Limits" section in the maintenance manual of the respective robot.
 
 ![](../_assets/3-Safety-io/E00002/그림1.jpg)<br>
 Figure 3.2.1. Example of Hardware Limit Switch Installation Position
@@ -1285,14 +1285,14 @@ To move the robot while a hardware limit switch is triggered, follow the conditi
 A) Enter **System Mode** from **Manual Mode**.  
 B) Hold the **Enabling Switch** on the teach pendant.  
 
-『Manual Mode』 + 『System』 + 『TP Enabling Switch ON』  
+`Manual Mode` - `System` - `TP Enabling Switch ON`  
 
 C) Turn **Motor ON** in this state.  
 D) Use the **Jog Keys** to move the robot back into the operating range.
 
 ### (2) Error Occurs Even When the Operating Range Is Not Exceeded
 
-First, check on the teach pendant’s dedicated input signal window whether the **Limit (Over-Travel)** item is continuously active. You can view this window by selecting **『Window Layout』 → 『Select』 → 『System Input』**. If the **Limit (Over-Travel)** item is highlighted in yellow, it indicates an error occurrence.
+First, check on the teach pendant's dedicated input signal window whether the **Limit (Over-Travel)** item is continuously active. You can view this window by selecting `Window Layout` - `Select` - `System Input`. If the **Limit (Over-Travel)** item is highlighted in yellow, it indicates an error occurrence.
 
 ### [Caution]
 - In **Manual Mode**, the **Enabling Switch** on the teach pendant must be ON for monitoring.  
@@ -1301,7 +1301,7 @@ First, check on the teach pendant’s dedicated input signal window whether the 
 ![](../_assets/3-Safety-io/E00002/그림3.png)<br>
 Figure 3.2.3. Over-Travel Monitoring in the System Input Window
 
-In such cases, the cause can be traced to components related to the limit switch. The limit switch is connected to the controller’s servo safety system via the **CEC1 – CER1** cable from the robot body, as shown in the following figure.
+In such cases, the cause can be traced to components related to the limit switch. The limit switch is connected to the controller's servo safety system via the **CEC1 - CER1** cable from the robot body, as shown in the following figure.
 
 ![](../_assets/3-Safety-io/E00002/hw_limit_sw_wire_0_en.png)<br>
 Figure 3.2.4. Hardware Limit Switch Wiring Structure
@@ -1402,7 +1402,7 @@ Check which channel is assigned on the CNSI2 connector as described in item (1).
 
 #### 3-3) Assigned to Safety Communication Input
 
-If the Primary Axis limit switch input is assigned to the **Safety Communication Input**, refer to the **Hi7 Robot Controller Function Manual – Industrial Communication** for details.
+If the Primary Axis limit switch input is assigned to the **Safety Communication Input**, refer to the **Hi7 Robot Controller Function Manual - Industrial Communication** for details.
 
 ### (4) If the Primary Axis Limit Switch Safety Input Assignment is Not Configured
 
@@ -1455,7 +1455,7 @@ If the automatic mode safety guard input is assigned to the Basic Safety Input, 
 Figure 3.3.2. Location of Servo Safety Board CNSI1 on Hi7-N Controller
 
 Check which channel the automatic mode safety guard input is assigned to. Input channel assignments can be verified on the T/P screen shown in the Safety I/O Assignment section above.  
-Once the assigned input channel is confirmed, refer to the site’s electrical diagram or wiring diagram to verify proper wiring. While checking the actual wiring, also confirm connector and assembly conditions.  
+Once the assigned input channel is confirmed, refer to the site's electrical diagram or wiring diagram to verify proper wiring. While checking the actual wiring, also confirm connector and assembly conditions.  
 
 When reviewing the electrical diagram or wiring diagram, refer to Section 4.3.2.6 of the Hi7 Controller Maintenance Manual for the standard wiring of the Servo Safety Board CNSI1.
 
@@ -1470,7 +1470,7 @@ Once the assigned input channel is confirmed, refer to the site electrical schem
 When checking the electrical schematic or wiring diagram, refer to Section 5.4.6 of the Hi7 Controller Maintenance Manual for the standard wiring of the Option Safety IO Board CNSI2.
 
 #### 2-3) If assigned to Safety Communication Input  
-If the external emergency stop input is assigned to a Safety Communication Input, refer to the "Hi7 Robot Controller Function Manual – Industrial Communication" for details.
+If the external emergency stop input is assigned to a Safety Communication Input, refer to the "Hi7 Robot Controller Function Manual - Industrial Communication" for details.
 
 ### (3) If the Safety Input Assignment for the Automatic Mode Safety Guard Signal is Not Configured
 If the automatic mode safety guard input has not been selected in the safety input assignment, activate the automatic mode safety guard function by selecting one of the following options:<br>
@@ -1482,7 +1482,7 @@ The safety input assignment can be configured through the following menu:
 
 System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment  
 ![](../_assets/3-Safety-io/N00088/io_alloc_param1.png)<br>
-Figure 3.3.4. T/P screen – Safety Input/Output Assignment
+Figure 3.3.4. T/P screen - Safety Input/Output Assignment
 
 [__SOURCE](3-safety-board-part/E02320.md)
 ## 3.4. E02320 General Safety Guard Switch Activated
@@ -1509,17 +1509,17 @@ By default, the general safety guard input is assigned to the basic safety input
 
 System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: Safety I/O Allocation<br>
 ![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
-Figure 3.4.1. T/P screen – Safety I/O Allocation
+Figure 3.4.1. T/P screen - Safety I/O Allocation
 
 #### 2-1) If assigned to Basic Safety Input
 If the general safety guard (SGG) switch input is assigned to the basic safety input, it is connected to the servo safety board CNSI1 connector (4 channels). Refer to section 4.3.2.6 of the Hi7 controller maintenance manual for the detailed pin map of this connector.
 
 ![](../_assets/3-Safety-io/E02320/bd642_cnsi1_position.png)<br>
-Figure 3.4.2. Hi7-N Controller – Servo Safety Board CNSI1 Location
+Figure 3.4.2. Hi7-N Controller - Servo Safety Board CNSI1 Location
 
 Check which channel the general safety guard (SGG) switch input is assigned to. The input channel assignment can be confirmed in the T/P screen shown above in the Safety I/O Allocation.
 
-Once the assigned input channel is confirmed, refer to the site’s electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
+Once the assigned input channel is confirmed, refer to the site's electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
 
 When checking the electrical schematics or wiring diagrams, refer to section 4.3.2.6 of the Hi7 controller maintenance manual for the wiring standard of the servo safety board CNSI1.
 
@@ -1528,16 +1528,16 @@ When checking the electrical schematics or wiring diagrams, refer to section 4.3
 If the general safety guard (SGG) switch input is assigned to the extended safety input, it is connected to the option Safety I/O board CNSI2 connector (8 channels). Refer to section 5.4.6 of the Hi7 Controller Maintenance Manual for the detailed pinout of this connector.
 
 ![](../_assets/3-Safety-io/E02320/bd680_cnsi2_position.png)<br>
-Figure 3.4.3. Hi7-N Controller – Option Safety I/O Board CNSI2 Location
+Figure 3.4.3. Hi7-N Controller - Option Safety I/O Board CNSI2 Location
 
 Check which channel the general safety guard (SGG) switch input is assigned to. The input channel assignment can be confirmed in the T/P screen shown above in the Safety I/O Allocation.
 
-Once the assigned input channel is confirmed, refer to the site’s electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
+Once the assigned input channel is confirmed, refer to the site's electrical schematics or wiring diagrams to verify proper wiring. Additionally, physically inspect the wiring for proper connection and assembly.
 
 When checking the electrical schematics or wiring diagrams, refer to section 5.4.6 of the Hi7 Controller Maintenance Manual for the wiring standard of the option Safety I/O board CNSI2.
 
 #### 2-3) When Assigned to Safety Communication Input
-If the external emergency stop input is assigned to the safety communication input, refer to the "Hi7 Robot Controller Function Manual – Industrial Communication" for details.
+If the external emergency stop input is assigned to the safety communication input, refer to the "Hi7 Robot Controller Function Manual - Industrial Communication" for details.
 
 ### (3) When Safety Input Assignment for the General Safety Guard Signal Is Not Configured
 If the general safety guard input is not selected in the safety input assignment, activate the general safety guard function by selecting one of the following options:<br>
@@ -1549,7 +1549,7 @@ The safety input assignment can be configured via the following menu:<br>
 
 System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety I/O -> 1: I/O Allocation<br>
 ![](../_assets/3-Safety-io/N00088/base_add_comm_si_func_sel.png)<br>
-Figure 3.4.4. T/P Screen – Safety I/O Allocation
+Figure 3.4.4. T/P Screen - Safety I/O Allocation
 
 [__SOURCE](3-safety-board-part/E51431.md)
 ## 3.5. E51431 (A ch) Abnormal Feedback of Magnetic Contactor
@@ -1636,9 +1636,9 @@ If the error occurs on a channel that is being used, first check which input cha
 System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 1: Input/Output Assignment
 
 ![](../_assets/3-Safety-io/E52042/io_alloc_param1.png)<br>
-Figure 3.6.3. T/P Screen – Safety Input Assignment
+Figure 3.6.3. T/P Screen - Safety Input Assignment
 
-Once the input channel assignment is confirmed, refer to the site’s electrical schematics or wiring diagrams to ensure proper wiring. Also, inspect the actual wiring for correct connections and assembly.  
+Once the input channel assignment is confirmed, refer to the site's electrical schematics or wiring diagrams to ensure proper wiring. Also, inspect the actual wiring for correct connections and assembly.  
 For wiring standards of the Servo Safety Board CNSI1, refer to **Hi7 Controller Maintenance Manual, Section 4.3.2.6**.
 
 ### (2) Noise caused by terminal blocks or cable condition
@@ -1648,7 +1648,7 @@ A monitoring screen for safety input signals is available on the T/P. It can mon
 
 System -> 8: Safety System -> 3: Monitoring -> 3: Safety IO Status  
 ![](../_assets/3-Safety-io/E52042/safety_io_status.png)<br>
-Figure 3.6.4. T/P Screen – Safety IO Monitoring
+Figure 3.6.4. T/P Screen - Safety IO Monitoring
 
 ### (3) Safety Signal Parameter Setting Error (Filter, Mismatch Allow Time)
 
@@ -1660,7 +1660,7 @@ The recommended default settings for safety input signals are as follows. These 
 
 System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety IO -> 2: Basic IO  
 ![](../_assets/3-Safety-io/E52042/def_input.png)<br>
-Figure 3.6.5. T/P Screen – Basic IO Settings
+Figure 3.6.5. T/P Screen - Basic IO Settings
 
 [__SOURCE](3-safety-board-part/E52043.md)
 ## 3.7. E52043 (0 ch) Additional Safety Input Signal Mismatch
@@ -1696,9 +1696,9 @@ If the error occurs on a channel that is in use, verify which input channel the 
 System -> 8: Safety System -> 2: Parameter Setting -> 3: Safety IO -> 1: Input/Output Assignment -> Additional Input <br>
 
 ![](../_assets/3-Safety-io/E52043/add_si_func_sel.png)<br>
-**Figure 3.7.2. T/P Screen – Additional Safety Input/Output Assignment**
+**Figure 3.7.2. T/P Screen - Additional Safety Input/Output Assignment**
 
-Once the Additional safety input channel assignment is confirmed, refer to the site’s electrical schematic or wiring diagram to verify that the actual wiring matches the design.  
+Once the Additional safety input channel assignment is confirmed, refer to the site's electrical schematic or wiring diagram to verify that the actual wiring matches the design.  
 Also, check the physical wiring for proper connection and assembly status.  
 
 When verifying the electrical schematic or wiring diagram, follow the wiring standards for the Option Safety IO Board CNSI2 as specified in **Hi7 Controller Maintenance Manual, Section 5.4.6**.
@@ -1713,7 +1713,7 @@ Monitoring occurs every 0.5 seconds, allowing for basic verification.
 `System -> 8: Safety System -> 3: Monitoring -> 3: Safety IO Status`  
 
 ![](../_assets/3-Safety-io/E52043/add_si_monitoring.png)<br>
-**Figure 3.7.3. T/P Screen – Safety IO Monitoring**
+**Figure 3.7.3. T/P Screen - Safety IO Monitoring**
 
 ### (3) Incorrect Safety Signal Parameter Settings (Filter, Mismatch Allowance Time)
 
@@ -1728,7 +1728,7 @@ The recommended default settings for Additional safety input signals are as foll
 `System -> 8: Safety System -> 2: Parameter Settings -> 3: Safety IO -> 3: Additional IO`  
 
 ![](../_assets/3-Safety-io/E52043/add_io.png)<br>
-**Figure 3.7.4. T/P Screen – Additional Safety IO Settings**
+**Figure 3.7.4. T/P Screen - Additional Safety IO Settings**
 
 [__SOURCE](4-servo-board-part/README.md)
 # 4. Servo Safety Board (Servo Part)
@@ -1758,9 +1758,9 @@ Since resetting the encoder changes the reference position data of the correspon
 {% endhint %}
 
 (1)	Check the encoder battery voltage.<br>
-The encoder battery is 3.6V. If this voltage drops to 3.0V~3.2V, it is displayed as "W0104 ○ Axis Encoder Battery voltage low." The encoder battery should be replaced when this warning occurs. The encoder battery must be replaced while the controller power is ON. If the battery is replaced with a normal encoder battery in this state, the robot can continue to be used without any problems.
+The encoder battery is 3.6V. If this voltage drops to 3.0V~3.2V, it is displayed as "W0104 o Axis Encoder Battery voltage low." The encoder battery should be replaced when this warning occurs. The encoder battery must be replaced while the controller power is ON. If the battery is replaced with a normal encoder battery in this state, the robot can continue to be used without any problems.
 
-If the encoder battery replacement time is passed and the encoder battery voltage drops to 2.5V~3.0V, the error "E2470 Axis ○ Encoder Abnormality: Encoder Reset Required" occurs. When this error occurs, the encoder's position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture through manual operation of the axis coordinate system and re-perform the encoder calibration for that axis.
+If the encoder battery replacement time is passed and the encoder battery voltage drops to 2.5V~3.0V, the error "E2470 Axis o Encoder Abnormality: Encoder Reset Required" occurs. When this error occurs, the encoder's position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture through manual operation of the axis coordinate system and re-perform the encoder calibration for that axis.
 
 ![](../_assets/4.서보보드/battery_replace_position.png)<br>
 Figure 4.1.1 Encoder Battery Replacement Position
@@ -1785,7 +1785,7 @@ If the problem is not resolved by the above measures, it is highly likely that t
 
 ### 1. Overview
 
-Errors may occur due to communication abnormalities between the main board and the servo safety board or due to abrupt motion changes.<br> 
+Errors may occur due to communication abnormalities between the main board and the servo safety board or due to abrupt motion changes.<br> 
 If a communication problem between boards occurs, normal commands cannot be transmitted from the main board to the servo safety board. At this time, since the robot may operate abnormally due to incorrect commands, an error is generated and the robot is stopped.<br>
 In addition, in the case of abrupt motion, the drive unit may fail to follow the position command, so an error is generated and the robot is stopped.
 
@@ -1808,13 +1808,11 @@ If the main board and servo safety board are not correctly installed in the rack
 
 ---
 
-<div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
+{% hint style="warning" %}
 
-### ⚠️ Warning
+To protect previous job programs, make sure to back up all files on the main board using a USB memory before removing the board from the rack.
 
-**To protect previous job programs, make sure to back up all files on the main board using a USB memory before removing the board from the rack.**
-
-</div>
+{% endhint %}
 
 ---
 
@@ -1885,7 +1883,7 @@ If the tool weight or inertia differs significantly from the values registered i
 ![](../_assets/4.서보보드/tool.png)<br>
 Figure 4.3.1 Check Tool Data
 
-To automatically set the tool weight or inertia, you can use the load estimation function in the menu below. 
+To automatically set the tool weight or inertia, you can use the load estimation function in the menu below. 
 
 * Enter the load estimation function.
 
@@ -1949,7 +1947,7 @@ The motor torque may be insufficient because the maximum speed of the external a
 Figure 4.3.11 External Axis Acc/Dec Check
 
 (6)	Adjust the job program.<br>
-Change the step conditions of the corresponding step or the immediately preceding step in the job program. First, try changing it to “Acc=0”, second, try lowering the speed of the step, and third, try adding a step to the movement path to change the program conditions.
+Change the step conditions of the corresponding step or the immediately preceding step in the job program. First, try changing it to "Acc=0", second, try lowering the speed of the step, and third, try adding a step to the movement path to change the program conditions.
 
 
 [__SOURCE](4-servo-board-part/E50101.md)
@@ -2030,7 +2028,7 @@ If the error does not occur after replacing the servo motor, the servo motor is 
 Figure 4.4.8 Motor Positions for Each Axis of Robot
 
 (5)	Check the communication status of the wiring after completing the measures.<br>
-After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
+After the measures for the problematic part are completed, check the communication status by referring to the `Encoder Communication Failure Count Display Function Manual`.
 
 ![](../_assets/4.서보보드/encoder_comm.png)<br>
 Figure 4.4.9 Encoder Communication Failure Monitoring
@@ -2101,7 +2099,7 @@ If the error does not occur after replacing the servo safety board, the servo sa
 Figure 4.5.6 N Controller Servo Safety Board Replacement
 
 (4)	Check the communication status of the wiring after completing the measures.<br>
-After the measures for the problematic part are completed, check the communication status by referring to the 『Encoder Communication Failure Count Display Function Manual』.
+After the measures for the problematic part are completed, check the communication status by referring to the `Encoder Communication Failure Count Display Function Manual`.
 
 ![](../_assets/4.서보보드/encoder_comm.png)<br>
 Figure 4.5.7 Encoder Communication Failure Monitoring
@@ -2293,7 +2291,7 @@ This error may occur when the data received from the encoder itself is normal, b
 (1)	Check the encoder supply voltage.<br>
 (2)	Inspect the encoder wiring.<br>
 (3)	After resetting the serial encoder error, turn the controller power off and on again.<br>
-(4)	If the error persists, perform a motor (encoder) replacement test. 
+(4)	If the error persists, perform a motor (encoder) replacement test. 
 
 {% endhint %}
 
@@ -2378,9 +2376,9 @@ Error reset is performed in the menu below.
 Figure 4.15.1 Encoder Error Release
 
 (2) Check the encoder battery voltage.<br>
-The encoder battery is 3.6V. If this voltage drops to 3.0V~3.2V, “W0104 ○ Axis Encoder Battery Voltage Low” is displayed. When this warning occurs, the encoder battery must be replaced. Encoder battery replacement must be performed while the controller power is ON. If you replace it with a normal encoder battery in this state, you can continue to use the robot without any problems.
+The encoder battery is 3.6V. If this voltage drops to 3.0V~3.2V, "W0104 o Axis Encoder Battery Voltage Low" is displayed. When this warning occurs, the encoder battery must be replaced. Encoder battery replacement must be performed while the controller power is ON. If you replace it with a normal encoder battery in this state, you can continue to use the robot without any problems.
 
-If the encoder battery replacement time is passed and the voltage drops to 2.5V~3.0V, the error “E2470 ○ Axis Encoder Abnormal: Encoder Reset Required” occurs when the controller power is turned ON. If this error occurs, the encoder position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture using manual operation in the axis coordinate system and perform encoder calibration for the corresponding axis again.
+If the encoder battery replacement time is passed and the voltage drops to 2.5V~3.0V, the error "E2470 o Axis Encoder Abnormal: Encoder Reset Required" occurs when the controller power is turned ON. If this error occurs, the encoder position data has already been lost. After replacing the encoder battery and resetting the encoder, you must move the robot to the reference posture using manual operation in the axis coordinate system and perform encoder calibration for the corresponding axis again.
 
 ![](../_assets/4.서보보드/battery_replace_position.png)<br>
 Figure 4.15.2 Encoder Battery Replacement Position
@@ -2509,7 +2507,7 @@ Check if there is any interference or collision with the robot in the robot's wo
 
 (3) Check if the brake release is operating normally.<br>
 There may be a problem with the release function of the brake for the corresponding axis or an abnormality in the brake release voltage.
- * Inspection of individual axis brake release anomalies<br>
+ * Inspection of individual axis brake release anomalies<br>
 Use the Axis Lock function to verify the operation of the brake release function for the corresponding axis.
 Lock the axes except for the axis you want to verify, then repeat Motor ON/OFF to check if the brake release sound ("click") is heard from the motor of the mechanical unit.
 
@@ -2577,7 +2575,7 @@ Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower)
 
 {% hint style="info" %}
 
-(1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed. 
+(1)	Operate at low speed (playback speed 30% or less) until the encoder temperature reaches a normal level (approx. 15℃ or higher), then restart at normal speed. 
 
 {% endhint %}
 
@@ -2587,7 +2585,7 @@ Generally, in a low-temperature environment (encoder temperature 5 ℃ or lower)
 Figure 4.18.1 Encoder Temperature Check Screen
 
 [__SOURCE](4-servo-board-part/E50205.md)
-## 4.19. E50205. (O Axis) Unable to sustain servo lock – abnormal current output
+## 4.19. E50205. (O Axis) Unable to sustain servo lock - abnormal current output
 
 ### 1. Overview
 
@@ -2621,13 +2619,11 @@ Turn off the controller power, disconnect U, V, W of the corresponding axis driv
 
 ---
 
-<div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
+{% hint style="warning" %}
 
-### ⚠️ Warning
+Be careful as there is a risk of electric shock when inspecting while the power is on.
 
-**Be careful as there is a risk of electric shock when inspecting while the power is on.**
-
-</div>
+{% endhint %}
 
 ---
 
@@ -2662,7 +2658,7 @@ Replace components in the order of Servo Safety Board (BD642) → Amplifier Boar
 Figure 4.19.6 N Controller Drive Components
 
 [__SOURCE](4-servo-board-part/E50206.md)
-## 4.20. E50206. (O Axis) Unable to sustain servo lock – abnormal parameter
+## 4.20. E50206. (O Axis) Unable to sustain servo lock - abnormal parameter
 
 ### 1. Overview
 
@@ -2696,13 +2692,11 @@ Turn off the controller power, disconnect U, V, W of the corresponding axis driv
 
 ---
 
-<div style="border: 2px solid #f5c542; background-color: #fff8e1; padding: 1em; border-radius: 8px;">
+{% hint style="warning" %}
 
-### ⚠️ Warning
+Be careful as there is a risk of electric shock when inspecting while the power is on.
 
-**Be careful as there is a risk of electric shock when inspecting while the power is on.**
-
-</div>
+{% endhint %}
 
 ---
 
@@ -2918,25 +2912,25 @@ The Servo Safety Board (BD642) activates the initial charge relay during the pro
 
 {% hint style="info" %}
 
-(1)    Inspect the monitoring system.<br>
-(2)    Inspect the power board.<br>
-(3)    Inspect the Servo Safety Board (BD642).<br>
+(1)    Inspect the monitoring system.<br>
+(2)    Inspect the power board.<br>
+(3)    Inspect the Servo Safety Board (BD642).<br>
 
 {% endhint %}
 
-(1)    Inspect the monitoring system.<br>
+(1)    Inspect the monitoring system.<br>
 Check the cabling between the power electric module (PSM or PDM), where the initial charging resistor and relay are installed, and the servo safety board (BD642) that collects monitoring signals. The cable name is CNPRC, and it enters the power electric module from the servo safety board through the backplane board. Inspect the connection status of this cable's connector.
 
 ![](../_assets/4.서보보드/cnprc_cable.png)<br>
 Figure 4.24.1 CNPRC Cable Connection
 
-(2)    Inspect the power board.<br>
+(2)    Inspect the power board.<br>
 In the case of the Hi7-N controller, there may be a problem with the servo board, power board, or cable wiring, so inspect or replace them.
 
 ![](../_assets/4.서보보드/psm_psbd.png)<br>
 Figure 4.24.2 Power Board inside Power Electric Module
 
-(3)    Replace and test the servo safety board.<br>
+(3)    Replace and test the servo safety board.<br>
 If the error does not occur after replacing the servo safety board, it can be determined as a failure of the encoder data receiving part of the servo board.
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
@@ -2948,18 +2942,18 @@ Figure 4.24.3 Replacement of Hi7-N Controller Servo Safety Board
 ### 1. Overview
 
 The Servo Safety Board (BD642) monitors the brake operation command and the signal from the brake feedback circuit, and generates an error if the two signals do not match.<br>
-If the output of the brake circuit is not executed normally, brake operation may fail, so the servo board detects this and stops the robot. 
+If the output of the brake circuit is not executed normally, brake operation may fail, so the servo board detects this and stops the robot. 
 
 ### 2. Cause and Inspection
 
 {% hint style="info" %}
 
-(1)    Inspect the brake wiring.<br>
-(2)    Inspect the Servo Safety Board (BD642).<br>
+(1)    Inspect the brake wiring.<br>
+(2)    Inspect the Servo Safety Board (BD642).<br>
 
 {% endhint %}
 
-(1)    Inspect the brake wiring.<br>
+(1)    Inspect the brake wiring.<br>
 The sequence for inspecting brake wiring is as follows.<br>
 1st: Check for poor contact in connectors related to brake wiring.<br>
 2nd: Check for short circuits in the brake wiring. Check the wiring of each axis 1:1 using equipment such as a multimeter (tester).<br>
@@ -2979,7 +2973,7 @@ In the case of the Hi7-N controller, inspect the wiring between CMC1 and CMR1, a
 ![](../_assets/4.서보보드/hi7_robot_power_cable.png)<br>
 Figure 4.25.2 N Controller Brake Output Wiring
 
-(2)    Check the servo safety board.<br>
+(2)    Check the servo safety board.<br>
 The sequence for checking the servo safety board is as follows.<br>
 1st: Check for blown fuses in the brake circuit.<br>
 2nd: If there are no issues with the fuses of all brake channels, replace the servo safety board and check.<br>
@@ -3009,13 +3003,13 @@ If the brake power is not supplied normally, the holding of the robot axis may b
 
 {% hint style="info" %}
 
-(1)    Check if the brake power (24V) is being supplied normally.<br>
-(2)    Check for disconnection or poor contact in the brake power cable.<br>
-(3)    Replace the Servo Safety Board (BD642).<br>
+(1)    Check if the brake power (24V) is being supplied normally.<br>
+(2)    Check for disconnection or poor contact in the brake power cable.<br>
+(3)    Replace the Servo Safety Board (BD642).<br>
 
 {% endhint %}
 
-(1)    Check if the brake power (24V) is being supplied normally.<br>
+(1)    Check if the brake power (24V) is being supplied normally.<br>
 The sequence for inspecting brake power wiring is as follows.<br>
 1st: Check for poor contact in connectors related to brake power wiring.<br>
 2nd: Check for short circuits in the brake power wiring. Check 1:1 using equipment such as a multimeter (tester).<br>
@@ -3025,13 +3019,13 @@ The sequence for inspecting brake power wiring is as follows.<br>
 ![](../_assets/4.서보보드/psm_psbd.png)<br>
 Figure 4.26.1 Power Electric Module
 
-(2)    Check for disconnection or poor contact status of the brake power cable.<br>
+(2)    Check for disconnection or poor contact status of the brake power cable.<br>
 Inspect the internal wiring of the controller. In the case of the Hi7-N controller, inspect the wiring between the J12(BD642) connector and the CNOBK(power board) connector.
 
 ![](../_assets/4.서보보드/brake_pwr_cable.png)<br>
 Figure 4.26.2 N Controller Brake Power Inspection
 
-(3)    Perform a replacement test of the servo safety board.<br>
+(3)    Perform a replacement test of the servo safety board.<br>
 If the error does not occur after replacing the servo safety board, it can be determined as a failure of the encoder data receiving part of the servo board.
 
 ![](../_assets/4.서보보드/hi7_controller_bd642.png)<br>
@@ -3082,7 +3076,7 @@ B.	Visually inspect the cable for breaks, crimping damage, bends, or damage.<br>
 C.	Check the connector pins (terminals) for corrosion, contamination, or bending.<br>
 3)	Inspection Method<br>
 A.	With the power turned OFF, disconnect and reconnect the cable.<br>
-B.	When inserting, ensure it is fully seated until a “click” sound is heard.<br>
+B.	When inserting, ensure it is fully seated until a "click" sound is heard.<br>
 C.	If necessary, replace the cable with a spare cable and try again.<br>
 D.	Recheck the connection order and verify that it is connected to the correct LAN port.<br>
 4)	Additional Checks<br>
@@ -3116,7 +3110,7 @@ Figure 5.1.4 7-Segment Status information
 
 If a communication connection problem still exists even though there are no abnormalities in the inspection items 1 and 2, replace the board.<br>
 
- 
+ 
 #### [User DIO board (BD681) inspection procedure]
 ![](../_assets/5-Communication/BD681_LED.png)<br> 
 Figure 5.1.5 BD681 Board LED 
@@ -3161,7 +3155,7 @@ B.	Visually inspect the cable for breaks, crimping damage, bends, or damage.<br>
 C.	Check the connector pins (terminals) for corrosion, contamination, or bending.<br>
 3)	Inspection Method<br>
 A.	With the power turned OFF, disconnect and reconnect the cable.<br>
-B.	When inserting, ensure it is fully seated until a “click” sound is heard.<br>
+B.	When inserting, ensure it is fully seated until a "click" sound is heard.<br>
 C.	If necessary, replace the cable with a spare cable and try again.<br>
 D.	Recheck the connection order and verify that it is connected to the correct LAN port.<br>
 4)	Additional Checks<br>

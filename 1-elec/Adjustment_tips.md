@@ -1,4 +1,4 @@
-## 1.4. Adjustment Procedures
+﻿## 1.4. Adjustment Procedures
 
 This controller is fully adjusted at the factory prior to shipment; therefore, no additional adjustments are typically required. However, when replacing certain components, some adjustments may be necessary. This section describes the adjustment points and procedures. Do not perform adjustments unless absolutely necessary. If a problem occurs and the cause is not identified, do not attempt to modify the settings.
 

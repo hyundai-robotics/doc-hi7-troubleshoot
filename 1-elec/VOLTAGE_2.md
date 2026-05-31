@@ -1,4 +1,4 @@
-﻿## 1.2. Voltage Check 2 – Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
+﻿## 1.2. Voltage Check 2 - Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
 
 (1) Verify the voltage on the controller nameplate and the actual input voltage.
 

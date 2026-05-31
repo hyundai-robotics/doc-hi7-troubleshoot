@@ -1,4 +1,4 @@
-﻿## 1.1. Voltage Check 1 – Internal 3-Phase Voltage Test for Hi7-N Controller
+﻿## 1.1. Voltage Check 1 - Internal 3-Phase Voltage Test for Hi7-N Controller
 
 (1) Verify the 3-phase power voltage inside the controller.
 

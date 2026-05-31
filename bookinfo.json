@@ -8,5 +8,6 @@
     "docId": "HI7TROUBLESHOOT_EN_001",
     "references": [
         { "title" : "Hi7-N Controller Maintenance Manual", "id" : "HI7NMAINTENANCE_EN_001" }
-    ]
+    ],
+    "permittedStrs": ["Hi7"]
 }
