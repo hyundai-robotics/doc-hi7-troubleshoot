@@ -9,10 +9,24 @@ In the event of a malfunction, the system is structured to allow easy identifica
 
 This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
 
+[__SOURCE](0-about-this-manual/README.md)
+# About the Manual
+
+You must fully understand the contents of the manual before using the product. Moreover, keep the manual nearby so that you can refer to it whenever you need it.
+
+This manual may be provided as reference material for customers who have purchased HD Hyundai Robotics products or may be used as internal training material.
+
+This manual has been created based on standard specifications, so some contents may differ depending on the model of the product you have purchased. In addition, the contents and specifications of this manual are subject to change without prior notice to improve the performance of the product, and HD Hyundai Robotics is not responsible for situations that could be caused by inaccuracies or typos in the manual. For detailed information on the revision of the manual, you need to visit our internet website [https://www.hd-hyundairobotics.com/en/main](https://www.hd-hyundairobotics.com/en/main).
+
 [__SOURCE](0-about-this-manual/precautions.md)
 # Precautions
 
 {% include file="en/precautions.md" %}
+
+[__SOURCE](0-about-this-manual/safety-notice.md)
+# Safety Cautions
+
+{% include file="en/safety-notice.md" %}
 
 [__SOURCE](1-elec/README.md)
 # 1. Electrical equipment
@@ -1563,7 +1577,7 @@ The magnetic contactor (MC) did not operate as expected.
 (1) Check the monitoring system.<br>
 (2) Inspect the magnetic contactor (MC).<br>
 (3) Inspect the electrical board.<br>
-(4) Check the power supply module (H6PSM30).<br>
+(4) Check the power supply module (H7PSM30).<br>
 (5) Inspect the servo amplifier.<br>
 {% endhint %}
 
@@ -2028,7 +2042,7 @@ If the error does not occur after replacing the servo motor, the servo motor is 
 Figure 4.4.8 Motor Positions for Each Axis of Robot
 
 (5)	Check the communication status of the wiring after completing the measures.<br>
-After the measures for the problematic part are completed, check the communication status by referring to the `Encoder Communication Failure Count Display Function Manual`.
+After completing the corrective actions for the issue, check the communication status by referring to Figure 4.4.9, the encoder communication failure monitoring screen below.
 
 ![](../_assets/4.서보보드/encoder_comm.png)<br>
 Figure 4.4.9 Encoder Communication Failure Monitoring

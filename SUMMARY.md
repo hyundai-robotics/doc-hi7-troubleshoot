@@ -2,7 +2,9 @@
 
 * [Hi7 Controller Maintenance Manual - Troubleshooting](README.md)
 
-* [Precautions](0-about-this-manual/precautions.md)
+* [About the Manual](0-about-this-manual/README.md)
+  * [Precautions](0-about-this-manual/precautions.md)
+  * [Safety Cautions](0-about-this-manual/safety-notice.md)
 
 * [1. Electrical](1-elec/README.md)
   * [1.1. Voltage Check 1 - Procedure for Checking Internal Three-Phase Voltage of the Hi7-N Controller](1-elec/VOLTAGE_1.md)
