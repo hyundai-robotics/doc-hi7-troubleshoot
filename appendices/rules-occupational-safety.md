@@ -1,5 +1,5 @@
-﻿# Rules on Occupational Safety and Health Standards and Safety Inspection Notification
+﻿# 职业安全和健康标准及安全检查通知的规则
 
-This industrial robot shall be installed in consideration of the inspection requirements specified in the Rules on Occupational Safety and Health Standards and the Safety Inspection Notification, where applicable.
+此工业机器人应安装在考虑到职业安全和健康标准规则及安全检查通知中规定的检查要求的情况下。 
 
-"[Rules on Occupational Safety and Health Standards](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/en/README)"
+"[职业安全和健康标准规则](https://hrbook-hrc.web.app/#/view/rules-on-occupational-safety-and-health-standards/zh/README)"

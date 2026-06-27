@@ -1,56 +1,55 @@
-﻿## 5.3. Board communication (EtherCAT) master ENI mismatch
+## 5.3. 板通信 (EtherCAT) 主控 ENI 不匹配
 
-### 1. Summary
+### 1. 概述
 
-Controller communication configuration and ENI file mismatch.<br>
-(ENI : EtherCAT Network Information)
+控制器通信配置与 ENI 文件不匹配。<br>
+(ENI : EtherCAT 网络信息)
 
-### 2. Causation
+### 2. 原因
 
 {% hint style="info" %}
 
-The controller communication configuration does not match the configured ENI file.<br>
+控制器通信配置与配置的 ENI 文件不匹配。<br>
 
 {% endhint %}
 
-### Verify the controller communication configuration.
+### 验证控制器通信配置。
 
-The controller supports predefined communication configurations. If the communication connection is configured incorrectly, normal operation is not possible.<br>
-In addition, distinguish between the [IN] and [OUT] communication connectors when connecting.
-To ensure proper communication, connect the '[OUT] connector of the first board' to the '[IN] connector of the second board'.<br>
+控制器支持预定义的通信配置。如果通信连接配置不正确，则无法正常操作。<br>
+此外，在连接时区分 [IN] 和 [OUT] 通信连接器。
+为确保正确的通信，将“第一个板的 [OUT] 连接器”连接到“第二个板的 [IN] 连接器”。<br>
 
-<strong>< Example of a correct communication configuration ></strong><br>
+<strong>< 正确的通信配置示例 ></strong><br>
 
-- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board (BD642)
-- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board (BD642) **[OUT]** ↔ **[IN]** User DIO board(BD681)
+- 主控制模块(H6COM-T) ↔ **[IN]** 伺服安全板 (BD642)
+- 主控制模块(H6COM-T) ↔ **[IN]** 伺服安全板 (BD642) **[OUT]** ↔ **[IN]** 用户 DIO 板(BD681)
 
 <br>
 
-<strong>< Example of an incorrect communication configuration ></strong><br>
+<strong>< 错误的通信配置示例 ></strong><br>
 
-- Main Control Module(H6COM-T) ↔ **[OUT]** Servo safety board(BD642)
-- Main Control Module(H6COM-T) ↔ **[IN]** Servo safety board(BD642) **[OUT]** ↔ **[OUT]** User DIO board(BD681)
-- Main Control Module(H6COM-T) ↔ **[IN]** User DIO board(BD681) **[OUT]** ↔ **[IN]** Servo safety board(BD642)
+- 主控制模块(H6COM-T) ↔ **[OUT]** 伺服安全板(BD642)
+- 主控制模块(H6COM-T) ↔ **[IN]** 伺服安全板(BD642) **[OUT]** ↔ **[OUT]** 用户 DIO 板(BD681)
+- 主控制模块(H6COM-T) ↔ **[IN]** 用户 DIO 板(BD681) **[OUT]** ↔ **[IN]** 伺服安全板(BD642)
 
 <br>
 
 ![](../_assets/5-Communication/BD642_EtherCAT_Connector.png)<br>
-Figure 5.3.1 BD642 EtherCAT Connector
+图 5.3.1 BD642 EtherCAT 连接器
 
 <br>
 
 ![](../_assets/5-Communication/BD681_EtherCAT_Connector.png)<br>
-Figure 5.3.2 BD681 EtherCAT Connector
+图 5.3.2 BD681 EtherCAT 连接器
 
 <br>
 
-When the communication connection is configured correctly, the controller automatically selects the ENI file and attempts a connection at power-on.<br>
+当通信连接配置正确时，控制器将在开机时自动选择 ENI 文件并尝试连接。<br>
 
-If the internal settings of the ENI file are incorrect, communication may be established but the functions may not operate properly.
-In this case, update the version of the Main Control Module (H6COM-T) of the controller or contact our company.<br>
+如果 ENI 文件的内部设置不正确，可能会建立通信，但功能可能无法正常运行。
+在这种情况下，请更新控制器的主控制模块 (H6COM-T) 的版本或联系本公司。<br>
 
-To manually change the ENI file selection, configure it in the TP menu below.
-After changing the setting, reboot the controller for the changes to take effect.
+要手动更改 ENI 文件选择，请在下面的 TP 菜单中进行配置。
+更改设置后，重新启动控制器以使更改生效。
 
-**- The location of the menu : [system]-[5:Initialization]-[10:Controller Setting]**
-
+**- 菜单的位置 : [system]-[5:Initialization]-[10:Controller Setting]**

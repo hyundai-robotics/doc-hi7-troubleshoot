@@ -1,17 +1,17 @@
-﻿## 1.2. Voltage Check 2 - Hi7-N Controller Input 3-Phase Voltage Inspection Procedure
+## 1.2. 电压检查 2 - Hi7-N 控制器输入三相电压检查程序
 
-(1) Verify the voltage on the controller nameplate and the actual input voltage.
+(1) 验证控制器铭牌上的电压与实际输入电压。
 
-Check whether the voltage actually supplied to the controller is within the allowable range of the voltage indicated on the nameplate. The allowable range for the input voltage is within 10% of the value marked on the nameplate and must be at least 198V AC based on a 220V AC standard.
+检查实际供应给控制器的电压是否在铭牌上指示的电压的允许范围内。输入电压的允许范围在铭牌标记值的 ±10% 之内，并且必须至少为基于 220V AC 标准的 198V AC。
 
-The figure below illustrates the measurement method for the controller's input voltage. If the measured voltage is outside the allowable range, please inspect the power supply facilities.
+下图说明了控制器输入电压的测量方法。如果测量的电压超出允许范围，请检查电源设施。
 
-*	Measurement at the power line side of the front switch
+* 在前开关的电源线侧进行测量
 
 ![](../_assets/1.전장/전압점검/전압점검2.PNG)<br>
-(a) Hi7-N Conroller<br>
-Figure 1.2 Measurement on the power line side of the power switch
+(a) Hi7-N 控制器<br>
+图 1.2 电源开关的电源线侧测量
 
 {% hint style="warning" %}
-Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components.
+在测量高电压时要小心，因为存在相间或与周围组件短路的风险。
 {% endhint %}

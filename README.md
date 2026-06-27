@@ -1,8 +1,8 @@
-﻿# Hi7-N Controller Maintenance Manual - Troubleshooting
+# Hi7-N 控制器维护手册 - 故障排除
 
-The controller is designed with primary emphasis on high precision and high-speed performance.
-In the event of a malfunction, the system is structured to allow easy identification of the cause and rapid recovery. Please read and fully understand this manual to ensure effective and efficient troubleshooting.
+该控制器的设计主要强调高精度和高速性能。
+在发生故障时，系统的结构允许轻松识别原因并迅速恢复。请阅读并完全理解本手册，以确保有效和高效的故障排除。
 
-## Troubleshooting Procedures
+## 故障排除程序
 
-This section describes the troubleshooting procedures for each error code that may occur in the Hi7-N Controller.
+本节描述可能发生在 Hi7-N 控制器中的每个错误代码的故障排除程序。

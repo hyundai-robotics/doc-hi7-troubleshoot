@@ -1,79 +1,78 @@
-﻿## 1.3. Replacement Procedures
+## 1.3. 更换程序
 
-This section describes the replacement procedures for each component and printed circuit board (PCB) during troubleshooting.
+本节描述了在故障排除期间对每个组件和印刷电路板（PCB）的更换程序。
 
-### 1. Module Replacement Procedures
-
-{% hint style="warning" %}
-Operators must keep the following precautions in mind when replacing modules.
-{% endhint %}
-
-① Ensure that the power supply is turned OFF before starting any work.</br>
-② Keep your hands clean to prevent oil or moisture from getting onto the circuit boards. When you must handle a board, hold it by its edges. Be careful not to touch electronic components, conductive patterns, or especially the contact areas of the connectors.</br>
-③ Ensure that the operator's body (hands) and the controller are at the same electrical potential (equipotential).</br>
-④ Each circuit board has multiple connectors. During replacement, ensure they are inserted correctly to avoid incorrect insertion, omission, or loose connections. Align the connector labels with the names printed on the board before insertion.</br>
-
-### 1.1. Main Module Replacement Procedures
+### 1. 模块更换程序
 
 {% hint style="warning" %}
-Before removing the main module, be sure to take the following actions
+操作人员在更换模块时必须牢记以下注意事项。
 {% endhint %}
 
-① When replacing the main module, first back up all necessary programs and parameter data using the HR-VIEW S/W on a (Notebook) PC or a USB memory drive before proceeding with the replacement.</br>
-② Since the taught programs and parameter data are stored in the RAM of the main module, the existing data will not be present once the board is replaced with a new one.</br>
-③ After the replacement, you can use the system by loading the previously backed-up data onto the new board.</br>
-Please adhere to the precautions above and follow the steps below to replace the circuit board.</br>
+① 在开始任何工作之前，请确保电源已关闭。</br>
+② 保持手部清洁，以防止油或水分沾到电路板上。当您必须处理电路板时，请握住其边缘。注意不要触碰电子元件、导电图案，尤其是连接器的接触区域。</br>
+③ 确保操作人员的身体（手）和控制器处于相同的电位（Equipotential）。</br>
+④ 每个电路板都有多个连接器。在更换过程中，确保它们正确插入，以避免错误插入、遗漏或连接松动。在插入之前，要将连接器标签与电路板上打印的名称对齐。</br>
 
-#### 1.1.1 Removing the Control Module
-
-① First, disconnect the input power from the power supply unit.</br>
-② Disconnect all connectors attached to the module. For connectors fastened with screws, use an appropriate screwdriver to loosen them, and remove the connectors carefully to avoid applying excessive force.</br>
-③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it.</br>
-
-#### 1.1.2 Installing the Control Module
-
-① First, verify that the controller input power is in the OFF state.</br>
-② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it.</br>
-③ Reconnect all connectors to the module. For connectors fastened with screws, use an appropriate screwdriver to secure them, ensuring they are connected firmly without applying excessive force.</br>
-④ Double-check that the communication cables are connected correctly and that no steps have been omitted.</br>
-
-### 1.2. Drive Module Replacement Procedures
+### 1.1. 主模块更换程序
 
 {% hint style="warning" %}
-Operators must keep the following precautions in mind when replacing the servo drive module.
+在拆卸主模块之前，请确保采取以下行动
 {% endhint %}
 
-Be sure to check the nameplate on the front panel, as compatibility may vary between different models of servo drive modules.
+① 更换主模块时，请首先使用（笔记本）电脑上的 HR-VIEW 软件或 USB 存储设备备份所有必要的程序和参数数据，然后再进行更换。</br>
+② 由于教导程序和参数数据存储在主模块的 RAM 中，替换新的电路板后，现有数据将不再存在。</br>
+③ 更换后，您可以通过将之前备份的数据加载到新电路板上来使用系统。</br>
+请遵守上述预防措施，并按照以下步骤更换电路板。</br>
 
-#### 1.2.1 Removing the Servo Drive Unit
-① First, turn OFF the input power to the power supply unit.</br>
-② Loosen the fixing bolts on the protective cover of the servo drive unit and remove the cover.</br>
-③ Disconnect the wiring secured by screws to the terminal block.</br>
-④ Disconnect all connected connectors.</br>
-⑤ Remove the screws securing the servo drive unit.</br>
-⑥ Carefully take out the servo drive unit. The servo drive unit is heavy; use caution to avoid injury while removing it. </br>Also, be careful not to damage any adjacent wiring.
+#### 1.1.1 拆卸控制模块
 
-#### 1.2.2 Installing the Servo Drive Unit
-① First, verify that the input power to the power supply unit is turned OFF.</br>
-② Carefully lift and slide the servo drive unit into place. The unit is heavy; use caution to avoid injury during installation. Take care not to damage the surrounding wiring.</br>
-③ Secure the servo drive unit with screws.</br>
-④ Tighten the wiring onto the terminal block using the screws.</br>
-⑤ Reconnect all the connectors.</br>
-⑥ Fasten the protective cover of the servo drive unit with the bolts.</br>
-⑦ Double-check to ensure that no steps have been omitted.</br>
+① 首先，切断电源单元的输入电源。</br>
+② 断开所有连接到模块的连接器。对于用螺丝固定的连接器，请使用合适的螺丝刀将其松开，并小心地移除连接器，以避免施加过大的力量。</br>
+③ 稍微松开上下固定螺丝，上移模块，然后拉出以移除它。</br>
 
-### 1.3. Power Supply Module (PSM) Replacement Procedures 
+#### 1.1.2 安装控制模块
 
-{% hint style="warning" %} The PSM is a multi-power supply unit used as the main control power source. As it is a precision device, please handle it with extraordinary care. {% endhint %}
+① 首先，确认控制器输入电源处于关闭状态。</br>
+② 通过将替换模块挂在上固定螺丝和下固定螺丝上进行安装，然后拧紧螺丝以固定。</br>
+③ 重新连接所有连接器到模块。对于用螺丝固定的连接器，请使用合适的螺丝刀将其固定，确保它们牢固连接而不施加过大力量。</br>
+④ 再次检查通信电缆是否连接正确，并确保没有遗漏步骤。</br>
 
-#### 1.3.1 Removing the Power Supply Module (PSM)
-① First, turn OFF the input power to the power supply unit.</br>
-② Disconnect all connectors attached to the module.</br>
-③ Slightly loosen the top and bottom fixing screws, move the module upward, and then pull it out to remove it. The PSM is heavy; use caution to avoid injury while removing it. Take care not to damage any adjacent wiring. Additionally, be careful not to pull the module too suddenly or with excessive force, as this may cause injury.</br>
+### 1.2. 驱动模块更换程序
 
-#### 1.3.2 Installing the Power Supply Module (PSM)
-① First, verify that the controller input power is in the OFF state.</br>
-② Mount the replacement module by hooking it onto the top and bottom fixing screws, then tighten the screws to secure it. The PSM is heavy; use caution to avoid injury during installation. Take care not to damage the surrounding wiring. Avoid pushing the module in too abruptly, as it may lead to injury.</br>
-③ Reconnect all connectors to the module. For connectors fastened with screws, use an appropriate screwdriver to secure them, ensuring they are connected firmly without applying excessive force.</br>
-④ Double-check to ensure that no connectors are misplaced and that no steps have been omitted.</br>
+{% hint style="warning" %}
+操作人员在更换伺服驱动模块时必须牢记以下注意事项。
+{% endhint %}
 
+确保检查前面板上的铭牌，因为不同型号的伺服驱动模块之间的兼容性可能有所不同。
+
+#### 1.2.1 拆卸伺服驱动单元
+① 首先，切断电源单元的输入电源。</br>
+② 松开伺服驱动单元保护盖上的固定螺栓并移除盖子。</br>
+③ 断开固定在接线端子上的接线。</br>
+④ 断开所有连接的连接器。</br>
+⑤ 移除固定伺服驱动单元的螺丝。</br>
+⑥ 小心取出伺服驱动单元。伺服驱动单元较重；在拆卸时要小心以避免受伤。</br>同时，注意不要损坏任何相邻的接线。
+
+#### 1.2.2 安装伺服驱动单元
+① 首先，确认电源单元的输入电源已关闭。</br>
+② 小心地抬起并滑动伺服驱动单元到位。该单元较重；在安装过程中要小心以避免受伤。注意不要损坏周围的接线。</br>
+③ 用螺丝固定伺服驱动单元。</br>
+④ 用螺丝将接线固定在接线端子上。</br>
+⑤ 重新连接所有连接器。</br>
+⑥ 用螺栓固定伺服驱动单元的保护盖。</br>
+⑦ 再次确认是否遗漏了任何步骤。</br>
+
+### 1.3. 电源模块（PSM）更换程序 
+
+{% hint style="warning" %} PSM 是作为主要控制电源源使用的多电源单元。由于它是一种精密设备，请极其小心处理。 {% endhint %}
+
+#### 1.3.1 拆卸电源模块（PSM）
+① 首先，切断电源单元的输入电源。</br>
+② 断开所有连接到模块的连接器。</br>
+③ 稍微松开上下固定螺丝，上移模块，然后拉出以移除它。PSM 较重；在拆卸时要小心以避免受伤。注意不要损坏任何相邻的接线。此外，注意不要突然或用过大的力量拉出模块，以免造成受伤。</br>
+
+#### 1.3.2 安装电源模块（PSM）
+① 首先，确认控制器输入电源处于关闭状态。</br>
+② 通过将替换模块挂在上固定螺丝和下固定螺丝上进行安装，然后拧紧螺丝以固定。PSM 较重；在安装过程中要小心以避免受伤。注意不要损坏周围的接线。避免突然将模块推入，因为这可能导致受伤。</br>
+③ 重新连接所有连接器到模块。对于用螺丝固定的连接器，请使用合适的螺丝刀将其固定，确保它们牢固连接而不施加过大力量。</br>
+④ 再次确认是否存在连接器放错位置或遗漏任何步骤。</br>

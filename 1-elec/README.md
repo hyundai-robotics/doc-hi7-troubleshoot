@@ -1,1 +1,1 @@
-﻿# 1. Electrical equipment
+# 1. 电气设备

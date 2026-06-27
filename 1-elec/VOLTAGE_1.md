@@ -1,22 +1,21 @@
-﻿## 1.1. Voltage Check 1 - Internal 3-Phase Voltage Test for Hi7-N Controller
+## 1.1. 电压检查 1 - Hi7-N 控制器的内部三相电压测试
 
-(1) Verify the 3-phase power voltage inside the controller.
+(1) 验证控制器内部的三相电功率电压。
 
-The Power Supply Module (PSM) mounted on the front of the controller is responsible for distributing and relaying various power sources. The 3-phase power is switched ON/OFF via a magnetic switch within the PSM. With the motor in the OFF state, check whether the input voltage to the PSM is within a 10% tolerance range based on AC 220V. If the measured voltage is outside the allowable range, perform the following inspections.
+安装在控制器前面的电源模块 (PSM) 负责分配和中继各种电源。三相电源通过 PSM 内的磁性开关进行开/关控制。在电机处于关闭状态时，检查输入电压是否在基于 AC 220V 的 10% 容忍范围内。如果测量的电压超出允许范围，请执行以下检查。
 
 ![](../_assets/1.전장/전압점검/전압점검1_en.PNG)<br>
-Figure 1.1 3-phase power input to the PSM (Power Supply Module)
-
+图 1.1 3 相电力输入到 PSM（电源模块）
 
 {% hint style="warning" %}
-Warning
-Exercise caution when measuring high voltage, as there is a risk of short circuits between phases or with surrounding components."
+警告
+测量高电压时要小心，因为存在相间或与周围组件短路的风险。
 {% endhint %}
 
-1)  Case where the controller nameplate voltage is 220V<br>
-If the controller input voltage is 220V AC, the voltage input from the external power switch or terminal block must be identical to the voltage measured at the internal PSM (Power Supply Module). If there is a discrepancy, please inspect the 3-phase power wiring.
+1)  控制器铭牌电压为 220V 的情况<br>
+如果控制器输入电压为 220V AC，则来自外部电源开关或接线端子的电压必须与在内部 PSM（电源模块）测量的电压相同。如果存在差异，请检查三相电源接线。
 
-2)	Case where the controller nameplate voltage is NOT 220V<br>
-If the controller input power is not a 220V AC specification, the 3-phase power is converted to 220V AC using an internal transformer and then connected to the PSM. Check whether the voltage measured at the PSM is within a 10% tolerance range based on 220V AC.
-If the measured voltage is outside the allowable range, inspect the connection status of the input and output terminals of the internal transformer. The primary side of the internal transformer must be connected to the voltage indicated on the controller nameplate. The secondary side of the transformer is always set to 3-phase 220V AC.
-If 3-phase 220V AC is not output correctly from the output terminal despite the input and output terminals being properly connected, the transformer is defective. In this case, the output voltage tolerance of the transformer must be within 5%.
+2) 控制器铭牌电压不是 220V 的情况<br>
+如果控制器输入电源不是 220V AC 规格，则三相电源通过内部变压器转换为 220V AC，然后连接到 PSM。检查在 PSM 的测量电压是否在基于 220V AC 的 10% 容忍范围内。
+如果测量的电压超出允许范围，请检查内部变压器的输入和输出端子的连接状态。内部变压器的初级侧必须连接到控制器铭牌上指示的电压。变压器的次级侧始终设置为三相 220V AC。
+如果输出端子未正确输出三相 220V AC，尽管输入和输出端子连接正确，则变压器存在缺陷。在这种情况下，变压器的输出电压容忍度必须在 5% 以内。

@@ -1,1 +1,1 @@
-﻿# 3. Servo Safety Board (Safety Section)
+# 3. 伺服安全板 (安全部分)
